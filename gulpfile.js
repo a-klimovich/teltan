@@ -13,7 +13,7 @@ const buildDirectory = 'build/';
 
 const vendorsJs = [
   // vendors js paths
-  srcDirectory + '/vendors/jquery/jquery-3.3.1.min.js',
+  srcDirectory + '/vendors/test/test.js',
 ]
 const vendorsCSS = [
   // vendors css paths

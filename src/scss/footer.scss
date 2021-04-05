@@ -1,0 +1,13 @@
+.footer {
+  background: #fff;
+
+  &__text {
+    color: #6c6c6c;
+  }
+}
+
+@media (max-width: 991px) {
+  .footer {
+    display: none;
+  }
+}

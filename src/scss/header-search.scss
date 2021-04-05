@@ -1,0 +1,50 @@
+.main-search-group {
+  button, input {
+    height: 66px;
+  }
+
+  .dropdown.active {
+    box-shadow: 0px 5px 29px -12px rgba(0, 0, 0, 86%);
+
+    button {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+  
+    .dropdown-menu {
+      top: -3px !important;
+      box-shadow: inset 0 9px 29px -23px #000;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
+  }
+}
+
+.search-mobile {
+  display: none;
+
+  .btn-mobile-search {
+    border: 1px solid #ced4da;
+    background: #ffff;
+    color: #ced4da;
+    border-right: transparent;
+  }
+
+  .input-mobile-search {
+    border-left: transparent;
+  }
+}
+
+@media (max-width: 991px) {
+  .search-disktop {
+    display: none;
+  }
+
+  .search-mobile {
+    display: block;
+  }
+
+  .logo {
+    max-width: 125px;
+  }
+}
