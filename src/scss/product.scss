@@ -6,8 +6,12 @@
 
   &__title {
     overflow: hidden;
-    display: -webkit-box;
     text-overflow: ellipsis;
+    display: -moz-box;
+    -moz-box-orient: vertical;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
     line-clamp: 2;
     box-orient: vertical;
   }
@@ -60,7 +64,9 @@
 }
 
 @media (max-width: 991px) {
-  .card-item-product__text {
-    display: none;
+  .card-item-product {
+    &__text {
+      display: none;
+    }
   }
 }

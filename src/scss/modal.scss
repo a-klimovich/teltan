@@ -1,0 +1,92 @@
+.modal {
+  .modal-body {
+    padding: 28px 48px;
+  }
+
+  h3 {
+    padding-bottom: 16px;
+    margin-bottom: 20px;
+  }
+
+  .form-sign-in {
+    margin-bottom: 48px;
+  }
+
+  .form-group input {
+    height: 48px;
+    padding-top: 16px;
+    padding-bottom: 18px;
+  }
+
+  .form-check-input {
+    margin-top: 0.4rem;
+    margin-left: -1.05rem;
+  }
+
+  .icon-google,
+  .icon-facebook {
+    max-width: 26px;
+  }
+
+  .btn-sand-register-form,
+  .btn-sign-in {
+    font-size: 18px;
+    font-weight: 900;
+
+    letter-spacing: .7px;
+    line-height: 26px;
+
+    padding: 18px 24px;
+
+    min-width: 253px;
+  }
+}
+
+.modal-confirm-code {
+  h3 {
+    font-size: 26px;
+    line-height: 36px;
+  }
+
+  &__text {
+    margin-bottom: 28px;
+  }
+
+  .modal-body,
+  .modal-dialog {
+    max-width: 541px;
+  }
+
+  .modal-body {
+    padding: 30px;
+    padding-left: 23px;
+  }
+
+  .code-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 30px;
+
+    &__data {
+      max-width: 55px;
+      max-height: 48px;
+      margin-right: 11px;
+
+      &::placeholder {
+        text-align: center;
+      }
+    }
+  }
+
+  .btn-confirm-code {
+    min-width: 200px;
+
+    padding-top: 20px;
+    padding-bottom: 19px;
+
+    font-size: 18px;
+    font-weight: 900;
+  }
+}

@@ -1,0 +1,22 @@
+@import 'variables';
+
+.counter-user-message {
+  position: relative;
+  border-radius: 50%;
+  
+  background: $primary;
+  color: #fff;
+  
+  height: 24px;
+  width: 24px;
+  
+  font-size: 11px;
+  line-height: 38px;
+
+  span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-45%, -50%);
+  }
+}

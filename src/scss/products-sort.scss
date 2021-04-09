@@ -1,0 +1,30 @@
+@import "variables";
+
+.products-sort {
+  button:hover {
+    i {
+      color: $primary !important;
+    }
+  }
+
+  .icon-arrow-down-sign-to-navigate-3 {
+    margin-right: 101px;
+  }
+
+  .icon-sirting_block,
+  .icon-sirting_line {
+    font-size: 21px;
+    font-weight: bold;
+    color: #6d6d6d;
+
+    &:hover {
+      color: $primary;
+    }
+  }
+
+  @media (max-width: 991px) {
+    .icon-arrow-down-sign-to-navigate-3 {
+      margin-right: 66px;
+    }
+  }
+}

@@ -1,20 +1,52 @@
 <div class="header-disktop">
   <div class="row mb-3">
+<!-- USER UNREGISTRED -->
+  <!--
     <div class="col-3 d-flex align-items-center">
       <ul class="nav font-weight-bold">
         <li class="mr-4 justify-content-center">
-          <a class="" href="#">
+          <a class="" href="#" data-toggle="modal" data-target="#registerModal">
             <span class="mr-2">Register</span>
             <i class="icon-user-1"></i>
           </a>
           </li>
         <li>
           <a class="" href="#">
-            <span class="mr-2">Sign In</span>
+            <span class="mr-2" data-toggle="modal" data-target="#logInModal">Sign In</span>
             <i class="icon-log-in"></i>
           </a>
         </li>
       </ul>
+    </div> -->
+
+<!-- USER SIGN IN -->
+    <div class="col-3 d-flex justify-content-between">
+      <button class="btn btn-primary text-uppercase" href="#" data-toggle="modal" data-target="#registerModal">
+        <i class="icon-user-1 mr-2"></i><span>Your Ad</span>
+      </button>
+
+      <div class="d-flex align-items-center">
+        <a class="d-flex justify-content-center align-items-center font-weight-bold" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="icon-arrow-down-sign-to-navigate-3"></i>
+
+          <span class="mr-1 ml-2">My Profile</span>
+
+          @@include('counter-user-message.html')
+        </a>
+  
+        <div class="dropdown-menu text-right">
+          <a class="dropdown-item active">My announsment</a>
+          <a class="dropdown-item d-flex justify-content-center align-items-center">
+            @@include('counter-user-message.html')
+            <span class="ml-3">My Messages</span>
+          </a>
+          <a class="dropdown-item">Wallet history</a>
+          <a class="dropdown-item">History</a>
+          <a class="dropdown-item">Tracked</a>
+          <a class="dropdown-item">VIP</a>
+          <a class="dropdown-item">Settings</a>
+        </div>
+      </div>
     </div>
   
     <div class="col-6 d-flex justify-content-around">
