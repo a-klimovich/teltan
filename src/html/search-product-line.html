@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  @@include('./utils/head.html')
+</head>
+<body>
+  @@include('modal.html')
+  @@include('header.html')
+
+  <!-- Modal -->
+  <div class="container-fluid breadcrumb-beckground p-0 mb-5">
+    <div class="container">
+      @@include('breadcrumbs.html')
+    </div>
+  </div>
+
+  <main class="mb-5">
+    <div class="container">
+      <h3 class="mb-4 subtitle-item">
+        search results
+      </h3>
+
+      <div class="mb-4 d-flex justify-content-between">
+        @@include('products-sort.html')
+        @@include('pagination.html')
+      </div>
+    
+      <div class="row row-cols-1">
+        @@include('product-line.html')
+        @@include('product-line.html')
+        @@include('product-line.html')
+        @@include('product-line.html')
+        @@include('product-line.html')
+        @@include('product-line.html')
+        @@include('product-line.html')
+        @@include('product-line.html')
+        @@include('product-line.html')
+        @@include('product-line.html')
+        @@include('product-line.html')
+        @@include('product-line.html')
+      </div>
+
+      <div class="d-flex justify-content-end">
+        @@include('pagination.html')
+      </div>
+    </div>
+  </main>
+
+  @@include('footer.html')
+
+  @@include('./utils/includies.html')
+</body>
+</html>
