@@ -1,0 +1,69 @@
+@import '../variables';
+
+.propert-sell-main {
+  position: relative;
+  padding: 30px;
+
+  &__header {
+    padding-bottom: 26px;
+    margin-bottom: 38px;
+  }
+
+  &__btn-next-step {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 285px;
+    height: 54px;
+
+    text-transform: uppercase;
+    font-weight: bold;
+
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
+
+    background: #898989;
+    color: #ffffff;
+
+    .btn-icon {
+      display: block;
+
+      font-size: 11px;
+      margin-right: 5px;
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.step {
+  &__icone {
+    font-size: 40px;
+    color: #bababa;
+  }
+
+  &.active {
+    font-weight: 700;
+
+    .step__title {
+      font-weight: bold;
+    }
+
+    .step__subtitle {
+      color: $light-green;
+    }
+  
+    .step__icone {
+      color: $light-green;
+    }
+  }
+
+  &.completed {
+    .step__subtitle {
+      font-weight: bold;
+      color: $light-green;
+    }
+  }
+}

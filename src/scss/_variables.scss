@@ -1,10 +1,12 @@
 $body-bg:                 #f5f5f5;
 
-$green:                   #00b560;
+$green:                   #3fb465;
 $primary:                    $green;
+$light-green:             #33e56d;
 $orange:                  #ff8400;
 $white:                   #ffffff;
 $secondary:               #c4c4c4;
+$light-gray:              #e7e7e7;
 
 // status color
 $online-status-color: #00ae10;
@@ -22,17 +24,17 @@ $container-max-widths: (
   xl: 1230px
 ) !default;
 
-$dropdown-link-hover-color:   $primary;
+$dropdown-link-hover-color:   $light-green;
 $dropdown-link-hover-bg:      $white;
 
-$dropdown-link-active-color:  $primary;
+$dropdown-link-active-color:  $light-green;
 $dropdown-link-active-bg:     $white;
 
 $breadcrumb-bg:               transparent;
 $breadcrumb-divider:          quote("•");
 
 $link-color:                #000;
-$link-hover-color:            $primary;
+$link-hover-color:            $light-green;
 $link-hover-decoration:       none;
 
 $input-placeholder-color:   #000;
@@ -45,4 +47,6 @@ $carousel-control-width:      10%;
 $input-btn-focus-width:       0;
 
 $pagination-hover-color:    #fff;
-$pagination-hover-bg:         $primary;
+$pagination-hover-bg:         $light-green;
+
+$box-shadow: -5px 1rem 2rem -2rem #4a4a4a40;

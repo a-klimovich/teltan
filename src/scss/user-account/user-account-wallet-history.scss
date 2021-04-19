@@ -1,0 +1,69 @@
+@import '../variables';
+
+.wallet-history {
+  button {
+    min-width: 160px;
+    min-height: 48px;
+    border-radius: 4px;
+  }
+
+  &__title {
+    font-size: 20px;
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: 24px;
+    color: #373737;
+    text-align: center;
+    
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+  }
+
+  .currency-sign {
+    font-size: 24px;
+  }
+
+  .current-balance {
+    &__my-balance {
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+    }
+
+    .icon-crown {
+      font-size: 33px;
+    }
+
+    .conversion-booth {
+      .input-group {
+        max-width: 100px;
+        max-height: 48px;
+  
+        input.form-control::placeholder {
+          text-align: center;
+        }
+  
+        .input-group-text {
+          font-weight: 700;
+          color: #373737;
+          background-color: #fff;
+        }
+      }
+    }
+
+    .state-of-an-account {
+      color: $primary;
+    }
+  }
+
+  .card {
+    padding: 30px;
+  }
+
+  .purchase-history {
+    &__name,
+    &__date {
+      font-weight: 700;
+      color: #373737;
+    }
+  }
+}

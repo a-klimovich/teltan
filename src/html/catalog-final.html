@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  @@include('./utils/head.html')
+</head>
+<body>
+  @@include('./modals/modal.html')
+  @@include('./header/header.html')
+
+  <!-- Modal -->
+  <div class="container-fluid breadcrumb-beckground p-0 mb-5">
+    <div class="container">
+      @@include('breadcrumbs.html')
+    </div>
+  </div>
+
+  <main class="mb-5">
+    <div class="container">
+      <h3 class="mb-4 subtitle-item">
+        search results
+      </h3>
+
+      <div class="row">
+        <div class="col-9">
+          <div class="mb-4 d-flex justify-content-between">
+            @@include('products-sort.html')
+            @@include('pagination.html')
+          </div>
+        
+          <div class="row row-cols-3">
+            @@include('./product-card/product.html')
+            @@include('./product-card/product.html')
+            @@include('./product-card/product.html')
+            @@include('./product-card/product.html')
+            @@include('./product-card/product.html')
+            @@include('./product-card/product.html')
+            @@include('./product-card/product.html')
+            @@include('./product-card/product.html')
+            @@include('./product-card/product.html')
+            @@include('./product-card/product.html')
+            @@include('./product-card/product.html')
+            @@include('./product-card/product.html')
+            @@include('./product-card/product.html')
+            @@include('./product-card/product.html')
+            @@include('./product-card/product.html')
+            @@include('./product-card/product.html')
+            @@include('./product-card/product.html')
+            @@include('./product-card/product.html')
+            @@include('./product-card/product.html')
+            @@include('./product-card/product.html')
+            @@include('./product-card/product.html')
+            @@include('./product-card/product.html')
+            @@include('./product-card/product.html')
+            @@include('./product-card/product.html')
+          </div>
+
+          <div class="d-flex justify-content-end">
+            @@include('pagination.html')
+          </div>
+        </div>
+
+        <div class="col-3">
+          @@include('./conditions-menu/condition.html')
+        </div>
+      </div>
+    </div>
+  </main>
+
+  @@include('footer.html')
+
+  @@include('./utils/includies.html')
+</body>
+</html>

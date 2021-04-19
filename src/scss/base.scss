@@ -13,9 +13,18 @@ a {
   cursor: pointer;
 }
 
+p {
+  letter-spacing: -0.7px;
+  line-height: 26px;
+}
+
 input::placeholder,
 textarea::placeholder {
   text-align: right;
+}
+
+.card {
+  box-shadow: $box-shadow;
 }
 
 .max-text-line-2 {

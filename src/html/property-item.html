@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  @@include('./utils/head.html')
+</head>
+<body>
+  @@include('./modals/modal.html')
+  @@include('./header/header.html')
+
+  <!-- Modal -->
+  <div class="container-fluid breadcrumb-beckground p-0 mb-5">
+    <div class="container">
+      @@include('breadcrumbs.html')
+    </div>
+  </div>
+
+  <main class="mb-5">
+    <div class="container">
+      <h2 class="mb-3 text-uppercase font-weight-bolder text-right">Stylish Duplex Apartment - Nahalat Binyamin Market</h2>
+
+      <div class="mb-4 pb-3 d-flex justify-content-end subtitle-item">
+        <div class="mr-4 date text-right">
+          Yesterday, 20:28
+        </div>
+
+        <div role="button" class="d-none d-lg-inline-block mr-4">
+          <span class="mr-2">To favorites</span>
+          <i class="icon-love-2"></i>
+        </div>
+
+        <div class="d-inline-block">
+          <span class="mr-2">2 500</span>
+          <i class="icon-visibility"></i>
+        </div>
+      </div>
+
+      <div class="row mb-4">
+        <div class="col-4 flex-column">
+          @@include('./item/connection-with-seller.html')
+          @@include('./item/seller-card.html')
+          @@include('./item/exact-address-card.html')
+          
+          @@include('./product-card/product.html')
+          @@include('./product-card/product.html')
+          @@include('./product-card/product.html')
+        </div>
+
+        <div class="col-8">
+          @@include('./item/item-slider.html')
+
+          @@include('./item/property-about-item.html')
+          
+          <h3 class="mb-4 subtitle-item">
+            Description
+          </h3>
+          
+          @@include('./item/property-item-description.html')
+        </div>
+      </div>
+    </div>
+  </main>
+
+  @@include('footer.html')
+
+  @@include('./utils/includies.html')
+</body>
+</html>

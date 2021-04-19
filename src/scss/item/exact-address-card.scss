@@ -1,0 +1,22 @@
+.exact-address-card {
+  padding: 30px;
+
+  &__title {
+    font-size: 17px;
+    font-weight: 900;
+    color: #373737;
+  }
+
+  .map {
+    &__address {
+      font-size: 18px;
+      line-height: 22px;
+      letter-spacing: -0.2px;
+    }
+
+    &__image {
+      max-width: 330px;
+      min-height: 204px;
+    }
+  }
+}

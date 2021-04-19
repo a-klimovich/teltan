@@ -1,0 +1,42 @@
+@import '../variables';
+
+.connection-with-seller {
+  padding: 30px;
+
+  button {
+    padding-left: 15px;
+    padding-right: 15px;
+    
+    line-height: 40px;
+    border-radius:  4px;
+  }
+
+  .btn-show-phone {
+    color: $primary;
+    border-color: $primary;
+  }
+
+  .btn.btn-show-phone[disabled] {
+    color: #c3c3c3;
+    border-color: #c3c3c3;
+  }
+
+  .btn.btn-primary[disabled] {
+    border-color: #c3c3c3;
+    background-color: #c3c3c3;
+  }
+
+  .text-unaurh-user {
+    font-size: 18px;
+  }
+
+  &__title {
+    font-size: 28px;
+    font-weight: 900;
+  }
+
+  &__price {
+    font-size: 32px;
+    font-weight: bold;
+  }
+}

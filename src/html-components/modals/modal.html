@@ -1,0 +1,143 @@
+<!-- Register modal -->
+<div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body">
+        <h3 class="subtitle-item" id="exampleModalLabel">
+          create a new accoun
+        </h3>
+
+        <div class="mb-4 d-flex flex-column">
+          <button type="button" class="mb-3 py-3 btn btn-white border-secondary">
+            <span class="mr-4">Sign in with Google</span>
+            <img src="assets/icon-google.svg" class="icon-google">
+          </button>
+  
+          <button type="button" class="py-3 btn btn-white border-secondary">
+            <span class="mr-4">Sign in with Facebook</span>
+            <img src="assets/icon-facebook.svg" class="icon-facebook">
+          </button>
+        </div>
+
+        <h3 class="subtitle-item">
+          or create it manually
+        </h3>
+
+        <form>
+          <div class="form-group">
+            <input type="tel" class="form-control" placeholder="Phone" id="" aria-describedby="userPhoneNumber">
+            <small id="telHelp" class="form-text text-muted text-right">a confirmation code will be sent to this phone number</small>
+          </div>
+
+          <div class="form-group">
+            <input type="email" class="form-control mb-3" placeholder="E-mail" id="" aria-describedby="userEmail">
+            
+            <input type="text" class="form-control" placeholder="Name" name="" id="">
+          </div>
+
+
+          <div class="form-group">
+            <input type="password" class="form-control mb-3" placeholder="Password" id="userPasword">
+            <input type="password" class="form-control" placeholder="Password confirm" id="confirmUserPassword">
+          </div>
+
+          <div class="d-flex justify-content-center">
+            <button type="submit" class="btn btn-primary text-uppercase btn-sand-register-form">create an account</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Log in modal -->
+<div class="modal fade" id="logInModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body">
+        <h3 class="subtitle-item" id="exampleModalLabel">
+          log into your account
+        </h3>
+
+        <form class="form-sign-in">
+          <div class="form-group">
+            <input type="email" class="form-control" placeholder="E-mail" id="" aria-describedby="userEmail">
+          </div>
+
+
+          <div class="form-group">
+            <input type="password" class="form-control" placeholder="Password" id="userPasword">
+          </div>
+
+          <div class="d-flex justify-content-between">
+            <a href="#" class="text-primary">
+              Forgot your password?
+            </a>
+  
+            <div class="form-check">
+              <label class="form-check-label pr-4" for="exampleCheck1">Remember me</label>
+              <input type="checkbox" class="form-check-input" id="rememberUserDateCheck">
+            </div>
+          </div>
+        </form>
+
+        <h3 class="subtitle-item">
+          or login with:
+        </h3>
+
+        <div class="mb-4 d-flex flex-column">
+          <button type="button" class="mb-3 py-3 btn btn-white border-secondary">
+            <span class="mr-4">Sign in with Google</span>
+            <img src="assets/icon-google.svg" class="icon-google">
+          </button>
+  
+          <button type="button" class="py-3 btn btn-white border-secondary">
+            <span class="mr-4">Sign in with Facebook</span>
+            <img src="assets/icon-facebook.svg" class="icon-facebook">
+          </button>
+        </div>
+
+        <div class="d-flex flex-column ">
+          <div class="mb-4 d-flex justify-content-center">
+            <button type="submit" class="btn btn-primary text-uppercase btn-sign-in">Sign in</button>
+          </div>
+
+          <a href="#" class="text-primary text-center">Don't have an account?</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Confirm-code modal -->
+<div class="modal fade modal-confirm-code" id="confirmCode" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body">
+        <h3 class="subtitle-item" id="exampleModalLabel">
+          Enter the code from your phone
+        </h3>
+
+        <p class="modal-confirm-code__text text-right">We have sent a verification code to your phone number, Enter the verification code into the window.</p>
+
+        <form class="form-confirm-code">
+          <div class="form-group code-group">
+            <input class="form-control code-group__data" type="text" placeholder="X" id="codeplace1" required>
+            <input class="form-control code-group__data" type="text" placeholder="X" id="codeplace2" required>
+            <input class="form-control code-group__data" type="text" placeholder="X" id="codeplace3" required>
+            <input class="form-control code-group__data" type="text" placeholder="X" id="codeplace4" required>
+          </div>
+        </form>
+
+        <div class="d-flex justify-content-between align-items-center">
+          <a href="#" class="text-primary"><i class="icon-replay"></i> Submit new code</a>
+
+          <div>
+            <button type="button" class="btn btn-transparent" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary text-uppercase btn-confirm-code">Confirm</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

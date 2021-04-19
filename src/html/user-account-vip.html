@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  @@include('./utils/head.html')
+</head>
+<body>
+  @@include('./modals/modal.html')
+  @@include('./header/header.html')
+
+  <!-- Modal -->
+  <div class="container-fluid breadcrumb-beckground p-0 mb-5">
+    <div class="container">
+      @@include('breadcrumbs.html')
+    </div>
+  </div>
+
+  <main class="mb-5">
+    <div class="container">
+      <h3 class="mb-4 subtitle-item">
+        Latest offers
+      </h3>
+    
+      <div class="row">
+        <div class="col">
+          <div class="row row-cols-3">
+            @@include('./user-account/user-vip-card.html', {
+              imagePath: "../assets/vip/Star-1.png",
+              name: "VIP 1",
+              price: "299 T",
+              benefitOne: "",
+              benefitTwo: "text-secondary",
+              benefitThree: "text-secondary"
+            })
+            
+            @@include('./user-account/user-vip-card.html', {
+              imagePath: "../assets/vip/Star-2.png",
+              name: "VIP 2",
+              price: "599 T",
+              benefitOne: "",
+              benefitTwo: "",
+              benefitThree: "text-secondary"
+            })
+            
+            @@include('./user-account/user-vip-card.html', {
+              imagePath: "../assets/vip/Star-3.png",
+              name: "VIP 1",
+              price: "1 999 T",
+              benefitOne: "",
+              benefitTwo: "",
+              benefitThree: ""
+            })
+
+            @@include('./user-account/user-vip-card.html', {
+              imagePath: "../assets/vip/Star-1.png",
+              name: "VIP 1",
+              price: "299 T",
+              benefitOne: "",
+              benefitTwo: "text-secondary",
+              benefitThree: "text-secondary"
+            })
+            
+            @@include('./user-account/user-vip-card.html', {
+              imagePath: "../assets/vip/Star-2.png",
+              name: "VIP 2",
+              price: "599 T",
+              benefitOne: "",
+              benefitTwo: "",
+              benefitThree: "text-secondary"
+            })
+            
+            @@include('./user-account/user-vip-card.html', {
+              imagePath: "../assets/vip/Star-3.png",
+              name: "VIP 1",
+              price: "1 999 T",
+              benefitOne: "",
+              benefitTwo: "",
+              benefitThree: ""
+            })
+          </div>
+        </div>
+        <div class="col-3">
+          @@include('./user-account/user-profile-menu.html')
+        </div>
+      </div>
+    </div>
+  </main>
+
+  @@include('footer.html')
+
+  @@include('./utils/includies.html')
+</body>
+</html>

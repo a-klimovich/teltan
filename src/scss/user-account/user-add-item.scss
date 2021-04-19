@@ -1,0 +1,56 @@
+@import "../variables";
+
+.user-add-item {
+  input {
+    height: 54px;
+  }
+
+  select, option {
+    text-align: right;
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    color: #5a5a5a;
+  }
+
+  label,
+  .name-photo-section {
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  &__photo {
+    .box-label-photo {
+      overflow: hidden;
+    }
+    
+    label {
+      justify-content: flex-end;
+      display: flex;
+    }
+
+    .add-item-photo {
+      font-size: 39px;
+
+      border: 1px solid #f3f3f3;
+      border-radius: 4px;
+      padding: 13px 26px;
+
+      cursor: pointer;
+
+      &:not(:last-child) {
+        margin-right: 20px;
+      }
+
+      &:hover {
+        color: $primary;
+        border: 1px solid $primary;
+      }
+    }
+
+    input {
+      visibility: hidden;
+    }
+  }
+}

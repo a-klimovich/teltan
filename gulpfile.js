@@ -7,6 +7,7 @@ const concat = require('gulp-concat');
 const imagemin = require('gulp-imagemin');
 const connect = require('gulp-connect');
 const fileinclude = require('gulp-file-include');
+const gulp = require('gulp');
 
 const srcDirectory = 'src/';
 const buildDirectory = 'build/';
@@ -24,6 +25,17 @@ const files = {
   scss: srcDirectory + 'scss/**/*.scss',
   js: srcDirectory + 'js/**/*.js',
 }
+
+
+
+gulp.task('fileinclude', function() {
+  gulp.src(['index.html'])
+    .pipe(fileinclude({
+      prefix: '@@',
+      basepath: '@file'
+    }))
+    .pipe(gulp.dest('./'));
+});
 
 /** HTML */
 function html() {

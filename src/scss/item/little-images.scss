@@ -1,0 +1,25 @@
+.little-photo {
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+  }
+
+  &.overlay {
+    img {
+      filter: brightness(40%);
+    }
+  }
+
+  &__overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+    color: #fff;
+    line-height: 34px;
+  }
+}

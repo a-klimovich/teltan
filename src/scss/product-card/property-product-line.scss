@@ -1,0 +1,27 @@
+@import '../variables';
+
+.description-item {
+  border-radius: 8px;
+  box-shadow: $box-shadow;
+
+  &__praice {
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  &__title {
+    font-size: 17px;
+    font-weight: 900;
+    line-height: 24px;
+  }
+
+  &__image {
+    min-width: 25%;
+
+    img {
+      
+    max-width: 100%;
+    width: 250px;
+    }
+  }
+}

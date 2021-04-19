@@ -1,0 +1,99 @@
+.step-one {
+  text-align: center;
+
+  &__title {
+    font-size: 30px;
+    font-weight: 900;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    margin-bottom: 50px;
+  }
+
+  &__icons-line {
+    margin-bottom: 50px;
+
+    .icon {
+      font-size: 53px;
+      margin-bottom: 30px;
+    }
+  }
+
+  .add-file-section {
+    margin-left: 15%;
+    margin-bottom: 30px;
+
+    &__delimiter {
+      font-size: 23px;
+      font-weight: 900;
+
+      margin: 0 20px;
+    }
+
+    #upload-btn label,
+    #upload-container label {
+      font-size: 18px;
+      line-height: 40px;
+      margin-bottom: 0;
+    }
+
+    #upload-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+  
+      position: relative;
+      z-index: 9;
+  
+      width: 360px;
+      height: 235px;
+  
+      border: 2px dashed #c3c3c3;
+      border-radius: 8px;
+  
+      i {
+        font-size: 40px;
+        margin-bottom: 20px;
+        user-select: none;
+      }
+  
+      label:hover {
+        cursor: pointer;
+        text-decoration: underline;
+      }
+  
+      input[type=file] {
+        width: 0.1px;
+        height: 0.1px;
+        opacity: 0;
+        position: absolute;
+        z-index: -1;
+      }
+    }
+  
+    #upload-btn {
+      position: relative;
+      z-index: 9;
+  
+      input[type=file] {
+        width: 0.1px;
+        height: 0.1px;
+        opacity: 0;
+        position: absolute;
+        z-index: -1;
+      }
+
+      button {
+        width: 285px;
+        height: 54px;
+
+        i {
+          font-size: 21px;
+        }
+      }
+    }
+  }
+}
