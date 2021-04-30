@@ -10,7 +10,6 @@ _IMP_
 > Gulp
 
 **Start project**
-
 ```yarn start```
 
 **Build project**
