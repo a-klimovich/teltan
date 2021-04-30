@@ -1,15 +1,21 @@
 # Teltan
-_IMP_
+_The Internet Marketplace_
 
 #### The project was created using:
 > Bootstrap 4.6
+
 > Scss
+
 > jQuery
 
 #### Workflow:
-> Gulp
+> Gulp 
+
+#### Node:
+> Node v14.12.0
 
 **Start project**
+```yarn install```
 ```yarn start```
 
 **Build project**
