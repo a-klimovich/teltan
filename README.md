@@ -7,9 +7,11 @@ _The Internet Marketplace_
 > jQuery
 
 #### Workflow:
-> Gulp
+> Gulp 
+> Node v14.12.0
 
 **Start project**
+```yarn install```
 ```yarn start```
 
 **Build project**
