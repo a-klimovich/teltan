@@ -16,18 +16,25 @@
 
   <main class="mb-5">
     <div class="container">
-      <h3 class="mb-4 subtitle-item">
+      <h3 class="mb-4 subtitle">
         Latest offers
       </h3>
     
       <div class="row">
-        <div class="col-9">
-          @@include('./user-account/user-product.html')
-          @@include('./user-account/user-product.html')
-          @@include('./user-account/user-product.html')
-          @@include('./user-account/user-product.html')
+        <div class="col-12 col-lg-9">
+          <div class="row row-cols-2 row-cols-lg-1">
+            <div class="col">
+              @@include('./user-account/user-product.html')
+            </div>
+            <div class="col">
+              @@include('./user-account/user-product.html')
+            </div>
+            <div class="col">
+              @@include('./user-account/user-product.html')
+            </div>
+          </div>
         </div>
-        <div class="col-3">
+        <div class="d-none d-lg-block col-3">
           @@include('./user-account/user-profile-menu.html')
         </div>
       </div>

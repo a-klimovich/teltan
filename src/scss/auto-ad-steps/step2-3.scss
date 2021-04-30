@@ -1,0 +1,75 @@
+.auto-ad-step2-3 {
+  .custom-select {
+    width: 150px;
+    height: 54px;
+  }
+
+  input {
+    height: 54px;
+
+    &::placeholder {
+      color: #5a5a5a;
+    }
+  }
+
+  .form_radio_btn {
+    label {
+      padding: 0 25px;
+      width: fit-content;
+      height: 54px;
+    }
+  }
+
+  .body-type-car {
+    .form_radio_btn {
+      label {
+        width: 215px;
+        height: 120px;
+        padding: 0;
+      }
+    }
+
+    .show-more-types {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      width: 215px;
+      height: 120px;
+      padding: 0;
+
+      color: #5a5a5a;
+    }
+
+    &__icon {
+      font-size: 84px;
+    }
+
+    &__name {
+      position: absolute;
+      bottom: 10%;
+    }
+  }
+
+  .car-generation {
+    &__image {
+      max-width: 215px;
+      max-height: 180px;
+  
+      overflow: hidden;
+      border: 2px solid transparent;
+      border-radius: 8px;
+  
+      cursor: pointer;
+  
+      &:hover {
+        border-color: #33e56d;
+      }
+    }
+
+    &__gen-number,
+    &__gen-year {
+      color: #5a5a5a;
+    }
+  }
+}

@@ -1,0 +1,20 @@
+.user-account-menu {
+  i.icon-left-arrow {
+    display: inline-block;
+    transform: rotate(180deg);
+  }
+
+  .icon-wallet-3,
+  .icon-vip-2,
+  .icon-shopping-bag,
+  .icon-return-of-investment-1,
+  .icon-love-2,
+  .icon-cogwheel {
+    font-size: 20px;
+  }
+
+  ul> li {
+    height: 54px;
+    padding-top: 16px;
+  }
+}

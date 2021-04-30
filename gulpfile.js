@@ -14,11 +14,13 @@ const buildDirectory = 'build/';
 
 const vendorsJs = [
   // vendors js paths
-  srcDirectory + '/vendors/test/test.js',
+  srcDirectory + '/vendors/noUiSlider/nouislider.js',
+  srcDirectory + '/vendors/bootstrapSelect/bootstrap-select.js',
 ]
 const vendorsCSS = [
   // vendors css paths
-  srcDirectory + '/vendors/test/test.css',
+  srcDirectory + '/vendors/noUiSlider/nouislider.css',
+  srcDirectory + '/vendors/bootstrapSelect/bootstrap-select.css',
 ]
 const files = {
   html: srcDirectory + 'html/**/*.html',
@@ -90,6 +92,11 @@ function assets() {
   return src(srcDirectory + 'assets/**/*')
     .pipe( dest(buildDirectory + 'assets/') )
 }
+
+function fonts() {
+  return src(srcDirectory + 'fonts/**/*')
+    .pipe( dest(buildDirectory + 'fonts/') )
+}
 /** -//- */
 
 function watchTask(){
@@ -107,12 +114,13 @@ function connectTask() {
   })
 }
 
-const build = parallel(html, styles, vendorsStyles, vendorsScripts, scripts, images, assets)
+const build = parallel(html, styles, vendorsStyles, vendorsScripts, scripts, images, assets, fonts)
 
 exports.html = html;
 exports.styles = styles;
 exports.scripts = scripts;
 exports.assets = assets;
+exports.fonts = fonts;
 exports.vendorsScripts = vendorsScripts;
 exports.vendorsStyles = vendorsStyles;
 exports.images = images;

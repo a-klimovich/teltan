@@ -1,13 +1,27 @@
-.page-link {
-  position: relative;
-  display: block;
-  padding: 1.1rem 1.4rem;
-  margin-right: 10px;
-  line-height: 1.25;
-  color: #fff;
-  background-color: #fff;
-  border: 1px solid #dee2e6;
-  border-radius: 8px;
-  background: #3fb465;
-  font-weight: bold;
+.pagination {
+  height: 100%;
+
+  .page-item {
+    width: 54px;
+    height: 100%;
+  
+    .page-link {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+      height: 100%;
+      width: 100%;
+    
+      border-radius: 8px;
+      
+      font-size: 18px;
+      color: #fff;
+      background: #3fb465;
+
+      &:hover {
+        background-color:#33e56d;
+      }
+    }
+  }
 }

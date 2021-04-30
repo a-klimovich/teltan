@@ -1,0 +1,30 @@
+@import "variables";
+@import "node_modules/bootstrap-scss/mixins";
+
+.subtitle {
+  position: relative;
+
+  padding-bottom: 15px;
+  
+  font-weight: 900;
+  
+  text-transform: uppercase;
+  text-align: right;
+
+  @include media-breakpoint-up(lg) {
+    padding-bottom: 27px;
+
+    &::after {
+      content: '';
+      position: absolute;
+  
+      bottom: 0;
+      right: 0;
+      
+      width: 75px;
+      height: 5px;
+      
+      background: $primary;
+    }
+  }
+}

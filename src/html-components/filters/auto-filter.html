@@ -1,0 +1,381 @@
+<div class="p-3 pt-4 pb-4 card text-right condition" id="filterModalContent">
+  <div class="pb-3 mb-4 d-flex d-lg-none justify-content-between border-bottom">
+    <a type="button"><i class="mr-3 icon-clear"></i> Close</a>
+    <h4 class="m-0 d-inline-block text-uppercase font-weight-bolder">Filters</h4>
+  </div>
+  
+  <div class="mb-3 pb-4 flex-column border-bottom">
+    <select class="selectpicker" data-style-base="form-control form-control-select" data-style="">
+      <option selected>Select</option>
+      <option value="1">One</option>
+      <option value="2">Two</option>
+      <option value="3">Three</option>
+    </select>
+  </div>
+
+  <h4 class="d-block d-lg-none text-uppercase font-weight-bolder" data-toggle="collapse" href="#collapsePrice" role="button" aria-expanded="true" aria-controls="collapsePrice">
+    <span class="d-flex justify-content-between"><i class="icone- icon-arrow-down-sign-to-navigate-3"></i>Price</span>
+  </h4>
+  <h4 class="d-none d-lg-block text-uppercase font-weight-bolder">Price</h4>
+
+  <ul class="border-bottom-0 condition-group collapse show" id="collapsePrice">
+    <li class="condition-group-item">
+      <a href="#">Under $1000</a>
+    </li>
+
+    <li class="condition-group-item">
+      <a href="#">$1001 to $2000</a>
+    </li>
+
+    <li class="condition-group-item">
+      <a href="#">$2001 to $1000</a>
+    </li>
+
+    <li class="condition-group-item">
+      <a href="#">$4001 to $10000</a>
+    </li>
+
+    <li class="condition-group-item">
+      <a href="#">$10001 & Above</a>
+    </li>
+  </ul>
+
+  <form class="collapse show" id="collapsePrice">
+    <div class="form-group">
+      <div class="mb-4 form-row">
+        <div class="col">
+          <input type="text" class="form-control" placeholder="Max" data-range-max-connected="rangeSlider">
+        </div>
+  
+        <div class="col">
+          <input type="text" class="form-control" placeholder="Min" data-range-min-connected="rangeSlider">
+        </div>
+      </div>
+
+      <div id="rangeSlider" data-range-min="0" data-range-max="10000"></div>
+    </div>
+  </form>
+
+  <div class="mb-4 pb-4 flex-column border-bottom">
+    <h4 class="d-block d-lg-none text-uppercase font-weight-bolder" data-toggle="collapse" href="#collapseRooms" role="button" aria-expanded="true" aria-controls="collapseRooms">
+      <span class="d-flex justify-content-between"><i class="icone- icon-arrow-down-sign-to-navigate-3"></i>Price</span>
+    </h4>
+    <h4 class="d-none d-lg-block text-uppercase font-weight-bolder">Rooms</h4>
+
+    <div class="collapse show" id="collapseRooms">
+      <div class="checkbox">
+        <label>
+          <div class="mr-2">Exchange (<span>9624</span>)</div>
+          <input type="checkbox" value="">
+          <span class="cr"><i class="cr-icon icon-check-1"></i></span>
+        </label>
+      </div>
+  
+      <div class="checkbox">
+        <label>
+          <div class="mr-2">Price incl.VAT (<span>1424</span>)</div>
+          <input type="checkbox" value="">
+          <span class="cr"><i class="cr-icon icon-check-1"></i></span>
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <div class="mb-4 pb-4 flex-column border-bottom">
+    <h4 class="d-block d-lg-none text-uppercase font-weight-bolder" data-toggle="collapse" href="#collapseBrand" role="button" aria-expanded="true" aria-controls="collapseBrand">
+      <span class="d-flex justify-content-between"><i class="icone- icon-arrow-down-sign-to-navigate-3"></i>Brand</span>
+    </h4>
+    <h4 class="d-none d-lg-block text-uppercase font-weight-bolder">Brand</h4>
+
+    <div class="collapse show" id="collapseBrand">
+      <select class="selectpicker" data-style-base="mb-4 form-control form-control-select" data-style="">
+        <option selected>Brand</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+      </select>
+
+      <select class="selectpicker" data-style-base="mb-4 form-control form-control-select" data-style="">
+        <option selected>Model</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+      </select>
+
+      <select class="selectpicker" data-style-base="mb-4 form-control form-control-select" data-style="">
+        <option selected>Generation</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+      </select>
+    </div>
+  </div>
+  
+
+  <div class="mb-4 flex-column border-bottom">
+    <h4 class="d-block d-lg-none text-uppercase font-weight-bolder" data-toggle="collapse" href="#collapseYearOfIssue" role="button" aria-expanded="true" aria-controls="collapseYearOfIssue">
+      <span class="d-flex justify-content-between"><i class="icone- icon-arrow-down-sign-to-navigate-3"></i>Year of issue</span>
+    </h4>
+    <h4 class="d-none d-lg-block text-uppercase font-weight-bolder">Year of issue</h4>
+
+    <div class="collapse show" id="collapseYearOfIssue">
+      <div class="mb-4 form-row">
+        <div class="col">
+          <input type="text" class="form-control" placeholder="20">
+        </div>
+
+        <div class="col">
+          <input type="text" class="form-control" placeholder="1">
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="mb-4 pb-4 flex-column border-bottom">
+    <h4 class="d-block d-lg-none text-uppercase font-weight-bolder" data-toggle="collapse" href="#collapseBodyType" role="button" aria-expanded="true" aria-controls="collapseBodyType">
+      <span class="d-flex justify-content-between"><i class="icone- icon-arrow-down-sign-to-navigate-3"></i>Body type</span>
+    </h4>
+    <h4 class="d-none d-lg-block text-uppercase font-weight-bolder">Body type</h4>
+
+    <div class="mb-3 pb-4 flex-column border-bottom collapse show" id="collapseBodyType">
+      <select class="selectpicker" data-style-base="mb-4 form-control form-control-select" data-style="">
+        <option selected>Select</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+      </select>
+    </div>
+  </div>
+  
+  <div class="mb-4 pb-4 flex-column border-bottom">
+    <h4 class="d-block d-lg-none text-uppercase font-weight-bolder" data-toggle="collapse" href="#collapseEngineType" role="button" aria-expanded="true" aria-controls="collapseEngineType">
+      <span class="d-flex justify-content-between"><i class="icone- icon-arrow-down-sign-to-navigate-3"></i>Engine's type</span>
+    </h4>
+    <h4 class="d-none d-lg-block text-uppercase font-weight-bolder">Engine's type</h4>
+
+    <div class="collapse show" id="collapseEngineType">
+      <select class="selectpicker" data-style-base="mb-4 form-control form-control-select" data-style="">
+        <option selected>Open this select menu</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+      </select>
+  
+      <div class="checkbox">
+        <label>
+          <div class="mr-2">Hybrid (<span>548</span>)</div>
+          <input type="checkbox" value="">
+          <span class="cr"><i class="cr-icon icon-check-1"></i></span>
+        </label>
+      </div>
+  
+      <div class="checkbox">
+        <label>
+          <div class="mr-2">Gas equipment (<span>833</span>)</div>
+          <input type="checkbox" value="">
+          <span class="cr"><i class="cr-icon icon-check-1"></i></span>
+        </label>
+      </div>
+    </div>
+  </div>
+  
+  <div class="mb-4 pb-4 flex-column border-bottom">
+    <h4 class="d-block d-lg-none text-uppercase font-weight-bolder" data-toggle="collapse" href="#collapseTransmission" role="button" aria-expanded="true" aria-controls="collapseTransmission">
+      <span class="d-flex justify-content-between"><i class="icone- icon-arrow-down-sign-to-navigate-3"></i>Transmission</span>
+    </h4>
+    <h4 class="d-none d-lg-block text-uppercase font-weight-bolder">Transmission</h4>
+    
+    <div class="collapse show" id="collapseTransmission">
+      <div class="checkbox">
+        <label>
+          <div class="mr-2">Automatic (<span>13 156</span>)</div>
+          <input type="checkbox" value="">
+          <span class="cr"><i class="cr-icon icon-check-1"></i></span>
+        </label>
+      </div>
+
+      <div class="checkbox">
+        <label>
+          <div class="mr-2">Mechanical (<span>18 980</span>)</div>
+          <input type="checkbox" value="">
+          <span class="cr"><i class="cr-icon icon-check-1"></i></span>
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <div class="mb-4 flex-column">
+    <h4 class="d-block d-lg-none text-uppercase font-weight-bolder" data-toggle="collapse" href="#collapseEngineVolume" role="button" aria-expanded="true" aria-controls="collapseEngineVolume">
+      <span class="d-flex justify-content-between"><i class="icone- icon-arrow-down-sign-to-navigate-3"></i>Engine volume</span>
+    </h4>
+    <h4 class="d-none d-lg-block text-uppercase font-weight-bolder">Engine volume</h4>
+      
+    <div class="mb-4 form-row collapse show" id="collapseEngineVolume">
+      <div class="col">
+        <select class="selectpicker" data-style-base="mb-4 form-control form-control-select" data-style="">
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </select>
+      </div>
+
+      <div class="col">
+        <select class="selectpicker" data-style-base="mb-4 form-control form-control-select" data-style="">
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <div class="mb-4 flex-column">
+    <h4 class="d-block d-lg-none text-uppercase font-weight-bolder" data-toggle="collapse" href="#collapseDriveUnit" role="button" aria-expanded="true" aria-controls="collapseDriveUnit">
+      <span class="d-flex justify-content-between"><i class="icone- icon-arrow-down-sign-to-navigate-3"></i>Drive unit</span>
+    </h4>
+    <h4 class="d-none d-lg-block text-uppercase font-weight-bolder">Drive unit</h4>
+      
+    <div class="collapse show" id="collapseDriveUnit">
+      <div class="checkbox">
+        <label>
+          <div class="mr-2">Front (<span>24 007</span>)</div>
+          <input type="checkbox" value="">
+          <span class="cr"><i class="cr-icon icon-check-1"></i></span>
+        </label>
+      </div>
+
+      <div class="checkbox">
+        <label>
+          <div class="mr-2">Rear (<span>3817</span>)</div>
+          <input type="checkbox" value="">
+          <span class="cr"><i class="cr-icon icon-check-1"></i></span>
+        </label>
+      </div>
+      
+      <div class="checkbox">
+        <label>
+          <div class="mr-2">Full (<span>4312</span>)</div>
+          <input type="checkbox" value="">
+          <span class="cr"><i class="cr-icon icon-check-1"></i></span>
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <div class="mb-4 flex-column">
+    <h4 class="d-block d-lg-none text-uppercase font-weight-bolder" data-toggle="collapse" href="#collapseMileage" role="button" aria-expanded="true" aria-controls="collapseMileage">
+      <span class="d-flex justify-content-between"><i class="icone- icon-arrow-down-sign-to-navigate-3"></i>Mileage</span>
+    </h4>
+    <h4 class="d-none d-lg-block text-uppercase font-weight-bolder">Mileage</h4>
+
+    <div class="collapse show" id="collapseMileage">
+      <div class="mb-4 form-row">
+        <div class="col">
+          <select class="selectpicker" data-style-base="mb-4 form-control form-control-select" data-style="">
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+        </div>
+
+        <div class="col">
+          <select class="selectpicker" data-style-base="mb-4 form-control form-control-select" data-style="">
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="mb-4 pb-4 d-flex flex-column border-bottom">
+    <h4 class="d-block d-lg-none text-uppercase font-weight-bolder" data-toggle="collapse" href="#collapseColour" role="button" aria-expanded="true" aria-controls="collapseColour">
+      <span class="d-flex justify-content-between"><i class="icone- icon-arrow-down-sign-to-navigate-3"></i>Colour</span>
+    </h4>
+    <h4 class="d-none d-lg-block text-uppercase font-weight-bolder">Colour</h4>
+
+    <div class="d-flex flex-wrap justify-content-between collapse show" id="collapseColour">
+      <div class="mr-2 mb-2 colour-element colour-green"></div>
+      <div class="mr-2 mb-2 colour-element colour-yellow"></div>
+      <div class="mr-2 mb-2 colour-element colour-orange"></div>
+      <div class="mr-2 mb-2 colour-element colour-red"></div>
+      <div class="mr-2 mb-2 colour-element colour-silver"></div>
+      <div class="mr-2 mb-2 colour-element colour-metalic"></div>
+      <div class="mr-2 mb-2 colour-element colour-white"></div>
+      <div class="mb-2 colour-element colour-black"></div>
+
+      <div class="mr-2 mb-2 colour-element colour-gradient"></div>
+      <div class="mr-2 mb-2 colour-element colour-candy"></div>
+      <div class="mr-2 mb-2 colour-element colour-burgundy"></div>
+      <div class="mr-2 mb-2 colour-element colour-crem"></div>
+      <div class="mr-2 mb-2 colour-element colour-brown"></div>
+      <div class="mr-2 mb-2 colour-element colour-purple"></div>
+      <div class="mr-2 mb-2 colour-element colour-blue"></div>
+      <div class="mb-2 colour-element colour-sky"></div>
+    </div>
+  </div>
+
+  <div class="mb-4 d-flex flex-column border-bottom">
+    <h4 class="d-block d-lg-none text-uppercase font-weight-bolder" data-toggle="collapse" href="#collapseSeller" role="button" aria-expanded="true" aria-controls="collapseSeller">
+      <span class="d-flex justify-content-between"><i class="icone- icon-arrow-down-sign-to-navigate-3"></i>Seller</span>
+    </h4>
+    <h4 class="d-none d-lg-block text-uppercase font-weight-bolder">Seller</h4>
+
+    <div class="collapse show" id="collapseSeller">
+      <div class="checkbox">
+        <label>
+          <div class="mr-2">Private person (<span>17 830</span>)</div>
+          <input type="checkbox" value="">
+          <span class="cr"><i class="cr-icon icon-check-1"></i></span>
+        </label>
+      </div>
+      <div class="checkbox">
+        <label>
+          <div class="mr-2">Autohouse (<span>7282</span>)</div>
+          <input type="checkbox" value="">
+          <span class="cr"><i class="cr-icon icon-check-1"></i></span>
+        </label>
+      </div>
+      <div class="checkbox">
+        <label>
+          <div class="mr-2">Car dealer (<span>7024</span>)</div>
+          <input type="checkbox" value="">
+          <span class="cr"><i class="cr-icon icon-check-1"></i></span>
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <div class="mb-5 d-flex flex-column">
+    <h4 class="d-block d-lg-none text-uppercase font-weight-bolder" data-toggle="collapse" href="#collapseLocation" role="button" aria-expanded="true" aria-controls="collapseLocation">
+      <span class="d-flex justify-content-between"><i class="icone- icon-arrow-down-sign-to-navigate-3"></i>Location</span>
+    </h4>
+    <h4 class="d-none d-lg-block text-uppercase font-weight-bolder">Location</h4>
+
+    <div class="d-flex flex-column collapse show" id="collapseLocation">
+      <select class="selectpicker" data-style-base="mb-4 form-control form-control-select" data-style="">
+        <option selected>Country</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+      </select>
+      <select class="selectpicker" data-style-base="mb-4 form-control form-control-select" data-style="">
+        <option selected>Region</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+      </select>
+      <select class="selectpicker" data-style-base="mb-4 form-control form-control-select" data-style="">
+        <option selected>City</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+      </select>
+    </div>
+  </div>
+
+  <button type="button" class="d-flex btn-primary rounded-bottom btn-extra-options">
+    Extra options
+  </button>
+</div>

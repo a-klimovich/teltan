@@ -1,3 +1,6 @@
+@import '../variables';
+@import "node_modules/bootstrap-scss/mixins";
+
 .product-line {
   position: relative;
 
@@ -6,26 +9,14 @@
   }
 
   .card-body {
-    border-right: 1px solid #e7e7e7;
+    @include media-breakpoint-up(lg) {
+      border-right: 1px solid #e7e7e7;
+    }
   }
 
   .card-price {
     font-weight: bold;
     font-size: 20px;
-  }
-  
-  .gray-line {
-    position: relative;
-    
-    &::after {
-      content: "";
-      position: absolute;
-      height: 1px;
-      background: #f3f3f3;
-      bottom: 0;
-      left: 20px;
-      width: calc(100% - 15px);
-    }
   }
 
   .card-title {
@@ -34,24 +25,30 @@
   }
 
   .like {
-    position: absolute;
-    right: 1rem;
-    top: 1rem;
-
-    border: transparent;
-    border-radius: 4px;
-
-    padding: 7px;
-
-    background: #f4f4f4;
+    cursor: pointer;
 
     &:hover {
-      color: #ef0bc7;
-      cursor: pointer;
+      i {
+        color: red;
+      }
     }
   }
 
-  @media (max-width: 991px) {
+  .active {
+    i {
+      color: red;
+    }
+  }
+
+  .image-box {
+    border-bottom: 1px solid #dee2e6;
+
+    @include media-breakpoint-up(lg) {
+      border-bottom: none;
+    }
+  }
+
+  @include media-breakpoint-down(lg) {
     &__info {
       padding-bottom: 20px;
     }
@@ -67,5 +64,24 @@
       line-clamp: 2;
       box-orient: vertical;
     }
+  }
+}
+
+.followThisItem {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+
+  border: transparent;
+  border-radius: 4px;
+
+  width: 32px;
+  height: 32px;
+
+  background: #f4f4f4;
+  cursor: pointer;
+
+  i:hover {
+    color: red;
   }
 }

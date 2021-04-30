@@ -1,0 +1,13 @@
+.header-auto-category {
+  height: 50px;
+  overflow: hidden;
+
+  button {
+    box-shadow: inset -35px 0px 34px -34px #368a50;
+
+    &:active {
+      box-shadow: none;
+      background-color: #f5f5f5;
+    }
+  }
+}

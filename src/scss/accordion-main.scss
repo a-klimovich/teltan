@@ -1,0 +1,30 @@
+@import "variables";
+@import "node_modules/bootstrap-scss/mixins";
+
+.accordion-main {
+  &__inner {
+    min-width: 100%;
+  }
+}
+
+@include media-breakpoint-down(lg) {
+  .accordion-main {
+    display: flex;
+    overflow-x: auto;
+
+    &__inner {
+      display: flex;
+    }
+    
+    &__row {
+      margin: 0 !important;
+      flex-wrap: nowrap !important;
+      margin-right: $grid-gutter-width-mobile !important;
+    }
+  
+    &__btn {
+      display: inline-block !important;
+      width: 220px !important;
+    }
+  }
+}

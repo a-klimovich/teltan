@@ -1,5 +1,12 @@
+@import '../variables';
+@import "node_modules/bootstrap-scss/mixins";
+
 .user-vip {
-  padding: 20px 20px 0px 20px;
+  padding: 10px 5px 0px 5px;
+
+  @include media-breakpoint-up(lg) {
+    padding: 20px 20px 0px 20px;
+  }
 
   .fluid-gray-line {
     position: absolute;

@@ -1,0 +1,40 @@
+<div class="property-step-price">
+  <h2 class="mb-4 text-center text-uppercase font-weight-bolder auto-step2__title">Choose a brand</h2>
+
+  <form action="/">
+    <div class="d-flex justify-content-center">
+      <div class="mr-4 mb-4 form_radio_btn">
+        <input id="checkbox-students" type="checkbox" name="Not students">
+        <label for="checkbox-students">Not students</label>
+      </div>
+      <div class="mr-4 mb-4 form_radio_btn">
+        <input id="checkbox-children" type="checkbox" name="Without children">
+        <label for="checkbox-children">Without children</label>
+      </div>
+      <div class="mr-4 mb-4 form_radio_btn">
+        <input id="checkbox-animals" type="checkbox" name="No animals">
+        <label for="checkbox-animals">No animals</label>
+      </div>
+    </div>
+  </form>
+
+  <p class="text-center">
+    Prices on the site are displayed in Belarusian rubles, as well as for reference purposes - in US dollars. 
+    The recalculation is made at the rate of the National Bank of the Republic of Belarus
+  </p>
+
+  <p class="mb-4 text-center">We remind you that all payments on the territory of Belarus between citizens of the Republic of Belarus are carried out exclusively in Belarusian rubles.</p>
+
+  <form action="/" class="d-flex justify-content-center align-items-center">
+    <div class="d-flex">
+      <select class="selectpicker" data-style-base="h-100 form-control form-control-select" data-style="">
+        <option value="USD" active>$</option>
+        <option value="EUR">€</option>
+      </select>
+
+      <div class="ml-4 mb-0 form-group">
+        <input type="number" class="form-control" id="sellPrice" placeholder="0" required>
+      </div>
+    </div>
+  </form>
+</div>

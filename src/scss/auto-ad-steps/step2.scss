@@ -1,0 +1,40 @@
+@import '../variables';
+@import "node_modules/bootstrap-scss/mixins";
+
+.auto-step2 {
+  padding: 0;
+
+  &__title {
+    @include media-breakpoint-down(lg) {
+      font-size: 20px;
+    }
+  }
+
+  .wrapper-brand-items {
+    .form_radio_btn {
+      width: 100%;
+  
+      label {
+        width: 100%;
+        padding-right: 5px;
+      }
+   }
+  }
+
+  .brand-filter {
+    @include media-breakpoint-down(lg) {
+      label {
+        width: 110px;
+      }
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    padding: 0 65px;
+  }
+
+  input {
+    height: 54px;
+    color: #5a5a5a;
+  }
+}

@@ -1,0 +1,33 @@
+@import "../variables";
+@import "node_modules/bootstrap-scss/mixins";
+
+.property.step-three {
+  p {
+    padding-top: 0;
+
+    // @include media-breakpoint-up(lg) {
+    //   padding-top: 14px;
+    // }
+  }
+
+  label, input, select {
+    width: 150px;
+    height: 54px;
+
+    margin-bottom: 0;
+
+    color: #5a5a5a;
+  }
+
+  input::placeholder {
+    color: #5a5a5a;
+  }
+
+  .floor-select {
+    width: 25%;
+
+    @include media-breakpoint-up(lg) {
+      width: 150px;
+    }
+  }
+}

@@ -1,0 +1,22 @@
+.collapse-menu-on-drop {
+
+  .list-wrap {
+    a {
+      font-weight: 700;
+      padding-right: 20px;
+    }
+
+    li {
+      line-height: 40px;
+    }
+
+    li::after {
+      display: inline-block;
+      content: "\e904";
+      font-family: 'icomoon';
+      transform: rotate(90deg);
+      position: relative;
+      top: 2px;
+    }
+  }
+}

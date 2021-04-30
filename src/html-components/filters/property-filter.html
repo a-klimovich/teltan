@@ -1,0 +1,193 @@
+<div class="p-3 pt-4 pb-4 card text-right condition"  id="filterModalContent">
+  <div class="pb-3 mb-4 d-flex d-lg-none justify-content-between border-bottom">
+    <a type="button"><i class="mr-3 icon-clear"></i> Close</a>
+    <h4 class="m-0 d-inline-block text-uppercase font-weight-bolder">Filters</h4>
+  </div>
+  
+  <h4 class="d-block d-lg-none text-uppercase font-weight-bolder" data-toggle="collapse" href="#collapseDepartment" role="button" aria-expanded="true" aria-controls="collapseDepartment">
+    <span class="d-flex justify-content-between"><i class="icone- icon-arrow-down-sign-to-navigate-3"></i> Department</span>
+  </h4>
+  <h4 class="d-none d-lg-block text-uppercase font-weight-bolder">Department</h4>
+
+  <ul class="condition-group collapse show" id="collapseDepartment">
+    <li class="condition-group-item">
+      <a href="#">Apartments for rent</a>
+    </li>
+    <li class="condition-group-item">
+      <a href="#">Sale of apartments</a>
+    </li>
+    <li class="condition-group-item">
+      <a href="#">Commercial property</a>
+    </li>
+    <li class="condition-group-item">
+      <a href="#">New apartments</a>
+    </li>
+  </ul>
+
+  <h4 class="d-block d-lg-none text-uppercase font-weight-bolder" data-toggle="collapse" href="#collapsePrice" role="button" aria-expanded="true" aria-controls="collapsePrice">
+    <span class="d-flex justify-content-between"><i class="icone- icon-arrow-down-sign-to-navigate-3"></i>Price</span>
+  </h4>
+  <h4 class="d-none d-lg-block text-uppercase font-weight-bolder">Price</h4>
+
+  <ul class="border-bottom-0 condition-group collapse show" id="collapsePrice">
+    <li class="condition-group-item">
+      <a href="#">Under $25</a>
+    </li>
+
+    <li class="condition-group-item">
+      <a href="#">$25 to $50</a>
+    </li>
+
+    <li class="condition-group-item">
+      <a href="#">$50 to $100</a>
+    </li>
+
+    <li class="condition-group-item">
+      <a href="#">$100 to $200</a>
+    </li>
+
+    <li class="condition-group-item">
+      <a href="#">$200 & Above</a>
+    </li>
+  </ul>
+
+  <form class="collapse show" id="collapsePrice">
+    <div class="form-group">
+      <div class="mb-4 form-row">
+        <div class="col">
+          <input type="text" class="form-control" placeholder="Max" data-range-max-connected="rangeSlider">
+        </div>
+  
+        <div class="col">
+          <input type="text" class="form-control" placeholder="Min" data-range-min-connected="rangeSlider">
+        </div>
+      </div>
+
+      <div id="rangeSlider" data-range-min="0" data-range-max="10000"></div>
+    </div>
+  </form>
+
+  <div class="mb-4 pb-4 flex-column border-bottom">
+    <h4 class="d-block d-lg-none text-uppercase font-weight-bolder" data-toggle="collapse" href="#collapseRooms" role="button" aria-expanded="true" aria-controls="collapseRooms">
+      <span class="d-flex justify-content-between"><i class="icone- icon-arrow-down-sign-to-navigate-3"></i> Rooms</span>
+    </h4>
+    <h4 class="d-none d-lg-block text-uppercase font-weight-bolder">Rooms</h4>
+
+    <div class="collapse show" id="collapseRooms">
+      <div class="mb-4 form-row">
+        <div class="col">
+          <input type="text" class="form-control" placeholder="Max">
+        </div>
+
+        <div class="col">
+          <input type="text" class="form-control" placeholder="Min">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="mb-4 pb-4 flex-column border-bottom">
+    <h4 class="d-block d-lg-none text-uppercase font-weight-bolder" data-toggle="collapse" href="#collapseArea" role="button" aria-expanded="true" aria-controls="collapseArea">
+      <span class="d-flex justify-content-between"><i class="icone- icon-arrow-down-sign-to-navigate-3"></i> Area</span>
+    </h4>
+    <h4 class="d-none d-lg-block text-uppercase font-weight-bolder">Area</h4>
+
+    <div class="collapse show" id="collapseArea">
+      <div class="mb-4 form-row">
+        <div class="col">
+          <input type="text" class="form-control" placeholder="Max">
+        </div>
+
+        <div class="col">
+          <input type="text" class="form-control" placeholder="Min">
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  <div class="mb-4 flex-column border-bottom">
+    <h4 class="d-block d-lg-none text-uppercase font-weight-bolder" data-toggle="collapse" href="#collapseFloor" role="button" aria-expanded="true" aria-controls="collapseFloor">
+      <span class="d-flex justify-content-between"><i class="icone- icon-arrow-down-sign-to-navigate-3"></i> Floor</span>
+    </h4>
+    <h4 class="d-none d-lg-block text-uppercase font-weight-bolder">Floor</h4>
+    
+    <div class="collapse show" id="collapseFloor">
+      <div class="mb-4 form-row">
+        <div class="col">
+          <input type="text" class="form-control" placeholder="20">
+        </div>
+
+        <div class="col">
+          <input type="text" class="form-control" placeholder="1">
+        </div>
+      </div>
+    </div>
+    
+    <p>Above 20</p>
+  </div>
+  
+  <div class="mb-4 pb-4 flex-column border-bottom">
+    <h4 class="d-block d-lg-none text-uppercase font-weight-bolder" data-toggle="collapse" href="#collapsePropertyType" role="button" aria-expanded="true" aria-controls="collapsePropertyType">
+      <span class="d-flex justify-content-between"><i class="icone- icon-arrow-down-sign-to-navigate-3"></i> Property type</span>
+    </h4>
+    <h4 class="d-none d-lg-block text-uppercase font-weight-bolder">Property type</h4>
+    
+    <div class="collapse show" id="collapsePropertyType">
+      <select class="custom-select mb-3">
+        <option selected>Open this select menu</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+      </select>
+    </div>
+  </div>
+  
+  <div class="mb-4 pb-4 flex-column border-bottom">
+    <h4 class="d-block d-lg-none text-uppercase font-weight-bolder" data-toggle="collapse" href="#collapseCity" role="button" aria-expanded="true" aria-controls="collapseCity">
+      <span class="d-flex justify-content-between"><i class="icone- icon-arrow-down-sign-to-navigate-3"></i> City</span>
+    </h4>
+    <h4 class="d-none d-lg-block text-uppercase font-weight-bolder">City</h4>
+    
+    <div class="collapse show" id="collapseCity">
+      <select class="custom-select mb-3">
+        <option selected>Open this select menu</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+      </select>
+    </div>
+  </div>
+  
+  <div class="mb-4 pb-4 flex-column border-bottom">
+    <h4 class="d-block d-lg-none text-uppercase font-weight-bolder" data-toggle="collapse" href="#collapseDistrict" role="button" aria-expanded="true" aria-controls="collapseDistrict">
+      <span class="d-flex justify-content-between"><i class="icone- icon-arrow-down-sign-to-navigate-3"></i> district</span>
+    </h4>
+    <h4 class="d-none d-lg-block text-uppercase font-weight-bolder">district</h4>
+    
+    <div class="collapse show" id="collapseDistrict">
+      <select class="custom-select mb-3">
+        <option selected>Open this select menu</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="mb-4 flex-column">
+    <h4 class="d-block d-lg-none text-uppercase font-weight-bolder" data-toggle="collapse" href="#collapeTheStreet" role="button" aria-expanded="true" aria-controls="collapeTheStreet">
+      <span class="d-flex justify-content-between"><i class="icone- icon-arrow-down-sign-to-navigate-3"></i> the street</span>
+    </h4>
+    <h4 class="d-none d-lg-block text-uppercase font-weight-bolder">the street</h4>
+    
+    <div class="collapse show" id="collapeTheStreet">
+      <select class="custom-select mb-3">
+        <option selected>Open this select menu</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+      </select>
+    </div>
+  </div>
+</div>

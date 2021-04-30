@@ -1,0 +1,66 @@
+@import '../variables';
+@import "node_modules/bootstrap-scss/mixins";
+
+.auto-ad-step3 {
+  textarea {
+    border-radius: 8px;
+    border-color: #e8e8e8;
+  }
+
+  &__colors {
+    .colour-element {
+      display: block;
+      width: 42px;
+      height: 42px;
+    }
+
+    input[type=radio] {
+      &:checked + label {
+        box-shadow: inset 0px 0px 2px 2px #33e56d;
+        border-color: #33e56d;
+      }
+    }
+  }
+
+  input {
+    height: 54px;
+  }
+
+  .dropdown.bootstrap-select {
+    width: fit-content !important;
+    margin-right: 10px;
+    margin-bottom: 10px;
+
+    @include media-breakpoint-up(lg) {
+      margin-right: 20px;
+      margin-bottom: 20px;
+    }
+
+    .form-control-select {
+      max-width: 100% !important;
+    }
+
+    .filter-option {
+      margin-left: 10px;
+    }
+  }
+
+  .select-w-100 {
+    .dropdown.bootstrap-select {
+      width: 100% !important;
+      margin: 0;
+    }
+  }
+
+  .form_radio_btn {
+    label {
+      padding: 0 12px;
+      width: fit-content;
+      height: 54px;
+
+      @include media-breakpoint-up(lg) {
+        padding: 0 25px;
+      }
+    }
+  }
+}

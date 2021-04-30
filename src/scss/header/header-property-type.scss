@@ -1,3 +1,6 @@
+@import '../variables';
+@import "node_modules/bootstrap-scss/mixins";
+
 .header-property-type-menu {
   display: flex;
   justify-content: center;
@@ -5,6 +8,54 @@
 
   background-image: url('../../assets/property-main-menu.png');
   min-height: 208px;
+
+  .btn-menu-seacrh {
+    border: none;
+    width: 75px;
+  }
+
+  .active {
+    color: #000000 !important;
+    background: #ffffff !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+
+  .btn-menu-property-section {
+    min-width: 120px;
+    height: 58px;
+    box-shadow: inset -35px 0 34px -34px #368a50;
+  }
+
+  .bootstrap-select {
+    // .price {
+
+    // }
+    // .area {
+
+    // }
+    // .floor {
+
+    // }
+    // .room {
+
+    // }
+    .address {
+      width: 100% !important;
+      
+       @include media-breakpoint-up(lg) {
+          width: 300px !important;
+        }
+      }
+
+    .typeBuilding {
+      width: 100% !important;
+      
+      @include media-breakpoint-up(lg) {
+        width: 330px !important;
+      }
+    }
+  }
 
   .radius-top-right{
     border-radius: 0;

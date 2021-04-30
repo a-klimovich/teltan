@@ -1,0 +1,31 @@
+@import '../variables';
+@import "node_modules/bootstrap-scss/mixins";
+
+.auto-ad-step4 {
+  min-height: 60vh;
+  max-width: 100%;
+  margin: 0 auto;
+
+  .dropdown.bootstrap-select {
+    width: fit-content !important;
+  }
+  .form-control-select {
+    width: 100px !important;
+  }
+
+  @include media-breakpoint-up(lg) {
+    width: 65%;
+  }
+
+  #select-currency {
+    max-width: 114px;
+    height: 64px;
+
+    margin-right: 30px;
+  }
+
+  #userItemPrice {
+    max-width: 244px;
+    height: 64px;
+  }
+}

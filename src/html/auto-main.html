@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  @@include('./utils/head.html')
+</head>
+<body>
+  @@include('./modals/modal.html')
+  <!-- Modal -->
+  @@include('./header/header-auto.html')
+
+  
+
+  <div class="mb-5 pb-0 container-fluid breadcrumb-beckground">
+    <div class="container">
+      @@include('breadcrumbs.html')
+
+      <div class="d-none d-lg-flex">
+        @@include('header/header-auto-category.html')
+      </div>
+    </div>
+  </div>
+
+  <main class="mb-5">
+    <div class="container">
+      <div class="mb-4 row flex-column-reverse flex-lg-row">
+        <div class="col-12 col-lg-9">
+          <div class="d-flex justify-content-between">
+            @@include('products-sort.html')
+            @@include('pagination.html')
+          </div>
+        </div>
+        <div class="col-12 col-lg-3">
+          <h3 class="subtitle">
+            Auto market
+          </h3>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12 col-lg-9">
+          @@include('./product-card/auto-product-line.html')
+          @@include('./product-card/auto-product-line.html')
+          @@include('./product-card/auto-product-line.html')
+          @@include('./product-card/auto-product-line.html')
+          @@include('./product-card/auto-product-line.html')
+          @@include('./product-card/auto-product-line.html')
+          @@include('./product-card/auto-product-line.html')
+        </div>
+
+        <div class="col-12 col-lg-3">
+          @@include('./filters/auto-filter.html')
+        </div>
+      </div>
+
+      <div class="mb-4 row">
+        <div class="col-12 col-lg-9">
+          @@include('text-about-category.html', {
+            subtitle: 'Auto market'
+          })
+        </div>
+      </div>
+    </div>
+  </main>
+
+  @@include('footer.html')
+
+  @@include('./utils/includies.html')
+</body>
+</html>

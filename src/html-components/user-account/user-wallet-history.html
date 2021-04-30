@@ -5,50 +5,58 @@
         1 Tcoin = 0.10 <span class="currency-sign">₪</span>
       </div>
 
-      <div class="d-flex justify-content-between align-items-center">
-        <h5 class="m-0 text-uppercase font-weight-bolder">My Tcoins: <span class="state-of-an-account">25 T</span></h5>
-
-        <form class="d-flex justify-content-center align-items-center conversion-booth" action="">
-          <div class="input-group">
-            <input type="text" class="form-control" placeholder="100" aria-describedby="basic-addon2">
-            <div class="input-group-append">
-              <span class="input-group-text" id="tCoin">T</span>
-            </div>
-          </div>
+      <div class="d-flex flex-column flex-lg-row justify-content-center align-items-center">
+        <div class="mb-4 mb-lg-0 d-flex justify-content-start justify-content-lg-end">
+          <span class="mr-4 d-flex align-items-center text-uppercase font-weight-bolder wallet-balance-name">My Tcoins: <span class="state-of-an-account">25 T</span></span>
           
-          <span class="mx-4">=</span>
-
-          <div class="input-group">
-            <input type="text" class="form-control" placeholder="10" aria-describedby="basic-addon2">
-            <div class="input-group-append">
-              <span class="input-group-text" id="shekel">₪</span>
+          <form id="convertor" class="d-flex justify-content-between align-items-center conversion-booth" action="">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="100" aria-describedby="basic-addon2">
+              <div class="input-group-append">
+                <span class="input-group-text" id="tCoin">T</span>
+              </div>
             </div>
-          </div>
-        </form>
+            
+            <span class="mx-3">=</span>
 
-        <button type="submit" class="btn btn-primary text-uppercase font-weight-bolder">change</button>
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="10" aria-describedby="basic-addon2">
+              <div class="input-group-append">
+                <span class="input-group-text" id="shekel">₪</span>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <div class="ml-4 d-flex justify-content-center justify-content-lg-start">
+          <button for="convertor" type="submit" class="btn btn-primary text-uppercase font-weight-bolder">change</button>
+        </div>
       </div>
     </div>
 
     <div class="mb-4 card">
-      <div class="pb-4 mb-4 d-flex justify-content-between align-items-center border-bottom">
-        <h5 class="m-0 text-uppercase font-weight-bolder">My balance: <span class="state-of-an-account">1300 <span class="currency-sign">₪</span></span></h5>
+      <div class="pb-4 mb-4 d-flex flex-row-reverse flex-lg-row justify-content-between align-items-center border-bottom">
+        <span class="m-0 text-nowrap text-uppercase font-weight-bolder wallet-balance-name">My balance: <span class="state-of-an-account">1300 <span class="currency-sign">₪</span></span></span>
   
         <div class="d-flex justify-content-center align-items-center">
-          <button type="submit" class="mr-4 btn btn-primary text-uppercase font-weight-bolder">add</button>
+          <button type="submit" class="mr-4 d-none d-lg-block btn btn-primary text-uppercase font-weight-bolder">add</button>
+          <span type="button" class="mb-0 d-block d-lg-none text-primary text-uppercase text-uppercase font-weight-bolder">add balance</span>
 
-          <span class="icon-wallet-1"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span><span class="path8"></span><span class="path9"></span><span class="path10"></span><span class="path11"></span><span class="path12"></span><span class="path13"></span><span class="path14"></span><span class="path15"></span><span class="path16"></span><span class="path17"></span><span class="path18"></span><span class="path19"></span><span class="path20"></span><span class="path21"></span><span class="path22"></span></span>
+          <span class="d-none d-lg-block"><i class="icon-wallet-3"></i></span>
         </div>
       </div>
 
-      <div class="d-flex justify-content-between align-items-center">
-        <h5 class="m-0 text-uppercase font-weight-bolder">My subscriptions: <span class="state-of-an-account">VIP 10</span></h5>
+      <div class="d-flex flex-row-reverse flex-lg-row justify-content-between align-items-center">
+        <span class="m-0 text-uppercase font-weight-bolder wallet-balance-name">My subscriptions: <span class="state-of-an-account">VIP 10</span></span>
   
         <div class="d-flex justify-content-center align-items-center">
-          <button type="button" class="mr-4 btn btn-primary text-uppercase font-weight-bolder">update</button>
-          <button type="button" class="mr-4 btn btn-primary text-uppercase font-weight-bolder">change</button>
+          <button type="button" class="d-none d-lg-block mr-4 btn btn-primary text-uppercase font-weight-bolder">update</button>
+          <button type="button" class="d-none d-lg-block mr-4 btn btn-primary text-uppercase font-weight-bolder">change</button>
 
-          <span class="icon-crown"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span><span class="path8"></span></span>
+          <span type="button" class="mr-3 mb-0 d-block d-lg-none text-primary text-uppercase text-uppercase font-weight-bolder">update</span>
+          <span type="button" class="mb-0 d-block d-lg-none text-primary text-uppercase text-uppercase font-weight-bolder">change</span>
+
+          <span class="d-none d-lg-block icon-crown"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span><span class="path8"></span></span>
         </div>
       </div>
     </div>

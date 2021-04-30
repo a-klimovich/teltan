@@ -1,8 +1,67 @@
+@import '../variables';
+@import "node_modules/bootstrap-scss/mixins";
+
 .user-product {
   position: relative;
 
+  &__body {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+
+    @include media-breakpoint-up(lg) {
+      padding: 15px;
+      border-right: 1px solid #dee2e6;
+    }
+  }
+
   &__info {
-    padding-bottom: 35px;
+    padding-bottom: 5px;
+    border-top: 1px solid #dee2e6;
+
+    @include media-breakpoint-up(lg) {
+      padding-bottom: 35px;
+      border-top: transparent;
+    }
+  }
+
+  &__info-mobile {
+    position: relative;
+    transform: translate(0, -50%);
+    height: 35px;
+
+    z-index: 10;
+
+    .like-btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+      width: 37px;
+      height: 100%;
+
+      padding: 7px;
+      border-radius: 4px;
+      
+      background: #f4f4f4;
+      cursor: pointer;
+
+      &:hover {
+        color: #ef0bc7;
+      }
+    }
+
+    .card-price-mobile {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      padding: 7px;
+      border-radius: 4px;
+
+      background: $primary;
+      color: #ffffff;
+    }
   }
 
   &__btn-edit {
@@ -14,16 +73,21 @@
 
     line-height: 40px;
     margin-bottom: 20px;
+    cursor: pointer;
 
     &:hover {
-      color: #3fb465;
+      color: #ef0bc7;
     }
   }
 
-  &__but-up-product {
+  .mobile-edit-btn {
+    border-radius: 4px;
+  }
+
+  &__up-product {
     position: absolute;
-    top: -16px;
-    right: -10px;
+    top: 15px;
+    right: 15px;
 
     width: 46px;
     height: 46px;
@@ -34,34 +98,33 @@
     color: #ffffff;
     font-weight: 700;
     text-transform: uppercase;
-  }
 
-  .card-body {
-    border-right: 1px solid #e7e7e7;
+    span {
+      position: absolute;
+      top: 50%;
+      right: 50%;
+      transform: translate(50%, -50%);
+    }
   }
 
   .card-price {
     font-weight: bold;
     font-size: 20px;
   }
-  
-  .gray-line {
-    position: relative;
-    
-    &::after {
-      content: "";
-      position: absolute;
-      height: 1px;
-      background: #f3f3f3;
-      bottom: 0;
-      left: 20px;
-      width: calc(100% - 15px);
-    }
-  }
 
   .card-title {
     font-size: 20px;
     margin-bottom: 20px;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -moz-box;
+    -moz-box-orient: vertical;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    line-clamp: 2;
+    box-orient: vertical;
   }
 
   .like {
@@ -79,24 +142,6 @@
     &:hover {
       color: #ef0bc7;
       cursor: pointer;
-    }
-  }
-
-  @media (max-width: 991px) {
-    &__info {
-      padding-bottom: 20px;
-    }
-
-    .card-title {
-      overflow: hidden;
-      text-overflow: ellipsis;
-      display: -moz-box;
-      -moz-box-orient: vertical;
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      -webkit-box-orient: vertical;
-      line-clamp: 2;
-      box-orient: vertical;
     }
   }
 }

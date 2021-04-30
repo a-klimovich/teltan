@@ -1,0 +1,14 @@
+@import '../variables';
+@import "node_modules/bootstrap-scss/mixins";
+
+.auto-brand {
+  color: #5a5a5a;
+  background: #ffffff;
+  height: 54px;
+  border-radius: 8px;
+  width: 100%;
+
+  @include media-breakpoint-up(lg) {
+    padding: 0 20px;
+  }
+}

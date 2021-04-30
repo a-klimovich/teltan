@@ -1,0 +1,71 @@
+.property-step-contact {
+
+  &__time {
+    select {
+      max-width: 130px;
+    }
+
+    label {
+      min-width: 103px;
+    }
+  }
+
+  .contact__main {
+    max-width: 520px;
+    margin: auto;
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+  &__time {
+    .form_radio_btn {
+      label {
+        width: fit-content;
+        margin-right: 25px;
+        padding: 0 15px;
+      }
+    }
+  }
+
+  .dropdown.bootstrap-select {
+    width: 25% !important;
+    margin-right: 15px;
+  }
+
+  .form-control-select {
+    // width: 25% !important;
+  }
+
+  input {
+    height: 54px;
+
+    &::placeholder {
+      color: #5a5a5a;
+    }
+
+    &[type=checkbox] {
+      display: none;
+    }
+
+    &[type=checkbox]:checked + label {
+      background: #33e56d;
+      color: #ffffff;
+      font-weight: 700;
+    }
+  }
+
+  label {
+    width: 150px;
+    height: 54px;
+
+    margin-bottom: 0;
+    color: #5a5a5a;
+  }
+
+  .send-international-number {
+    max-width: 520px;
+    margin: auto;
+  }
+}

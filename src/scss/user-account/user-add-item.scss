@@ -1,12 +1,9 @@
-@import "../variables";
+@import '../variables';
+@import "node_modules/bootstrap-scss/mixins";
 
 .user-add-item {
   input {
     height: 54px;
-  }
-
-  select, option {
-    text-align: right;
   }
 
   input::placeholder,
@@ -20,6 +17,14 @@
     font-weight: bold;
   }
 
+  .label__name {
+    text-align: right;
+
+    @include media-breakpoint-up(lg) {
+      text-align: start;
+    }
+  }
+
   &__photo {
     .box-label-photo {
       overflow: hidden;
@@ -31,17 +36,22 @@
     }
 
     .add-item-photo {
-      font-size: 39px;
+      width: 65px;
+      height: 65px;
+
+      @include media-breakpoint-up(lg) {
+        width: 100px;
+        height: 100px;
+      }
+
+      i {
+        font-size: 39px;
+      }
 
       border: 1px solid #f3f3f3;
       border-radius: 4px;
-      padding: 13px 26px;
 
       cursor: pointer;
-
-      &:not(:last-child) {
-        margin-right: 20px;
-      }
 
       &:hover {
         color: $primary;

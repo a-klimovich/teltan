@@ -17,28 +17,38 @@
   <main class="mb-5">
     <div class="container">
       <div class="row mb-4">
-        <div class="col-4 flex-column">
+        <div class="col-12 col-lg-4 flex-column">
+          <div class="d-block d-lg-none">
+            @@include('./item/item-slider.html')
+          </div>
           @@include('./item/connection-with-seller.html')
           @@include('./item/seller-card.html')
           @@include('./item/exact-address-card.html')
         </div>
 
-        <div class="col-8">
-          @@include('./item/item-slider.html')
+        <div class="col-12 col-lg-8">
+          <div class="d-none d-lg-block">
+            @@include('./item/item-slider.html')
+          </div>
 
           @@include('./item/about-item.html')
         </div>
       </div>
 
-      <h3 class="mb-4 subtitle-item">
+      <h3 class="mb-4 subtitle">
         Similar products
       </h3>
 
-      <div class="row row-cols-4">
-        @@include('./product-card/product.html')
-        @@include('./product-card/product.html')
-        @@include('./product-card/product.html')
-        @@include('./product-card/product.html')
+      <div class="row row-cols-2 row-cols-lg-4 ">
+        <div class="col">
+          @@include('./product-card/product.html')
+        </div>
+        <div class="col">
+          @@include('./product-card/product.html')
+        </div>
+        <div class="col">
+          @@include('./product-card/product.html')
+        </div>
       </div>
     </div>
   </main>

@@ -9,19 +9,27 @@ $secondary:               #c4c4c4;
 $light-gray:              #e7e7e7;
 
 // status color
-$online-status-color: #00ae10;
-$offline-status-color: #b8b8b8;
+$online-status-color:     #00ae10;
+$offline-status-color:    #b8b8b8;
 
 $status-online: $online-status-color;
 
-$font-family-sans-serif:    'Open Sans', sans-serif;
-$font-weight-bolder: 900;
+$font-family-sans-serif:   'Open Sans', sans-serif;
+$font-weight-bolder:        900;
 
 $container-max-widths: (
   sm: 540px,
   md: 720px,
   lg: 960px,
   xl: 1230px
+) !default;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
 ) !default;
 
 $dropdown-link-hover-color:   $light-green;
@@ -50,3 +58,6 @@ $pagination-hover-color:    #fff;
 $pagination-hover-bg:         $light-green;
 
 $box-shadow: -5px 1rem 2rem -2rem #4a4a4a40;
+
+$grid-gutter-width: 30px;
+$grid-gutter-width-mobile: 20px;

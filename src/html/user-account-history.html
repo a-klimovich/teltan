@@ -16,17 +16,17 @@
 
   <main class="mb-5">
     <div class="container">
-      <h3 class="mb-4 subtitle-item">
+      <h3 class="mb-4 subtitle">
         history
       </h3>
 
-      <button type="button" class="mb-4 btn btn-delete-all">
+      <button type="button" class="mb-4  btn btn-delete-all">
         <i class="icon-clear"></i>
         <span class="btn-delete-all__text">delete all</span>
       </button>
     
       <div class="row">
-        <div class="col-9">
+        <div class="col-12 col-lg-9">
           @@include('./user-account/user-history-item.html')
           @@include('./user-account/user-history-item.html')
           @@include('./user-account/user-history-item.html')
@@ -35,7 +35,7 @@
           @@include('./user-account/user-history-item.html')
           @@include('./user-account/user-history-item.html')
         </div>
-        <div class="col-3">
+        <div class="d-none d-lg-block col-lg-3">
           @@include('./user-account/user-profile-menu.html')
         </div>
       </div>

@@ -1,10 +1,19 @@
 @import '../variables';
+@import "node_modules/bootstrap-scss/mixins";
 
 .wallet-history {
   button {
     min-width: 160px;
     min-height: 48px;
     border-radius: 4px;
+  }
+
+  .wallet-balance-name {
+    font-size: 16px;
+
+    @include media-breakpoint-up(lg) {
+      font-size: 20px;
+    }
   }
 
   &__title {
@@ -29,14 +38,21 @@
       margin-bottom: 20px;
     }
 
-    .icon-crown {
+    .icon-crown,
+    .icon-wallet-3 {
       font-size: 33px;
     }
 
     .conversion-booth {
+      height: 48px;
+
       .input-group {
+        height: 100%;
         max-width: 100px;
-        max-height: 48px;
+
+        input {
+          height: 100%;
+        }
   
         input.form-control::placeholder {
           text-align: center;

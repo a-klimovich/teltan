@@ -1,0 +1,60 @@
+<div class="auto-step2">
+  <h2 class="mb-4 text-center text-uppercase font-weight-bolder auto-step2__title">Choose a brand</h2>
+
+  <form id="nameFilter">
+    <div class="mb-4 form-group">
+      <input type="text" name="name" class="form-control" placeholder="Find a brand. For example Volkswagen">
+    </div>
+  </form>
+
+  <div class="mb-4 mb-lg-5 row row-cols-3 row-cols-lg-5 justify-content-end">
+    <div class="mb-3 mb-lg-4 col" data-filter-for="#nameFilter" data-filter="sportage">
+      @@include('./auto-ad-steps/brand-item.html', {
+        brandID: 'Sportage',
+        title: 'Sportage',
+      })
+    </div>
+
+    <div class="mb-3 mb-lg-4 col" data-filter-for="#nameFilter" data-filter="sedona">
+      @@include('./auto-ad-steps/brand-item.html', {
+        brandID: 'Sedona',
+        title: 'Sedona',
+      })
+    </div>
+
+    <div class="mb-3 mb-lg-4 col" data-filter-for="#nameFilter" data-filter="pregio">
+      @@include('./auto-ad-steps/brand-item.html', {
+        brandID: 'Pregio',
+        title: 'Pregio',
+      })
+    </div>
+
+    <div class="mb-3 mb-lg-4 col" data-filter-for="#nameFilter" data-filter="magentis">
+      @@include('./auto-ad-steps/brand-item.html', {
+        brandID: 'Magentis',
+        title: 'Magentis',
+      })
+    </div>
+
+    <div class="mb-3 mb-lg-4 col" data-filter-for="#nameFilter" data-filter="ceed gt">
+      @@include('./auto-ad-steps/brand-item.html', {
+        brandID: 'Ceed GT',
+        title: 'Ceed GT',
+      })
+    </div>
+
+    <div class="mb-3 mb-lg-4 col" data-filter-for="#nameFilter" data-filter="avella">
+      @@include('./auto-ad-steps/brand-item.html', {
+        brandID: 'Avella',
+        title: 'Avella',
+      })
+    </div>
+
+    <div class="mb-3 mb-lg-4 col" data-filter-for="#nameFilter" data-filter="stinger">
+      @@include('./auto-ad-steps/brand-item.html', {
+        brandID: 'Stinger',
+        title: 'Stinger',
+      })
+    </div>
+  </div>
+</div>

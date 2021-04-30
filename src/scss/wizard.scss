@@ -1,0 +1,17 @@
+.wizard-content {
+  display: none;
+
+  &.active {
+    display: block;
+  }
+}
+
+.wizard-control-next,
+.wizard-control-prev,
+.wizard-control-final {
+  display: none !important;
+
+  &.active {
+    display: flex !important;
+  }
+}

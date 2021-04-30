@@ -1,11 +1,20 @@
+@import '../variables';
+@import "node_modules/bootstrap-scss/mixins";
+
 .step-one {
   text-align: center;
 
   &__title {
-    font-size: 30px;
+    font-size: 18px;
     font-weight: 900;
-    margin-bottom: 30px;
-    text-transform: uppercase;
+    margin-bottom: 15px;
+
+    @include media-breakpoint-up(lg) {
+      font-size: 30px;
+      font-weight: 900;
+      margin-bottom: 30px;
+      text-transform: uppercase;
+    }
   }
 
   &__text {
@@ -14,6 +23,7 @@
 
   &__icons-line {
     margin-bottom: 50px;
+    justify-content: center;
 
     .icon {
       font-size: 53px;
@@ -22,8 +32,12 @@
   }
 
   .add-file-section {
-    margin-left: 15%;
-    margin-bottom: 30px;
+    margin: auto;
+    
+    @include media-breakpoint-up(lg) {
+      margin-left: 15%;
+      margin-bottom: 130px; 
+    }
 
     &__delimiter {
       font-size: 23px;
@@ -59,6 +73,11 @@
         margin-bottom: 20px;
         user-select: none;
       }
+
+      label.focus {
+        outline: 1px solid #0078d7;
+        outline: -webkit-focus-ring-color auto 5px;
+      }
   
       label:hover {
         cursor: pointer;
@@ -86,7 +105,7 @@
         z-index: -1;
       }
 
-      button {
+      label {
         width: 285px;
         height: 54px;
 

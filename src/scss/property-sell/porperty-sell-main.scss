@@ -1,32 +1,48 @@
 @import '../variables';
+@import "node_modules/bootstrap-scss/mixins";
 
 .propert-sell-main {
   position: relative;
-  padding: 30px;
+  padding: 20px;
+
+  @include media-breakpoint-up(lg) {
+    padding: 30px;
+  }
 
   &__header {
     padding-bottom: 26px;
     margin-bottom: 38px;
   }
 
-  &__btn-next-step {
+  &__step-control {
     display: flex;
     justify-content: center;
     align-items: center;
 
-    width: 285px;
-    height: 54px;
+    button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 8px;
+      
+      width: 170px;
+      height: 54px;
 
-    text-transform: uppercase;
-    font-weight: bold;
+      text-transform: uppercase;
+      font-weight: bold;
+
+      background: #898989;
+      color: #ffffff;
+
+      @include media-breakpoint-up(lg) {
+        width: 285px;
+      }
+    }
 
     position: absolute;
     bottom: 0;
     left: 50%;
     transform: translate(-50%, 50%);
-
-    background: #898989;
-    color: #ffffff;
 
     .btn-icon {
       display: block;

@@ -1,5 +1,12 @@
+@import '../variables';
+@import "node_modules/bootstrap-scss/mixins";
+
 .exact-address-card {
   padding: 30px;
+
+  @include media-breakpoint-up(lg) {
+    height: fit-content;
+  }
 
   &__title {
     font-size: 17px;
@@ -16,7 +23,11 @@
 
     &__image {
       max-width: 330px;
-      min-height: 204px;
+      height: 100%;
+
+      @include media-breakpoint-up(lg) {
+        min-height: 204px;
+      }
     }
   }
 }

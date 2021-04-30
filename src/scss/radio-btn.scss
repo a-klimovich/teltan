@@ -1,0 +1,35 @@
+.form_radio_btn {
+  display: inline-block;
+  max-width: 100%;
+  overflow: hidden;
+
+  input[type=radio],
+  input[type=checkbox] {
+    display: none;
+
+    &:checked + label {
+      background: #33e56d;
+      color: #ffffff;
+    }
+  }
+
+  label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    max-width: 100%;
+    width: 160px;
+    height: 54px;
+
+    border-radius: 8px;
+    margin-bottom: 0;
+    
+    color: #5a5a5a;
+    
+    cursor: pointer;
+    padding: 0;
+    border: 1px solid #e7e7e7;
+    user-select: none;
+  }
+}

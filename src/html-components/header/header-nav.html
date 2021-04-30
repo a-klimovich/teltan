@@ -1,7 +1,7 @@
 <div class="header-disktop">
   <div class="row mb-3">
 <!-- USER UNREGISTRED -->
-    <div class="col-3 d-flex align-items-center">
+    <!-- <div class="col-3 d-flex align-items-center">
       <ul class="nav font-weight-bold">
         <li class="mr-4 justify-content-center">
           <a class="" href="#" data-toggle="modal" data-target="#registerModal">
@@ -16,14 +16,14 @@
           </a>
         </li>
       </ul>
-    </div>
+    </div> -->
     <!-- USER UNREGISTRED END -->
 
     <!-- USER SIGN IN -->
-    <!-- <div class="col-3 d-flex justify-content-between">
-      <button class="btn btn-primary text-uppercase" href="#" data-toggle="modal" data-target="#registerModal">
+    <div class="col-3 d-flex justify-content-between align-items-center">
+      <a href="#" class="btn btn-primary text-uppercase font-weight-bold"data-toggle="modal" data-target="#registerModal">
         <i class="icon-user-1 mr-2"></i><span>Your Ad</span>
-      </button>
+      </a>
 
       <div class="d-flex align-items-center">
         <a class="d-flex justify-content-center align-items-center font-weight-bold" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -47,10 +47,24 @@
           <a class="dropdown-item">Settings</a>
         </div>
       </div>
-    </div> -->
+    </div>
     <!-- USER SIGN IN END -->
 
     <div class="col-6 d-flex justify-content-around">
+      <div class="d-flex align-items-center">
+        <a class="font-weight-bold" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="icon-arrow-down-sign-to-navigate-3"></i>
+          <span class="mr-2 ml-1">Rus</span>
+          <i class="icon-language"></i>
+        </a>
+    
+        <div class="dropdown-menu">
+          <a class="dropdown-item active">Heb</a>
+          <a class="dropdown-item">Rus</a>
+          <a class="dropdown-item">Eng</a>
+        </div>
+      </div>
+      
       <div class="d-flex align-items-center">
         <a class="font-weight-bold" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <i class="icon-arrow-down-sign-to-navigate-3"></i>
@@ -121,7 +135,8 @@
         </a>
     
         <div class="dropdown-menu">
-          <a class="dropdown-item active">Rus</a>
+          <a class="dropdown-item active">Heb</a>
+          <a class="dropdown-item">Rus</a>
           <a class="dropdown-item">Eng</a>
         </div>
       </div>
@@ -132,62 +147,49 @@
     </a>
   </div>
 
-  <div class="d-flex justify-content-between mb-3 position-relative">
-    <div class="dropdown">
-      <button class="btn btn-transparent" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <div class="mb-3 text-center border-bottom d-flex justify-content-between">
+    <div id="mainNavMenuElement" class="mobile-header-menu-element">
+      <button class="btn btn-transparent" type="button" id="mibileHeaderNav">
         <i class="icon-sirting_line"></i>
       </button>
-      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        <a class="dropdown-item" href="#">Action</a>
-        <a class="dropdown-item" href="#">Another action</a>
-        <a class="dropdown-item" href="#">Something else here</a>
+      <div id="mibileHeaderNavContent" class="text-left mobile-header-nav-content">
+        <a class="font-weight-bold border-bottom" href="#"><i class="mr-2 text-dark icon-helmet"></i> Construction and repair</a>
+        <a class="font-weight-bold border-bottom" href="#"><i class="mr-2 text-dark icon-basketball-ball"></i> Sport. Hobby. Entertainment</a>
+        <a class="font-weight-bold border-bottom" href="#"><i class="mr-2 text-dark icon-desktop"></i> Electronics</a>
+        <a class="font-weight-bold border-bottom" href="#"><i class="mr-2 text-dark icon-shirt-1"></i> Clothing and fashion</a>
+        <a class="font-weight-bold border-bottom" href="#"><i class="mr-2 text-dark icon-blocks"></i> Small children</a>
+        <a class="font-weight-bold border-bottom" href="#"><i class="mr-2 text-dark icon-suitcase-1"></i> Business / Services</a>
+        <a class="font-weight-bold border-bottom" href="#"><i class="mr-2 text-dark icon-gift-card-1"></i> Other</a>
+        <a class="font-weight-bold border-bottom" href="#"><i class="mr-2 text-dark icon-gardening"></i> House and Garden</a>
+        <a class="font-weight-bold border-bottom" href="#"><i class="mr-2 text-dark icon-balloons"></i> Holidays</a>
+        <a class="font-weight-bold border-bottom" href="#"><i class="mr-2 text-dark icon-mark"></i> Conscript soldier</a>
+        <a class="font-weight-bold border-bottom" href="#"><i class="mr-2 text-dark icon-animal-kingdom"></i> Animals</a>
+        <a class="font-weight-bold" href="#"><i class="mr-2 text-dark icon-giftbox-1"></i> Free</a>
       </div>
     </div>
 
-    <div class="dropdown">
-      <button class="btn btn-transparent" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <div class="mobile-header-menu-element">
+      <a class="btn btn-transparent" id="userAccountMenu">
         <i class="icon-user-1"></i>
-      </button>
-      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        <a class="dropdown-item" href="#">Action</a>
-        <a class="dropdown-item" href="#">Another action</a>
-        <a class="dropdown-item" href="#">Something else here</a>
-      </div>
+      </a>
     </div>
 
-    <div class="dropdown">
-      <button class="btn btn-transparent" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <div class="mobile-header-menu-element">
+      <a class="btn btn-transparent" id="userAccountTracked">
         <i class="icon-bell"></i>
-      </button>
-      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        <a class="dropdown-item" href="#">Action</a>
-        <a class="dropdown-item" href="#">Another action</a>
-        <a class="dropdown-item" href="#">Something else here</a>
-      </div>
+      </a>
     </div>
 
-    <div class="dropdown">
-      <button class="btn btn-transparent" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <div class="mobile-header-menu-element">
+      <a class="btn btn-transparent" id="userAccountMessages">
         <i class="icon-chat-1"></i>
-      </button>
-      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        <a class="dropdown-item" href="#">Action</a>
-        <a class="dropdown-item" href="#">Another action</a>
-        <a class="dropdown-item" href="#">Something else here</a>
-      </div>
+      </a>
     </div>
 
-    <div class="dropdown active">
-      <button class="btn btn-transparent" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <div class="mobile-header-menu-element active">
+      <a class="btn btn-transparent" id="userAccountHome">
         <i class="icon-home-4"></i>
-      </button>
-      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        <a class="dropdown-item" href="#">Action</a>
-        <a class="dropdown-item" href="#">Another action</a>
-        <a class="dropdown-item" href="#">Something else here</a>
-      </div>
+      </a>
     </div>
-    
-    <div class="gray-line"></div>
   </div>
 </div>
