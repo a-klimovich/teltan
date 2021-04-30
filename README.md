@@ -3,7 +3,9 @@ _The Internet Marketplace_
 
 #### The project was created using:
 > Bootstrap 4.6
+
 > Scss
+
 > jQuery
 
 #### Workflow:
