@@ -1,5 +1,5 @@
 # Teltan
-_IMP_
+_The Internet Marketplace_
 
 #### The project was created using:
 > Bootstrap 4.6
