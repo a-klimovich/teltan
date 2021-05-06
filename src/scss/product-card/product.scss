@@ -23,20 +23,20 @@
     top: 0;
     transform: translate(0, -50%);
 
-    .like {
+    .like-box {
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 32px;
+      width: 35px;
 
       border: transparent;
       border-radius: 4px;
 
       background: #f4f4f4;
+      cursor: pointer;
 
-      &:hover {
-        color: #ef0bc7;
-        cursor: pointer;
+      .iconLike {
+        margin-bottom: -5px;
       }
 
       @media (min-width: $grid-breakpoints(lg)) {

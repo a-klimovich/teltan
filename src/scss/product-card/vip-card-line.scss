@@ -1,0 +1,30 @@
+.vip {
+  position: relative;
+
+  .card {
+    border: 2px solid #3fb465;
+
+    .card-title {
+      font-weight: 900;
+    }
+  }
+
+  &__content-main {
+    border-bottom: 1px solid #3fb465;
+  }
+
+  &__content {
+    background: #f8fffa;
+    border-right: 1px solid #3fb465;
+  }
+
+  &__icon-crown {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+
+    font-size: 36px;
+
+    z-index: 3;
+  }
+}

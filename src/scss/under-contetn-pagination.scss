@@ -1,0 +1,14 @@
+@import "variables";
+@import "node_modules/bootstrap-scss/mixins";
+
+.under-contetn-pagination {
+  .btn-show-more {
+    width: 100%;
+
+    @include media-breakpoint-up(lg) {
+      width: 30%;
+    }
+  }
+
+  height: 54px;
+}

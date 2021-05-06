@@ -1,0 +1,26 @@
+.like {
+  &:hover {
+    .iconLike {
+      stroke: #f00bc8;
+      fill: #f00bc8;
+    }
+  }
+}
+
+.like.active .iconLike {
+  stroke: #f00bc8;
+  fill: #f237d2;
+}
+
+.iconLike {
+  width: 17px;
+  fill: none;
+  stroke: #212529;
+  stroke-width:30px;
+  margin-bottom: -2px;
+
+  &:hover {
+    stroke: #f00bc8;
+    fill: #f00bc8;
+  }
+}
