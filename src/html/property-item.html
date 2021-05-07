@@ -16,7 +16,7 @@
 
   <main class="mb-5">
     <div class="container">
-      <h2 class="mb-3 text-uppercase font-weight-bolder text-right">Stylish Duplex Apartment - Nahalat Binyamin Market</h2>
+      <h3 class="mb-3 text-uppercase font-weight-bolder text-right">Stylish Duplex Apartment - Nahalat Binyamin Market</h3>
 
       <div class="mb-4 pb-3 d-flex justify-content-end subtitle">
         <div class="mr-4 date text-right">
@@ -34,43 +34,46 @@
         </div>
       </div>
 
-      <div class="row mb-4">
+      <div class="row flex-column-reverse flex-lg-row mb-4">
         <div class="col-12 col-lg-4 flex-column">
-          <div class="d-block d-lg-none">
-            @@include('./item/item-slider.html')
-          </div>
-          
           @@include('./item/connection-with-seller.html')
-          
           <div class="d-block d-lg-none">
             @@include('./item/property-about-item.html')
           </div>
-          @@include('./item/connection-with-seller.html')
           @@include('./item/seller-card.html')
           @@include('./item/exact-address-card.html')
+
+          <div class="d-block d-lg-none">
+            <h3 class="mb-4 subtitle">
+              Description
+            </h3>
+            
+            @@include('./item/property-item-description.html')
+          </div>
           
-          <div class="d-none d-lg-block">
-            @@include('./product-card/product.html')
+          <div class="mb-4 d-none d-lg-block">
+            @@include('./product-card/property-product.html')
           </div>
-          <div class="d-none d-lg-block">
-            @@include('./product-card/product.html')
+          <div class="mb-4 d-none d-lg-block">
+            @@include('./product-card/property-product.html')
           </div>
-          <div class="d-none d-lg-block">
-            @@include('./product-card/product.html')
+          <div class="mb-4 d-none d-lg-block">
+            @@include('./product-card/property-product.html')
           </div>
         </div>
 
         <div class="col-12 col-lg-8">
-          <div class="d-none d-lg-block">
-            @@include('./item/item-slider.html')
-            @@include('./item/property-about-item.html')
-          </div>
-
-          <h3 class="mb-4 subtitle">
-            Description
-          </h3>
+          @@include('./item/item-slider.html')
           
-          @@include('./item/property-item-description.html')
+          <div class="d-none d-lg-block">
+            @@include('./item/property-about-item.html')
+          
+            <h3 class="mb-4 subtitle">
+              Description
+            </h3>
+            
+            @@include('./item/property-item-description.html')
+          </div>
         </div>
       </div>
     </div>

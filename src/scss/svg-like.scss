@@ -1,4 +1,6 @@
 .like {
+  cursor: pointer;
+
   &:hover {
     .iconLike {
       stroke: #f00bc8;
