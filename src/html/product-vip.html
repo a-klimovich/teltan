@@ -32,16 +32,22 @@
             @@include('products-sort.html')
             @@include('pagination.html')
           </div>
-          
+
           <div class="row row-cols-2 row-cols-lg-3">
             <div class="col">
-              @@include('./product-card/product-vip-block.html')
+              @@include('./product-card/product-vip-block.html', {
+                imageSrc: '../../img/content-img/1.png'
+              })
             </div>
             <div class="col">
-              @@include('./product-card/product-vip-block.html')
+              @@include('./product-card/product-vip-block.html', {
+                imageSrc: '../../img/content-img/2.png'
+              })
             </div>
             <div class="col">
-              @@include('./product-card/product-vip-block.html')
+              @@include('./product-card/product-vip-block.html', {
+                imageSrc: '../../img/content-img/3.png'
+              })
             </div>
             <div class="col">
               @@include('./product-card/product.html')

@@ -1,4 +1,21 @@
+@import '../variables';
+@import "node_modules/bootstrap-scss/mixins";
+
 .item-slider {
+
+  .carousel-item {
+    height: 408px;
+    max-height: 408px;
+
+    img {
+      height: 100%;
+    }
+
+    @include media-breakpoint-up(lg) {
+      height: 587px;
+      max-height: 587px;
+    }
+  }
 
   .carousel-inner {
     border-radius: 8px;
@@ -38,10 +55,6 @@
 
     cursor: pointer;
 
-    z-index: 999;
-
-    &:hover {
-      color: rgb(247, 125, 145);
-    }
+    z-index: 9;
   }
 }
