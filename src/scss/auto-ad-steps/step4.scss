@@ -13,6 +13,35 @@
     width: 100px !important;
   }
 
+  .steps-check-box {
+    display: block;
+    position: relative;
+    top: 3px;
+    width: 14px;
+    height: 14px;
+    border: 1px solid #ced4da;
+    cursor: pointer;
+
+    &:after {
+      content: '';
+      display: none;
+      position: absolute;
+      left: 4px;
+      top: -2px;
+      width: 7px;
+      height: 12px;
+      border: solid #3fb465;
+      border-width: 0 3px 3px 0;
+      transform: rotate(45deg);
+    }
+  }
+
+   input:checked ~ .steps-check-box:after {
+    display: block;
+  }
+
+  
+
   @include media-breakpoint-up(lg) {
     width: 65%;
   }
