@@ -22,6 +22,7 @@
   .card-title {
     font-size: 20px;
     margin-bottom: 20px;
+    color: #373737;
   }
 
   .like {
@@ -81,7 +82,8 @@
   background: #f4f4f4;
   cursor: pointer;
 
-  i:hover {
-    color: red;
+  svg {
+    margin-bottom: -4px;
+    margin-left: -1px;
   }
 }

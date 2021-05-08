@@ -3,7 +3,7 @@
 
   <div class="mb-4 row">
     <div class="col-12 col-lg-10">
-      <!-- <div class="d-none d-lg-flex justify-content-end align-items-center">
+      <div class="d-none d-lg-flex justify-content-end align-items-center">
         <select id="floor" class="mr-3 custom-select" name="Year of issue">
           <option value="no-value">Older</option>
           <option value="1">2013 </option>
@@ -50,9 +50,10 @@
           <input id="carYear2021" type="radio" name="Year of issue" value="true">
           <label for="carYear2021">2021</label>
         </div>
-      </div> -->
+      </div>
 
-      <div class="d-flex">
+      <!-- Решение с селектом лучше чем то тчо выше... -->
+      <!-- <div class="d-flex">
         <select id="floor" class="selectpicker" data-style-base="form-control form-control-select" data-style="" name="Year of issue">
           <option value="2021">2021</option>
           <option value="2020">2020</option>
@@ -66,7 +67,7 @@
           <option value="2012">2012</option>
           <option value="2011">2011</option>
         </select>
-      </div>
+      </div> -->
     </div>
 
     <div class="d-none d-lg-block col-2">
@@ -190,20 +191,20 @@
 
   <div class="mb-4 row">
     <div class="col-12 col-lg-10">
-      <div class="d-flex justify-content-end">
-        <div class="mr-3 mr-lg-4 form_radio_btn">
+      <div class="row d-flex justify-content-end">
+        <div class="col col-lg-2 form_radio_btn">
           <input id="engineElectro" type="radio" name="Engine">
-          <label for="engineElectro">Electro</label>
+          <label class="w-100" for="engineElectro">Electro</label>
         </div>
 
-        <div class="mr-3 mr-lg-4 form_radio_btn">
+        <div class="col col-lg-2 form_radio_btn">
           <input id="engineDiesel" type="radio" name="Engine">
-          <label for="engineDiesel">Diesel</label>
+          <label class="w-100" for="engineDiesel">Diesel</label>
         </div>
   
-        <div class="form_radio_btn">
+        <div class="col col-lg-2 form_radio_btn">
           <input id="enginePetrol" type="radio" name="Engine">
-          <label for="enginePetrol">Petrol</label>
+          <label class="w-100" for="enginePetrol">Petrol</label>
         </div>
       </div>
 
@@ -224,22 +225,22 @@
 
   <div class="mb-4 row">
     <div class="col-12 col-lg-10">
-      <div class="d-flex justify-content-between justify-content-lg-end">
-        <div class="mr-0 mr-lg-3 mr-lg-4 form_radio_btn">
+      <div class="row d-flex justify-content-between justify-content-lg-end">
+        <div class="col col-lg-1 form_radio_btn">
           <input id="kW" type="radio" name="Engine power">
-          <label for="kW">kW</label>
+          <label class="w-100" for="kW">kW</label>
         </div>
   
-        <div class="mr-0 mr-lg-3 mr-lg-4 form_radio_btn">
+        <div class="col col-lg-1 form_radio_btn">
           <input id="hp" type="radio" name="Engine power">
-          <label for="hp">hp</label>
+          <label class="w-100" for="hp">hp</label>
         </div>
   
         <!-- <div class="d-flex w-25 justify-content-end mb-0 form-group">
           <input class="form-control" type="text" required>
         </div> -->
 
-        <div class="d-flex w-50 justify-content-end mb-0 form-group">
+        <div class="col-6 d-flex justify-content-end mb-0 form-group">
           <input class="form-control" type="text" placeholder="Engine power (optional)" required>
         </div>
       </div>
@@ -252,8 +253,10 @@
 
   <div class="mb-4 row">
     <div class="col-12 col-lg-10">
-      <div class="d-flex justify-content-end mb-0 form-group">
-        <input class="d-none d-lg-flex w-25 form-control" type="text" placeholder="hm" required>
+      <div class="row d-flex justify-content-end mb-0 form-group">
+        <div class="col-6 d-none d-lg-flex">
+          <input class="form-control" type="text" placeholder="hm" required>
+        </div>
         <input class="d-flex d-lg-none w-75 form-control" type="text" placeholder="Torque (optional):" required>
       </div>
     </div>
@@ -265,20 +268,20 @@
 
   <div class="mb-4 row">
     <div class="col-12 col-lg-10">
-      <div class="d-flex justify-content-end">
-        <div class="mr-3 mr-lg-4 form_radio_btn">
+      <div class="row d-flex justify-content-end">
+        <div class="col col-lg-2 form_radio_btn">
           <input id="DriveUnitFull" type="radio" name="Drive unit">
-          <label for="DriveUnitFull">Full</label>
+          <label class="w-100" for="DriveUnitFull">Full</label>
         </div>
 
-        <div class="mr-3 mr-lg-4 form_radio_btn">
+        <div class="col col-lg-2 form_radio_btn">
           <input id="DriveUnitRear" type="radio" name="Drive unit">
-          <label for="DriveUnitRear">Rear</label>
+          <label class="w-100" for="DriveUnitRear">Rear</label>
         </div>
   
-        <div class="form_radio_btn">
+        <div class="col col-lg-2 form_radio_btn">
           <input id="DriveUnitFront" type="radio" name="Drive unit">
-          <label for="DriveUnitFront">Front</label>
+          <label class="w-100" for="DriveUnitFront">Front</label>
         </div>
 
         <div class="ml-3 d-flex d-lg-none justify-content-center align-items-center">
@@ -294,7 +297,7 @@
 
   <div class="mb-4 row">
     <div class="col-12 col-lg-10">
-      <!-- <div class="d-none d-lg-flex justify-content-end">
+      <div class="d-none d-lg-flex justify-content-end">
         <div class="mr-3 mr-lg-4 form_radio_btn">
           <input id="transmissionManual" type="radio" name="Transmission">
           <label for="transmissionManual">Manual control for people with disabilities</label>
@@ -309,16 +312,16 @@
           <input id="transmissionAutomatic" type="radio" name="Transmission">
           <label for="transmissionAutomatic">Automatic</label>
         </div>
-      </div> -->
+      </div>
 
-      <div class="d-flex">
+      <!-- <div class="d-flex">
         <select class="selectpicker" data-style-base="form-control form-control-select" data-style="" name="transmission" id="transmissionSelect">
           <option value="0">Transmission</option>
           <option value="Manual control for people with disabilities">Manual control for people with disabilities</option>
           <option value="Mechanical">Mechanical</option>
           <option value="Automatic">Automatic</option>
         </select>
-      </div>
+      </div> -->
     </div>
 
     <div class="d-none d-lg-block col-2">

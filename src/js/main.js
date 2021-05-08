@@ -13,6 +13,21 @@
   })
 
   /**
+   * MAP
+   */
+  // что-то ломается TODO
+  //  mapboxgl.accessToken = 'pk.eyJ1IjoiYS1rbGltb2YiLCJhIjoiY2themVqYzI4MGlrZDJxbWlvaDBlMzF6MyJ9.QXFKypM1BnCkQaUZKTuP0g';
+  
+  //  let map = new mapboxgl.Map({
+  //    container: 'map',
+  //    style: 'mapbox://styles/mapbox/streets-v11'
+  //  });
+
+  //  map.on('load', function () {
+  //    map.resize();
+  //  });
+
+  /**
    * Filter
    */
   class Filter {

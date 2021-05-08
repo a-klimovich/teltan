@@ -45,7 +45,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 18px;
 
     width: 42px;
     height: 42px;
@@ -56,5 +55,14 @@
     cursor: pointer;
 
     z-index: 9;
+
+    .like {
+      margin-bottom: -4px;
+      margin-left: -2px;
+    }
+
+    svg {
+      width: 22px;
+    }
   }
 }

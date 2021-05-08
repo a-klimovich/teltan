@@ -8,6 +8,18 @@
     padding: 20px 20px 0px 20px;
   }
 
+  .vip-benefit {
+    color: $secondary;
+  }
+
+  .active {
+    color: #212529;
+
+    .icon-check-1 {
+      color: $primary;
+    }
+  }
+
   .fluid-gray-line {
     position: absolute;
     bottom: 1px;

@@ -1,4 +1,5 @@
 @import '../variables';
+@import "node_modules/bootstrap-scss/mixins";
 
 .auto-product {
   box-shadow: $box-shadow;
@@ -33,15 +34,8 @@
         background: #f4f4f4;
         cursor: pointer;
 
-        i {
-          font-size: 18px;
-          font-weight: 700;
-        }
-
-        &.active {
-          i {
-            color: #ef0bc7;
-          }
+        .iconLike  {
+          width: 21px;
         }
       }
 

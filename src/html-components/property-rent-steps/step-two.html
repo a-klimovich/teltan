@@ -13,8 +13,8 @@
       </div>
     </div>
 
-    <div class="d-flex flex-column-reverse flex-lg-row align-items-center justify-content-between">
-      <div class="row row-cols-3 row-cols-lg-5 justify-content-center">
+    <div class="d-flex flex-column-reverse flex-lg-row align-items-center justify-content-center">
+      <div class="row row-cols-3 row-cols-lg-6 justify-content-center">
         <div class="col mb-3 mb-lg-0 form_radio_btn">
           <input id="radio-1-rooms" type="radio" name="numberOfRooms" value="fiveRooms">
           <label for="radio-1-rooms">1-room apart.</label>
@@ -35,10 +35,9 @@
           <input id="radio-5-rooms" type="radio" name="numberOfRooms" value="oneRoom">
           <label for="radio-5-rooms">5-rooms apart.</label>
         </div>
-      </div>
-  
-      <div class="mb-4 mb-lg-0">
-        <span class="font-weight-bold">Number of rooms:</span>
+        <div class="d-none d-lg-flex justify-content-center align-items-center">
+          <span class="font-weight-bold">Number of rooms:</span>
+        </div>
       </div>
     </div>
   </div>
@@ -48,8 +47,6 @@
 
   <div class="map-wrapper">
     <div class="map">
-      <!-- MAP -->
-      <!-- MAP END -->
       <form action="/" class="d-flex justify-content-around map__form">
         <div class="col-2 mb-0 form-group">
           <input type="text" placeholder="№ Apartment" class="border-0 form-control" id="" aria-describedby="">
@@ -67,6 +64,8 @@
           <input type="text" placeholder="City" class="border-0 form-control" id="" aria-describedby="">
         </div>
       </form>
+
+      <div id='map'></div>
     </div>
   </div>
 </div>

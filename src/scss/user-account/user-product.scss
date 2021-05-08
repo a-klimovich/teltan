@@ -45,10 +45,6 @@
       
       background: #f4f4f4;
       cursor: pointer;
-
-      &:hover {
-        color: #ef0bc7;
-      }
     }
 
     .card-price-mobile {
@@ -76,7 +72,7 @@
     cursor: pointer;
 
     &:hover {
-      color: #ef0bc7;
+      color: $primary;
     }
   }
 
@@ -86,24 +82,43 @@
 
   &__up-product {
     position: absolute;
-    top: 15px;
-    right: 15px;
+    top: -15px;
+    right: -15px;
 
     width: 46px;
     height: 46px;
 
     border-radius: 50%;
-    background: #3fb465;
+    background: $primary;
 
     color: #ffffff;
-    font-weight: 700;
-    text-transform: uppercase;
+    font-size: 14px;
 
     span {
       position: absolute;
       top: 50%;
       right: 50%;
       transform: translate(50%, -50%);
+    }
+
+    .time {
+      display: none;
+    }
+
+    .up {
+      display: block;
+    }
+
+    &:hover {
+      background: #6d6d6d;
+
+      .time {
+        display: block;
+      }
+      
+      .up {
+        display: none;
+      }
     }
   }
 
@@ -125,23 +140,5 @@
     -webkit-box-orient: vertical;
     line-clamp: 2;
     box-orient: vertical;
-  }
-
-  .like {
-    position: absolute;
-    right: 1rem;
-    top: 1rem;
-
-    border: transparent;
-    border-radius: 4px;
-
-    padding: 7px;
-
-    background: #f4f4f4;
-
-    &:hover {
-      color: #ef0bc7;
-      cursor: pointer;
-    }
   }
 }

@@ -16,12 +16,8 @@
 
   <main class="mb-5">
     <div class="container">
-      <div class="mb-4 row">
+      <div class="mb-4 row flex-column-reverse flex-lg-row">
         <div class="col-12 col-lg-4 flex-column">
-          <div class="d-block d-lg-none">
-            @@include('./item/item-slider.html')
-          </div>
-          
           @@include('./item/connection-with-seller.html')
 
           <div class="mb-4 p-3 card">
@@ -30,15 +26,21 @@
 
           @@include('./item/seller-card.html')
           @@include('./item/exact-address-card.html')
+
+          <div class="d-block d-lg-none">
+            <div class="mb-5 card">
+              @@include('./item/about-auto-item.html')
+            </div>
+          </div>
         </div>
 
         <div class="col-12 col-lg-8">
+          @@include('./item/item-slider.html')
+          
           <div class="d-none d-lg-block">
-            @@include('./item/item-slider.html')
-          </div>
-
-          <div class="mb-5 card">
-            @@include('./item/about-auto-item.html')
+            <div class="mb-5 card">
+              @@include('./item/about-auto-item.html')
+            </div>
           </div>
         </div>
       </div>

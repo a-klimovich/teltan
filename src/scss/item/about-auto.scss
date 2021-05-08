@@ -1,6 +1,16 @@
 .about-auto {
   padding: 30px;
 
+  & .icon-arrow-down-sign-to-navigate-3 {
+    transform: rotate(-180deg);
+    transition: .15s transform ease-in-out;
+    display: inline-block;
+  }
+
+  & .collapsed .icon-arrow-down-sign-to-navigate-3 {
+    transform: rotate(0deg);
+  }
+
   .collapse p {
     color: #5a5a5a;
   }
