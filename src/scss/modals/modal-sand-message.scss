@@ -1,0 +1,27 @@
+.modal-sand-message {
+  
+  .subtitle {
+    font-size: 24px;
+    letter-spacing: -1px;
+  }
+
+  .addFileMessage {
+    position: absolute;
+    visibility: hidden;
+    border: none;
+    color: transparent;
+    background: transparent;
+    width: 0.01px;
+    height: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  .labelAddFileMessage {
+    cursor: pointer;
+  }
+
+  .modal-dialog {
+    max-width: 540px;
+  }
+}

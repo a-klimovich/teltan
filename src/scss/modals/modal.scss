@@ -46,10 +46,12 @@
   h3 {
     font-size: 26px;
     line-height: 36px;
+    letter-spacing: -2.2px;
   }
 
   &__text {
     margin-bottom: 28px;
+    letter-spacing: 0.2px;
   }
 
   .modal-body,
@@ -82,9 +84,7 @@
 
   .btn-confirm-code {
     min-width: 200px;
-
-    padding-top: 20px;
-    padding-bottom: 19px;
+    height: 54px;
 
     font-size: 18px;
     font-weight: 900;
