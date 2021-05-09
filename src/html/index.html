@@ -9,43 +9,57 @@
 
   <main class="mb-5">
     <div class="container">
-      <ul class="mt-4 list-group">
-        <li class="list-group-item"><a href="./main.html">Index</a></li>
-        <li class="list-group-item"><a href="./auto-ad-step.html">Steps AUTO</a></li>
-        <li class="list-group-item"><a href="./auto-item.html">Auto item</a></li>
-        <li class="list-group-item"><a href="./auto-main.html">Main auto</a></li>
-        <li class="list-group-item"><a href="./catalog-final.html">Main catalog</a></li>
-        <li class="list-group-item"><a href="./item.html">Main item</a></li>
-        <li class="list-group-item"><a href="./product-vip.html">Vip cards</a></li>
-        <li class="list-group-item"><a href="./property-main.html">Property Main</a></li>
-        <li class="list-group-item"><a href="./property-item.html">Property item</a></li>
-        <li class="list-group-item"><a href="./property-rent.html">Propperty Rent form</a></li>
-        <li class="list-group-item"><a href="./property-sell.html">Propperty Sell form</a></li>
-        <li class="list-group-item"><a href="./search-product.html">Search product</a></li>
-        <li class="list-group-item"><a href="./search-product-line.html">Search product line</a></li>
-        <li class="list-group-item"><a href="./user-account-history.html">User account history</a></li>
-        <li class="list-group-item"><a href="./user-account-menu.html">User account menu(mobile)</a></li>
-        <li class="list-group-item"><a href="./user-account-messages.html">User account message</a></li>
-        <li class="list-group-item"><a href="./user-account-tracked-item.html">User account follow item</a></li>
-        <li class="list-group-item"><a href="./user-account-vip.html">User account VIP</a></li>
-        <li class="list-group-item"><a href="./user-account-wallet-history.html">User account Wallet</a></li>
-        <li class="list-group-item"><a href="./user-account.html">User account main</a></li>
-        <li class="list-group-item"><a href="./user-add-item.html">User account Add item</a></li>
-      </ul>
+      <div class="mt-5 d-flex justify-content-end">
+        <div class="d-flex flex-column">
+          <h2 class="subtitle">Contetn</h2>
 
-      <h2>MODALS</h2>
-      <ul>
-        <li class="list-group-item"><a type="button" data-toggle="modal" data-target="#confirmCode" href="#">modal-get-code</a></li>
-          @@include('./modals/modal-get-code.html')
-        <li class="list-group-item"><a type="button" data-toggle="modal" data-target="#logInModal" href="#">modal-log-in</a></li>
-          @@include('./modals/modal-log-in.html')
-        <li class="list-group-item"><a type="button" data-toggle="modal" data-target="#registerModal" href="#">modal-registration</a></li>
-          @@include('./modals/modal-registration.html')
-        <li class="list-group-item"><a type="button" data-toggle="modal" data-target="#userAddCategory" href="#">modal-user-add-category</a></li>
-          @@include('./modals/modal-user-add-category.html')
-        <li class="list-group-item"><a type="button" data-toggle="modal" data-target="#modalSandMessage" href="#">modal-message</a></li>
-          @@include('./modals/modal-sand-message.html')
-      </ul>
+          <div class="d-flex">
+            <ul class="list-group">
+              <li class="list-group-item"><a href="./main.html">Index</a></li>
+              <li class="list-group-item"><a href="./auto-ad-step.html">Steps AUTO</a></li>
+              <li class="list-group-item"><a href="./auto-item.html">Auto item</a></li>
+              <li class="list-group-item"><a href="./auto-main.html">Main auto</a></li>
+              <li class="list-group-item"><a href="./catalog-final.html">Main catalog</a></li>
+              <li class="list-group-item"><a href="./item.html">Main item</a></li>
+              <li class="list-group-item"><a href="./product-vip.html">Vip cards</a></li>
+              <li class="list-group-item"><a href="./property-main.html">Property Main</a></li>
+              <li class="list-group-item"><a href="./property-item.html">Property item</a></li>
+              <li class="list-group-item"><a href="./property-rent.html">Propperty Rent form</a></li>
+            </ul>
+  
+            <ul class="list-group">
+              <li class="list-group-item"><a href="./property-sell.html">Propperty Sell form</a></li>
+              <li class="list-group-item"><a href="./search-product.html">Search product</a></li>
+              <li class="list-group-item"><a href="./search-product-line.html">Search product line</a></li>
+              <li class="list-group-item"><a href="./user-account-history.html">User account history</a></li>
+              <li class="list-group-item"><a href="./user-account-menu.html">User account menu(mobile)</a></li>
+              <li class="list-group-item"><a href="./user-account-messages.html">User account message</a></li>
+              <li class="list-group-item"><a href="./user-account-tracked-item.html">User account follow item</a></li>
+              <li class="list-group-item"><a href="./user-account-vip.html">User account VIP</a></li>
+              <li class="list-group-item"><a href="./user-account-wallet-history.html">User account Wallet</a></li>
+              <li class="list-group-item"><a href="./user-account.html">User account main</a></li>
+              <li class="list-group-item"><a href="./user-add-item.html">User account Add item</a></li>
+            </ul>
+          </div>
+        </div>
+  
+        <div class="d-flex flex-column">
+          <h2 class="subtitle">MODALS</h2>
+  
+          <ul>
+            <li class="list-group-item"><a type="button" data-toggle="modal" data-target="#confirmCode" href="#">modal-get-code</a></li>
+              @@include('./modals/modal-get-code.html')
+            <li class="list-group-item"><a type="button" data-toggle="modal" data-target="#logInModal" href="#">modal-log-in</a></li>
+              @@include('./modals/modal-log-in.html')
+            <li class="list-group-item"><a type="button" data-toggle="modal" data-target="#registerModal" href="#">modal-registration</a></li>
+              @@include('./modals/modal-registration.html')
+            <li class="list-group-item"><a type="button" data-toggle="modal" data-target="#userAddCategory" href="#">modal-user-add-category</a></li>
+              @@include('./modals/modal-user-add-category.html')
+            <li class="list-group-item"><a type="button" data-toggle="modal" data-target="#modalSandMessage" href="#">modal-message</a></li>
+              @@include('./modals/modal-sand-message.html')
+          </ul>
+        </div>
+      </div>
     </div>
   </main>
 

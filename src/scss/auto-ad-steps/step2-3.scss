@@ -72,4 +72,12 @@
       color: #5a5a5a;
     }
   }
+
+  .show-additionally {
+    display: none;
+
+    & .show {
+      display: inline-block;
+    }
+  }
 }

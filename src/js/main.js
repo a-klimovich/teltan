@@ -12,20 +12,12 @@
     $('#filterModalContent').remove('.visible')
   })
 
-  /**
-   * MAP
-   */
-  // что-то ломается TODO
-  //  mapboxgl.accessToken = 'pk.eyJ1IjoiYS1rbGltb2YiLCJhIjoiY2themVqYzI4MGlrZDJxbWlvaDBlMzF6MyJ9.QXFKypM1BnCkQaUZKTuP0g';
-  
-  //  let map = new mapboxgl.Map({
-  //    container: 'map',
-  //    style: 'mapbox://styles/mapbox/streets-v11'
-  //  });
-
-  //  map.on('load', function () {
-  //    map.resize();
-  //  });
+  if ($("#btnShowMoreBodyTypes")) {
+    $('#btnShowMoreBodyTypes').on('click', () => {
+      $('.form_radio_btn').filter('.show-additionally').css("display", "inline-block");
+      $('#btnShowMoreBodyTypes').css("display", "none")
+    })
+  }
 
   /**
    * Filter
