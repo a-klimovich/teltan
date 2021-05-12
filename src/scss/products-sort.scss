@@ -9,6 +9,15 @@
     margin-right: auto;
   }
 
+  .filterTogglerMobile {
+    padding: 11px;
+    fill: #6d6d6d;
+
+    &:hover {
+      fill: $primary;
+    }
+  }
+
   &__button {
     font-size: 21px;
     font-weight: bold;

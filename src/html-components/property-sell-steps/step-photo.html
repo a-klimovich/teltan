@@ -3,8 +3,8 @@
 
   <p class="mb-4 d-none d-lg-inline-block text-center">Add photos - this will increase customer confidence and make your ad more attractive. No more than 20 pieces.</p>
 
-  <div class="mb-3 mb-lg-5 px-lg-5 row row-cols-3 row row-cols-lg-5 flex-row-reverse">
-    <div class="mb-4 col">
+  <div id="fileUploaderRenderContainer" class="mb-3 mb-lg-5 px-lg-5 row row-cols-3 row row-cols-lg-5 flex-row-reverse">
+    <!-- <div class="mb-4 col">
       <div class="d-flex flex-column justify-content-center align-items-center">
         <div class="mb-3 d-flex justify-content-center align-items-center photo">
           <img src="../../assets/user-item-photo/vw-polo-front.png" alt="">
@@ -129,27 +129,27 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
 
-    <form class="col" action="/">
+    <input id="fileUploaderFiles" class="d-none" type="file" name="files[]" multiple>
+
+    <div class="col">
       <div class="d-none d-lg-flex align-items-center justify-content-center">
-        <input class="d-none" id="add-photo" type="file">
-        <label for="add-photo" class="mb-0 label-add-photo">
+        <label for="fileUploaderFiles" class="mb-0 label-add-photo">
           <p class="mb-2"><i class="icon-camera-1"></i></p>
           <p class="mb-0 label-add-photo__text">Add photo</p>
         </label>
       </div>
-    </form>
+    </div>
   </div>
 
-  <form class="mb-4 d-flex d-lg-none justify-content-center" action="">
+  <div class="mb-4 d-flex d-lg-none justify-content-center">
     <div class="btn btn-primary text-uppercase font-weight-bold addPhotoOnMobile">
-      <input class="d-none" id="addPhotoMobile" type="file">
-      <label class="m-0" for="addPhotoMobile">
+      <label for="fileUploaderFiles" class="m-0" for="addPhotoMobile">
         <span><i class="mr-3 icon-camera-1"></i>Add photo</span>
       </label>
     </div>
-  </form>
+  </div>
 
   <p class="text-center">Ads are published only with photos</p>
 </div>
