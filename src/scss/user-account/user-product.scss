@@ -82,8 +82,8 @@
 
   &__up-product {
     position: absolute;
-    top: -15px;
-    right: -15px;
+    top: 15px;
+    right: 15px;
 
     width: 46px;
     height: 46px;
@@ -93,6 +93,11 @@
 
     color: #ffffff;
     font-size: 14px;
+
+    @include media-breakpoint-up(lg) {
+      top: -15px;
+      right: -15px;
+    }
 
     span {
       position: absolute;

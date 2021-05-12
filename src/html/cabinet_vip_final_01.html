@@ -8,7 +8,7 @@
   @@include('./header/header.html')
 
   <!-- Modal -->
-  <div class="container-fluid breadcrumb-beckground p-0 mb-5">
+  <div class="container-fluid breadcrumb-beckground p-0 mb-3 mb-lg-5">
     <div class="container">
       @@include('breadcrumbs.html')
     </div>
@@ -16,9 +16,14 @@
 
   <main class="mb-5">
     <div class="container">
-      <h3 class="mb-4 subtitle">
+      <h3 class="d-none d-lg-block mb-4 subtitle">
         Latest offers
       </h3>
+
+      <a class="mb-3 d-flex d-lg-none justify-content-end align-items-center mobile-nav-link" href="#">
+        <span class="mr-3 text-uppercase font-weight-bolder">VIP<i class="ml-3 icon-vip-2 mobile-nav-link__iocn"></i></span>
+        <span class="text-primary"><i class="icon-left-arrow mobile-nav-link__arrow"></i></span>
+      </a>
     
       <div class="row">
         <div class="col">

@@ -1,0 +1,22 @@
+@import '../variables';
+
+.mobile-nav-link {
+  &:hover {
+    svg {
+      fill: $primary;
+    }
+  }
+
+  &__iocn {
+    font-size: 18px;
+
+    svg {
+      position: relative;
+      top: -2px;
+    }
+  }
+
+  &__arrow {
+    font-size: 14px;
+  }
+}
