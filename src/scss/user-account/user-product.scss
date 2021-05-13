@@ -80,7 +80,7 @@
     border-radius: 4px;
   }
 
-  &__up-product {
+  &__up-product, &__timer {
     position: absolute;
     top: 15px;
     right: 15px;
@@ -106,24 +106,17 @@
       transform: translate(50%, -50%);
     }
 
-    .time {
-      display: none;
+    &:hover {
+      background: #359855;
     }
+  }
 
-    .up {
-      display: block;
-    }
+  &__timer {
+    background: #6d6d6d;
 
     &:hover {
+      cursor: context-menu;
       background: #6d6d6d;
-
-      .time {
-        display: block;
-      }
-      
-      .up {
-        display: none;
-      }
     }
   }
 
