@@ -1,5 +1,14 @@
+@import '../variables';
+@import "node_modules/bootstrap-scss/mixins";
 
 .user-hisory-item {
+  padding: 0 10px;
+
+  @include media-breakpoint-up(lg) {
+    padding: 0 15px;
+  }
+
+
   &__price {
     font-size: 20px;
     font-weight: 700;
