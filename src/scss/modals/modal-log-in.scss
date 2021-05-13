@@ -1,4 +1,10 @@
 .modal-log-in {
+  .form-check {
+    label, input {
+      cursor: pointer;
+    }
+  }
+
   .subtitle {
     letter-spacing: -0.8px;
   }

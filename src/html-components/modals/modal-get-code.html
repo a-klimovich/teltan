@@ -8,12 +8,12 @@
 
         <p class="modal-confirm-code__text text-right">We have sent a verification code to your phone number, Enter the verification code into the window.</p>
 
-        <form class="form-confirm-code">
+        <form class="form-confirm-code" id="confirmCodeForm">
           <div class="form-group code-group">
-            <input class="form-control code-group__data" type="text" placeholder="X" id="codeplace1" required>
-            <input class="form-control code-group__data" type="text" placeholder="X" id="codeplace2" required>
-            <input class="form-control code-group__data" type="text" placeholder="X" id="codeplace3" required>
-            <input class="form-control code-group__data" type="text" placeholder="X" id="codeplace4" required>
+            <input class="form-control code-group__data" maxlength="1" type="text" placeholder="X" id="codeplace1" required>
+            <input class="form-control code-group__data" maxlength="1" type="text" placeholder="X" id="codeplace2" required>
+            <input class="form-control code-group__data" maxlength="1" type="text" placeholder="X" id="codeplace3" required>
+            <input class="form-control code-group__data" maxlength="1" type="text" placeholder="X" id="codeplace4" required>
           </div>
         </form>
 
@@ -22,7 +22,7 @@
 
           <div>
             <button type="button" class="btn btn-transparent" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary text-uppercase btn-confirm-code">Confirm</button>
+            <button form="confirmCodeForm" type="submit" class="btn btn-primary text-uppercase btn-confirm-code">Confirm</button>
           </div>
         </div>
       </div>

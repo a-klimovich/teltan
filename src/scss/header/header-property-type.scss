@@ -27,19 +27,12 @@
     box-shadow: inset -35px 0 34px -34px #368a50;
   }
 
+  .selectpicker-border {
+    border: none;
+    border-right: 1px solid #dee2e6!important;
+  }
+
   .bootstrap-select {
-    // .price {
-
-    // }
-    // .area {
-
-    // }
-    // .floor {
-
-    // }
-    // .room {
-
-    // }
     .address {
       width: 100% !important;
       
@@ -54,6 +47,10 @@
       @include media-breakpoint-up(lg) {
         width: 330px !important;
       }
+    }
+
+    .filter-option {
+      margin-right: 25px;
     }
   }
 
@@ -75,5 +72,19 @@
   .radius-bottom-right {
     border-radius: 0;
     border-bottom-right-radius: 8px;
+  }
+
+  .property-menu-with-icon {
+    position: relative;
+
+    .property-icon {
+      position: absolute;
+      top: 50%;
+      right: 8px;
+      transform: translate(0, -50%);
+      z-index: 9;
+      font-size: 20px;
+      color: #858585;
+    }
   }
 }

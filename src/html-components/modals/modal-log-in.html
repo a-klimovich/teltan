@@ -2,18 +2,18 @@
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-body">
-        <h3 class="subtitle" id="exampleModalLabel">
+        <h3 class="subtitle">
           log into your account
         </h3>
 
-        <form class="form-sign-in">
+        <form method="/" id="signInUser" class="form-sign-in">
           <div class="form-group">
-            <input type="email" class="form-control" placeholder="E-mail" id="" aria-describedby="userEmail">
+            <input type="email" class="form-control" placeholder="E-mail" id="userEmail" required>
           </div>
 
 
           <div class="form-group">
-            <input type="password" class="form-control" placeholder="Password" id="userPasword">
+            <input type="password" class="form-control" placeholder="Password" id="userPasword" required>
           </div>
 
           <div class="d-flex justify-content-between">
@@ -22,35 +22,35 @@
             </a>
   
             <div class="form-check">
-              <label class="form-check-label pr-4" for="exampleCheck1">Remember me</label>
+              <label class="form-check-label pr-4" for="rememberUserDateCheck">Remember me</label>
               <input type="checkbox" class="form-check-input" id="rememberUserDateCheck">
             </div>
           </div>
-        </form>
 
-        <h3 class="subtitle">
-          or login with:
-        </h3>
+          <h3 class="subtitle">
+            or login with:
+          </h3>
 
-        <div class="mb-4 d-flex flex-column">
-          <button type="button" class="mb-3 py-3 btn btn-white border-secondary">
-            <span class="mr-4">Sign in with Google</span>
-            <img src="assets/icon-google.svg" class="icon-google">
-          </button>
-  
-          <button type="button" class="py-3 btn btn-white border-secondary">
-            <span class="mr-4">Sign in with Facebook</span>
-            <img src="assets/icon-facebook.svg" class="icon-facebook">
-          </button>
-        </div>
-
-        <div class="d-flex flex-column ">
-          <div class="mb-4 d-flex justify-content-center">
-            <button type="submit" class="btn btn-primary text-uppercase btn-sign-in">Sign in</button>
+          <div class="mb-4 d-flex flex-column">
+            <button type="button" class="mb-3 py-3 btn btn-white border-secondary">
+              <span class="mr-4">Sign in with Google</span>
+              <img src="assets/icon-google.svg" class="icon-google">
+            </button>
+    
+            <button type="button" class="py-3 btn btn-white border-secondary">
+              <span class="mr-4">Sign in with Facebook</span>
+              <img src="assets/icon-facebook.svg" class="icon-facebook">
+            </button>
           </div>
-
-          <a href="#" class="text-primary text-center">Don't have an account?</a>
-        </div>
+  
+          <div class="d-flex flex-column ">
+            <div class="mb-4 d-flex justify-content-center">
+              <button type="submit" class="btn btn-primary text-uppercase btn-sign-in">Sign in</button>
+            </div>
+  
+            <a href="#" class="text-primary text-center">Don't have an account?</a>
+          </div>
+        </form>
       </div>
     </div>
   </div>
