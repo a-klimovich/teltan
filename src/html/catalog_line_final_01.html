@@ -31,16 +31,8 @@
           @@include('./product-card/product-line.html')
           @@include('./product-card/product-line.html')
           @@include('./product-card/product-line.html')
-        </div>
 
-        <div class="col col-lg-3">
-          @@include('./filters/main-filter.html')
-        </div>
-      </div>
-
-      <div class="row row-cols-1 row-cols-lg-2">
-        <div class="col col-lg-9">
-          <div class="mb-5">
+          <div class="mt-5 mb-5">
             @@include('under-contetn-pagination.html')
           </div>
           
@@ -48,7 +40,10 @@
             subtitle: 'Computers & Accessories'
           })
         </div>
-        <div class="col col-lg-3"></div>
+
+        <div class="col col-lg-3">
+          @@include('./filters/main-filter.html')
+        </div>
       </div>
     </div>
   </main>

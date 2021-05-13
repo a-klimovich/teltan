@@ -61,22 +61,18 @@
               @@include('./product-card/property-product.html')
             </div>
           </div>
+
+          <div class="mt-5 mb-5">
+            @@include('under-contetn-pagination.html')
+          </div>
+          
+          @@include('text-about-category.html', {
+            subtitle: 'the property'
+          })
         </div>
         
         <div class="d-none d-lg-block col-3">
           @@include('./filters/property-filter.html')
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-12 col-lg-9">
-          <div class="mb-5 d-flex justify-content-between">
-            @@include('./under-contetn-pagination.html')
-          </div>
-
-          @@include('text-about-category.html', {
-            subtitle: 'the property'
-          })
         </div>
       </div>
     </div>

@@ -59,6 +59,14 @@
               @@include('product-card/auto-product.html')
             </div>
           </div>
+
+          <div class="mt-5 mb-5">
+            @@include('under-contetn-pagination.html')
+          </div>
+          
+          @@include('text-about-category.html', {
+            subtitle: 'Auto market'
+          })
         </div>
 
         <div class="col-12 col-lg-3">
@@ -68,13 +76,7 @@
 
       <div class="mb-4 row">
         <div class="col-12 col-lg-9">
-          <div class="mb-5">
-            @@include('under-contetn-pagination.html')
-          </div>
           
-          @@include('text-about-category.html', {
-            subtitle: 'Auto market'
-          })
         </div>
       </div>
     </div>
