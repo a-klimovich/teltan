@@ -1,0 +1,12 @@
+.connection-card-property {
+  
+  &__date {
+    .icon-local {
+      position: relative;
+      width: 16px;
+      top: -2px;
+
+      fill: #747474;
+    }
+  }
+}

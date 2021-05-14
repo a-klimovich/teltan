@@ -18,7 +18,9 @@
   border-radius: 50%;
   background: #3fb465;
   box-shadow: none;
+  right: -13px;
   top: -8px;
+  cursor: pointer;
 
   &::after,
   &::before {

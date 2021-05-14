@@ -16,14 +16,15 @@
             <input type="password" class="form-control" placeholder="Password" id="userPasword" required>
           </div>
 
-          <div class="d-flex justify-content-between">
+          <div class="mb-4 d-flex justify-content-between">
             <a href="#" class="text-primary">
               Forgot your password?
             </a>
-  
-            <div class="form-check">
-              <label class="form-check-label pr-4" for="rememberUserDateCheck">Remember me</label>
-              <input type="checkbox" class="form-check-input" id="rememberUserDateCheck">
+
+            <div class="d-flex remeber-me">
+              <span class="pr-3">Remember me</span>
+              <input class="d-none" id="rememberUserData" type="checkbox" name="rememberUser">
+              <label class="remeber-me__label" for="rememberUserData"></label>
             </div>
           </div>
 

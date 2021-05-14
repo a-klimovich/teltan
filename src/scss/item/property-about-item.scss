@@ -1,0 +1,22 @@
+.property-about-item {
+  &__text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -moz-box;
+    -moz-box-orient: vertical;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    line-clamp: 4;
+    box-orient: vertical;
+  }
+
+  &__text.show {
+    display: block;
+  }
+
+  i {
+    color: #6a6a6a !important;
+    font-size: 30px
+  }
+}

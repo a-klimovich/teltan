@@ -16,9 +16,9 @@
   .steps-check-box {
     display: block;
     position: relative;
-    top: 3px;
-    width: 14px;
-    height: 14px;
+    top: 4px;
+    width: 17px;
+    height: 17px;
     border: 1px solid #ced4da;
     cursor: pointer;
 
@@ -26,10 +26,10 @@
       content: '';
       display: none;
       position: absolute;
-      left: 4px;
+      left: 5px;
       top: -2px;
-      width: 7px;
-      height: 12px;
+      width: 8px;
+      height: 13px;
       border: solid #3fb465;
       border-width: 0 3px 3px 0;
       transform: rotate(45deg);
@@ -39,8 +39,6 @@
    input:checked ~ .steps-check-box:after {
     display: block;
   }
-
-  
 
   @include media-breakpoint-up(lg) {
     width: 65%;
