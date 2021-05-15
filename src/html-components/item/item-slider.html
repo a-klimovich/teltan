@@ -1,4 +1,4 @@
-<div id="itemSlider" class="mb-4 carousel slide item-slider" data-touch="false" data-interval="false">
+<div id="itemSlider" class="mb-4 carousel slide item-slider" data-touch="true" data-interval="false">
   <div class="carousel-inner">
     <div class="carousel-item active">
       <img src="https://images.wallpaperscraft.ru/image/mercedes_benz_amg_gt_s_2016_vid_szadi_102848_1920x1080.jpg" class="d-block w-100" alt="...">
@@ -22,6 +22,16 @@
       <img src="assets/tec-3.jpg" class="d-block w-100" alt="...">
     </div>
   </div>
+  
+  <a class="carousel-control-prev" href="#itemSlider" role="button" data-slide="prev">
+    <i class="icon-left-arrow rotate-180"></i>
+    <span class="sr-only">Previous</span>
+  </a>
+
+  <a class="carousel-control-next" href="#itemSlider" role="button" data-slide="next">
+    <i class="icon-left-arrow"></i>
+    <span class="sr-only">Next</span>
+  </a>
 
   <span class="item-slider__like">
     <span class="like">
@@ -29,17 +39,11 @@
     </span>
   </span>
 
-  <a class="carousel-control-prev" href="#itemSlider" role="button" data-slide="prev">
-    <!-- <i><img src="assets/left-arrow.svg" alt=""></i> -->
-    <i class="icon-left-arrow rotate-180"></i>
-    <span class="sr-only">Previous</span>
-  </a>
-
-  <a class="carousel-control-next" href="#itemSlider" role="button" data-slide="next">
-    <!-- <i><img src="assets/right-arrow.svg" alt=""></i> -->
-    <i class="icon-left-arrow"></i>
-    <span class="sr-only">Next</span>
-  </a>
+  <div class="slide-counter">
+    <span class="current-slide-number">1</span>
+    <span>/</span>
+    <span class="all-slides-number">7</span>
+  </div>
 </div>
 
 <div class="d-none d-lg-flex row row-cols-4">

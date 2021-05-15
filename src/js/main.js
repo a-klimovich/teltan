@@ -12,12 +12,23 @@
     $('#filterModalContent').remove('.visible')
   })
 
+  $('.collaps-text-about-btn').on('click', function() {
+    $(this).closest('.collaps-text-about').find('.collaps-text-about-text').toggleClass('show')
+  })
+
   if ($("#btnShowMoreBodyTypes")) {
     $('#btnShowMoreBodyTypes').on('click', () => {
       $('.form_radio_btn').filter('.show-additionally').css("display", "inline-block");
       $('#btnShowMoreBodyTypes').css("display", "none")
     })
   }
+
+  // SLIDER COUNTER
+  const $itemSlider =  $('#itemSlider');
+
+  $itemSlider.on('slid.bs.carousel', function (e) {
+    $itemSlider.find('.current-slide-number').text(e.to + 1);
+  })
 
   /**
    * Filter
