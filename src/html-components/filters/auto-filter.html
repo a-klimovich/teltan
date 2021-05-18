@@ -1,4 +1,4 @@
-<div class="p-3 pt-4 pb-4 card text-right condition" id="filterModalContent">
+<div class="p-3 pt-4 pb-4 card text-right filter-select condition" id="filterModalContent">
   <div class="pb-3 mb-4 d-flex d-lg-none justify-content-between border-bottom">
     <a type="button"><i class="mr-3 icon-clear"></i> Close</a>
     <p class="h5 m-0 d-inline-block text-uppercase font-weight-bolder">Filters</p>
@@ -56,12 +56,7 @@
     </div>
   </form>
 
-  <div class="mb-4 pb-4 flex-column border-bottom">
-    <p class="h5 d-block d-lg-none text-uppercase font-weight-bolder" data-toggle="collapse" href="#collapseRooms" role="button" aria-expanded="true" aria-controls="collapseRooms">
-      <span class="d-flex justify-content-between"><i class="icone- icon-arrow-down-sign-to-navigate-3"></i>Price</span>
-    </p>
-    <p class="h5 d-none d-lg-block text-uppercase font-weight-bolder">Rooms</p>
-
+  <div class="mb-4 flex-column border-bottom">
     <div class="collapse show" id="collapseRooms">
       <div class="checkbox">
         <label>
@@ -82,41 +77,43 @@
   </div>
 
   <div class="mb-4 pb-4 flex-column border-bottom">
-    <p class="h5 d-block d-lg-none text-uppercase font-weight-bolder" data-toggle="collapse" href="#collapseBrand" role="button" aria-expanded="true" aria-controls="collapseBrand">
+    <p class="h5 mb-3 d-block d-lg-none text-uppercase font-weight-bolder" data-toggle="collapse" href="#collapseBrand" role="button" aria-expanded="true" aria-controls="collapseBrand">
       <span class="d-flex justify-content-between"><i class="icone- icon-arrow-down-sign-to-navigate-3"></i>Brand</span>
     </p>
-    <p class="h5 d-none d-lg-block text-uppercase font-weight-bolder">Brand</p>
+    <p class="h5 mb-3 d-none d-lg-block text-uppercase font-weight-bolder">Brand</p>
 
     <div class="collapse show" id="collapseBrand">
-      <select class="selectpicker" data-style-base="mb-4 form-control form-control-select" data-style="">
+      <select class="selectpicker" data-style-base="mb-2 form-control form-control-select" data-style="">
         <option selected>Brand</option>
         <option value="1">One</option>
         <option value="2">Two</option>
         <option value="3">Three</option>
       </select>
 
-      <select class="selectpicker" data-style-base="mb-4 form-control form-control-select" data-style="">
+      <select class="selectpicker" data-style-base="mb-2 form-control form-control-select" data-style="">
         <option selected>Model</option>
         <option value="1">One</option>
         <option value="2">Two</option>
         <option value="3">Three</option>
       </select>
 
-      <select class="selectpicker" data-style-base="mb-4 form-control form-control-select" data-style="">
+      <select class="selectpicker" data-style-base="mb-3 form-control form-control-select" data-style="">
         <option selected>Generation</option>
         <option value="1">One</option>
         <option value="2">Two</option>
         <option value="3">Three</option>
       </select>
     </div>
+
+    <a href="#" class="text-primary font-weight-bold">Add another mark</a>
   </div>
   
 
   <div class="mb-4 flex-column border-bottom">
-    <p class="h5 d-block d-lg-none text-uppercase font-weight-bolder" data-toggle="collapse" href="#collapseYearOfIssue" role="button" aria-expanded="true" aria-controls="collapseYearOfIssue">
+    <p class="h5 mb-3 d-block d-lg-none text-uppercase font-weight-bolder" data-toggle="collapse" href="#collapseYearOfIssue" role="button" aria-expanded="true" aria-controls="collapseYearOfIssue">
       <span class="d-flex justify-content-between"><i class="icone- icon-arrow-down-sign-to-navigate-3"></i>Year of issue</span>
     </p>
-    <p class="h5 d-none d-lg-block text-uppercase font-weight-bolder">Year of issue</p>
+    <p class="h5 mb-3 d-none d-lg-block text-uppercase font-weight-bolder">Year of issue</p>
 
     <div class="collapse show" id="collapseYearOfIssue">
       <div class="mb-4 form-row">
@@ -131,14 +128,14 @@
     </div>
   </div>
   
-  <div class="mb-4 pb-4 flex-column border-bottom">
-    <p class="h5 d-block d-lg-none text-uppercase font-weight-bolder" data-toggle="collapse" href="#collapseBodyType" role="button" aria-expanded="true" aria-controls="collapseBodyType">
+  <div class="d-flex flex-column">
+    <p class="h5 mb-3 d-block d-lg-none text-uppercase font-weight-bolder" data-toggle="collapse" href="#collapseBodyType" role="button" aria-expanded="true" aria-controls="collapseBodyType">
       <span class="d-flex justify-content-between"><i class="icone- icon-arrow-down-sign-to-navigate-3"></i>Body type</span>
     </p>
-    <p class="h5 d-none d-lg-block text-uppercase font-weight-bolder">Body type</p>
+    <p class="h5 mb-3 d-none d-lg-block text-uppercase font-weight-bolder">Body type</p>
 
-    <div class="mb-3 pb-4 flex-column border-bottom collapse show" id="collapseBodyType">
-      <select class="selectpicker" data-style-base="mb-4 form-control form-control-select" data-style="">
+    <div class="mb-4 pb-4 flex-column border-bottom collapse show" id="collapseBodyType">
+      <select class="selectpicker" data-style-base="form-control form-control-select" data-style="">
         <option selected>Select</option>
         <option value="1">One</option>
         <option value="2">Two</option>
@@ -147,14 +144,14 @@
     </div>
   </div>
   
-  <div class="mb-4 pb-4 flex-column border-bottom">
-    <p class="h5 d-block d-lg-none text-uppercase font-weight-bolder" data-toggle="collapse" href="#collapseEngineType" role="button" aria-expanded="true" aria-controls="collapseEngineType">
+  <div class="mb-4 pb-1 flex-column border-bottom">
+    <p class="h5 mb-3 d-block d-lg-none text-uppercase font-weight-bolder" data-toggle="collapse" href="#collapseEngineType" role="button" aria-expanded="true" aria-controls="collapseEngineType">
       <span class="d-flex justify-content-between"><i class="icone- icon-arrow-down-sign-to-navigate-3"></i>Engine's type</span>
     </p>
-    <p class="h5 d-none d-lg-block text-uppercase font-weight-bolder">Engine's type</p>
+    <p class="h5 mb-3 d-none d-lg-block text-uppercase font-weight-bolder">Engine's type</p>
 
     <div class="collapse show" id="collapseEngineType">
-      <select class="selectpicker" data-style-base="mb-4 form-control form-control-select" data-style="">
+      <select class="selectpicker" data-style-base="mb-2 form-control form-control-select" data-style="">
         <option selected>Open this select menu</option>
         <option value="1">One</option>
         <option value="2">Two</option>
@@ -179,11 +176,11 @@
     </div>
   </div>
   
-  <div class="mb-4 pb-4 flex-column border-bottom">
-    <p class="h5 d-block d-lg-none text-uppercase font-weight-bolder" data-toggle="collapse" href="#collapseTransmission" role="button" aria-expanded="true" aria-controls="collapseTransmission">
+  <div class="mb-4 pb-1 flex-column border-bottom">
+    <p class="h5 mb-3 d-block d-lg-none text-uppercase font-weight-bolder" data-toggle="collapse" href="#collapseTransmission" role="button" aria-expanded="true" aria-controls="collapseTransmission">
       <span class="d-flex justify-content-between"><i class="icone- icon-arrow-down-sign-to-navigate-3"></i>Transmission</span>
     </p>
-    <p class="h5 d-none d-lg-block text-uppercase font-weight-bolder">Transmission</p>
+    <p class="h5 mb-3 d-none d-lg-block text-uppercase font-weight-bolder">Transmission</p>
     
     <div class="collapse show" id="collapseTransmission">
       <div class="checkbox">
@@ -204,24 +201,24 @@
     </div>
   </div>
 
-  <div class="mb-4 flex-column">
-    <p class="h5 d-block d-lg-none text-uppercase font-weight-bolder" data-toggle="collapse" href="#collapseEngineVolume" role="button" aria-expanded="true" aria-controls="collapseEngineVolume">
+  <div class="mb-4 pb-4 flex-column border-bottom">
+    <p class="h5 mb-3 d-block d-lg-none text-uppercase font-weight-bolder" data-toggle="collapse" href="#collapseEngineVolume" role="button" aria-expanded="true" aria-controls="collapseEngineVolume">
       <span class="d-flex justify-content-between"><i class="icone- icon-arrow-down-sign-to-navigate-3"></i>Engine volume</span>
     </p>
-    <p class="h5 d-none d-lg-block text-uppercase font-weight-bolder">Engine volume</p>
+    <p class="h5 mb-3 d-none d-lg-block text-uppercase font-weight-bolder">Engine volume</p>
       
-    <div class="mb-4 form-row collapse show" id="collapseEngineVolume">
+    <div class="form-row collapse show" id="collapseEngineVolume">
       <div class="col">
-        <select class="selectpicker" data-style-base="mb-4 form-control form-control-select" data-style="">
-          <option value="1">One</option>
+        <select class="selectpicker" data-style-base="form-control form-control-select" data-style="">
+          <option value="1">To</option>
           <option value="2">Two</option>
           <option value="3">Three</option>
         </select>
       </div>
 
       <div class="col">
-        <select class="selectpicker" data-style-base="mb-4 form-control form-control-select" data-style="">
-          <option value="1">One</option>
+        <select class="selectpicker" data-style-base="form-control form-control-select" data-style="">
+          <option value="1">From</option>
           <option value="2">Two</option>
           <option value="3">Three</option>
         </select>
@@ -229,11 +226,11 @@
     </div>
   </div>
 
-  <div class="mb-4 flex-column">
-    <p class="h5 d-block d-lg-none text-uppercase font-weight-bolder" data-toggle="collapse" href="#collapseDriveUnit" role="button" aria-expanded="true" aria-controls="collapseDriveUnit">
+  <div class="mb-4 pb-2 flex-column border-bottom">
+    <p class="h5 mb-3 d-block d-lg-none text-uppercase font-weight-bolder" data-toggle="collapse" href="#collapseDriveUnit" role="button" aria-expanded="true" aria-controls="collapseDriveUnit">
       <span class="d-flex justify-content-between"><i class="icone- icon-arrow-down-sign-to-navigate-3"></i>Drive unit</span>
     </p>
-    <p class="h5 d-none d-lg-block text-uppercase font-weight-bolder">Drive unit</p>
+    <p class="h5 mb-3 d-none d-lg-block text-uppercase font-weight-bolder">Drive unit</p>
       
     <div class="collapse show" id="collapseDriveUnit">
       <div class="checkbox">
@@ -262,25 +259,25 @@
     </div>
   </div>
 
-  <div class="mb-4 flex-column">
-    <p class="h5 d-block d-lg-none text-uppercase font-weight-bolder" data-toggle="collapse" href="#collapseMileage" role="button" aria-expanded="true" aria-controls="collapseMileage">
+  <div class="mb-4 pb-4 flex-column border-bottom">
+    <p class="h5 mb-3 d-block d-lg-none text-uppercase font-weight-bolder" data-toggle="collapse" href="#collapseMileage" role="button" aria-expanded="true" aria-controls="collapseMileage">
       <span class="d-flex justify-content-between"><i class="icone- icon-arrow-down-sign-to-navigate-3"></i>Mileage</span>
     </p>
-    <p class="h5 d-none d-lg-block text-uppercase font-weight-bolder">Mileage</p>
+    <p class="h5 mb-3 d-none d-lg-block text-uppercase font-weight-bolder">Mileage</p>
 
     <div class="collapse show" id="collapseMileage">
-      <div class="mb-4 form-row">
+      <div class="form-row">
         <div class="col">
-          <select class="selectpicker" data-style-base="mb-4 form-control form-control-select" data-style="">
-            <option value="1">One</option>
+          <select class="selectpicker" data-style-base="form-control form-control-select" data-style="">
+            <option value="1">To</option>
             <option value="2">Two</option>
             <option value="3">Three</option>
           </select>
         </div>
 
         <div class="col">
-          <select class="selectpicker" data-style-base="mb-4 form-control form-control-select" data-style="">
-            <option value="1">One</option>
+          <select class="selectpicker" data-style-base="form-control form-control-select" data-style="">
+            <option value="1">From</option>
             <option value="2">Two</option>
             <option value="3">Three</option>
           </select>
@@ -290,10 +287,10 @@
   </div>
 
   <div class="mb-4 pb-4 d-flex flex-column border-bottom">
-    <p class="h5 d-block d-lg-none text-uppercase font-weight-bolder" data-toggle="collapse" href="#collapseColour" role="button" aria-expanded="true" aria-controls="collapseColour">
+    <p class="h5 mb-3 d-block d-lg-none text-uppercase font-weight-bolder" data-toggle="collapse" href="#collapseColour" role="button" aria-expanded="true" aria-controls="collapseColour">
       <span class="d-flex justify-content-between"><i class="icone- icon-arrow-down-sign-to-navigate-3"></i>Colour</span>
     </p>
-    <p class="h5 d-none d-lg-block text-uppercase font-weight-bolder">Colour</p>
+    <p class="h5 mb-3 d-none d-lg-block text-uppercase font-weight-bolder">Colour</p>
 
     <div class="d-flex flex-wrap palitra palette">
       <input type="radio" class="d-none" name="color" id="colourGradient">
@@ -347,10 +344,10 @@
   </div>
 
   <div class="mb-4 d-flex flex-column border-bottom">
-    <p class="h5 d-block d-lg-none text-uppercase font-weight-bolder" data-toggle="collapse" href="#collapseSeller" role="button" aria-expanded="true" aria-controls="collapseSeller">
+    <p class="h5 mb-3 d-block d-lg-none text-uppercase font-weight-bolder" data-toggle="collapse" href="#collapseSeller" role="button" aria-expanded="true" aria-controls="collapseSeller">
       <span class="d-flex justify-content-between"><i class="icone- icon-arrow-down-sign-to-navigate-3"></i>Seller</span>
     </p>
-    <p class="h5 d-none d-lg-block text-uppercase font-weight-bolder">Seller</p>
+    <p class="h5 mb-3 d-none d-lg-block text-uppercase font-weight-bolder">Seller</p>
 
     <div class="collapse show" id="collapseSeller">
       <div class="checkbox">
@@ -378,25 +375,25 @@
   </div>
 
   <div class="mb-5 d-flex flex-column">
-    <p class="h5 d-block d-lg-none text-uppercase font-weight-bolder" data-toggle="collapse" href="#collapseLocation" role="button" aria-expanded="true" aria-controls="collapseLocation">
+    <p class="h5 mb-3 d-block d-lg-none text-uppercase font-weight-bolder" data-toggle="collapse" href="#collapseLocation" role="button" aria-expanded="true" aria-controls="collapseLocation">
       <span class="d-flex justify-content-between"><i class="icone- icon-arrow-down-sign-to-navigate-3"></i>Location</span>
     </p>
-    <p class="h5 d-none d-lg-block text-uppercase font-weight-bolder">Location</p>
+    <p class="h5 mb-3 d-none d-lg-block text-uppercase font-weight-bolder">Location</p>
 
     <div class="d-flex flex-column collapse show" id="collapseLocation">
-      <select class="selectpicker" data-style-base="mb-4 form-control form-control-select" data-style="">
+      <select class="selectpicker" data-style-base="mb-2 form-control form-control-select" data-style="">
         <option selected>Country</option>
         <option value="1">One</option>
         <option value="2">Two</option>
         <option value="3">Three</option>
       </select>
-      <select class="selectpicker" data-style-base="mb-4 form-control form-control-select" data-style="">
+      <select class="selectpicker" data-style-base="mb-2 form-control form-control-select" data-style="">
         <option selected>Region</option>
         <option value="1">One</option>
         <option value="2">Two</option>
         <option value="3">Three</option>
       </select>
-      <select class="selectpicker" data-style-base="mb-4 form-control form-control-select" data-style="">
+      <select class="selectpicker" data-style-base="mb-2 form-control form-control-select" data-style="">
         <option selected>City</option>
         <option value="1">One</option>
         <option value="2">Two</option>

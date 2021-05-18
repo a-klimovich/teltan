@@ -1,7 +1,7 @@
 <div class="auto-step2">
   <h2 class="mb-4 text-center text-uppercase font-weight-bolder auto-step2__title">Choose a brand</h2>
 
-  <form id="brandFilter">
+  <div id="brandFilter">
     <div class="mb-4 d-flex justify-content-center align-items-center brand-filter">
       <div class="mr-3 form_radio_btn">
         <input id="popularCar" type="radio" name="category" value="popular">
@@ -17,11 +17,12 @@
     <div class="mb-4 form-group">
       <input name="search" type="text" class="form-control" placeholder="Find a brand. For example Volkswagen">
     </div>
-  </form>
+  </div>
 
   <div class="mb-4 mb-lg-5 row row-cols-3 row-cols-lg-5 justify-content-end wrapper-brand-items">
     <div class="mb-3 mb-lg-4 col" data-filter-for="#brandFilter" data-filter="tata popular">
       @@include('./auto-ad-steps/brand-item.html', {
+        name: "brandFilter",
         brandID: 'tata',
         title: 'Tata',
         image: '../../img/auto-brand/tata.png'
@@ -30,6 +31,7 @@
 
     <div class="mb-3 mb-lg-4 col" data-filter-for="#brandFilter" data-filter="oldsmobile popular">
       @@include('./auto-ad-steps/brand-item.html', {
+        name: "brandFilter",
         brandID: 'oldsmobile',
         title: 'Oldsmobile Oldsmobile',
         image: '../../img/auto-brand/oldsmobile.png'
@@ -38,6 +40,7 @@
 
     <div class="mb-3 mb-lg-4 col" data-filter-for="#brandFilter" data-filter="isuzu">
       @@include('./auto-ad-steps/brand-item.html', {
+        name: "brandFilter",
         brandID: 'isuzu',
         title: 'Isuzu',
         image: '../../img/auto-brand/isuzu.png'
@@ -46,6 +49,7 @@
 
     <div class="mb-3 mb-lg-4 col" data-filter-for="#brandFilter" data-filter="delorean">
       @@include('./auto-ad-steps/brand-item.html', {
+        name: "brandFilter",
         brandID: 'h',
         title: 'DeLorean DeLorean',
         image: '../../img/auto-brand/isuzu.png'
@@ -54,6 +58,7 @@
 
     <div class="mb-3 mb-lg-4 col" data-filter-for="#brandFilter" data-filter="acura">
       @@include('./auto-ad-steps/brand-item.html', {
+        name: "brandFilter",
         brandID: 'g',
         title: 'Acura',
         image: '../../img/auto-brand/isuzu.png'
@@ -62,6 +67,7 @@
 
     <div class="mb-3 mb-lg-4 col" data-filter-for="#brandFilter" data-filter="tata popular">
       @@include('./auto-ad-steps/brand-item.html', {
+        name: "brandFilter",
         brandID: 'f',
         title: 'Tata',
         image: '../../img/auto-brand/tata.png'
@@ -70,6 +76,7 @@
 
     <div class="mb-3 mb-lg-4 col" data-filter-for="#brandFilter" data-filter="oldsmobile popular">
       @@include('./auto-ad-steps/brand-item.html', {
+        name: "brandFilter",
         brandID: 'e',
         title: 'Oldsmobile',
         image: '../../img/auto-brand/oldsmobile.png'
@@ -78,6 +85,7 @@
 
     <div class="mb-3 mb-lg-4 col" data-filter-for="#brandFilter" data-filter="tata popular">
       @@include('./auto-ad-steps/brand-item.html', {
+        name: "brandFilter",
         brandID: 'd',
         title: 'Tata',
         image: '../../img/auto-brand/tata.png'
@@ -86,6 +94,7 @@
 
     <div class="mb-3 mb-lg-4 col" data-filter-for="#brandFilter" data-filter="oldsmobile popular">
       @@include('./auto-ad-steps/brand-item.html', {
+        name: "brandFilter",
         brandID: 'c',
         title: 'Oldsmobile',
         image: '../../img/auto-brand/oldsmobile.png'
@@ -94,6 +103,7 @@
 
     <div class="mb-3 mb-lg-4 col" data-filter-for="#brandFilter" data-filter="tata popular">
       @@include('./auto-ad-steps/brand-item.html', {
+        name: "brandFilter",
         brandID: 'b',
         title: 'Tata',
         image: '../../img/auto-brand/tata.png'
@@ -102,6 +112,7 @@
 
     <div class="mb-3 mb-lg-4 col" data-filter-for="#brandFilter" data-filter="oldsmobile popular">
       @@include('./auto-ad-steps/brand-item.html', {
+        name: "brandFilter",
         brandID: 'a',
         title: 'Oldsmobile',
         image: '../../img/auto-brand/oldsmobile.png'

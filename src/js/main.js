@@ -34,6 +34,8 @@
    * Filter
    */
   class Filter {
+    filterData = {}
+
     constructor(formSelector) {
       const $form = $(formSelector)
 
@@ -43,14 +45,14 @@
 
       const $items = $(`[data-filter-for="${formSelector}"]`)
 
-      $form.on('keyup change paste', 'input, select, textarea', () => {
-        const filterData = $form.serializeArray().map((item) => item.value.toLowerCase())
-        
+      $form.on('keyup change paste', 'input, select, textarea', (e) => {
+        this.filterData = {...this.filterData, [e.target.name]:e.target.value}
+
         $items.each((_, el) => {
           const $el = $(el);
           let isFind = true;
 
-          filterData.forEach((filterDataItem) => {
+          Object.entries(this.filterData).map(([name, value]) => value).forEach((filterDataItem) => {
             if (!$el.data('filter').includes(filterDataItem)) isFind = false
           })
 
