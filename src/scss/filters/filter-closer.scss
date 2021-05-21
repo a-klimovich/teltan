@@ -1,0 +1,13 @@
+@import '../variables';
+@import "node_modules/bootstrap-scss/mixins";
+
+.filter-closer {
+  &:hover {
+    color: inherit;
+  }
+
+  i.icon-clear {
+    font-size: 13px;
+    top: 0px;
+  }
+}

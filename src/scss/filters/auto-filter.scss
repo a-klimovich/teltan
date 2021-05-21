@@ -1,18 +1,5 @@
 @import '../variables';
-
-.filter-select {
-  .bootstrap-select>.dropdown-toggle {
-    height: 42px;
-  }
-
-  .dropdown.bootstrap-select .form-control-select:after {
-    font-size: 13px;
-  }
-
-  .bootstrap-select>.dropdown-toggle:after {
-    margin-top: 0;
-  }
-}
+@import "node_modules/bootstrap-scss/mixins";
 
 .palette {
   label {

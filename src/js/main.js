@@ -1,15 +1,23 @@
 (function(){
+  const $filterModalContetn = $('#filterModalContent')
+
   $('#mibileHeaderNav').on('click', () => {
     $('#mainNavMenuElement').toggleClass('active')
     $('#mibileHeaderNavContent').toggleClass('visible')
   })
 
-  $('.filterTogglerMobile').on('click', () => {
-    $('#filterModalContent').addClass('visible')
+  $('.filterTogglerMobile').on('click', (e) => {
+    e.preventDefault()
+    $filterModalContetn.toggleClass('visible')
+
+    $('body').toggleClass('filter-open')
   })
-  
-  $('#filterMobileClose').on('click', () => {
-    $('#filterModalContent').remove('.visible')
+
+  $(document).mouseup(e => {
+    if(!$filterModalContetn.is(e.target) && $filterModalContetn.has(e.target).length === 0) {
+      $filterModalContetn.removeClass('visible')
+      $('body').removeClass('filter-open')
+    }
   })
 
   $('.collaps-text-about-btn').on('click', function() {
@@ -338,6 +346,16 @@
 
         maxInput.addEventListener('change', (e) => {
           this.slider.set([null, e.target.value])
+        })
+      }
+
+      const setters = document.querySelectorAll(`[data-range-connected="${this.elementId}"]`);
+      
+      if (setters.length) {
+        setters.forEach((node) => {
+          node.addEventListener('click', (e) => {
+            this.slider.set(e.target.dataset.rangeSet.split(','))
+          })
         })
       }
     }

@@ -9,7 +9,7 @@
     top: 0;
     left: 0;
     min-width: 250px;
-    width: 50%;
+    width: 55%;
     height: 100vh;
     overflow-y: auto;
 
@@ -29,6 +29,14 @@
     li {
       list-style: none;
       line-height: 36px;
+
+      span {
+        cursor: pointer;
+        
+        &:hover {
+          color: $primary;
+        }
+      }
     }
 
     & li:not(:last-child) {
@@ -98,5 +106,20 @@
     input:checked ~ .cr:after {
       display: block;
     }
+  }
+}
+
+.filter-open {
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(84, 83, 83, 0.37);
+    z-index: 2;
   }
 }

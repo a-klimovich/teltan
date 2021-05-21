@@ -43,6 +43,10 @@
 
     &__icon {
       font-size: 84px;
+      
+      svg {
+        width: 84px;
+      }
     }
 
     &__name {

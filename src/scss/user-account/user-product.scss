@@ -25,6 +25,10 @@
     }
   }
 
+  &__image {
+    height: 205px;
+  }
+
   &__info-mobile {
     position: relative;
     transform: translate(0, -50%);
@@ -52,7 +56,8 @@
       justify-content: center;
       align-items: center;
 
-      padding: 7px;
+      height: 100%;
+      padding: 0 .8em;
       border-radius: 4px;
 
       background: $primary;
@@ -82,8 +87,8 @@
 
   &__up-product, &__timer {
     position: absolute;
-    top: 15px;
-    right: 15px;
+    top: 10px;
+    right: 10px;
 
     width: 46px;
     height: 46px;
@@ -126,9 +131,6 @@
   }
 
   .card-title {
-    font-size: 20px;
-    margin-bottom: 20px;
-
     overflow: hidden;
     text-overflow: ellipsis;
     display: -moz-box;
@@ -138,5 +140,10 @@
     -webkit-box-orient: vertical;
     line-clamp: 2;
     box-orient: vertical;
+
+    @include media-breakpoint-up(lg) {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
   }
 }

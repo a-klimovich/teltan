@@ -1,0 +1,51 @@
+@import '../variables';
+@import "node_modules/bootstrap-scss/mixins";
+
+.filter-select {
+  &__collapse-title {
+    padding: 1em 0;
+  }
+
+  .filter-title {
+    font-size: 1.15em;
+    font-weight: bolder;
+  }
+
+  .icone-filter-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    top: -2px;
+  }
+
+  .h5 {
+    font-size: 0.95em;
+    font-weight: 700;
+  }
+
+  & .icon-arrow-down-sign-to-navigate-3 {
+    transform: rotate(-180deg);
+    transition: .15s transform ease-in-out;
+  }
+  
+  & .collapsed .icon-arrow-down-sign-to-navigate-3 {
+    color: #3fb465;
+    transform: rotate(0deg);
+  }
+
+  .collapse {
+    color: #5a5a5a;
+  }
+
+  @include media-breakpoint-up(lg) {
+    .h5 {
+      font-size: 1.05em;
+      font-weight: 900;
+    }
+
+    &__collapse-title {
+      padding: 0;
+    }
+  }
+}
