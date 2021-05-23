@@ -1,264 +1,509 @@
-<div class="p-3 pt-4 pb-4 card text-right filter-select condition" id="filterModalContent">
+<div class="p-3 pt-4 pb-4 card text-right filter-select filter" id="filterModalContent">
   <div class="pb-3 mb-2 mb-lg-4 d-flex d-lg-none justify-content-between border-bottom">
     <a class="filter-closer filterTogglerMobile" type="button"><i class="mr-1 mr-lg-3 icon-clear"></i> Close</a>
     <p class="m-0 d-inline-block text-uppercase font-weight-bolder filter-title">Filters</p>
   </div>
 
-  <p class="filter-select__collapse-title h5 d-block d-lg-none text-uppercase" data-toggle="collapse" href="#collapseDepartment" role="button" aria-expanded="true" aria-controls="collapseDepartment">
-    <span class="d-flex justify-content-between"><i class="icone-filter-title icon-arrow-down-sign-to-navigate-3"></i> Department</span>
-  </p>
-  <p class="filter-select__collapse-title h5 d-none d-lg-block text-uppercase">Department</p>
+  <div class="border-bottom mb-lg-4">
+    <p class="filter-select__collapse-title h5 d-block d-lg-none text-uppercase" data-toggle="collapse" href="#collapseDepartment" role="button" aria-expanded="true" aria-controls="collapseDepartment">
+      <span class="d-flex justify-content-between"><i class="icone-filter-title icon-arrow-down-sign-to-navigate-3"></i>Categories</span>
+    </p>
+    <p class="filter-select__collapse-title h5 d-none d-lg-block text-uppercase">Department</p>
+    
+    <div class="collapse show" id="collapseDepartment">
+      <form class="d-block d-lg-none" action="/">
+        <ul>
+          <li class="mb-0 checkbox">
+            <label class="mb-0">
+              <span class="mr-2">Computer Components</span>
+              <input type="checkbox" value="">
+              <span class="cr"></span>
+            </label>
+          </li>
+          <li class="mb-0 checkbox">
+            <label class="mb-0">
+              <span class="mr-2">Computers & Tablets</span>
+              <input type="checkbox" value="">
+              <span class="cr"></span>
+            </label>
+          </li>
+          <li class="mb-0 checkbox">
+            <label class="mb-0">
+              <span class="mr-2">Data Storage</span>
+              <input type="checkbox" value="">
+              <span class="cr"></span>
+            </label>
+          </li>
+          <li class="mb-0 checkbox">
+            <label class="mb-0">
+              <span class="mr-2">Laptop Accessories</span>
+              <input type="checkbox" value="">
+              <span class="cr"></span>
+            </label>
+          </li>
+          <li class="mb-0 checkbox">
+            <label class="mb-0">
+              <span class="mr-2">Laptop Accessories</span>
+              <input type="checkbox" value="">
+              <span class="cr"></span>
+            </label>
+          </li>
+          <li class="mb-0 checkbox">
+            <label class="mb-0">
+              <span class="mr-2">Monitors</span>
+              <input type="checkbox" value="">
+              <span class="cr"></span>
+            </label>
+          </li>
+          <li class="mb-0 checkbox">
+            <label class="mb-0">
+              <span class="mr-2">Networking Products</span>
+              <input type="checkbox" value="">
+              <span class="cr"></span>
+            </label>
+          </li>
+
+          <li class="border-0">
+            <span class="h5 font-weight-bold show-all-categories-btn">Show all</span>
+          </li>
+
+          <li class="mb-0 checkbox show-more-categories">
+            <label class="mb-0">
+              <span class="mr-2">Power Strips & Surge Protectors</span>
+              <input type="checkbox" value="">
+              <span class="cr"></span>
+            </label>
+          </li>
+          <li class="mb-0 checkbox show-more-categories">
+            <label class="mb-0">
+              <span class="mr-2">Servers</span>
+              <input type="checkbox" value="">
+              <span class="cr"></span>
+            </label>
+          </li>
+          <li class="mb-0 checkbox show-more-categories">
+            <label class="mb-0">
+              <span class="mr-2">Tablet Accessories</span>
+              <input type="checkbox" value="">
+              <span class="cr"></span>
+            </label>
+          </li>
+        </ul>
+      </form>
+
+      <ul class="d-none d-lg-block">
+        <li>
+          <a href="#">Computer Components</a>
+        </li>
+        <li>
+          <a href="#">Computers & Tablets</a>
+        </li>
+        <li>
+          <a href="#">Data Storage</a>
+        </li>
+        <li>
+          <a href="#">Laptop Accessories</a>
+        </li>
+        <li>
+          <a href="#">Monitors</a>
+        </li>
+        <li>
+          <a href="#">Networking Products</a>
+        </li>
+        <li>
+          <a href="#">Power Strips & Surge Protectors</a>
+        </li>
+        <li>
+          <a href="#">Servers</a>
+        </li>
+        <li>
+          <a href="#">Tablet Accessories</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="d-block d-lg-none border-bottom">
+    <p class="filter-select__collapse-title h5 d-block d-lg-none text-uppercase" data-toggle="collapse" href="#collapseRegion" role="button" aria-expanded="true" aria-controls="collapseCondition">
+      <span class="d-flex justify-content-between"><i class="icone-filter-title icon-arrow-down-sign-to-navigate-3"></i>Region</span>
+    </p>
   
-  <div class="collapse show" id="collapseDepartment">
-    <ul class="condition-group">
-      <li class="condition-group-item">
-        <a href="#">Computer Components</a>
-      </li>
-      <li class="condition-group-item">
-        <a href="#">Computers & Tablets</a>
-      </li>
-      <li class="condition-group-item">
-        <a href="#">Data Storage</a>
-      </li>
-      <li class="condition-group-item">
-        <a href="#">Laptop Accessories</a>
-      </li>
-      <li class="condition-group-item">
-        <a href="#">Monitors</a>
-      </li>
-      <li class="condition-group-item">
-        <a href="#">Networking Products</a>
-      </li>
-      <li class="condition-group-item">
-        <a href="#">Power Strips & Surge Protectors</a>
-      </li>
-      <li class="condition-group-item">
-        <a href="#">Servers</a>
-      </li>
-      <li class="condition-group-item">
-        <a href="#">Tablet Accessories</a>
-      </li>
-    </ul>
+    <div id="collapseRegion" class="collapse show">
+      <form action="/" class="mb-4">
+        <select class="selectpicker" data-style-base="h-100 form-control form-control-select" data-style="">
+          <option value="Change region" active>Change region</option>
+          <option value="Madera">Madera</option>
+        </select>
+      </form>
+    </div>
+  </div>
+
+  <div class="d-block d-lg-none border-bottom">
+    <p class="filter-select__collapse-title h5 d-block d-lg-none text-uppercase" data-toggle="collapse" href="#collapseMobilePrice" role="button" aria-expanded="true" aria-controls="collapseCondition">
+      <span class="d-flex justify-content-between"><i class="icone-filter-title icon-arrow-down-sign-to-navigate-3"></i>Price</span>
+    </p>
+  
+    <div id="collapseMobilePrice" class="collapse show">
+      <form action="/">
+        <div class="form-group">
+          <div class="mb-4 form-row">
+            <div class="col">
+              <input type="text" class="form-control" placeholder="Max" data-range-max-connected="rangeSliderMainFilterMobile">
+            </div>
+      
+            <div class="col">
+              <input type="text" class="form-control" placeholder="Min" data-range-min-connected="rangeSliderMainFilterMobile">
+            </div>
+          </div>
+    
+          <div class="mb-3" id="rangeSliderMainFilterMobile" data-range-min="0" data-range-max="10000"></div>
+        
+          <div class="row px-2 d-flex justify-content-between">
+            <span>10 000$</span>
+            <span>1$</span>
+          </div>
+        </div>
+      </form>
+    </div>
   </div>
   
-  <p class="filter-select__collapse-title h5 d-block d-lg-none text-uppercase" data-toggle="collapse" href="#collapseCondition" role="button" aria-expanded="true" aria-controls="collapseCondition">
-    <span class="d-flex justify-content-between"><i class="icone-filter-title icon-arrow-down-sign-to-navigate-3"></i> Condition</span>
-  </p>
-  <p class="filter-select__collapse-title h5 d-none d-lg-block text-uppercase">Condition</p>
+  <div class="border-bottom mb-lg-4">
+    <p class="filter-select__collapse-title h5 d-block d-lg-none text-uppercase" data-toggle="collapse" href="#collapseCondition" role="button" aria-expanded="true" aria-controls="collapseCondition">
+      <span class="d-flex justify-content-between"><i class="icone-filter-title icon-arrow-down-sign-to-navigate-3"></i> Condition</span>
+    </p>
+    <p class="filter-select__collapse-title h5 d-none d-lg-block text-uppercase">Condition</p>
+  
+    <div id="collapseCondition" class="collapse show">
+      <form action="/" class="d-block d-lg-none">
+        <ul>
+          <li class="mb-0 checkbox">
+            <label class="mb-0">
+              <span class="mr-2">Carrier Cell Phones</span>
+              <input type="checkbox" value="">
+              <span class="cr"></span>
+            </label>
+          </li>
+          <li class="mb-0 checkbox">
+            <label class="mb-0">
+              <span class="mr-2">Unlocked Cell Phones</span>
+              <input type="checkbox" value="">
+              <span class="cr"></span>
+            </label>
+          </li>
+          <li class="mb-0 checkbox">
+            <label class="mb-0">
+              <span class="mr-2">Accessories</span>
+              <input type="checkbox" value="">
+              <span class="cr"></span>
+            </label>
+          </li>
+          <li class="border-0 mb-0 checkbox">
+            <label class="mb-0">
+              <span class="mr-2">Cases, Holsters & Clips</span>
+              <input type="checkbox" value="">
+              <span class="cr"></span>
+            </label>
+          </li>
+        </ul>
+      </form>
 
-  <div id="collapseCondition" class="collapse show">
-    <ul class="condition-group">
-      <li class="condition-group-item">
-        <a href="#">Carrier Cell Phones</a>
-      </li>
-      <li class="condition-group-item">
-        <a href="#">Unlocked Cell Phones</a>
-      </li>
-      <li class="condition-group-item">
-        <a href="#">Accessories</a>
-      </li>
-    </ul>
+      <ul class="d-none d-lg-block">
+        <li>
+          <a href="#">Carrier Cell Phones</a>
+        </li>
+        <li>
+          <a href="#">Unlocked Cell Phones</a>
+        </li>
+        <li>
+          <a href="#">Accessories</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="d-block d-lg-none border-bottom">
+    <p class="filter-select__collapse-title h5 d-block d-lg-none text-uppercase" data-toggle="collapse" href="#collapseSeller" role="button" aria-expanded="true" aria-controls="collapseCondition">
+      <span class="d-flex justify-content-between"><i class="icone-filter-title icon-arrow-down-sign-to-navigate-3"></i>Seller</span>
+    </p>
+
+    <div id="collapseSeller" class="collapse show">
+      <form action="/">
+        <ul>
+          <li class="mb-0 checkbox">
+            <label class="mb-0">
+              <span class="mr-2">Teltan</span>
+              <input type="checkbox" value="">
+              <span class="cr"></span>
+            </label>
+          </li>
+          <li class="border-0 mb-0 checkbox">
+            <label class="mb-0">
+              <span class="mr-2">Another</span>
+              <input type="checkbox" value="">
+              <span class="cr"></span>
+            </label>
+          </li>
+        </ul>
+      </form>
+    </div>
+  </div>  
+
+  <div class="d-block d-lg-none border-bottom">
+    <p class="filter-select__collapse-title h5 d-block d-lg-none text-uppercase" data-toggle="collapse" href="#collapseOffers" role="button" aria-expanded="true" aria-controls="collapseCondition">
+      <span class="d-flex justify-content-between"><i class="icone-filter-title icon-arrow-down-sign-to-navigate-3"></i>Special offer</span>
+    </p>
+
+    <div id="collapseOffers" class="collapse show">
+      <form action="/">
+        <ul>
+          <li class="mb-0 checkbox">
+            <label class="mb-0">
+              <span class="mr-2">Discount</span>
+              <input type="checkbox" value="">
+              <span class="cr"></span>
+            </label>
+          </li>
+          <li class="border-0 mb-0 checkbox">
+            <label class="mb-0">
+              <span class="mr-2">No</span>
+              <input type="checkbox" value="">
+              <span class="cr"></span>
+            </label>
+          </li>
+        </ul>
+      </form>
+    </div>
+  </div>  
+  
+  <div class="d-none d-lg-block border-bottom mb-lg-4">
+    <p class="filter-select__collapse-title h5 d-block d-lg-none text-uppercase" data-toggle="collapse" href="#collapseReview" role="button" aria-expanded="true" aria-controls="collapseReview">
+      <span class="d-flex justify-content-between"><i class="icone-filter-title icon-arrow-down-sign-to-navigate-3"></i> Avg. Customer Review</span>
+    </p>
+    <p class="filter-select__collapse-title h5 d-none d-lg-block text-uppercase">Avg. Customer Review</p>
+  
+    <div id="collapseReview" class="collapse show">
+      <ul>
+        <li type="button" class="d-flex justify-content-between ">
+          <span>25</span>
+          <span>
+            <i class="icon-star color-orange"></i>
+            <i class="icon-star color-orange"></i>
+            <i class="icon-star color-orange"></i>
+            <i class="icon-star color-orange"></i>
+            <i class="icon-star color-orange"></i>
+          </span>
+        </li>
+    
+        <li type="button" class="d-flex justify-content-between ">
+          <span>151</span>
+          <span>
+            <i class="icon-star color-gray"></i>
+            <i class="icon-star color-orange"></i>
+            <i class="icon-star color-orange"></i>
+            <i class="icon-star color-orange"></i>
+            <i class="icon-star color-orange"></i>
+          </span>
+        </li>
+    
+        <li type="button" class="d-flex justify-content-between ">
+          <span>2552</span>
+          <span>
+            <i class="icon-star color-gray"></i>
+            <i class="icon-star color-gray"></i>
+            <i class="icon-star color-orange"></i>
+            <i class="icon-star color-orange"></i>
+            <i class="icon-star color-orange"></i>
+          </span>
+        </li>
+    
+        <li type="button" class="d-flex justify-content-between ">
+          <span>253</span>
+          <span>
+            <i class="icon-star color-gray"></i>
+            <i class="icon-star color-gray"></i>
+            <i class="icon-star color-gray"></i>
+            <i class="icon-star color-orange"></i>
+            <i class="icon-star color-orange"></i>
+          </span>
+        </li>
+    
+        <li type="button" class="d-flex justify-content-between ">
+          <span>0</span>
+          <span>
+            <i class="icon-star color-gray"></i>
+            <i class="icon-star color-gray"></i>
+            <i class="icon-star color-gray"></i>
+            <i class="icon-star color-gray"></i>
+            <i class="icon-star color-orange"></i>
+          </span>
+        </li>
+      </ul>
+    </div>
   </div>
   
-  <p class="filter-select__collapse-title h5 d-block d-lg-none text-uppercase" data-toggle="collapse" href="#collapseReview" role="button" aria-expanded="true" aria-controls="collapseReview">
-    <span class="d-flex justify-content-between"><i class="icone-filter-title icon-arrow-down-sign-to-navigate-3"></i> Avg. Customer Review</span>
-  </p>
-  <p class="filter-select__collapse-title h5 d-none d-lg-block text-uppercase">Avg. Customer Review</p>
-
-  <div id="collapseReview" class="collapse show">
-    <ul class="condition-group">
-      <li type="button" class="d-flex justify-content-between condition-group-item">
-        <span>25</span>
-        <span>
-          <i class="icon-star color-orange"></i>
-          <i class="icon-star color-orange"></i>
-          <i class="icon-star color-orange"></i>
-          <i class="icon-star color-orange"></i>
-          <i class="icon-star color-orange"></i>
-        </span>
-      </li>
+  <div class="d-none d-lg-block border-bottom mb-lg-4">
+    <p class="filter-select__collapse-title h5 d-block d-lg-none text-uppercase" data-toggle="collapse" href="#collapseBrand" role="button" aria-expanded="true" aria-controls="collapseBrand">
+      <span class="d-flex justify-content-between"><i class="icone-filter-title icon-arrow-down-sign-to-navigate-3"></i> Brand</span>
+    </p>
+    <p class="filter-select__collapse-title h5 d-none d-lg-block text-uppercase">Brand</p>
   
-      <li type="button" class="d-flex justify-content-between condition-group-item">
-        <span>151</span>
-        <span>
-          <i class="icon-star color-gray"></i>
-          <i class="icon-star color-orange"></i>
-          <i class="icon-star color-orange"></i>
-          <i class="icon-star color-orange"></i>
-          <i class="icon-star color-orange"></i>
-        </span>
-      </li>
-  
-      <li type="button" class="d-flex justify-content-between condition-group-item">
-        <span>2552</span>
-        <span>
-          <i class="icon-star color-gray"></i>
-          <i class="icon-star color-gray"></i>
-          <i class="icon-star color-orange"></i>
-          <i class="icon-star color-orange"></i>
-          <i class="icon-star color-orange"></i>
-        </span>
-      </li>
-  
-      <li type="button" class="d-flex justify-content-between condition-group-item">
-        <span>253</span>
-        <span>
-          <i class="icon-star color-gray"></i>
-          <i class="icon-star color-gray"></i>
-          <i class="icon-star color-gray"></i>
-          <i class="icon-star color-orange"></i>
-          <i class="icon-star color-orange"></i>
-        </span>
-      </li>
-  
-      <li type="button" class="d-flex justify-content-between condition-group-item">
-        <span>0</span>
-        <span>
-          <i class="icon-star color-gray"></i>
-          <i class="icon-star color-gray"></i>
-          <i class="icon-star color-gray"></i>
-          <i class="icon-star color-gray"></i>
-          <i class="icon-star color-orange"></i>
-        </span>
-      </li>
-    </ul>
+    <div class="collapse show" id="collapseBrand">
+      <form action="/" class="pt-2" >
+        <div class="checkbox">
+          <label>
+            <span class="mr-2">Apple</span>
+            <input type="checkbox" value="">
+            <span class="cr"></span>
+          </label>
+        </div>
+    
+        <div class="checkbox">
+          <label>
+            <span class="mr-2">Samsung Electronics</span>
+            <input type="checkbox" value="">
+            <span class="cr"></span>
+          </label>
+        </div>
+    
+        <div class="checkbox">
+          <label>
+            <span class="mr-2">OnePlus</span>
+            <input type="checkbox" value="">
+            <span class="cr"></span>
+          </label>
+        </div>
+    
+        <div class="checkbox">
+          <label>
+            <span class="mr-2">TracFone</span>
+            <input type="checkbox" value="">
+            <span class="cr"></span>
+          </label>
+        </div>
+    
+        <div class="checkbox">
+          <label>
+            <span class="mr-2">Google</span>
+            <input type="checkbox" value="">
+            <span class="cr"></span>
+          </label>
+        </div>
+    
+        <div class="checkbox">
+          <label>
+            <span class="mr-2">Motorola</span>
+            <input type="checkbox" value="">
+            <span class="cr"></span>
+          </label>
+        </div>
+    
+        <div class="checkbox">
+          <label>
+            <span class="mr-2">Awolf</span>
+            <input type="checkbox" value="">
+            <span class="cr"></span>
+          </label>
+        </div>
+    
+        <div class="checkbox">
+          <label>
+            <span class="mr-2">BLU</span>
+            <input type="checkbox" value="">
+            <span class="cr"></span>
+          </label>
+        </div>
+    
+        <div class="checkbox">
+          <label>
+            <span class="mr-2">Tinwoo</span>
+            <input type="checkbox" value="">
+            <span class="cr"></span>
+          </label>
+        </div>
+    
+        <div class="checkbox">
+          <label>
+            <span class="mr-2">RORSOU</span>
+            <input type="checkbox" value="">
+            <span class="cr"></span>
+          </label>
+        </div>
+      </form>
+    </div>
   </div>
   
-  <p class="filter-select__collapse-title h5 d-block d-lg-none text-uppercase" data-toggle="collapse" href="#collapseBrand" role="button" aria-expanded="true" aria-controls="collapseBrand">
-    <span class="d-flex justify-content-between"><i class="icone-filter-title icon-arrow-down-sign-to-navigate-3"></i> Brand</span>
-  </p>
-  <p class="filter-select__collapse-title h5 d-none d-lg-block text-uppercase">Brand</p>
-
-  <div class="collapse show" id="collapseBrand">
-    <form action="/" class="pt-2 brand-selection" >
-      <div class="checkbox">
-        <label>
-          <span class="mr-2">Apple</span>
-          <input type="checkbox" value="">
-          <span class="cr"></span>
-        </label>
-      </div>
+  <div class="d-none d-lg-block mb-3">
+    <p class="filter-select__collapse-title h5 d-block d-lg-none text-uppercase" data-toggle="collapse" href="#collapsePrice" role="button" aria-expanded="true" aria-controls="collapsePrice">
+      <span class="d-flex justify-content-between"><i class="icone-filter-title icon-arrow-down-sign-to-navigate-3"></i>Price</span>
+    </p>
+    <p class="filter-select__collapse-title h5 d-none d-lg-block text-uppercase">Price</p>
   
-      <div class="checkbox">
-        <label>
-          <span class="mr-2">Samsung Electronics</span>
-          <input type="checkbox" value="">
-          <span class="cr"></span>
-        </label>
-      </div>
+    <div id="collapsePrice" class="collapse show">
+      <ul >
+        <li>
+          <span data-range-set="0,250" data-range-connected="rangeSlider">Under $250</span>
+        </li>
+    
+        <li>
+          <span data-range-set="250,500" data-range-connected="rangeSlider">$250 to $500</span>
+        </li>
+    
+        <li>
+          <span data-range-set="500,1000" data-range-connected="rangeSlider">$500 to $1000</span>
+        </li>
+    
+        <li>
+          <span data-range-set="1000,2000" data-range-connected="rangeSlider">$1000 to $2000</span>
+        </li>
+    
+        <li>
+          <span data-range-set="2000,10000" data-range-connected="rangeSlider">$2000 & Above</span>
+        </li>
+      </ul>
+    
+      <form action="/">
+        <div class="form-group">
+          <div class="mb-4 form-row">
+            <div class="col">
+              <input type="text" class="form-control" placeholder="Max" data-range-max-connected="rangeSlider">
+            </div>
+      
+            <div class="col">
+              <input type="text" class="form-control" placeholder="Min" data-range-min-connected="rangeSlider">
+            </div>
+          </div>
+    
+          <div class="mb-3" id="rangeSlider" data-range-min="0" data-range-max="10000"></div>
+        
+          <div class="row px-2 d-flex justify-content-between">
+            <span>10 000$</span>
+            <span>1$</span>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
   
-      <div class="checkbox">
-        <label>
-          <span class="mr-2">OnePlus</span>
-          <input type="checkbox" value="">
-          <span class="cr"></span>
-        </label>
-      </div>
-  
-      <div class="checkbox">
-        <label>
-          <span class="mr-2">TracFone</span>
-          <input type="checkbox" value="">
-          <span class="cr"></span>
-        </label>
-      </div>
-  
-      <div class="checkbox">
-        <label>
-          <span class="mr-2">Google</span>
-          <input type="checkbox" value="">
-          <span class="cr"></span>
-        </label>
-      </div>
-  
-      <div class="checkbox">
-        <label>
-          <span class="mr-2">Motorola</span>
-          <input type="checkbox" value="">
-          <span class="cr"></span>
-        </label>
-      </div>
-  
-      <div class="checkbox">
-        <label>
-          <span class="mr-2">Awolf</span>
-          <input type="checkbox" value="">
-          <span class="cr"></span>
-        </label>
-      </div>
-  
-      <div class="checkbox">
-        <label>
-          <span class="mr-2">BLU</span>
-          <input type="checkbox" value="">
-          <span class="cr"></span>
-        </label>
-      </div>
-  
-      <div class="checkbox">
-        <label>
-          <span class="mr-2">Tinwoo</span>
-          <input type="checkbox" value="">
-          <span class="cr"></span>
-        </label>
-      </div>
-  
-      <div class="checkbox">
-        <label>
-          <span class="mr-2">RORSOU</span>
+  <div class="border-bottom py-3 d-block d-lg-none">
+    <form action="/">
+      <div class="mb-0 checkbox">
+        <label class="h5 text-uppercase mb-0">
+          <span class="mr-2">With photo only</span>
           <input type="checkbox" value="">
           <span class="cr"></span>
         </label>
       </div>
     </form>
   </div>
-  
-  <p class="filter-select__collapse-title h5 d-block d-lg-none text-uppercase" data-toggle="collapse" href="#collapsePrice" role="button" aria-expanded="true" aria-controls="collapsePrice">
-    <span class="d-flex justify-content-between"><i class="icone-filter-title icon-arrow-down-sign-to-navigate-3"></i>Price</span>
-  </p>
-  <p class="filter-select__collapse-title h5 d-none d-lg-block text-uppercase">Price</p>
 
-  <div id="collapsePrice" class="collapse show">
-    <ul class="border-bottom-0 condition-group" >
-      <li class="condition-group-item">
-        <span data-range-set="0,250" data-range-connected="rangeSlider">Under $250</span>
-      </li>
-  
-      <li class="condition-group-item">
-        <span data-range-set="250,500" data-range-connected="rangeSlider">$250 to $500</span>
-      </li>
-  
-      <li class="condition-group-item">
-        <span data-range-set="500,1000" data-range-connected="rangeSlider">$500 to $1000</span>
-      </li>
-  
-      <li class="condition-group-item">
-        <span data-range-set="1000,2000" data-range-connected="rangeSlider">$1000 to $2000</span>
-      </li>
-  
-      <li class="condition-group-item">
-        <span data-range-set="2000,10000" data-range-connected="rangeSlider">$2000 & Above</span>
-      </li>
-    </ul>
-  
+  <div class="border-bottom py-3 d-block d-lg-none">
     <form action="/">
-      <div class="form-group">
-        <div class="mb-4 form-row">
-          <div class="col">
-            <input type="text" class="form-control" placeholder="Max" data-range-max-connected="rangeSlider">
-          </div>
-    
-          <div class="col">
-            <input type="text" class="form-control" placeholder="Min" data-range-min-connected="rangeSlider">
-          </div>
-        </div>
-  
-        <div class="mb-3" id="rangeSlider" data-range-min="0" data-range-max="10000"></div>
-      
-        <div class="row px-2 d-flex justify-content-between">
-          <span>10 000$</span>
-          <span>1$</span>
-        </div>
+      <div class="mb-0 checkbox">
+        <label class="h5 text-uppercase mb-0">
+          <span class="mr-2">Exchange is possible</span>
+          <input type="checkbox" value="">
+          <span class="cr"></span>
+        </label>
       </div>
     </form>
   </div>

@@ -3,6 +3,53 @@
 .seller-card {
   padding: 30px;
 
+  &__date-registration {
+    color: #545658;
+  }
+
+  &__status {
+    position: relative;
+    color: $secondary;
+    padding-right: 15px;
+
+    &::after {
+      content: "";
+      display: inline;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+
+      width: 0.5em;
+      height: 0.5em;
+      border-radius: 50%;
+      background: $secondary;
+    }
+
+    &.active {
+      color: $primary;
+
+      &::after {
+        background: $primary;
+      }
+    }
+  }
+
+  &__name {
+    font-weight: 700;
+  }
+
+  .btn-seller-card-author-item-mobile {
+    height: 54px;
+    border: 2px solid $primary;
+    border-radius: 4px;
+
+    font-weight: 900;
+    text-transform: uppercase;
+    color: $primary;
+  }
+
+  // PC version
   .btn-author-add {
     line-height: 40px;
     border-radius:  4px;

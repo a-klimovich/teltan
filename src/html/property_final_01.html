@@ -8,8 +8,19 @@
   @@include('./header/header-property.html')
 
   <main class="mb-5 wrapper flex-grow-1">
-    <div class="pt-5 container">
-      <div class="mb-4 row">
+    <div class="d-block d-lg-none container-fluid breadcrumb-beckground p-0 mt-4 mb-lg-5">
+      <div class="container">
+        <div class="d-flex justify-content-center align-items-bottom">
+          <button class="mb-0 w-50 py-2 btn-primary border-0 rounded-top text-center text-uppercase">
+            <span class="h6 mr-2">Rent</span>
+            <i class="icon-arrow-down-sign-to-navigate-3"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="pt-3 pt-lg-5 container">
+      <div class="mb-4 row flex-column-reverse flex-lg-row">
         <div class="col-12 col-lg-9">
           <div class="d-flex justify-content-between">
             @@include('pagination.html')
@@ -45,7 +56,7 @@
           })
         </div>
         
-        <div class="d-none d-lg-block col-3">
+        <div class="col col-lg-3">
           @@include('./filters/property-filter.html')
         </div>
       </div>

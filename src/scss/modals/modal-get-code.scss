@@ -3,5 +3,31 @@
     input {
       text-align: center;
     }
+
+    &__data {
+      &::placeholder {
+        position: relative;
+        top: 3px;
+        font-weight: 700;
+        font-size: 1.3em;
+        color: #c9c9c9;
+      }
+
+      &:focus::-webkit-input-placeholder {
+        color: transparent
+      }
+      
+      &:focus::-moz-placeholder {
+        color: transparent
+      }
+      
+      &:focus:-moz-placeholder {
+        color: transparent
+      }
+      
+      &:focus:-ms-input-placeholder {
+        color: transparent
+      }
+    }
   }
 }

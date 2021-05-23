@@ -362,5 +362,6 @@
   }
 
   new RangeSlider('rangeSlider');
+  new RangeSlider('rangeSliderMainFilterMobile');
 })();
 

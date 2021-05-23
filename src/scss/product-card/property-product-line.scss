@@ -5,6 +5,11 @@
   border-radius: 8px;
   box-shadow: $box-shadow;
 
+  .followThisItem {
+    top: 10px;
+    right: 10px;
+  }
+
   &__loaction {
     .icon-local {
       position: relative;
@@ -25,21 +30,26 @@
   }
 
   &__title {
-    font-size: 17px;
+    font-size: .99rem;
     font-weight: 900;
     line-height: 24px;
     letter-spacing: -0.7px;
     color: #373737;
+
+    @include media-breakpoint-up(lg) {
+      font-size: 1.25em;
+    }
   }
 
   &__image {
-    width: 50%;
+    width: 55%;
 
     img {
       width: 100%;
     }
 
     @include media-breakpoint-up(lg) {
+      width: 50%;
       min-width: 285px;
     }
   }
