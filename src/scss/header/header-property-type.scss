@@ -34,23 +34,30 @@
 
   .bootstrap-select {
     .address {
-      width: 100% !important;
-      
-       @include media-breakpoint-up(lg) {
-          width: 300px !important;
-        }
+      width: 300px !important;
       }
 
     .typeBuilding {
-      width: 100% !important;
-      
-      @include media-breakpoint-up(lg) {
-        width: 330px !important;
-      }
+      width: 330px !important;
     }
 
     .filter-option {
       margin-right: 25px;
+    }
+
+    @include media-breakpoint-down(lg) {
+      .typeBuilding, .address {
+        width: 100% !important;
+
+        .filter-option {
+          margin-right: 25px;
+          margin-left: 10px;
+        }
+      }
+
+      .filter-option {
+        margin-right: 0;
+      }
     }
   }
 

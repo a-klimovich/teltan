@@ -35,10 +35,10 @@
     font-family: 'icomoon';
 
     border: none !important;
-    font-size: 0.9em;
+    font-size: 0.8em;
 
     @include media-breakpoint-up(lg) {
-      font-size: 1.1em;
+      font-size: 1em;
     }
   }
 

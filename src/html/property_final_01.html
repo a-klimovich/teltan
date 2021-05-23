@@ -6,19 +6,20 @@
 <body class="d-flex flex-column min-vh-100">
    
   @@include('./header/header-property.html')
+  @@include('./header/header-search-mobile.html')
 
-  <main class="mb-5 wrapper flex-grow-1">
-    <div class="d-block d-lg-none container-fluid breadcrumb-beckground p-0 mt-4 mb-lg-5">
-      <div class="container">
-        <div class="d-flex justify-content-center align-items-bottom">
-          <button class="mb-0 w-50 py-2 btn-primary border-0 rounded-top text-center text-uppercase">
-            <span class="h6 mr-2">Rent</span>
-            <i class="icon-arrow-down-sign-to-navigate-3"></i>
-          </button>
-        </div>
+  <div class="p-0 d-block d-lg-none container-fluid breadcrumb-beckground">
+    <div class="container">
+      <div class="d-flex justify-content-center align-items-bottom">
+        <button class="rounded-top btn-property-rent-mobile">
+          <span class="h6 font-weight-bold mr-2">Rent</span>
+          <i class="icon-arrow-down-sign-to-navigate-3"></i>
+        </button>
       </div>
     </div>
+  </div>
 
+  <main class="mb-5 wrapper flex-grow-1">
     <div class="pt-3 pt-lg-5 container">
       <div class="mb-4 row flex-column-reverse flex-lg-row">
         <div class="col-12 col-lg-9">
