@@ -1,4 +1,5 @@
 @import "variables";
+@import "node_modules/bootstrap-scss/mixins";
 
 .dropdown.bootstrap-select {
   width: 100% !important;
@@ -34,6 +35,11 @@
     font-family: 'icomoon';
 
     border: none !important;
+    font-size: 0.9em;
+
+    @include media-breakpoint-up(lg) {
+      font-size: 1.1em;
+    }
   }
 
   &.show {

@@ -22,6 +22,18 @@
         fill: #747474;
       }
     }
+
+    .icon-local-block {
+      position: relative;
+      top: 2px;
+  
+      width: 16px;
+      height: 20px;
+  
+      path {
+        fill: #747474;
+      }
+    }
   }
 
   &__praice {
@@ -30,14 +42,17 @@
   }
 
   &__title {
-    font-size: .99rem;
-    font-weight: 900;
+    font-size: 1.1em;
+    font-weight: 700;
     line-height: 24px;
-    letter-spacing: -0.7px;
+    letter-spacing: -0.5px;
     color: #373737;
 
     @include media-breakpoint-up(lg) {
-      font-size: 1.25em;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: -0.7px;
+      font-size: 1.15em;
     }
   }
 

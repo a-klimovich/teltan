@@ -1,119 +1,132 @@
 <div class="p-3 pt-4 pb-4 card text-right filter-select filter" id="filterModalContent">
-  <div class="pb-3 mb-2 mb-lg-4 d-flex d-lg-none justify-content-between border-bottom">
+  <div class="pb-3 mb-4 d-flex d-lg-none justify-content-between border-bottom">
     <a class="filter-closer filterTogglerMobile" type="button"><i class="mr-1 mr-lg-3 icon-clear"></i> Close</a>
-    <p class="m-0 d-inline-block text-uppercase font-weight-bolder filter-title">Filters</p>
+    <p class="m-0 d-inline-block text-uppercase filter-title">Filters</p>
   </div>
   
-  <p class="h5 d-block d-lg-none text-uppercase font-weight-bolder" data-toggle="collapse" href="#collapseDepartment" role="button" aria-expanded="true" aria-controls="collapseDepartment">
-    <span class="d-flex justify-content-between"><i class="icone- icon-arrow-down-sign-to-navigate-3"></i> Department</span>
-  </p>
-  <p class="h5 mb-3 d-none d-lg-block text-uppercase font-weight-bolder">Department</p>
-
-  <ul class="collapse show" id="collapseDepartment">
-    <li>
-      <a href="#">Apartments for rent</a>
-    </li>
-    <li>
-      <a href="#">Sale of apartments</a>
-    </li>
-    <li>
-      <a href="#">Commercial property</a>
-    </li>
-    <li>
-      <a href="#">New apartments</a>
-    </li>
-  </ul>
-
-  <p class="h5 d-block d-lg-none text-uppercase font-weight-bolder" data-toggle="collapse" href="#collapsePrice" role="button" aria-expanded="true" aria-controls="collapsePrice">
-    <span class="d-flex justify-content-between"><i class="icone- icon-arrow-down-sign-to-navigate-3"></i>Price</span>
-  </p>
-  <p class="h5 mb-3 d-none d-lg-block text-uppercase font-weight-bolder">Price</p>
-
-  <ul class="border-bottom-0 collapse show" id="collapsePrice">
-    <li>
-      <a href="#">Under $25</a>
-    </li>
-
-    <li>
-      <a href="#">$25 to $50</a>
-    </li>
-
-    <li>
-      <a href="#">$50 to $100</a>
-    </li>
-
-    <li>
-      <a href="#">$100 to $200</a>
-    </li>
-
-    <li>
-      <a href="#">$200 & Above</a>
-    </li>
-  </ul>
-
-  <form class="collapse show" id="collapsePrice">
-    <div class="form-group">
-      <div class="mb-4 form-row">
-        <div class="col">
-          <input type="text" class="form-control" placeholder="Max" data-range-max-connected="rangeSlider">
-        </div>
-  
-        <div class="col">
-          <input type="text" class="form-control" placeholder="Min" data-range-min-connected="rangeSlider">
-        </div>
-      </div>
-
-      <div id="rangeSlider" data-range-min="0" data-range-max="10000"></div>
-    </div>
-  </form>
-
-  <div class="mb-4 pb-4 flex-column border-bottom">
-    <p class="h5 d-block d-lg-none text-uppercase font-weight-bolder" data-toggle="collapse" href="#collapseRooms" role="button" aria-expanded="true" aria-controls="collapseRooms">
-      <span class="d-flex justify-content-between"><i class="icone- icon-arrow-down-sign-to-navigate-3"></i> Rooms</span>
+  <div class="mb-3 pb-3 border-bottom">
+    <p class="h5 d-block d-lg-none text-uppercase" data-toggle="collapse" href="#collapseDepartment" role="button" aria-expanded="true" aria-controls="collapseDepartment">
+      <span class="d-flex justify-content-between"><i class="icone- icon-arrow-down-sign-to-navigate-3"></i> Department</span>
     </p>
-    <p class="h5 mb-3 d-none d-lg-block text-uppercase font-weight-bolder">Rooms</p>
-
-    <div class="collapse show" id="collapseRooms">
-      <div class="mb-4 form-row">
-        <div class="col">
-          <input type="text" class="form-control" placeholder="Max">
-        </div>
-
-        <div class="col">
-          <input type="text" class="form-control" placeholder="Min">
-        </div>
-      </div>
+    <p class="h5 mb-3 d-none d-lg-block text-uppercase">Department</p>
+  
+    <div class="collapse show" id="collapseDepartment">
+      <ul>
+        <li>
+          <a href="#">Apartments for rent</a>
+        </li>
+        <li>
+          <a href="#">Sale of apartments</a>
+        </li>
+        <li>
+          <a href="#">Commercial property</a>
+        </li>
+        <li>
+          <a href="#">New apartments</a>
+        </li>
+      </ul>
     </div>
   </div>
 
-  <div class="mb-4 pb-4 flex-column border-bottom">
-    <p class="h5 d-block d-lg-none text-uppercase font-weight-bolder" data-toggle="collapse" href="#collapseArea" role="button" aria-expanded="true" aria-controls="collapseArea">
-      <span class="d-flex justify-content-between"><i class="icone- icon-arrow-down-sign-to-navigate-3"></i> Area</span>
+  <div class="pb-3 mb-3 border-bottom">
+    <p class="h5 d-block d-lg-none text-uppercase" data-toggle="collapse" href="#collapsePrice" role="button" aria-expanded="true" aria-controls="collapsePrice">
+      <span class="d-flex justify-content-between"><i class="icone- icon-arrow-down-sign-to-navigate-3"></i>Price</span>
     </p>
-    <p class="h5 mb-3 d-none d-lg-block text-uppercase font-weight-bolder">Area</p>
-
-    <div class="collapse show" id="collapseArea">
-      <div class="mb-4 form-row">
-        <div class="col">
-          <input type="text" class="form-control" placeholder="Max">
-        </div>
-
-        <div class="col">
-          <input type="text" class="form-control" placeholder="Min">
-        </div>
-      </div>
-    </div>
-  </div>
+    <p class="h5 mb-3 d-none d-lg-block text-uppercase">Price</p>
   
-
-  <div class="mb-4 flex-column border-bottom">
-    <p class="h5 d-block d-lg-none text-uppercase font-weight-bolder" data-toggle="collapse" href="#collapseFloor" role="button" aria-expanded="true" aria-controls="collapseFloor">
-      <span class="d-flex justify-content-between"><i class="icone- icon-arrow-down-sign-to-navigate-3"></i> Floor</span>
-    </p>
-    <p class="h5 mb-3 d-none d-lg-block text-uppercase font-weight-bolder">Floor</p>
+    <div class="collapse show" id="collapsePrice">
+      <ul >
+        <li>
+          <span data-range-set="0,250" data-range-connected="rangeSlider">Under $250</span>
+        </li>
     
-    <div class="collapse show" id="collapseFloor">
-      <div class="mb-4 form-row">
+        <li>
+          <span data-range-set="250,500" data-range-connected="rangeSlider">$250 to $500</span>
+        </li>
+    
+        <li>
+          <span data-range-set="500,1000" data-range-connected="rangeSlider">$500 to $1000</span>
+        </li>
+    
+        <li>
+          <span data-range-set="1000,2000" data-range-connected="rangeSlider">$1000 to $2000</span>
+        </li>
+    
+        <li>
+          <span data-range-set="2000,10000" data-range-connected="rangeSlider">$2000 & Above</span>
+        </li>
+      </ul>
+    
+      <form action="/">
+        <div class="form-group">
+          <div class="mb-4 form-row">
+            <div class="col">
+              <input type="text" class="form-control" placeholder="Max" data-range-max-connected="rangeSlider">
+            </div>
+      
+            <div class="col">
+              <input type="text" class="form-control" placeholder="Min" data-range-min-connected="rangeSlider">
+            </div>
+          </div>
+    
+          <div class="mb-3" id="rangeSlider" data-range-min="0" data-range-max="10000"></div>
+        
+          <div class="row px-2 d-flex justify-content-between">
+            <span>10 000$</span>
+            <span>1$</span>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="pb-4 mb-3 border-bottom">
+    <!-- <p class="h5 d-block d-lg-none text-uppercase" data-toggle="collapse" href="#collapseRooms" role="button" aria-expanded="true" aria-controls="collapseRooms">
+      <span class="d-flex justify-content-between"><i class="icone- icon-arrow-down-sign-to-navigate-3"></i> Rooms</span>
+    </p> -->
+    <p class="h5 mb-3 d-block text-uppercase">Rooms</p>
+
+    <div>
+      <div class="form-row">
+        <div class="col">
+          <input type="text" class="form-control" placeholder="Max">
+        </div>
+
+        <div class="col">
+          <input type="text" class="form-control" placeholder="Min">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="pb-4 mb-3 border-bottom">
+    <!-- <p class="h5 d-block d-lg-none text-uppercase" data-toggle="collapse" href="#collapseArea" role="button" aria-expanded="true" aria-controls="collapseArea">
+      <span class="d-flex justify-content-between"><i class="icone- icon-arrow-down-sign-to-navigate-3"></i> Area</span>
+    </p> -->
+    <p class="h5 mb-3 d-block text-uppercase">Area</p>
+
+    <div>
+      <div class="form-row">
+        <div class="col">
+          <input type="text" class="form-control" placeholder="Max">
+        </div>
+
+        <div class="col">
+          <input type="text" class="form-control" placeholder="Min">
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  <div class="pb-3 mb-3 border-bottom">
+    <!-- <p class="h5 d-block d-lg-none text-uppercase" data-toggle="collapse" href="#collapseFloor" role="button" aria-expanded="true" aria-controls="collapseFloor">
+      <span class="d-flex justify-content-between"><i class="icone- icon-arrow-down-sign-to-navigate-3"></i> Floor</span>
+    </p> -->
+    <p class="h5 mb-3 d-block text-uppercase">Floor</p>
+    
+    <div>
+      <div class="form-row">
         <div class="col">
           <input type="text" class="form-control" placeholder="20">
         </div>
@@ -127,13 +140,13 @@
     <p>Above 20</p>
   </div>
   
-  <div class="mb-4 pb-4 flex-column border-bottom">
-    <p class="h5 d-block d-lg-none text-uppercase font-weight-bolder" data-toggle="collapse" href="#collapsePropertyType" role="button" aria-expanded="true" aria-controls="collapsePropertyType">
+  <div class="pb-3 mb-3 border-bottom">
+    <!-- <p class="h5 d-block d-lg-none text-uppercase" data-toggle="collapse" href="#collapsePropertyType" role="button" aria-expanded="true" aria-controls="collapsePropertyType">
       <span class="d-flex justify-content-between"><i class="icone- icon-arrow-down-sign-to-navigate-3"></i> Property type</span>
-    </p>
-    <p class="h5 mb-3 d-none d-lg-block text-uppercase font-weight-bolder">Property type</p>
+    </p> -->
+    <p class="h5 mb-3 d-block text-uppercase">Property type</p>
     
-    <div class="collapse show" id="collapsePropertyType">
+    <div>
       <select class="selectpicker" data-style-base="mb-3 form-control form-control-select" data-style="">
         <option selected>Select Type</option>
         <option value="1">One</option>
@@ -143,13 +156,13 @@
     </div>
   </div>
   
-  <div class="mb-4 pb-4 flex-column border-bottom">
-    <p class="h5 d-block d-lg-none text-uppercase font-weight-bolder" data-toggle="collapse" href="#collapseCity" role="button" aria-expanded="true" aria-controls="collapseCity">
+  <div class="pb-3 mb-3 border-bottom">
+    <!-- <p class="h5 d-block d-lg-none text-uppercase" data-toggle="collapse" href="#collapseCity" role="button" aria-expanded="true" aria-controls="collapseCity">
       <span class="d-flex justify-content-between"><i class="icone- icon-arrow-down-sign-to-navigate-3"></i> City</span>
-    </p>
-    <p class="h5 mb-3 d-none d-lg-block text-uppercase font-weight-bolder">City</p>
+    </p> -->
+    <p class="h5 mb-3 d-block text-uppercase">City</p>
     
-    <div class="collapse show" id="collapseCity">
+    <div>
       <select class="selectpicker" data-style-base="mb-3 form-control form-control-select" data-style="">
         <option selected>Select</option>
         <option value="1">One</option>
@@ -159,13 +172,13 @@
     </div>
   </div>
   
-  <div class="mb-4 pb-4 flex-column border-bottom">
-    <p class="h5 d-block d-lg-none text-uppercase font-weight-bolder" data-toggle="collapse" href="#collapseDistrict" role="button" aria-expanded="true" aria-controls="collapseDistrict">
+  <div class="pb-3 mb-3 border-bottom">
+    <!-- <p class="h5 d-block d-lg-none text-uppercase" data-toggle="collapse" href="#collapseDistrict" role="button" aria-expanded="true" aria-controls="collapseDistrict">
       <span class="d-flex justify-content-between"><i class="icone- icon-arrow-down-sign-to-navigate-3"></i> district</span>
-    </p>
-    <p class="h5 mb-3 d-none d-lg-block text-uppercase font-weight-bolder">district</p>
+    </p> -->
+    <p class="h5 mb-3 d-block text-uppercase">district</p>
     
-    <div class="collapse show" id="collapseDistrict">
+    <div>
       <select class="selectpicker" data-style-base="mb-3 form-control form-control-select" data-style="">
         <option selected>Select</option>
         <option value="1">One</option>
@@ -175,13 +188,13 @@
     </div>
   </div>
 
-  <div class="mb-4 flex-column">
-    <p class="h5 d-block d-lg-none text-uppercase font-weight-bolder" data-toggle="collapse" href="#collapeTheStreet" role="button" aria-expanded="true" aria-controls="collapeTheStreet">
+  <div>
+    <!-- <p class="h5 d-block d-lg-none text-uppercase" data-toggle="collapse" href="#collapeTheStreet" role="button" aria-expanded="true" aria-controls="collapeTheStreet">
       <span class="d-flex justify-content-between"><i class="icone- icon-arrow-down-sign-to-navigate-3"></i> the street</span>
-    </p>
-    <p class="h5 mb-3 d-none d-lg-block text-uppercase font-weight-bolder">the street</p>
+    </p> -->
+    <p class="h5 mb-3 d-block text-uppercase">the street</p>
     
-    <div class="collapse show" id="collapeTheStreet">
+    <div>
       <select class="selectpicker" data-style-base="mb-3 form-control form-control-select" data-style="">
         <option selected>Select</option>
         <option value="1">One</option>

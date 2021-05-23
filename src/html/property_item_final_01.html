@@ -16,9 +16,9 @@
 
   <main class="mb-5">
     <div class="container">
-      <p class="h3 mb-3 text-uppercase font-weight-bolder text-right">Stylish Duplex Apartment - Nahalat Binyamin Market</p>
+      <p class="h3 mb-3 d-none d-lg-block text-uppercase font-weight-bolder text-right">Stylish Duplex Apartment - Nahalat Binyamin Market</p>
 
-      <div class="mb-4 pb-3 d-flex justify-content-end subtitle date-under-property-item">
+      <div class="mb-4 pb-3 d-none d-lg-flex justify-content-end subtitle date-under-property-item">
         <div class="mr-4 date text-right">
           Yesterday, 20:28
         </div>
@@ -36,9 +36,15 @@
 
       <div class="row flex-column-reverse flex-lg-row mb-4">
         <div class="col-12 col-lg-4 flex-column">
-          @@include('./item/connection-card-property.html')
-          @@include('./item/connection-card-property-registred.html')
-          @@include('./item/connection-card-property-edit.html')
+          @@include('./item/connection-card-property.html', {
+            title: 'Stylish Duplex Apartment - Nahalat Binyamin Market'
+          })
+          @@include('./item/connection-card-property-registred.html', {
+            title: 'Stylish Duplex Apartment - Nahalat Binyamin Market'
+          })
+          @@include('./item/connection-card-property-edit.html', {
+            title: 'Stylish Duplex Apartment - Nahalat Binyamin Market'
+          })
 
 
           <div class="d-block d-lg-none">

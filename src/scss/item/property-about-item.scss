@@ -1,4 +1,18 @@
+@import '../variables';
+@import "node_modules/bootstrap-scss/mixins";
+
 .property-about-item {
+
+  &__short-description {
+    span {
+      font-size: 0.9em;
+
+      @include media-breakpoint-up(lg) {
+        font-size: 1.05em;
+      }
+    }
+  }
+
   &__text {
     overflow: hidden;
     text-overflow: ellipsis;
@@ -17,6 +31,10 @@
 
   i {
     color: #6a6a6a !important;
-    font-size: 30px
+    font-size: 25px;
+
+    @include media-breakpoint-up(lg) {
+      font-size: 30px;
+    }
   }
 }

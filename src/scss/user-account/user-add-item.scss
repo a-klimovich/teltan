@@ -64,3 +64,23 @@
     }
   }
 }
+
+@include media-breakpoint-down(lg) {
+  .card.user-add-item {
+    background-color: transparent;
+    border: transparent;
+    box-shadow: none;
+
+    .user-add-item__photo {
+      .add-item-photo {
+        width: 60px;
+        height: 60px;
+        background-color: #ffffff;
+
+        i {
+          font-size: 1.7em;
+        }
+      }
+    }
+  }
+}
