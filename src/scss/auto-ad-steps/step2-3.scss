@@ -69,6 +69,10 @@
       &:hover {
         border-color: #33e56d;
       }
+
+      &.active {
+        border-color: #33e56d;
+      }
     }
 
     &__gen-number,

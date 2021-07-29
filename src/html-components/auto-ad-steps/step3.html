@@ -131,9 +131,14 @@
 
   <div class="mb-4 row flex-column-reverse flex-lg-row">
     <div class="col col-lg-10">
-      <div class="d-flex flex-row-reverse flex-wrap">
-
-        <select class="mr-2 mr-lg-3 mb-2 mb-lg-3 selectpicker" data-style-base="form-control form-control-select" data-style="" name="Multimedia" id="">
+      <div class="mb-2 d-flex d-lg-none select-w-100">
+        <select class="selectpicker" data-style-base="form-control form-control-select" data-style="" name="Multimedia" id="audioSelect">
+          <option value="Audio Select" class="font-weight-bold">Audio system</option>
+        </select>
+      </div>
+      
+      <div class="d-flex flex-row-reverse justify-content-center justify-content-lg-start flex-wrap">
+        <select class="d-none d-lg-flex mr-2 mr-lg-3 mb-2 mb-lg-3 selectpicker" data-style-base="form-control form-control-select" data-style="" name="Multimedia" id="">
           <option value="Audio system">Audio system</option>
         </select>
 
@@ -162,49 +167,49 @@
           <label for="multimediaAUX">AUX</label>
         </div>
 
-        <div class="mr-2 mr-lg-3 mb-2 mb-lg-3 form_radio_btn">
+        <div class="d-none d-lg-flex mr-2 mr-lg-3 mb-2 mb-lg-3 form_radio_btn">
           <input id="multimedia220V" type="checkbox" name="Multimedia">
           <label for="multimedia220V">220V</label>
         </div>
 
-        <div class="mr-2 mr-lg-3 mb-2 mb-lg-3 form_radio_btn">
+        <div class="d-none d-lg-flex mr-2 mr-lg-3 mb-2 mb-lg-3 form_radio_btn">
           <input id="multimediaUSB" type="checkbox" name="Multimedia">
           <label for="multimediaUSB">USB</label>
         </div>
 
-        <div class="mr-2 mr-lg-3 mb-2 mb-lg-3 form_radio_btn">
+        <div class="d-none d-lg-flex mr-2 mr-lg-3 mb-2 mb-lg-3 form_radio_btn">
           <input id="multimedia12V" type="checkbox" name="Multimedia">
           <label for="multimedia12V">12V</label>
         </div>
 
-        <div class="mr-2 mr-lg-3 mb-2 mb-lg-3 form_radio_btn">
+        <div class="d-none d-lg-flex mr-2 mr-lg-3 mb-2 mb-lg-3 form_radio_btn">
           <input id="multimediaRear" type="checkbox" name="Multimedia">
           <label for="multimediaRear">Rear seat multimedia system</label>
         </div>
       </div>
     </div>
 
-    <div class="mb-4 mb-lg-0 col col-lg-2 d-flex d-lg-block justify-content-center justify-content-lg-center">
+    <div class="mb-2 mb-lg-0 col col-lg-2 d-flex d-lg-block justify-content-end justify-content-lg-center">
       <p class="m-0 font-weight-bold">Multimedia:</p>
     </div>
   </div>
 
   <div class="mb-4 row flex-column-reverse flex-lg-row">
     <div class="col col-lg-10">
-      <div class="d-flex flex-row-reverse flex-wrap">
+      <div class="d-flex flex-row-reverse justify-content-center justify-content-lg-start flex-wrap">
         <select class="selectpicker" data-style-base="form-control form-control-select" data-style="" name="Comfort" id="">
           <option value="Air conditioning">Air conditioning</option>
         </select>
 
-        <select class="selectpicker" data-style-base="form-control form-control-select" data-style="" name="Comfort" id="">
+        <select class="d-none d-lg-flex selectpicker" data-style-base="form-control form-control-select" data-style="" name="Comfort" id="">
           <option value="Steering wheel adjustment">Steering wheel adjustment</option>
         </select>
 
-        <select class="selectpicker" data-style-base="form-control form-control-select" data-style="" name="Comfort" id="">
+        <select class="d-none d-lg-flex selectpicker" data-style-base="form-control form-control-select" data-style="" name="Comfort" id="">
           <option value="Suspension">Suspension</option>
         </select>
 
-        <select class="selectpicker" data-style-base="form-control form-control-select" data-style="" name="Comfort" id="">
+        <select class="d-none d-lg-flex selectpicker" data-style-base="form-control form-control-select" data-style="" name="Comfort" id="">
           <option value="Power windows">Power windows</option>
         </select>
 
@@ -216,22 +221,22 @@
           <option value="Camera">Camera</option>
         </select>
 
-        <div class="mr-2 mr-lg-3 mb-2 mb-lg-3 form_radio_btn">
+        <div class="d-none d-lg-flex mr-2 mr-lg-3 mb-2 mb-lg-3 form_radio_btn">
           <input id="comfortOnBoardComputer" type="checkbox" name="Comfort">
           <label for="comfortOnBoardComputer">On-board computer</label>
         </div>
 
-        <div class="mr-2 mr-lg-3 mb-2 mb-lg-3 form_radio_btn">
+        <div class="d-none d-lg-flex mr-2 mr-lg-3 mb-2 mb-lg-3 form_radio_btn">
           <input id="comfortTrunk" type="checkbox" name="Comfort">
           <label for="comfortTrunk">Trunk lid motor</label>
         </div>
 
-        <div class="mr-2 mr-lg-3 mb-2 mb-lg-3 form_radio_btn">
+        <div class="d-none d-lg-flex mr-2 mr-lg-3 mb-2 mb-lg-3 form_radio_btn">
           <input id="comfortRemoteEngineStart" type="checkbox" name="Comfort">
           <label for="comfortRemoteEngineStart">Remote engine start</label>
         </div>
 
-        <div class="mr-2 mr-lg-3 mb-2 mb-lg-3 form_radio_btn">
+        <div class="d-none d-lg-flex mr-2 mr-lg-3 mb-2 mb-lg-3 form_radio_btn">
           <input id="comfortDigitalInstrumentPanel" type="checkbox" name="Comfort">
           <label for="comfortDigitalInstrumentPanel">Digital instrument panel</label>
         </div>
@@ -251,7 +256,7 @@
           <label for="comfortHeater">Heater</label>
         </div>
 
-        <div class="mr-2 mr-lg-3 mb-2 mb-lg-3 form_radio_btn">
+        <div class="d-none d-lg-flex mr-2 mr-lg-3 mb-2 mb-lg-3 form_radio_btn">
           <input id="comfortActiveParkingAssistance" type="checkbox" name="Comfort">
           <label for="comfortActiveParkingAssistance">Active parking assistance system</label>
         </div>
@@ -265,7 +270,7 @@
 
   <div class="mb-4 row flex-column-reverse flex-lg-row">
     <div class="col col-lg-10">
-      <div class="d-flex flex-row-reverse flex-wrap">
+      <div class="d-flex flex-row-reverse justify-content-center justify-content-lg-start flex-wrap">
         <select class="selectpicker" data-style-base="form-control form-control-select" data-style="" name="Overview" id="">
           <option value="Suspension">Headlights</option>
         </select>
@@ -313,7 +318,7 @@
 
   <div class="mb-4 row flex-column-reverse flex-lg-row">
     <div class="col col-lg-10">
-      <div class="d-flex flex-row-reverse flex-wrap">
+      <div class="d-flex flex-row-reverse justify-content-center justify-content-lg-start flex-wrap">
         <select class="selectpicker" data-style-base="form-control form-control-select" data-style="" name="Exterior" id="">
           <option value="Suspension">Disc type</option>
         </select>
@@ -338,7 +343,7 @@
 
   <div class="mb-4 row flex-column-reverse flex-lg-row">
     <div class="col col-lg-10">
-      <div class="d-flex flex-row-reverse flex-wrap">
+      <div class="d-flex flex-row-reverse justify-content-center justify-content-lg-start flex-wrap">
         <select class="selectpicker" data-style-base="form-control form-control-select" data-style="" name="Anti-theft protection" id="">
           <option value="Suspension">Signaling</option>
         </select>
@@ -356,7 +361,7 @@
 
   <div class="mb-4 row flex-column-reverse flex-lg-row">
     <div class="col col-lg-10">
-      <div class="d-flex flex-row-reverse flex-wrap">
+      <div class="d-flex flex-row-reverse justify-content-center justify-content-lg-start flex-wrap">
         <select class="selectpicker" data-style-base="form-control form-control-select" data-style="" name="Salon" id="">
           <option value="Suspension">Number of seats</option>
         </select>
@@ -439,7 +444,6 @@
           <input id="salonSeatPositionMemory" type="checkbox" name="Salon">
           <label for="salonSeatPositionMemory">Seat position memory</label>
         </div>
-        
       </div>
     </div>
     <div class="mb-4 mb-lg-0 col col-lg-2 d-flex d-lg-block justify-content-center justify-content-lg-center">
@@ -449,7 +453,7 @@
 
   <div class="mb-4 row flex-column-reverse flex-lg-row">
     <div class="col col-lg-10">
-      <div class="d-flex flex-row-reverse flex-wrap">
+      <div class="d-flex flex-row-reverse justify-content-center justify-content-lg-start flex-wrap">
         <select class="selectpicker" data-style-base="form-control form-control-select" data-style="" name="Safety" id="">
           <option value="Suspension">Cruise control</option>
         </select>
@@ -465,7 +469,7 @@
       </div>
     </div>
 
-    <div class="mb-4 mb-lg-0 col col-lg-2 d-flex d-lg-block justify-content-center justify-content-lg-center">
+    <div class="mb-2 mb-lg-0 col col-lg-2 d-flex d-lg-block justify-content-end justify-content-lg-center">
       <p class="m-0 font-weight-bold">Safety:</p>
     </div>
   </div>
@@ -477,7 +481,7 @@
         advantages and disadvantages." rows="4"></textarea>
       </div>
     </div>
-    <div class="mb-4 mb-lg-0 col col-lg-2 d-flex d-lg-block justify-content-center justify-content-lg-center">
+    <div class="mb-2 mb-lg-0 col col-lg-2 d-flex d-lg-block justify-content-end justify-content-lg-center">
       <p class="m-0 font-weight-bold">Comment (optional):</p>
     </div>
   </div>

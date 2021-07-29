@@ -4,57 +4,57 @@
   <div class="mb-4 row">
     <div class="col-12 col-lg-10">
       <div class="d-none d-lg-flex justify-content-end align-items-center">
-        <select id="floor" class="mr-3 custom-select" name="Year of issue">
+        <select class="mr-3 custom-select" name="Year of issue">
           <option value="no-value">Older</option>
           <option value="1">2013 </option>
           <option value="2">2012</option>
           <option value="3">2011</option>
         </select>
 
-        <div class="mr-3 form_radio_btn" data-toggle="collapse" href="#collapseCarGeneration" role="button" aria-expanded="false" aria-controls="collapseCarGeneration">
+        <div class="mr-3 form_radio_btn">
           <input id="carYear2014" type="radio" name="Year of issue" value="true">
           <label for="carYear2014">2014</label>
         </div>
 
-        <div class="mr-3 form_radio_btn" data-toggle="collapse" href="#collapseCarGeneration" role="button" aria-expanded="false" aria-controls="collapseCarGeneration">
+        <div class="mr-3 form_radio_btn">
           <input id="carYear2015" type="radio" name="Year of issue" value="true">
           <label for="carYear2015">2015</label>
         </div>
 
-        <div class="mr-3 form_radio_btn" data-toggle="collapse" href="#collapseCarGeneration" role="button" aria-expanded="false" aria-controls="collapseCarGeneration">
+        <div class="mr-3 form_radio_btn">
           <input id="carYear2016" type="radio" name="Year of issue" value="true">
           <label for="carYear2016">2016</label>
         </div>
 
-        <div class="mr-3 form_radio_btn" data-toggle="collapse" href="#collapseCarGeneration" role="button" aria-expanded="false" aria-controls="collapseCarGeneration">
+        <div class="mr-3 form_radio_btn">
           <input id="carYear2017" type="radio" name="Year of issue" value="true">
           <label for="carYear2017">2017</label>
         </div>
 
-        <div class="mr-3 form_radio_btn" data-toggle="collapse" href="#collapseCarGeneration" role="button" aria-expanded="false" aria-controls="collapseCarGeneration">
+        <div class="mr-3 form_radio_btn">
           <input id="carYear2018" type="radio" name="Year of issue" value="true">
           <label for="carYear2018">2018</label>
         </div>
 
-        <div class="mr-3 form_radio_btn" data-toggle="collapse" href="#collapseCarGeneration" role="button" aria-expanded="false" aria-controls="collapseCarGeneration">
+        <div class="mr-3 form_radio_btn">
           <input id="carYear2019" type="radio" name="Year of issue" value="true">
           <label for="carYear2019">2019</label>
         </div>
 
-        <div class="mr-3 form_radio_btn" data-toggle="collapse" href="#collapseCarGeneration" role="button" aria-expanded="false" aria-controls="collapseCarGeneration">
+        <div class="mr-3 form_radio_btn">
           <input id="carYear2020" type="radio" name="Year of issue" value="true">
           <label for="carYear2020">2020</label>
         </div>
 
-        <div class="form_radio_btn" data-toggle="collapse" href="#collapseCarGeneration" role="button" aria-expanded="false" aria-controls="collapseCarGeneration">
+        <div class="form_radio_btn">
           <input id="carYear2021" type="radio" name="Year of issue" value="true">
           <label for="carYear2021">2021</label>
         </div>
       </div>
 
-      <!-- Решение с селектом лучше чем то тчо выше... -->
-      <!-- <div class="d-flex">
-        <select id="floor" class="selectpicker" data-style-base="form-control form-control-select" data-style="" name="Year of issue">
+      <div class="d-flex d-lg-none">
+        <select class="selectpicker" data-style-base="form-control form-control-select" data-style="" name="Year of issue">
+          <option value="0">Year of issue</option>
           <option value="2021">2021</option>
           <option value="2020">2020</option>
           <option value="2019">2019</option>
@@ -67,7 +67,7 @@
           <option value="2012">2012</option>
           <option value="2011">2011</option>
         </select>
-      </div> -->
+      </div>
     </div>
 
     <div class="d-none d-lg-block col-2">
@@ -75,12 +75,12 @@
     </div>
   </div>
 
-  <div class="mb-4 collapse row" id="collapseCarGeneration">
-    <div class="col-12 col-lg-10">
+  <div class="mb-4 row">
+    <div class="col-9 col-lg-10">
       <div class="d-flex flex-row-reverse">
         <div class="d-flex flex-column align-items-center">
-          <div class="mb-3 d-flex justify-content-center align-items-center car-generation__image">
-            <img src="../../img/auto-generation-1.png" alt="">
+          <div class="mb-3 d-flex justify-content-center align-items-center car-generation__image active">
+            <img class="w-100" src="../../img/auto-generation-1.png" alt="">
           </div>
 
           <span class="car-generation__gen-number">III Restyling</span>
@@ -89,7 +89,7 @@
 
         <div class="mr-3 mr-lg-4 d-flex flex-column align-items-center">
           <div class="mb-3 d-flex justify-content-center align-items-center car-generation__image">
-            <img src="../../img/auto-generation.png" alt="">
+            <img class="w-100" src="../../img/auto-generation.png" alt="">
           </div>
 
           <span>IV</span>
@@ -98,7 +98,7 @@
       </div>
     </div>
 
-    <div class="d-none d-lg-block col-2">
+    <div class="col-3 col-lg-2">
       <p class="m-0 font-weight-bold">Generation:</p>
     </div>
   </div>
@@ -106,7 +106,7 @@
   <div class="mb-4 row">
     <div class="col-12 col-lg-10">
       <div class="mb-0 form-group">
-        <input type="text" class="form-control" placeholder="For example, GT, CL, LX, WRC" required>
+        <input type="text" class="form-control" placeholder="Modification (optional):" required>
       </div>
     </div>
 
@@ -240,7 +240,21 @@
       </div>
 
       <div class="d-flex d-lg-none">
-        <input id="bodyTypeCar" class="form-control" type="text" name="Engine" placeholder="Body type">
+        <select class="selectpicker" data-style-base="form-control form-control-select" data-style="" name="Body type">
+          <option value="Body type">Body type</option>
+          <option value="Sedan">Sedan</option>
+          <option value="Hatchback">Hatchback</option>
+          <option value="SUV">SUV</option>
+          <option value="Station wagon">Station wagon</option>
+          <option value="Liftback">Liftback</option>
+          <option value="Minivan">Minivan</option>
+          <option value="Minibus">Minibus</option>
+          <option value="Coupe">Coupe</option>
+          <option value="Lemousine">Lemousine</option>
+          <option value="Cabriolet">Cabriolet</option>
+          <option value="Pickup">Pickup</option>
+          <option value="Van">Van</option>
+        </select>
       </div>
     </div>
 
@@ -251,7 +265,7 @@
 
   <div class="mb-4 row">
     <div class="col-12 col-lg-10">
-      <div class="row d-flex justify-content-end">
+      <div class="row d-none d-lg-flex justify-content-end">
         <div class="col col-lg-2 form_radio_btn">
           <input id="engineElectro" type="radio" name="Engine">
           <label class="w-100" for="engineElectro">Electro</label>
@@ -268,14 +282,14 @@
         </div>
       </div>
 
-      <!-- <div class="d-flex d-lg-none">
-        <select class="custom-select w-100" name="Engine" id="engineSelect">
+      <div class="d-flex d-lg-none">
+        <select id="engineSelect" class="selectpicker" data-style-base="form-control form-control-select" data-style="" name="Engine">
           <option value="0">Engine</option>
           <option value="Electro">Electro</option>
           <option value="Diesel">Diesel</option>
           <option value="Petrol">Petrol</option>
         </select>
-      </div> -->
+      </div>
     </div>
 
     <div class="d-none d-lg-block col-2">
@@ -317,7 +331,9 @@
         <div class="col-6 d-none d-lg-flex">
           <input class="form-control" type="text" placeholder="hm" required>
         </div>
-        <input class="d-flex d-lg-none w-75 form-control" type="text" placeholder="Torque (optional):" required>
+        <div class="col-6 d-flex d-lg-none">
+          <input class="form-control" type="text" placeholder="Torque (optional):" required>
+        </div>
       </div>
     </div>
 
@@ -374,14 +390,14 @@
         </div>
       </div>
 
-      <!-- <div class="d-flex">
+      <div class="d-flex d-lg-none">
         <select class="selectpicker" data-style-base="form-control form-control-select" data-style="" name="transmission" id="transmissionSelect">
           <option value="0">Transmission</option>
           <option value="Manual control for people with disabilities">Manual control for people with disabilities</option>
           <option value="Mechanical">Mechanical</option>
           <option value="Automatic">Automatic</option>
         </select>
-      </div> -->
+      </div>
     </div>
 
     <div class="d-none d-lg-block col-2">
