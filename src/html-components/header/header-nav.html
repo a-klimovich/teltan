@@ -1,196 +1,291 @@
-<div class="header-disktop">
-  <div class="row mb-3">
-<!-- USER UNREGISTRED -->
-    <!-- <div class="col-3 d-flex align-items-center">
-      <ul class="nav font-weight-bold">
-        <li class="mr-4 justify-content-center">
-          <a class="" href="#" data-toggle="modal" data-target="#registerModal">
-            <span class="mr-2">Register</span>
-            <i class="icon-user-1"></i>
+ <div class="header__nav mb-3">
+  <div class="row">
+    <div class="col col-lg-5 col-xl-6">
+      <div class="d-flex h-100 justify-content-between align-items-center">
+        <div class="d-flex align-items-center">
+          <a class="d-flex align-items-center lang-list" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="mr-2 icon-arrow-down-sign-to-navigate-3"></i>
+            <span class="mr-2 ml-1">Rus</span>
+            <i class="icon-language"></i>
           </a>
-          </li>
-        <li>
-          <a class="" href="#" data-toggle="modal" data-target="#logInModal">
-            <span class="mr-2">Sign In</span>
-            <i class="icon-log-in"></i>
-          </a>
-        </li>
-      </ul>
-    </div> -->
-    <!-- USER UNREGISTRED END -->
-
-    <!-- USER SIGN IN -->
-    <div class="col-4 col-xl-3 d-flex justify-content-between align-items-center">
-      <a href="#" class="btn btn-primary text-uppercase font-weight-bold" data-toggle="modal" data-target="#modalTypeAdd">
-        <i class="icon-user-1 mr-2"></i>
-        <span>Your Ad</span>
-      </a>
-
-      <div class="d-flex align-items-center">
-        <a class="d-flex justify-content-center align-items-center font-weight-bold" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <i class="icon-arrow-down-sign-to-navigate-3"></i>
-
-          <span class="mr-1 ml-2">My Profile</span>
-
-          @@include('./user-account/counter-user-message.html')
-        </a>
-
-        <div class="dropdown-menu text-right">
-          <a class="dropdown-item active">My announsment</a>
-          <a class="dropdown-item d-flex justify-content-center align-items-center">
-            @@include('./user-account/counter-user-message.html')
-            <span class="ml-3">My Messages</span>
-          </a>
-          <a class="dropdown-item">Wallet history</a>
-          <a class="dropdown-item">History</a>
-          <a class="dropdown-item">Tracked</a>
-          <a class="dropdown-item">VIP</a>
-          <a class="dropdown-item">Settings</a>
-        </div>
-      </div>
-    </div>
-    <!-- USER SIGN IN END -->
-
-    <div class="col-6 d-flex justify-content-around">
-      <div class="d-flex align-items-center">
-        <a class="font-weight-bold" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <i class="icon-arrow-down-sign-to-navigate-3"></i>
-          <span class="mr-2 ml-1">Rus</span>
-          <i class="icon-language"></i>
-        </a>
-    
-        <div class="dropdown-menu">
-          <a class="dropdown-item active">Heb</a>
-          <a class="dropdown-item">Rus</a>
-          <a class="dropdown-item">Eng</a>
-        </div>
-      </div>
       
-      <div class="d-flex align-items-center">
-        <a class="font-weight-bold" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <i class="icon-arrow-down-sign-to-navigate-3"></i>
-          <span class="mr-2 ml-2">Free</span>
-          <i class="icon-free"></i>
-        </a>
-  
-        <div class="dropdown-menu text-right">
-          <a class="dropdown-item active">item-1</a>
-          <a class="dropdown-item">item-2</a>
-          <a class="dropdown-item">item-3</a>
+          <div class="dropdown-menu languages">
+            <a class="border-bottom dropdown-item active">Heb</a>
+            <a class="border-bottom dropdown-item">Rus</a>
+            <a class="dropdown-item">Eng</a>
+          </div>
         </div>
-      </div>
   
-      <div class="d-flex align-items-center">
-        <a class="font-weight-bold" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <i class="icon-arrow-down-sign-to-navigate-3"></i>
-          <span class="mr-2 ml-2">Property</span>
-          <i class="icon-home"></i>
-        </a>
+        <div class="d-none d-lg-flex align-items-center">
+          <div class="fleamarket-link">
+            <a class="d-flex align-items-center mr-2 pr-2 mr-lg-3 pr-lg-3 mr-xl-5 pr-xl-5 border-right" href="#">
+              <span class="mr-2">Catalog</span> @@include('../assets/icon-catalog.svg')
+            </a>
   
-        <div class="dropdown-menu text-right">
-          <a class="dropdown-item">Rent</a>
-          <a class="dropdown-item">Buy</a>
-          <a class="dropdown-item">Commercial property</a>
-          <a class="dropdown-item">New Buildings</a>
-        </div>
-      </div>
+            <div class="fleamarket catalog-categories">
+              <div class="tab-content" id="v-pills-tabContent">
+                <div class="tab-pane fade show active" id="electronics" role="tabpanel" aria-labelledby="electronics-tab">
+                  <ul>
+                    <li><a href="#">Electronics</a></li>
+                    <li><a href="#">Electronics</a></li>
+                    <li><a href="#">Electronics</a></li>
+                    <li><a href="#">Electronics</a></li>
+                    <li><a href="#">Electronics</a></li>
+                  </ul>
+                </div>
   
-      <div class="d-flex align-items-center">
-        <a class="font-weight-bold" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <i class="icon-arrow-down-sign-to-navigate-3"></i>
-          <span class="mr-2 ml-2">Auto</span>
-          <i class="icon-steering"></i>
-        </a>
+                <!-- Flea market on click content link-->
+                <div class="tab-pane fade" id="hobby" role="tabpanel" aria-labelledby="hobby-tab">
+                  <ul class="link-list">
+                    <li><a href="#">Водный спорт</a></li>
+                    <li><a href="#">Картины</a></li>
+                    <li><a href="#">Коллекционные предметы</a></li>
+                    <li><a href="#">Музыкальные инструменты</a></li>
+                    <li><a href="#">Призывнику</a></li>
+                    <li><a href="#">Литература и учебные материалы</a></li>
+                    <li><a href="#">Электросамокаты. Гироскутеры</a></li>
+                    <li><a href="#">Иудаика</a></li>
+                    <li><a href="#">Спортивный инвентарь</a></li>
+                    <li><a href="#">Кемпинг</a></li>
+                    <li><a href="#">Велосипеды</a></li>
+                    <li><a href="#">Велоаксессуары и экипировка</a></li>
+                    <li><a href="#">Товары для фитнесса</a></li>
+                    <li><a href="#">Настольные игры</a></li>
+                    <li><a href="#">Handmade</a></li>
+                  </ul>
+                </div>
   
-        <div class="dropdown-menu text-right">
-          <a class="dropdown-item">item-1</a>
-          <a class="dropdown-item">item-2</a>
-          <a class="dropdown-item">item-3</a>
-        </div>
-      </div>
-    </div>
+                <div class="tab-pane fade" id="construction" role="tabpanel" aria-labelledby="construction-tab"></div>
   
-    <div class="col">
-      <div class="d-flex justify-content-end">
-        <a href="#">
-          <img class="logo w-100" src="img/logo-color.png" alt="">
-        </a>
-      </div>
-    </div>
-  </div>
-</div>
+                <div class="tab-pane fade" id="business" role="tabpanel" aria-labelledby="business-tab"></div>
+  
+                <div class="tab-pane fade" id="children" role="tabpanel" aria-labelledby="children-tab"></div>
+  
+                <div class="tab-pane fade" id="accessories" role="tabpanel" aria-labelledby="accessories-tab"></div>
+  
+                <div class="tab-pane fade" id="clothes" role="tabpanel" aria-labelledby="clothes-tab"></div>
+  
+                <div class="tab-pane fade" id="holidays" role="tabpanel" aria-labelledby="holidays-tab"></div>
+  
+                <div class="tab-pane fade" id="garden" role="tabpanel" aria-labelledby="garden-tab"></div>
+  
+                <div class="tab-pane fade" id="weapons" role="tabpanel" aria-labelledby="weapons-tab"></div>
+  
+                <div class="tab-pane fade" id="other" role="tabpanel" aria-labelledby="other-tab"></div>
+              </div>
+  
+              <!-- Flea market categories links-->
+              <div class="nav flex-column nav-pills border-left" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                <a class="nav-link active" id="electronics-tab" data-toggle="pill" href="#electronics" role="tab" aria-controls="electronics" aria-selected="true">
+                  Electronics
+                  @@include('../assets/icon-baby-face.svg')
+                </a>
+  
+                <a class="nav-link" id="hobby-tab" data-toggle="pill" href="#hobby" role="tab" aria-controls="hobby" aria-selected="false">
+                  Sport. Hobby. Entertainment
+                  @@include('../assets/icon-game-ball.svg')
+                </a>
+  
+                <a class="nav-link" id="construction-tab" data-toggle="pill" href="#construction" role="tab" aria-controls="construction" aria-selected="false">
+                  Construction and repair
+                  @@include('../assets/icon-repair.svg')
+                </a>
+  
+                <a class="nav-link" id="business-tab" data-toggle="pill" href="#business" role="tab" aria-controls="business" aria-selected="false">
+                  Sale / purchase of business / services / work
+                  @@include('../assets/icon-cupon.svg')
+                </a>
+  
+                <a class="nav-link" id="children-tab" data-toggle="pill" href="#children" role="tab" aria-controls="children" aria-selected="false">
+                  Small children
+                  @@include('../assets/icon-baby-face.svg')
+                </a>
+  
+                <a class="nav-link" id="accessories-tab" data-toggle="pill" href="#accessories" role="tab" aria-controls="accessories" aria-selected="false">
+                  Accessories
+                  @@include('../assets/icon-game-ball.svg')
+                </a>
+  
+                <a class="nav-link" id="clothes-tab" data-toggle="pill" href="#clothes" role="tab" aria-controls="clothes" aria-selected="false">
+                  Clothes
+                  @@include('../assets/icon-repair.svg')
+                </a>
+  
+                <a class="nav-link" id="holidays-tab" data-toggle="pill" href="#holidays" role="tab" aria-controls="holidays" aria-selected="false">
+                  Holidays
+                  @@include('../assets/icon-cupon.svg')
+                </a>
+  
+                <a class="nav-link" id="garden-tab" data-toggle="pill" href="#garden" role="tab" aria-controls="garden" aria-selected="false">
+                  House and garden
+                  @@include('../assets/icon-baby-face.svg')
+                </a>
+  
+                <a class="nav-link" id="weapons-tab" data-toggle="pill" href="#weapons" role="tab" aria-controls="weapons" aria-selected="false">
+                  Weapons
+                  @@include('../assets/icon-game-ball.svg')
+                </a>
+  
+                <a class="nav-link" id="other-tab" data-toggle="pill" href="#other" role="tab" aria-controls="other" aria-selected="false">
+                  Other
+                  @@include('../assets/icon-repair.svg')
+                </a>
+              </div>
+            </div>
+          </div>
 
-<div class="header-mobile">
-  <div class="d-flex justify-content-between align-items-center mb-3">
-    <div class="d-flex">
-      <button class="btn btn-primary text-white text-uppercase your-add-btn mr-2">
-        <i class="icon-arrow-down-sign-to-navigate-3 pt-1"></i>
-        <span class="ml-2 font-weight-bold">your add</span>
-      </button>
+          <a class="d-flex align-items-center mr-2 pr-2 pr-lg-3 pr-xl-5 border-right" href="#">
+            <span class="mr-2">Draws</span> <i class="mb-1 icon-giftbox-1"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  
+    <div class="col col-lg-7 col-xl-6">
+      <div class="d-flex justify-content-end justify-content-lg-between align-items-center">
+        <a href="#" class="mr-3 mr-md-5 mr-lg-0 text-uppercase btn-your-add" data-toggle="modal" data-target="#modalTypeAdd">
+          <i class="icon-user-1 mr-2"></i>
+          <span>Your Ad</span>
+        </a>
+        
+        <div class="d-none d-lg-flex align-items-center fleamarket-link">
+          <a class="font-weight-bold">
+            <span class="mr-2 ml-2">Flea Market</span>
+            <i class="icon-free"></i>
+          </a>
+
+          <div class="fleamarket">
+            <div class="tab-content" id="v-pills-tabContent">
+              <div class="tab-pane fade show active" id="v-pills-electronics" role="tabpanel" aria-labelledby="v-pills-electronics-tab">
+                <ul>
+                  <li><a href="#">Electronics</a></li>
+                  <li><a href="#">Electronics</a></li>
+                  <li><a href="#">Electronics</a></li>
+                  <li><a href="#">Electronics</a></li>
+                  <li><a href="#">Electronics</a></li>
+                </ul>
+              </div>
+          
+              <!-- Flea market on click content link-->
+              <div class="tab-pane fade" id="v-pills-hobby" role="tabpanel" aria-labelledby="v-pills-hobby-tab">
+                <ul class="link-list">
+                  <li><a href="#">Водный спорт</a></li>
+                  <li><a href="#">Картины</a></li>
+                  <li><a href="#">Коллекционные предметы</a></li>
+                  <li><a href="#">Музыкальные инструменты</a></li>
+                  <li><a href="#">Призывнику</a></li>
+                  <li><a href="#">Литература и учебные материалы</a></li>
+                  <li><a href="#">Электросамокаты. Гироскутеры</a></li>
+                  <li><a href="#">Иудаика</a></li>
+                  <li><a href="#">Спортивный инвентарь</a></li>
+                  <li><a href="#">Кемпинг</a></li>
+                  <li><a href="#">Велосипеды</a></li>
+                  <li><a href="#">Велоаксессуары и экипировка</a></li>
+                  <li><a href="#">Товары для фитнесса</a></li>
+                  <li><a href="#">Настольные игры</a></li>
+                  <li><a href="#">Handmade</a></li>
+                </ul>
+              </div>
+          
+              <div class="tab-pane fade" id="v-pills-construction" role="tabpanel" aria-labelledby="v-pills-construction-tab"></div>
+          
+              <div class="tab-pane fade" id="v-pills-business" role="tabpanel" aria-labelledby="v-pills-business-tab"></div>
+          
+              <div class="tab-pane fade" id="v-pills-children" role="tabpanel" aria-labelledby="v-pills-children-tab"></div>
+          
+              <div class="tab-pane fade" id="v-pills-accessories" role="tabpanel" aria-labelledby="v-pills-accessories-tab"></div>
+          
+              <div class="tab-pane fade" id="v-pills-clothes" role="tabpanel" aria-labelledby="v-pills-clothes-tab"></div>
+          
+              <div class="tab-pane fade" id="v-pills-holidays" role="tabpanel" aria-labelledby="v-pills-holidays-tab"></div>
+          
+              <div class="tab-pane fade" id="v-pills-garden" role="tabpanel" aria-labelledby="v-pills-garden-tab"></div>
+          
+              <div class="tab-pane fade" id="v-pills-weapons" role="tabpanel" aria-labelledby="v-pills-weapons-tab"></div>
+          
+              <div class="tab-pane fade" id="v-pills-other" role="tabpanel" aria-labelledby="v-pills-other-tab"></div>
+            </div>
+          
+            <!-- Flea market categories links-->
+            <div class="nav flex-column nav-pills border-left" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+              <a class="nav-link active" id="v-pills-electronics-tab" data-toggle="pill" href="#v-pills-electronics" role="tab" aria-controls="v-pills-electronics" aria-selected="true">
+                Electronics
+                @@include('../assets/icon-baby-face.svg')
+              </a>
+          
+              <a class="nav-link" id="v-pills-hobby-tab" data-toggle="pill" href="#v-pills-hobby" role="tab" aria-controls="v-pills-hobby" aria-selected="false">
+                Sport. Hobby. Entertainment
+                @@include('../assets/icon-game-ball.svg')
+              </a>
+          
+              <a class="nav-link" id="v-pills-construction-tab" data-toggle="pill" href="#v-pills-construction" role="tab" aria-controls="v-pills-construction" aria-selected="false">
+                Construction and repair
+                @@include('../assets/icon-repair.svg')
+              </a>
+          
+              <a class="nav-link" id="v-pills-business-tab" data-toggle="pill" href="#v-pills-business" role="tab" aria-controls="v-pills-business" aria-selected="false">
+                Sale / purchase of business / services / work
+                @@include('../assets/icon-cupon.svg')
+              </a>
+          
+              <a class="nav-link" id="v-pills-children-tab" data-toggle="pill" href="#v-pills-children" role="tab" aria-controls="v-pills-children" aria-selected="false">
+                Small children
+                @@include('../assets/icon-baby-face.svg')
+              </a>
+          
+              <a class="nav-link" id="v-pills-accessories-tab" data-toggle="pill" href="#v-pills-accessories" role="tab" aria-controls="v-pills-accessories" aria-selected="false">
+                Accessories
+                @@include('../assets/icon-game-ball.svg')
+              </a>
+          
+              <a class="nav-link" id="v-pills-clothes-tab" data-toggle="pill" href="#v-pills-clothes" role="tab" aria-controls="v-pills-clothes" aria-selected="false">
+                Clothes
+                @@include('../assets/icon-repair.svg')
+              </a>
+          
+              <a class="nav-link" id="v-pills-holidays-tab" data-toggle="pill" href="#v-pills-holidays" role="tab" aria-controls="v-pills-holidays" aria-selected="false">
+                Holidays
+                @@include('../assets/icon-cupon.svg')
+              </a>
+          
+              <a class="nav-link" id="v-pills-garden-tab" data-toggle="pill" href="#v-pills-garden" role="tab" aria-controls="v-pills-garden" aria-selected="false">
+                House and garden
+                @@include('../assets/icon-baby-face.svg')
+              </a>
+          
+              <a class="nav-link" id="v-pills-weapons-tab" data-toggle="pill" href="#v-pills-weapons" role="tab" aria-controls="v-pills-weapons" aria-selected="false">
+                Weapons
+                @@include('../assets/icon-game-ball.svg')
+              </a>
+          
+              <a class="nav-link" id="v-pills-other-tab" data-toggle="pill" href="#v-pills-other" role="tab" aria-controls="v-pills-other" aria-selected="false">
+                Other
+                @@include('../assets/icon-repair.svg')
+              </a>
+            </div>
+          </div>
+        </div>
     
-      <div class="d-flex align-items-center">
-        <a class="font-weight-bold" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <i class="icon-arrow-down-sign-to-navigate-3"></i>
-          <span class="mr-2 ml-1">Rus</span>
-          <i class="icon-language"></i>
-        </a>
+        <div class="d-none d-lg-flex align-items-center">
+          <a class="font-weight-bold">
+            <span class="mr-2 ml-2">Property</span>
+            <i class="icon-home"></i>
+          </a>
+        </div>
     
-        <div class="dropdown-menu">
-          <a class="dropdown-item active">Heb</a>
-          <a class="dropdown-item">Rus</a>
-          <a class="dropdown-item">Eng</a>
+        <div class="d-none d-lg-flex align-items-center">
+          <a class="font-weight-bold">
+            <span class="mr-2 ml-2">Auto</span>
+            <i class="icon-steering"></i>
+          </a>
+        </div>
+
+        <div class="d-flex d-lg-none hamburger">
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
         </div>
       </div>
-    </div>
-
-    <a href="#">
-      <img class="logo w-100" src="img/logo-color.png" alt="">
-    </a>
-  </div>
-
-  <div class="mb-3 text-center border-bottom d-flex justify-content-between">
-    <div id="mainNavMenuElement" class="mobile-header-menu-element">
-      <button class="btn btn-transparent" type="button" id="mibileHeaderNav">
-        <i class="icon-sirting_line"></i>
-      </button>
-      <div id="mibileHeaderNavContent" class="text-left mobile-header-nav-content">
-        <a class="font-weight-bold border-bottom" href="#"><i class="mr-2 text-dark icon-helmet"></i> Construction and repair</a>
-        <a class="font-weight-bold border-bottom" href="#"><i class="mr-2 text-dark icon-basketball-ball"></i> Sport. Hobby. Entertainment</a>
-        <a class="font-weight-bold border-bottom" href="#"><i class="mr-2 text-dark icon-desktop"></i> Electronics</a>
-        <a class="font-weight-bold border-bottom" href="#"><i class="mr-2 text-dark icon-shirt-1"></i> Clothing and fashion</a>
-        <a class="font-weight-bold border-bottom" href="#"><i class="mr-2 text-dark icon-blocks"></i> Small children</a>
-        <a class="font-weight-bold border-bottom" href="#"><i class="mr-2 text-dark icon-suitcase-1"></i> Business / Services</a>
-        <a class="font-weight-bold border-bottom" href="#"><i class="mr-2 text-dark icon-gift-card-1"></i> Other</a>
-        <a class="font-weight-bold border-bottom" href="#"><i class="mr-2 text-dark icon-gardening"></i> House and Garden</a>
-        <a class="font-weight-bold border-bottom" href="#"><i class="mr-2 text-dark icon-balloons"></i> Holidays</a>
-        <a class="font-weight-bold border-bottom" href="#"><i class="mr-2 text-dark icon-mark"></i> Conscript soldier</a>
-        <a class="font-weight-bold border-bottom" href="#"><i class="mr-2 text-dark icon-animal-kingdom"></i> Animals</a>
-        <a class="font-weight-bold" href="#"><i class="mr-2 text-dark icon-giftbox-1"></i> Free</a>
-      </div>
-    </div>
-
-    <div class="mobile-header-menu-element">
-      <a class="btn btn-transparent" id="userAccountMenu">
-        <i class="icon-user-1"></i>
-      </a>
-    </div>
-
-    <div class="mobile-header-menu-element">
-      <a class="btn btn-transparent" id="userAccountTracked">
-        <i class="icon-bell"></i>
-      </a>
-    </div>
-
-    <div class="mobile-header-menu-element">
-      <a class="btn btn-transparent" id="userAccountMessages">
-        <i class="icon-chat-1"></i>
-      </a>
-    </div>
-
-    <div class="mobile-header-menu-element active">
-      <a class="btn btn-transparent" id="userAccountHome">
-        <i class="icon-home-4"></i>
-      </a>
     </div>
   </div>
 </div>

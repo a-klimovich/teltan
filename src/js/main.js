@@ -1,11 +1,6 @@
 (function(){
   const $filterModalContetn = $('#filterModalContent')
 
-  $('#mibileHeaderNav').on('click', () => {
-    $('#mainNavMenuElement').toggleClass('active')
-    $('#mibileHeaderNavContent').toggleClass('visible')
-  })
-
   $('.filterTogglerMobile').on('click', (e) => {
     e.preventDefault()
     $filterModalContetn.toggleClass('visible')

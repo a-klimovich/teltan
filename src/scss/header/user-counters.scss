@@ -1,0 +1,52 @@
+@import '../variables';
+
+.user-message,
+.user-basket,
+.user-follows {
+  position: relative;
+  cursor: pointer;
+
+  &__counter {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    border-radius: 25px;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #F5F5F5;
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $secondary;
+    color: $white;
+
+    span {
+      line-height: 12px;
+    }
+
+    &.not-empty {
+      background: #F50000;
+    }
+  }
+}
+.user-message {
+  &__counter {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+.user-basket {
+  &__counter {
+    top: -10px;
+    right: -10px;
+  }
+}
+
+.user-follows {
+  &__counter {
+    top: -8px;
+    right: -10px;
+  }
+}

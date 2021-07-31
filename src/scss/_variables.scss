@@ -1,61 +1,61 @@
-$body-bg:                 #f5f5f5;
+$body-bg: #f5f5f5;
 
-$green:                   #3fb465;
-$primary:                    $green;
-$light-green:             #33e56d;
-$orange:                  #ff8400;
-$white:                   #ffffff;
-$secondary:               #c4c4c4;
-$light-gray:              #e7e7e7;
-
+$green: #3fb465;
+$primary: $green;
+$light-green: #33e56d;
+$orange: #ff8400;
+$white: #ffffff;
+$secondary: #c4c4c4;
+$light-gray: #e7e7e7;
 // status color
-$online-status-color:     #00ae10;
-$offline-status-color:    #b8b8b8;
+$online-status-color: #00ae10;
+$offline-status-color: #b8b8b8;
 
 $status-online: $online-status-color;
 
-$font-family-sans-serif:   'Open Sans', sans-serif;
-$font-weight-bolder:        900;
+$font-family-sans-serif: "Open Sans", sans-serif;
+$font-weight-bolder: 900;
 
 $container-max-widths: (
-  sm: 540px,
-  md: 720px,
-  lg: 960px,
-  xl: 1230px
+  // sm: 320px,
+  md: 540px,
+  lg: 720px,
+  xl: 960px,
 ) !default;
 
 $grid-breakpoints: (
   xs: 0,
-  sm: 576px,
-  md: 768px,
-  lg: 992px,
-  xl: 1200px
+  sm: 450px,
+  md: 570px,
+  lg: 750px,
+  xl: 960px,
 ) !default;
 
-$dropdown-link-hover-color:   $light-green;
-$dropdown-link-hover-bg:      $white;
+$dropdown-link-hover-color: $light-green;
+$dropdown-link-hover-bg: $white;
 
-$dropdown-link-active-color:  $light-green;
-$dropdown-link-active-bg:     $white;
+$dropdown-link-active-color: $light-green;
+$dropdown-link-active-bg: $white;
 
-$breadcrumb-bg:               transparent;
-$breadcrumb-divider:          quote("•");
+$breadcrumb-bg: transparent;
+$breadcrumb-divider: quote("•");
 
-$link-color:                #000;
-$link-hover-color:            $light-green;
-$link-hover-decoration:       none;
+$link-color: #000;
+$link-hover-color: $light-green;
+$link-hover-decoration: none;
 
-$input-placeholder-color:   #000;
+$input-placeholder-color: #000;
 
-$border-radius:               8px;
+$border-radius: 8px;
 $modal-content-border-radius: 8px;
 
-$carousel-control-width:      10%;
+$carousel-control-width: 10%;
 
-$input-btn-focus-width:       0;
+$input-placeholder-color: #999999;
+$input-btn-focus-width: 0;
 
-$pagination-hover-color:    #fff;
-$pagination-hover-bg:         $light-green;
+$pagination-hover-color: #fff;
+$pagination-hover-bg: $light-green;
 
 $box-shadow: 7px 8px 22px 0px #302d2d40;
 

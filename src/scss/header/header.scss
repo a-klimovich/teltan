@@ -1,109 +1,173 @@
 @import "../variables";
+@import "node_modules/bootstrap-scss/mixins";
 
-.logo {
-  width: 100%;
-  max-width: 180px;
-}
+.header {
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 18px;
 
-.header-mobile {
-  display: none;
-  position: relative;
-
-  .icon-arrow-down-sign-to-navigate-3 {
-    font-size: 12px;
-  }
-
-  .your-add-btn {
-    height: fit-content;
-
-    font-weight: bold;
-    font-size: 12px;
-  }
-
-  .active {
-    border-bottom: 3px solid $primary;
-    
-    i {
-      color: $primary;
-    }
-  }
-}
-
-.header-disktop {
-  .dropdown-menu {
-    left: -30px !important;
-    min-width: 12rem;
-    box-shadow: 4px 4px 29px -12px rgba(0, 0, 0, 0.24);
-
-    .dropdown-item {
-      line-height: 42px;
-    }
-
-    .dropdown-item:not(:last-child) {
-      position: relative;
-
-      &:after{
-        content: '';
-        position: absolute;
-        height: 1px;
-        background: #f3f3f3;
-        bottom: 0;
-        left: 10%;
-        width: 80%;
+  a {
+    &:hover {
+      path {
+        fill: #33e56d;
       }
     }
   }
-}
 
-@media (max-width: 991px) {
-  .header-disktop {
-    display: none;
+  &__nav,
+  &__search {
+    i,
+    svg {
+      font-size: 19px;
+      width: 19px;
+      height: 19px;
+    }
   }
 
-  .header-mobile {
-    display: block;
+  &__nav {
+    .lang-list {
+      .icon-arrow-down-sign-to-navigate-3 {
+        font-size: 10px;
+        width: auto;
+        height: auto;
+      }
+
+      .icon-language {
+        top: -1px;
+      }
+    }
+
+    .dropdown-menu.languages {
+      padding: 4px 16px;
+      top: 10px !important;
+      left: -10px !important;
+      box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+      border-radius: 5px;
+      text-align: right;
+      min-width: 107px !important;
+
+      a {
+        padding: 9px 0;
+      }
+    }
+
+    .hamburger {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      width: 24px;
+      height: 20px;
+
+      cursor: pointer;
+
+      .line {
+        width: 100%;
+        height: 4px;
+        background: #333333;
+        border-radius: 1px;
+      }
+    }
+
+    .btn-your-add {
+      background: #3fb465;
+      border-radius: 6px;
+      width: 112px;
+      height: 34px;
+      color: $white;
+      padding: 8px 11px 7px 16px;
+
+      &:hover {
+        background: #288C48;
+      }
+
+      span {
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 18px;
+      }
+
+      i {
+        width: auto;
+        height: auto;
+        font-size: 13px;
+      }
+    }
   }
 
-  .logo {
-    max-width: 125px;
-  }
-}
+  &__search {
+    .logo {
+      &:hover {
+        path {
+          fill: black;
+        }
+      }
 
-#mainNavMenuElement {
-  &.active {
-    border: #ffffff;
-    border-radius: 8px 8px 0 0;
+      &__image {
+        svg {
+          width: 44px;
+          height: 44px;
+        }
 
-    background: #fff;
-  }
-}
+        @include media-breakpoint-down(lg) {
+          svg {
+            width: 28px;
+            height: 28px;
+          }
+        }
+      }
 
-.mobile-header-menu-element {
-  width: 80px;
-}
+      &__section-name {
+        font-weight: bold;
+        font-size: 17px;
+        line-height: 23px;
+        color: $primary;
 
-.mobile-header-nav-content {
-  display: none;
-  box-shadow: 1px 12px 30px -26px !important;
+        @include media-breakpoint-down(lg) {
+          font-size: 11px;
+          line-height: 10px;
+        }
+      }
 
-  i {
-    font-size: 20px;
-    color: #000000;
-  }
-  
-  a {
-    padding-left: 20px;
-    line-height: 60px;
-  }
+      &__text {
+        svg {
+          width: 102px;
+          height: 22px;
+        }
 
-  &.visible {
-    display: flex;
-    flex-direction: column;
-    background-color: white; // TODO: from variables
-    position: fixed;
-    z-index: 100;
-    top: 90px;
-    left: 0;
-    width: 100%;
+        @include media-breakpoint-down(lg) {
+          svg {
+            width: 75px;
+            height: 13px;
+          }
+        }
+      }
+    }
+
+    form .input-group {
+      height: 51px;
+
+      input {
+        height: 100%;
+      }
+
+      @include media-breakpoint-down(lg) {
+        height: 39px;
+      }
+    }
+
+    .btn-on-search {
+      width: 59px;
+
+      @include media-breakpoint-down(lg) {
+        width: 35px;
+
+        i, svg {
+          font-size: 14px;
+          width: auto;
+          height: auto;
+        }
+      }
+    }
   }
 }
