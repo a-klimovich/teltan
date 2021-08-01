@@ -22,30 +22,250 @@
 
   <main class="mb-5">
     <div class="container">
-      <h1 class="mb-lg-4 subtitle">
-        Latest offers
-      </h1>
+      <div class="d-flex flex-column">
+        <p class="h2 mb-lg-4 subtitle">
+          Flea Market
+        </p>
+  
+        <div class="mb-3 mb-lg-4 row row-cols-1 row-cols-lg-2">
+          <div class="col">
+            <div class="big-card-product">
+              <div class="p-3 p-lg-0 image-box">
+                <img src="./img/iphone.jpg" alt="">
+              </div>
+  
+              <div class="data">
+                <span class="mr-2"><span class="views">2531</span> <i class="icon-visibility"></i></span>
+                <span class="date">Yesterday, 20:28</span>
+              </div>
+  
+              <div class="marker">
+                <span>Акция</span>
+              </div>
+  
+              <div class="info w-100">
+                <div class="row flex-column flex-lg-row">
+                  <div class="col col-xl-5">
+                    <div class="px-3 px-lg-0 d-flex justify-content-between justify-content-lg-end align-items-lg-end h-100 knock-stream">
+                      <p class="mr-4 like">
+                        <svg id="iconLike" class="iconLike" viewBox="0 0 612 792"><path d="M562.413,284.393c-9.68,41.044-32.121,78.438-64.831,108.07L329.588,542.345l-165.11-149.843 c-32.771-29.691-55.201-67.076-64.892-108.12c-6.965-29.484-4.103-46.14-4.092-46.249l0.147-0.994 c6.395-72.004,56.382-124.273,118.873-124.273c46.111,0,86.703,28.333,105.965,73.933l9.061,21.477l9.061-21.477 c18.958-44.901,61.694-73.922,108.896-73.922c62.481,0,112.478,52.27,119,125.208C566.517,238.242,569.379,254.908,562.413,284.393z"/></svg>
+                      </p>
+      
+                      <p class="bg-primary price">$27 600</p>
+                    </div>
+                  </div>
+    
+                  <div class="col col-xl-7">
+                    <div class="px-3 px-lg-0 pr-lg-3 text-right">
+                      <a href="#" class="title text-uppercase">Lenovo laptop. 15 inches, metal case, windows 10</a>
+                      <p class="category">Sale of apartaments</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col">
+            <div class="big-card-product">
+              <div class="image-box">
+                <img src="./img/iphone.jpg" alt="">
+              </div>
+  
+              <div class="data">
+                <span class="mr-2"><span class="views">2531</span> <i class="icon-visibility"></i></span>
+                <span class="date">Yesterday, 20:28</span>
+              </div>
+  
+              <div class="marker">
+                <span>Акция</span>
+              </div>
+  
+              <div class="info w-100">
+                <div class="row flex-column flex-lg-row">
+                  <div class="col col-xl-5">
+                    <div class="px-3 px-lg-0 d-flex justify-content-between justify-content-lg-end align-items-lg-end h-100 knock-stream">
+                      <p class="mr-4 like">
+                        <svg id="iconLike" class="iconLike" viewBox="0 0 612 792"><path d="M562.413,284.393c-9.68,41.044-32.121,78.438-64.831,108.07L329.588,542.345l-165.11-149.843 c-32.771-29.691-55.201-67.076-64.892-108.12c-6.965-29.484-4.103-46.14-4.092-46.249l0.147-0.994 c6.395-72.004,56.382-124.273,118.873-124.273c46.111,0,86.703,28.333,105.965,73.933l9.061,21.477l9.061-21.477 c18.958-44.901,61.694-73.922,108.896-73.922c62.481,0,112.478,52.27,119,125.208C566.517,238.242,569.379,254.908,562.413,284.393z"/></svg>
+                      </p>
+      
+                      <p class="bg-primary price">$27 600</p>
+                    </div>
+                  </div>
+    
+                  <div class="col col-xl-7">
+                    <div class="px-3 px-lg-0 pr-lg-3 text-right">
+                      <a href="#" class="title text-uppercase">Lenovo laptop. 15 inches, metal case, windows 10</a>
+                      <p class="category">Sale of apartaments</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-      <div class="row row-cols-2 row-cols-lg-4">
-        <div class="col">
-          @@include('./product-card/product.html')
-        </div>
-        <div class="col">
-          @@include('./product-card/product.html')
-        </div>
-        <div class="col">
-          @@include('./product-card/product.html')
-        </div>
-        <div class="col">
-          @@include('./product-card/product.html')
-        </div>
-        <div class="col">
-          @@include('./product-card/product.html')
-        </div>
-        <div class="col">
-          @@include('./product-card/product.html')
+        <div class="row row-cols-2 row-cols-lg-4">
+          <div class="mb-3 col">
+            <div class="card flea-product-card">
+              <a href="#">
+                <div class="image-block">
+                  <div class="i-box">
+                    <picture>
+                      <source srcset="./img/flea-item-1.png">
+                      <img src="./assets/no-image.svg" alt="no-img">
+                    </picture>
+                  </div>
+                </div>
+  
+                <div class="px-2 px-lg-3 d-flex justify-content-between">
+                  <p class="mb-0 like">
+                    <svg id="iconLike" class="iconLike" viewBox="0 0 612 792"><path d="M562.413,284.393c-9.68,41.044-32.121,78.438-64.831,108.07L329.588,542.345l-165.11-149.843 c-32.771-29.691-55.201-67.076-64.892-108.12c-6.965-29.484-4.103-46.14-4.092-46.249l0.147-0.994 c6.395-72.004,56.382-124.273,118.873-124.273c46.111,0,86.703,28.333,105.965,73.933l9.061,21.477l9.061-21.477 c18.958-44.901,61.694-73.922,108.896-73.922c62.481,0,112.478,52.27,119,125.208C566.517,238.242,569.379,254.908,562.413,284.393z"/></svg>
+                  </p>
+    
+                  <p class="mb-0 bg-primary price">$27 600</p>
+                </div>
+  
+                <div class="px-2 px-lg-3 content-block">
+                  <div class="text-right">
+                    <p class="mb-2 mb-lg-3 title">Concert tickets for Alisher Morgenstern</p>
+                    <p class="mb-2 mb-lg-4 category">Sale of apartaments</p>
+                  </div>
+  
+                  <div class="border-top py-2 py-lg-3 d-flex justify-content-between align-items-center text-nowrap">
+                    <span class="mr-0 mr-lg-2 views"><span>2531</span> <i class="icon-visibility"></i></span>
+                    <span class="date">Yesterday, 20:28</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="mb-3 col">
+            <div class="card flea-product-card">
+              <a href="#">
+                <div class="image-block">
+                  <div class="i-box">
+                    <picture>
+                      <source srcset="">
+                      <img src="./assets/no-image.svg" alt="no-img">
+                     </picture>
+                  </div>
+                </div>
+  
+                <div class="px-2 px-lg-3 d-flex justify-content-between">
+                  <p class="mb-0 like">
+                    <svg id="iconLike" class="iconLike" viewBox="0 0 612 792"><path d="M562.413,284.393c-9.68,41.044-32.121,78.438-64.831,108.07L329.588,542.345l-165.11-149.843 c-32.771-29.691-55.201-67.076-64.892-108.12c-6.965-29.484-4.103-46.14-4.092-46.249l0.147-0.994 c6.395-72.004,56.382-124.273,118.873-124.273c46.111,0,86.703,28.333,105.965,73.933l9.061,21.477l9.061-21.477 c18.958-44.901,61.694-73.922,108.896-73.922c62.481,0,112.478,52.27,119,125.208C566.517,238.242,569.379,254.908,562.413,284.393z"/></svg>
+                  </p>
+    
+                  <p class="mb-0 bg-primary price">$27 600</p>
+                </div>
+  
+                <div class="px-2 px-lg-3 content-block">
+                  <div class="text-right">
+                    <p class="mb-2 mb-lg-3 title">Concert tickets for Alisher Morgenstern</p>
+                    <p class="mb-2 mb-lg-4 category">Sale of apartaments</p>
+                  </div>
+  
+                  <div class="border-top py-2 py-lg-3 d-flex justify-content-between align-items-center text-nowrap">
+                    <span class="mr-0 mr-lg-2 views"><span>2531</span> <i class="icon-visibility"></i></span>
+                    <span class="date">Yesterday, 20:28</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="mb-3 col">
+            <div class="card flea-product-card">
+              <a href="#">
+                <div class="image-block">
+                  <div class="i-box">
+                    <picture>
+                      <source srcset="./img/flea-item-2.png">
+                      <img src="./assets/no-image.svg" alt="no-img">
+                     </picture>
+                  </div>
+                </div>
+  
+                <div class="px-2 px-lg-3 d-flex justify-content-between">
+                  <p class="mb-0 like">
+                    <svg id="iconLike" class="iconLike" viewBox="0 0 612 792"><path d="M562.413,284.393c-9.68,41.044-32.121,78.438-64.831,108.07L329.588,542.345l-165.11-149.843 c-32.771-29.691-55.201-67.076-64.892-108.12c-6.965-29.484-4.103-46.14-4.092-46.249l0.147-0.994 c6.395-72.004,56.382-124.273,118.873-124.273c46.111,0,86.703,28.333,105.965,73.933l9.061,21.477l9.061-21.477 c18.958-44.901,61.694-73.922,108.896-73.922c62.481,0,112.478,52.27,119,125.208C566.517,238.242,569.379,254.908,562.413,284.393z"/></svg>
+                  </p>
+    
+                  <p class="mb-0 bg-primary price">$27 600</p>
+                </div>
+  
+                <div class="px-2 px-lg-3 content-block">
+                  <div class="text-right">
+                    <p class="mb-2 mb-lg-3 title">Concert tickets for Alisher Morgenstern</p>
+                    <p class="mb-2 mb-lg-4 category">Sale of apartaments</p>
+                  </div>
+  
+                  <div class="border-top py-2 py-lg-3 d-flex justify-content-between align-items-center text-nowrap">
+                    <span class="mr-0 mr-lg-2 views"><span>2531</span> <i class="icon-visibility"></i></span>
+                    <span class="date">Yesterday, 20:28</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="mb-3 col">
+            <div class="card flea-product-card">
+              <a href="#">
+                <div class="image-block">
+                  <div class="i-box">
+                    <picture>
+                      <source srcset="./img/flea-item-3.png">
+                      <img src="./assets/no-image.svg" alt="no-img">
+                     </picture>
+                  </div>
+                </div>
+  
+                <div class="px-2 px-lg-3 d-flex justify-content-between">
+                  <p class="mb-0 like">
+                    <svg id="iconLike" class="iconLike" viewBox="0 0 612 792"><path d="M562.413,284.393c-9.68,41.044-32.121,78.438-64.831,108.07L329.588,542.345l-165.11-149.843 c-32.771-29.691-55.201-67.076-64.892-108.12c-6.965-29.484-4.103-46.14-4.092-46.249l0.147-0.994 c6.395-72.004,56.382-124.273,118.873-124.273c46.111,0,86.703,28.333,105.965,73.933l9.061,21.477l9.061-21.477 c18.958-44.901,61.694-73.922,108.896-73.922c62.481,0,112.478,52.27,119,125.208C566.517,238.242,569.379,254.908,562.413,284.393z"/></svg>
+                  </p>
+    
+                  <p class="mb-0 bg-primary price">$27 600</p>
+                </div>
+  
+                <div class="px-2 px-lg-3 content-block">
+                  <div class="text-right">
+                    <p class="mb-2 mb-lg-3 title">Concert tickets for Alisher Morgenstern</p>
+                    <p class="mb-2 mb-lg-4 category">Sale of apartaments</p>
+                  </div>
+  
+                  <div class="border-top py-2 py-lg-3 d-flex justify-content-between align-items-center text-nowrap">
+                    <span class="mr-0 mr-lg-2 views"><span>2531</span> <i class="icon-visibility"></i></span>
+                    <span class="date">Yesterday, 20:28</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
+
+
+      <!-- <div class="row row-cols-2 row-cols-lg-4">
+        <div class="col">
+          @@include('./product-card/product.html')
+        </div>
+        <div class="col">
+          @@include('./product-card/product.html')
+        </div>
+        <div class="col">
+          @@include('./product-card/product.html')
+        </div>
+        <div class="col">
+          @@include('./product-card/product.html')
+        </div>
+        <div class="col">
+          @@include('./product-card/product.html')
+        </div>
+        <div class="col">
+          @@include('./product-card/product.html')
+        </div>
+      </div> -->
 
       <div class="d-none d-lg-flex justify-content-center">
         <button class="p-3 w-25 btn btn-primary font-weight-bold text-uppercase">show more</button>

@@ -1,14 +1,43 @@
+@import "./variables";
+@import "node_modules/bootstrap-scss/mixins";
+
 .footer {
   background: #fff;
   box-shadow: 0px -1px 29px -1px #302d2d40;
 
-  &__text {
-    color: #6c6c6c;
-  }
-}
+  &__info {
+    font-size: 13px;
 
-@media (max-width: 991px) {
-  .footer {
-    display: none;
+    ul {
+      list-style: none;
+      
+      li {
+        color: #222222;
+        font-weight: 700;
+      }
+    }
+
+    .copyright {
+      color: #555555;
+      text-align: right;
+
+      @include media-breakpoint-down(lg) {
+        text-align: center;
+      }
+    }
+  }
+
+  &__social {
+    svg {
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  &__logo {
+    .image svg {
+      width: 30px;
+      height: 30px;
+    }
   }
 }

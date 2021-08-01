@@ -1,0 +1,151 @@
+@import "../variables";
+@import "node_modules/bootstrap-scss/mixins";
+
+.big-card-product {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+
+  height: 377px;
+  overflow: hidden;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 40.63%, #000000 100%);
+  font-size: 13px;
+
+  border-radius: 7px;
+
+  @include media-breakpoint-down(lg) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+    margin-bottom: 15px;
+    font-size: 10px;
+  }
+
+  .image-box {
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+
+    @include media-breakpoint-down(lg) {
+      height: 70%;
+      width: auto;
+      z-index: 1;
+
+      img {
+        width: auto;
+        z-index: 0;
+      }
+    }
+  }
+
+  .data,
+  .marker,
+  .info {
+    position: absolute;
+
+    @include media-breakpoint-down(lg) {
+      z-index: 2;
+    }
+  }
+
+  .data {
+    top: 15px;
+    left: 30px;
+    padding: 4px 10px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 1px;
+
+    @include media-breakpoint-down(lg) {
+      left: 10px;
+    }
+  }
+
+  .marker {
+    top: 15px;
+    right: 0px;
+    padding: 4px 10px;
+    padding-left: 15px;
+    background: #F71A3F;
+    font-weight: 600;
+    color: $white;
+
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      
+      top: 0;
+      left: -19px;
+
+      height: 100%;
+      border: 1em solid #f71a3f;
+      border-left-color: transparent;
+    }
+
+    @include media-breakpoint-down(lg) {
+      padding-left: 5px;
+    }
+  }
+
+  .info {
+    bottom: 0;
+    color: $white;
+    
+    @include media-breakpoint-down(lg) {
+      border-top: 1px solid #E7E7E7;
+
+      .price {
+        font-size: 13px;
+      }
+
+      .title {
+        color: $black !important;
+        font-size: 12px;
+      }
+
+      .knock-stream {
+        position: relative;
+        top: -17px;
+      }
+    }
+
+    .price {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 8px 14px;
+
+      font-weight: 700;
+      line-height: 18px;
+      text-transform: uppercase;
+      border-radius: 4px;
+    }
+
+    .like {
+      padding: 8px;
+      padding-bottom: 6px;
+      background: #F4F4F4;
+      border-radius: 4px;
+    }
+
+    .title {
+      font-weight: 800;
+      color: $white;
+      margin-bottom: 5px;
+    }
+
+    .category {
+      color: #999999;
+    }
+  }
+}

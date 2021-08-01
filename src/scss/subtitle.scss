@@ -11,25 +11,16 @@
   text-transform: uppercase;
   text-align: right;
 
-  @include media-breakpoint-up(lg) {
-    padding-bottom: 27px;
-    font-size: 30px;
+  &::after {
+    content: '';
+    position: absolute;
 
-    &::after {
-      content: '';
-      position: absolute;
-  
-      bottom: 0;
-      right: 0;
-      
-      width: 75px;
-      height: 5px;
-      
-      background: $primary;
-    }
+    bottom: 0;
+    right: 0;
+    
+    width: 75px;
+    height: 5px;
+    
+    background: $primary;
   }
-}
-
-.date-under-property-item {
-  font-size: 17px;
 }

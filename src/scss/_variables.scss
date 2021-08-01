@@ -1,5 +1,6 @@
 $body-bg: #f5f5f5;
 
+$black: #222222;
 $green: #3fb465;
 $primary: $green;
 $light-green: #33e56d;
@@ -57,7 +58,7 @@ $input-btn-focus-width: 0;
 $pagination-hover-color: #fff;
 $pagination-hover-bg: $light-green;
 
-$box-shadow: 7px 8px 22px 0px #302d2d40;
+$box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
 
 $grid-gutter-width: 30px;
 $grid-gutter-width-mobile: 20px;
