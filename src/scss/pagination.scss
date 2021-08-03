@@ -2,51 +2,87 @@
 @import "node_modules/bootstrap-scss/mixins";
 
 .pagination {
+  $width: 32px;
+  $height: 32px;
+  $radius: 3px;
+
   display: flex;
+  height: $height;
   
   ul {
     list-style: none;
-    height: 32px;
+    height: $height;
+  }
+
+  &__list-item {
+    width: $width;
+    height: $height;
   
-    .li {
-      width: 54px;
-      height: 100%;
-    
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      
-      height: 100%;
-      width: 100%;
-    
-      border-radius: 8px;
-      
-      font-size: 18px;
-      background: #3fb465;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-      &:hover {
-        background-color:#33e56d;
-      }
+    border-radius: $radius;
+    
+    font-size: 14px;
+    font-weight: 400;
+    background: #3fb465;
+    cursor: pointer;
 
-      a {
-        color: #fff;
-      }
+    &:hover {
+      background-color:#33e56d;
+    }
+
+    a {
+      color: #fff;
+    }
+  }
+
+  .dots {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    width: 12px;
+    
+    span {
+      width: 2px;
+      height: 2px;
+      background-color: #9A9A9A;
+    }
+  }
+
+  &__list-item.active {
+    border: 2px solid #3fb465;
+    background-color: $white;
+    
+    a {
+      color: #3fb465;
+      font-weight: 600;
     }
   }
 
   .prev,
   .next {
-    border-radius: 8px;
+    width: $width;
+    height: $height;
+    border-radius: $radius;
     border: transparent;
 
     background: #3fb465;
 
     img {
-      width: 12px;
+      width: 11px;
     }
 
     &:hover {
       background-color:#33e56d;
+    }
+  }
+
+  .next {
+    img {
+      transform: rotate(180deg);
     }
   }
 }
