@@ -26,7 +26,18 @@
     })
   }
 
-  // SLIDER COUNTER
+  //Slider Content
+
+  $(document).ready(function(){
+    $('.vip-items-slider').slick({
+      slidesToShow: 4,
+      slidesToScroll: 4,
+      prevArrow: '<div class="prev"><img src="./assets/vip-item-prev.svg" alt="prev"></div>',
+      nextArrow: '<div class="next"><img src="./assets/vip-item-next.svg" alt="next"></div>',
+    });
+  });
+
+  // Slider Counter
   const $itemSlider =  $('#itemSlider');
 
   $itemSlider.on('slid.bs.carousel', function (e) {
