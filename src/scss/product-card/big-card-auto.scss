@@ -1,2 +1,47 @@
 @import "../variables";
 @import "node_modules/bootstrap-scss/mixins";
+
+.auto-product {
+  .image-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    @include media-breakpoint-down(lg) {
+      height: 65% !important;
+    }
+
+    @include media-breakpoint-down(md) {
+      height: 62.1% !important;
+    }
+
+    img {
+      height: auto;
+    }
+  }
+
+  &__mileage,
+  &__local {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 13px;
+
+    svg, i {
+      font-size: 16px;
+      width: 14px;
+      fill: $white;
+    }
+
+    @include media-breakpoint-down(lg) {
+      color: $black;
+      font-size: 10px;
+
+      svg, i {
+        font-size: 11px;
+        width: 10px;
+        fill: $black;
+      }
+    }
+  }
+}

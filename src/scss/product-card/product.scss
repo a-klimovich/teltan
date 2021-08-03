@@ -4,8 +4,11 @@
 .flea-product-card {
   display: flex;
   flex-direction: column;
-  background: #FFF5D9;
   overflow: hidden;
+
+  &.dg-pink, &.card.bg-pink {
+    background-color: $pink;
+  }
   
   a:hover {
     color: $black;
@@ -24,7 +27,11 @@
       height: 148px;
       overflow: hidden;
 
-      @include media-breakpoint-down(lg) {
+      @include media-breakpoint-down(md) {
+        height: 110px;
+      }
+
+      @include media-breakpoint-down(sm) {
         height: 92px;
       }
 
