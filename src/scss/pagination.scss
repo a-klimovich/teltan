@@ -1,11 +1,17 @@
-.pagination {
-  height: 100%;
+@import './variables';
+@import "node_modules/bootstrap-scss/mixins";
 
-  .page-item {
-    width: 54px;
-    height: 100%;
+.pagination {
+  display: flex;
   
-    .page-link {
+  ul {
+    list-style: none;
+    height: 32px;
+  
+    .li {
+      width: 54px;
+      height: 100%;
+    
       display: flex;
       justify-content: center;
       align-items: center;
@@ -16,12 +22,31 @@
       border-radius: 8px;
       
       font-size: 18px;
-      color: #fff;
       background: #3fb465;
 
       &:hover {
         background-color:#33e56d;
       }
+
+      a {
+        color: #fff;
+      }
+    }
+  }
+
+  .prev,
+  .next {
+    border-radius: 8px;
+    border: transparent;
+
+    background: #3fb465;
+
+    img {
+      width: 12px;
+    }
+
+    &:hover {
+      background-color:#33e56d;
     }
   }
 }

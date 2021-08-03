@@ -26,14 +26,13 @@
     })
   }
 
-  //Slider Content
-
+  //Slider VIP items
   $(document).ready(function(){
     $('.vip-items-slider').slick({
       slidesToShow: 4,
       slidesToScroll: 4,
-      prevArrow: '<div class="prev"><img src="./assets/vip-item-prev.svg" alt="prev"></div>',
-      nextArrow: '<div class="next"><img src="./assets/vip-item-next.svg" alt="next"></div>',
+      prevArrow: '<div class="prev"><img src="./assets/vip-item-arrow.svg" alt="prev"></div>',
+      nextArrow: '<div class="next"><img src="./assets/vip-item-arrow.svg" alt="next"></div>',
     });
   });
 
