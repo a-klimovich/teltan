@@ -6,7 +6,15 @@
 @import "node_modules/bootstrap-scss/bootstrap";
 
 :root {
-  font-size: 14px;
+  font-size: 10px;
+
+  @include media-breakpoint-up(md) {
+    font-size: 12px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    font-size: 14px;
+  }
 }
 
 html {
@@ -117,6 +125,7 @@ textarea {
 
 .card {
   box-shadow: $box-shadow;
+  border: 0;
 }
 
 .dropdown-menu {

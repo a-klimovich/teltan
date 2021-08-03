@@ -1,7 +1,7 @@
 @import '../variables';
 @import "node_modules/bootstrap-scss/mixins";
 
-.flea-product-card {
+.product-card {
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -19,11 +19,13 @@
     border-bottom: 1px solid #E7E7E7;
     padding: 1rem;
     padding-bottom: 1.4rem;
-
+    
     .i-box {
       display: flex;
       justify-content: center;
       align-items: center;
+      background-position: center;
+      background-image: url('../assets/no-image.svg');
       height: 148px;
       overflow: hidden;
 
@@ -40,6 +42,7 @@
         object-fit: cover;
         -o-object-position: center;
         object-position: center;
+        background-color: $white;
       }
     }
   }
@@ -110,6 +113,7 @@
   }
 }
 
+// TODO
 // .card-item-product {
 //   &__image {
 //     display: flex;

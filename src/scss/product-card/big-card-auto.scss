@@ -22,10 +22,15 @@
   }
 
   &__mileage,
-  &__local {
+  &__location {
     display: flex;
     justify-content: flex-end;
     font-size: 13px;
+
+    .mileage, .addres {
+      color: $white;
+      font-weight: 400;
+    }
 
     svg, i {
       font-size: 16px;
