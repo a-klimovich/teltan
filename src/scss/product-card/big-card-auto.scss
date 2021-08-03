@@ -16,9 +16,9 @@
       height: 62.1% !important;
     }
 
-    img {
-      height: auto;
-    }
+    // img {
+    //   height: auto;
+    // }
   }
 
   &__mileage,
@@ -26,11 +26,6 @@
     display: flex;
     justify-content: flex-end;
     font-size: 13px;
-
-    .mileage, .addres {
-      color: $white;
-      font-weight: 400;
-    }
 
     svg, i {
       font-size: 16px;
