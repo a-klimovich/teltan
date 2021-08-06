@@ -52,6 +52,10 @@
     }
   }
 
+  .marker {
+    font-size: 1rem;
+  }
+
   .data,
   .marker,
   .info {
@@ -71,33 +75,6 @@
 
     @include media-breakpoint-down(lg) {
       left: 10px;
-    }
-  }
-
-  .marker {
-    top: 15px;
-    right: 0px;
-    padding: 4px 10px;
-    padding-left: 15px;
-    background: #F71A3F;
-    font-weight: 600;
-    color: $white;
-
-    &::before {
-      content: "";
-      position: absolute;
-      display: block;
-      
-      top: 0;
-      left: -19px;
-
-      height: 100%;
-      border: 1em solid #f71a3f;
-      border-left-color: transparent;
-    }
-
-    @include media-breakpoint-down(lg) {
-      padding-left: 5px;
     }
   }
 

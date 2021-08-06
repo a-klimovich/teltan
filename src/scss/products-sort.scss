@@ -2,7 +2,7 @@
 
 .products-sort {
   width: 100%;
-  height: 48px;
+  height: 40px;
 
   
   .icon-arrow-down-sign-to-navigate-3 {
@@ -10,7 +10,7 @@
   }
 
   .filterTogglerMobile {
-    padding: 11px;
+    padding: 9px;
     fill: #6d6d6d;
 
     &:hover {
@@ -23,14 +23,14 @@
     font-weight: bold;
     color: #6d6d6d;
 
-    width: 48px;
+    width: 40px;
 
     background-color: #ffffff;
     border-radius: 4px;
   }
 
   .dropdown { 
-    max-width: 280px;
+    max-width: 230px;
     width: 100%;
 
     .dropdown-menu {

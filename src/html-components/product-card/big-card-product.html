@@ -8,9 +8,10 @@
     <span class="date">@@date</span>
   </div>
 
-  <div class="marker">
-    <span>Акция</span>
-  </div>
+  @@include('./product-card/product-marker.html', {
+    'markerState': 'stock',
+    'text': 'Акция',
+  })
 
   <div class="info w-100">
     <div class="row flex-column flex-lg-row">

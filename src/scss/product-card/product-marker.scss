@@ -1,0 +1,60 @@
+@import '../variables';
+@import "node_modules/bootstrap-scss/mixins";
+
+.marker {
+  top: 15px;
+  right: 0px;
+  padding: 4px 10px;
+  padding-left: 15px;
+  font-size: 13px;
+  font-weight: 600;
+  color: $white;
+
+  &.stock {
+    background: #F71A3F;
+
+    &::before {
+      border: 1em solid #f71a3f;
+    }
+  }
+
+  &.profitable {
+    background: #3FD1FF;
+
+    &::before {
+      border: 1em solid #3FD1FF;
+    }
+  }
+
+  &.hot {
+    background: #B637F2;
+
+    &::before {
+      border: 1em solid #B637F2;
+    }
+  }
+
+  &.urgently {
+    background: #FF862F;
+
+    &::before {
+      border: 1em solid #FF862F;
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    
+    top: 0;
+    left: -19px;
+
+    height: 100%;
+    border-left-color: transparent !important;
+  }
+
+  @include media-breakpoint-down(lg) {
+    padding-left: 5px;
+  }
+}

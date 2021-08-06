@@ -1,89 +1,140 @@
 @import '../variables';
 @import "node_modules/bootstrap-scss/mixins";
 
-.product-line {
-  position: relative;
+.product-card.product-line {
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
 
-  &__info {
-    padding-bottom: 35px;
+  .card-link {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
   }
 
-  .card-body {
-    @include media-breakpoint-up(lg) {
-      border-right: 1px solid #e7e7e7;
+  .image-block {
+    border-left: 1px solid #e7e7e7;
+  }
+
+  .like-price {
+    position: absolute;
+    left: 0;
+    top: 25px;
+
+    .like {
+      display: none;
+    }
+
+    .price {
+      width: auto;
+      background: transparent !important;
+      color: $primary;
+      font-size: 15px;
     }
   }
 
-  .card-price {
-    font-weight: bold;
-    font-size: 20px;
+  .i-box {
+    max-width: 168px;
+    height: 158px;
   }
 
-  .card-title {
-    font-size: 20px;
-    margin-bottom: 20px;
-    color: #373737;
+  .content-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 72%;
+    padding: 10px 0;
+    padding-top: 20px;
   }
 
-  .like {
-    cursor: pointer;
-
-    &:hover {
-      i {
-        color: red;
-      }
-    }
-  }
-
-  .active {
-    i {
-      color: red;
-    }
-  }
-
-  .image-box {
-    border-bottom: 1px solid #dee2e6;
-
-    @include media-breakpoint-up(lg) {
-      border-bottom: none;
-    }
-  }
-
-  @include media-breakpoint-down(lg) {
-    &__info {
-      padding-bottom: 20px;
-    }
-
-    .card-title {
-      overflow: hidden;
-      text-overflow: ellipsis;
-      display: -moz-box;
-      -moz-box-orient: vertical;
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      -webkit-box-orient: vertical;
-      line-clamp: 2;
-      box-orient: vertical;
-    }
+  &__data-viwe {
+    padding: 0.5rem 0 !important;
   }
 }
 
-.followThisItem {
-  position: absolute;
-  right: 15px;
-  top: 15px;
+// .product-line {
+//   position: relative;
 
-  border: transparent;
-  border-radius: 4px;
+//   &__info {
+//     padding-bottom: 35px;
+//   }
 
-  width: 32px;
-  height: 32px;
+//   .card-body {
+//     @include media-breakpoint-up(lg) {
+//       border-right: 1px solid #e7e7e7;
+//     }
+//   }
 
-  background: #f4f4f4;
-  cursor: pointer;
+//   .card-price {
+//     font-weight: bold;
+//     font-size: 20px;
+//   }
 
-  svg {
-    margin-bottom: -4px;
-    margin-left: -1px;
-  }
-}
+//   .card-title {
+//     font-size: 20px;
+//     margin-bottom: 20px;
+//     color: #373737;
+//   }
+
+//   .like {
+//     cursor: pointer;
+
+//     &:hover {
+//       i {
+//         color: red;
+//       }
+//     }
+//   }
+
+//   .active {
+//     i {
+//       color: red;
+//     }
+//   }
+
+//   .image-box {
+//     border-bottom: 1px solid #dee2e6;
+
+//     @include media-breakpoint-up(lg) {
+//       border-bottom: none;
+//     }
+//   }
+
+//   @include media-breakpoint-down(lg) {
+//     &__info {
+//       padding-bottom: 20px;
+//     }
+
+//     .card-title {
+//       overflow: hidden;
+//       text-overflow: ellipsis;
+//       display: -moz-box;
+//       -moz-box-orient: vertical;
+//       display: -webkit-box;
+//       -webkit-line-clamp: 2;
+//       -webkit-box-orient: vertical;
+//       line-clamp: 2;
+//       box-orient: vertical;
+//     }
+//   }
+// }
+
+// .followThisItem {
+//   position: absolute;
+//   right: 15px;
+//   top: 15px;
+
+//   border: transparent;
+//   border-radius: 4px;
+
+//   width: 32px;
+//   height: 32px;
+
+//   background: #f4f4f4;
+//   cursor: pointer;
+
+//   svg {
+//     margin-bottom: -4px;
+//     margin-left: -1px;
+//   }
+// }
