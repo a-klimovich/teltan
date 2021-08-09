@@ -1,0 +1,19 @@
+@import "variables";
+@import "node_modules/bootstrap-scss/mixins";
+
+.property-map {
+  height: 239px;
+  position: relative;
+  margin-bottom: 70px;
+  background: url(image.png);
+  filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.25));
+  border-radius: 5px;
+
+  .show-all-items {
+    width: 100%;
+    border: none;
+    background-color: white;
+    text-decoration: underline;
+    padding: 7px 0;
+  }
+}

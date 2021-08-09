@@ -1,6 +1,26 @@
 (function(){
   const $filterModalContetn = $('#filterModalContent')
 
+  // MAP property content
+  if ($('#map').length) {
+    ymaps.ready(init);
+  
+    function init(){
+      const myLocation = [54.241584, 25.786242];
+  
+      myMap = new ymaps.Map("map", {
+        center: myLocation,
+        zoom: 12
+      }),
+  
+      myPlacemark = new ymaps.Placemark(myLocation, {}, {
+        preset: 'islands#redIcon'
+      });
+  
+      myMap.geoObjects.add(myPlacemark);
+    }
+  }
+
   $('.filterTogglerMobile').on('click', (e) => {
     e.preventDefault()
     $filterModalContetn.toggleClass('visible')
@@ -33,6 +53,28 @@
       slidesToScroll: 4,
       prevArrow: '<div class="prev"><img src="./assets/vip-item-arrow.svg" alt="prev"></div>',
       nextArrow: '<div class="next"><img src="./assets/vip-item-arrow.svg" alt="next"></div>',
+      responsive: [
+        {
+          breakpoint: 960,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+          }
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+          }
+        }, {
+          breakpoint: 540,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+          }
+        }]
     });
   });
 

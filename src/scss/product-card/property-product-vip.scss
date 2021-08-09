@@ -1,0 +1,22 @@
+@import '../variables';
+@import "node_modules/bootstrap-scss/mixins";
+
+.product-card.property-vip {
+  
+  .image-block {
+    height: 220px;
+    padding: 0;
+
+    .i-box {
+      height: 100% !important;
+    }
+  }
+  .card-link {
+    .location {
+      svg {
+        width: 1.1rem;
+        fill: #747474;
+      }
+    }
+  }
+}

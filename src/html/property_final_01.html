@@ -6,59 +6,126 @@
 <body class="d-flex flex-column min-vh-100">
    
   @@include('./header/header-property.html')
-  @@include('./header/header-search-mobile.html')
-
-  <div class="p-0 d-block d-lg-none container-fluid breadcrumb-beckground">
-    <div class="container">
-      <div class="d-flex justify-content-center align-items-bottom">
-        <button class="rounded-top btn-property-rent-mobile">
-          <span class="h6 font-weight-bold mr-2">Rent</span>
-          <i class="icon-arrow-down-sign-to-navigate-3"></i>
-        </button>
-      </div>
-    </div>
-  </div>
-
+  
   <main class="mb-5 wrapper flex-grow-1">
     <div class="pt-3 pt-lg-5 container">
-      <div class="mb-4 row flex-column-reverse flex-lg-row">
-        <div class="col-12 col-lg-9">
-          <div class="d-flex justify-content-between">
+      @@include('./vip-item-slider.html')
+
+      <h1 class="mb-4 subtitle">
+        the property
+      </h1>
+
+      <div class="row">
+        <div class="col-12 col-lg-9 d-flex flex-column">
+          <div class="property-map">
+            <div id="map"></div>
+            <button class="show-all-items">Показать объявления на карте</button>
+          </div>
+
+          <div class="mb-5 d-flex justify-content-between align-items-center">
             @@include('pagination.html')
             @@include('products-sort.html')
           </div>
+
+          <div class="mb-5 flex-column">
+            <div class="row row-cols-2 row-cols-lg-1">
+              <div class="mb-4 col">
+                @@include('./product-card/property-product-line.html', {
+                  'image': './img/room_01.png',
+                  'price': '$27 600',
+                  'title': 'Concert tickets for Alisher Morgenstern',
+                  'addres': 'Tel Aviv-Yafo, Tel Aviv District, Israel',
+                  'category': 'Sale of apartaments',
+                  'views': '2531',
+                  'date': 'Yesterday, 20:28',
+                })
+              </div>
+  
+              <div class="mb-4 col">
+                @@include('./product-card/property-product-line.html', {
+                  'bg-color': '#FFF5D9',
+                  'image': './img/room_02.png',
+                  'price': '$27 600',
+                  'title': 'Concert tickets for Alisher Morgenstern',
+                  'addres': 'Tel Aviv-Yafo, Tel Aviv District, Israel',
+                  'category': 'Sale of apartaments',
+                  'views': '2531',
+                  'date': 'Yesterday, 20:28',
+                })
+              </div>
+            </div>
+
+            <!-- VIP card -->
+            <div class="row row-cols-1">
+              <div class="mb-3 col">
+                @@include('./product-card/property-product-vip.html', {
+                  'image': './img/room_03.png',
+                  'price': '$27 600',
+                  'title': 'Concert tickets for Alisher Morgenstern',
+                  'addres': 'Tel Aviv-Yafo, Tel Aviv District, Israel',
+                  'category': 'Sale of apartaments',
+                  'views': '2531',
+                  'date': 'Yesterday, 20:28',
+                })
+              </div>
+              <div class="mb-3 col">
+                @@include('./product-card/property-product-vip.html', {
+                  'bg-color': '#FFF5D9',
+                  'image': './img/room_03.png',
+                  'price': '$27 600',
+                  'title': 'Concert tickets for Alisher Morgenstern',
+                  'addres': 'Tel Aviv-Yafo, Tel Aviv District, Israel',
+                  'category': 'Sale of apartaments',
+                  'views': '2531',
+                  'date': 'Yesterday, 20:28',
+                })
+              </div>
+            </div>
+            <!-- VIP card end-->
+
+            <div class="row row-cols-2 row-cols-lg-1">
+              <div class="mb-4 col">
+                @@include('./product-card/property-product-line.html', {
+                  'image': './assets/no-image.svg',
+                  'price': '$27 600',
+                  'title': 'Concert tickets for Alisher Morgenstern',
+                  'addres': 'Tel Aviv-Yafo, Tel Aviv District, Israel',
+                  'category': 'Sale of apartaments',
+                  'views': '2531',
+                  'date': 'Yesterday, 20:28',
+                })
+              </div>
+  
+              <div class="mb-4 col">
+                @@include('./product-card/property-product-line.html', {
+                  'bg-color': '#FFF5D9',
+                  'image': './img/room_05.png',
+                  'price': '$27 600',
+                  'title': 'Concert tickets for Alisher Morgenstern',
+                  'addres': 'Tel Aviv-Yafo, Tel Aviv District, Israel',
+                  'category': 'Sale of apartaments',
+                  'views': '2531',
+                  'date': 'Yesterday, 20:28',
+                })
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="col-12 col-lg-3">
-          <h1 class="subtitle">
-            the property
-          </h1>
+        
+        <div class="col col-lg-3">
+          @@include('./filters/property-filter.html')
         </div>
       </div>
 
       <div class="row">
-        <div class="col-12 col-lg-9 d-flex flex-column justify-content-between">
-          <div class="flex-column">
-            @@include('./product-card/property-product-line.html')
-            @@include('./product-card/property-product-line.html')
-            @@include('./product-card/property-product-line.html')
-            @@include('./product-card/property-product-line.html')
-            @@include('./product-card/property-product-line.html')
-            @@include('./product-card/property-product-line.html')
-            @@include('./product-card/property-product-line.html')
-            @@include('./product-card/property-product-line.html')
-          </div>
-
-          <div class="mt-5 mb-5">
-            @@include('under-contetn-pagination.html')
+        <div class="col-12 col-lg-9">
+          <div class="mb-5 d-flex justify-content-center">
+            @@include('pagination.html')
           </div>
           
           @@include('text-about-category.html', {
             subtitle: 'the property'
           })
-        </div>
-        
-        <div class="col col-lg-3">
-          @@include('./filters/property-filter.html')
         </div>
       </div>
     </div>
