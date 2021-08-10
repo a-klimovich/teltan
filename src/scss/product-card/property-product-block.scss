@@ -1,6 +1,18 @@
 @import '../variables';
 @import "node_modules/bootstrap-scss/mixins";
 
+
+.product-card.property-product-line {
+  @include media-breakpoint-down(lg) {
+    .image-block {
+      width: 100%;
+    }
+    .i-box {
+      max-width: auto;
+    }
+  }
+}
+// TODO
 // .property-product-block {
 //   .like-and-price {
 //     position: absolute;

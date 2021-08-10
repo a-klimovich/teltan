@@ -2,42 +2,25 @@
 @import "node_modules/bootstrap-scss/mixins";
 
 
-.product-card.property-product {
-  .card-link {
-    justify-content: flex-start;
+.product-card.product-line.property-product-line {
+  .image-block {
+    padding: 0;
 
-    .image-block {
-      padding: 0;
-      width: 33%;
+    .i-box {
+      height: 111px;
 
-      .i-box {
-        height: 100%;
-        max-width: 230px;
-      }
-    }
-
-    .content-block {
-      width: 70%;
-    }
-
-    .title {
-      text-transform: uppercase;
-      font-size: 15px;
-      line-height: 21px;
-      padding-left: 20%;
-      font-weight: 800;
-    }
-
-    .location {
-      svg {
-        width: 1.1rem;
-        fill: #747474;
+      @include media-breakpoint-up(lg) {
+        height: 167px;
       }
     }
   }
 
-  .marker {
-    top: 10px;
+  .content-block {
+    .location {
+      svg {
+        fill: #747474;
+      }
+    }
   }
 }
 
