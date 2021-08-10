@@ -2,6 +2,17 @@
 @import "node_modules/bootstrap-scss/mixins";
 
 .filter {
+  overflow: hidden;
+
+  .btn-more-filter-settings {
+    margin: -1.5rem;
+    margin-top: 0;
+    padding: 12px 0;
+
+    @include media-breakpoint-down(lg) {
+      display: none;
+    }
+  }
 
   .form-control-select {
     height: auto;

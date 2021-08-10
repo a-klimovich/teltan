@@ -1,172 +1,171 @@
-<div class="card text-right filter-select filter" id="filterModalContent">
-  <div class="p-3 pt-4 pb-4">
-    <div class="mb-4 pb-2 d-flex d-lg-none justify-content-between border-bottom">
-      <a type="button"><i class="mr-3 icon-clear"></i> Close</a>
-      <p class="h5 m-0 d-inline-block text-uppercase font-weight-bolder">Filters</p>
-    </div>
+<div class="p-3 pt-4 pb-4 card text-right filter-select filter" id="filterModalContent">
+  <div class="mb-4 pb-2 d-flex d-lg-none justify-content-between border-bottom">
+    <a type="button"><i class="mr-3 icon-clear"></i> Close</a>
+    <p class="h5 m-0 d-inline-block text-uppercase font-weight-bolder">Filters</p>
+  </div>
+  
+  <div class="mb-lg-4 pb-4 border-bottom">
+    <select class="selectpicker" data-style-base="form-control form-control-select" data-style="">
+      <option selected>Select</option>
+      <option value="1">One</option>
+      <option value="2">Two</option>
+      <option value="3">Three</option>
+    </select>
+  </div>
+
+  <div class="d-none d-lg-block mb-3">
+    <p class="filter-select__collapse-title h5 d-block d-lg-none text-uppercase" data-toggle="collapse" href="#collapsePrice" role="button" aria-expanded="true" aria-controls="collapsePrice">
+      <span class="d-flex justify-content-between"><i class="icone-filter-title icon-arrow-down-sign-to-navigate-3"></i>Price</span>
+    </p>
+    <p class="filter-select__collapse-title h5 d-none d-lg-block text-uppercase">Price</p>
+  
+    <div id="collapsePrice" class="collapse show">
+      <ul >
+        <li>
+          <span data-range-set="0,250" data-range-connected="rangeSlider">Under $250</span>
+        </li>
     
-    <div class="mb-lg-4 pb-4 border-bottom">
-      <select class="selectpicker" data-style-base="form-control form-control-select" data-style="">
-        <option selected>Select</option>
+        <li>
+          <span data-range-set="250,500" data-range-connected="rangeSlider">$250 to $500</span>
+        </li>
+    
+        <li>
+          <span data-range-set="500,1000" data-range-connected="rangeSlider">$500 to $1000</span>
+        </li>
+    
+        <li>
+          <span data-range-set="1000,2000" data-range-connected="rangeSlider">$1000 to $2000</span>
+        </li>
+    
+        <li>
+          <span data-range-set="2000,10000" data-range-connected="rangeSlider">$2000 & Above</span>
+        </li>
+      </ul>
+    
+      <form action="/">
+        <div class="form-group">
+          <div class="mb-4 form-row">
+            <div class="col">
+              <input type="text" class="form-control" placeholder="Max" data-range-max-connected="rangeSlider">
+            </div>
+      
+            <div class="col">
+              <input type="text" class="form-control" placeholder="Min" data-range-min-connected="rangeSlider">
+            </div>
+          </div>
+    
+          <div class="mb-3" id="rangeSlider" data-range-min="0" data-range-max="10000"></div>
+        
+          <div class="row px-2 d-flex justify-content-between">
+            <span>10 000$</span>
+            <span>1$</span>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="mb-4 d-block d-lg-none border-bottom">
+    <p class="filter-select__collapse-title h5 d-block d-lg-none text-uppercase" data-toggle="collapse" href="#collapseMobilePrice" role="button" aria-expanded="true" aria-controls="collapseCondition">
+      <span class="d-flex justify-content-between"><i class="icone-filter-title icon-arrow-down-sign-to-navigate-3"></i>Price</span>
+    </p>
+  
+    <div id="collapseMobilePrice" class="collapse show">
+      <form action="/">
+        <div class="form-group">
+          <div class="mb-4 form-row">
+            <div class="col">
+              <input type="text" class="form-control" placeholder="Max" data-range-max-connected="rangeSliderMainFilterMobile">
+            </div>
+      
+            <div class="col">
+              <input type="text" class="form-control" placeholder="Min" data-range-min-connected="rangeSliderMainFilterMobile">
+            </div>
+          </div>
+    
+          <div class="mb-3" id="rangeSliderMainFilterMobile" data-range-min="0" data-range-max="10000"></div>
+        
+          <div class="row px-2 d-flex justify-content-between">
+            <span>10 000$</span>
+            <span>1$</span>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="mb-4 border-bottom">
+    <div class="collapse show" id="collapseRooms">
+      <div class="checkbox">
+        <label>
+          <div class="mr-2">Exchange (<span>9624</span>)</div>
+          <input type="checkbox" value="">
+          <span class="cr"></i></span>
+        </label>
+      </div>
+  
+      <div class="checkbox">
+        <label>
+          <div class="mr-2">Price incl.VAT (<span>1424</span>)</div>
+          <input type="checkbox" value="">
+          <span class="cr"></i></span>
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <div class="mb-4 pb-4 border-bottom">
+    <p class="h5 mb-3 d-block d-lg-none text-uppercase font-weight-bolder" data-toggle="collapse" href="#collapseBrand" role="button" aria-expanded="true" aria-controls="collapseBrand">
+      <span class="d-flex justify-content-between"><i class="icone- icon-arrow-down-sign-to-navigate-3"></i>Brand</span>
+    </p>
+    <p class="h5 mb-3 d-none d-lg-block text-uppercase font-weight-bolder">Brand</p>
+
+    <div class="collapse show" id="collapseBrand">
+      <select class="selectpicker" data-style-base="mb-2 form-control form-control-select" data-style="">
+        <option selected>Brand</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+      </select>
+
+      <select class="selectpicker" data-style-base="mb-2 form-control form-control-select" data-style="">
+        <option selected>Model</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+      </select>
+
+      <select class="selectpicker" data-style-base="mb-3 form-control form-control-select" data-style="">
+        <option selected>Generation</option>
         <option value="1">One</option>
         <option value="2">Two</option>
         <option value="3">Three</option>
       </select>
     </div>
+
+    <a href="#" class="text-primary font-weight-bold">Add another mark</a>
+  </div>
   
-    <div class="d-none d-lg-block mb-3">
-      <p class="filter-select__collapse-title h5 d-block d-lg-none text-uppercase" data-toggle="collapse" href="#collapsePrice" role="button" aria-expanded="true" aria-controls="collapsePrice">
-        <span class="d-flex justify-content-between"><i class="icone-filter-title icon-arrow-down-sign-to-navigate-3"></i>Price</span>
-      </p>
-      <p class="filter-select__collapse-title h5 d-none d-lg-block text-uppercase">Price</p>
-    
-      <div id="collapsePrice" class="collapse show">
-        <ul >
-          <li>
-            <span data-range-set="0,250" data-range-connected="rangeSlider">Under $250</span>
-          </li>
-      
-          <li>
-            <span data-range-set="250,500" data-range-connected="rangeSlider">$250 to $500</span>
-          </li>
-      
-          <li>
-            <span data-range-set="500,1000" data-range-connected="rangeSlider">$500 to $1000</span>
-          </li>
-      
-          <li>
-            <span data-range-set="1000,2000" data-range-connected="rangeSlider">$1000 to $2000</span>
-          </li>
-      
-          <li>
-            <span data-range-set="2000,10000" data-range-connected="rangeSlider">$2000 & Above</span>
-          </li>
-        </ul>
-      
-        <form action="/">
-          <div class="form-group">
-            <div class="mb-4 form-row">
-              <div class="col">
-                <input type="text" class="form-control" placeholder="Max" data-range-max-connected="rangeSlider">
-              </div>
-        
-              <div class="col">
-                <input type="text" class="form-control" placeholder="Min" data-range-min-connected="rangeSlider">
-              </div>
-            </div>
-      
-            <div class="mb-3" id="rangeSlider" data-range-min="0" data-range-max="10000"></div>
-          
-            <div class="row px-2 d-flex justify-content-between">
-              <span>10 000$</span>
-              <span>1$</span>
-            </div>
-          </div>
-        </form>
-      </div>
-    </div>
-  
-    <div class="mb-4 d-block d-lg-none border-bottom">
-      <p class="filter-select__collapse-title h5 d-block d-lg-none text-uppercase" data-toggle="collapse" href="#collapseMobilePrice" role="button" aria-expanded="true" aria-controls="collapseCondition">
-        <span class="d-flex justify-content-between"><i class="icone-filter-title icon-arrow-down-sign-to-navigate-3"></i>Price</span>
-      </p>
-    
-      <div id="collapseMobilePrice" class="collapse show">
-        <form action="/">
-          <div class="form-group">
-            <div class="mb-4 form-row">
-              <div class="col">
-                <input type="text" class="form-control" placeholder="Max" data-range-max-connected="rangeSliderMainFilterMobile">
-              </div>
-        
-              <div class="col">
-                <input type="text" class="form-control" placeholder="Min" data-range-min-connected="rangeSliderMainFilterMobile">
-              </div>
-            </div>
-      
-            <div class="mb-3" id="rangeSliderMainFilterMobile" data-range-min="0" data-range-max="10000"></div>
-          
-            <div class="row px-2 d-flex justify-content-between">
-              <span>10 000$</span>
-              <span>1$</span>
-            </div>
-          </div>
-        </form>
-      </div>
-    </div>
-  
-    <div class="mb-4 border-bottom">
-      <div class="collapse show" id="collapseRooms">
-        <div class="checkbox">
-          <label>
-            <div class="mr-2">Exchange (<span>9624</span>)</div>
-            <input type="checkbox" value="">
-            <span class="cr"></i></span>
-          </label>
+  <div class="mb-4 border-bottom">
+    <p class="h5 mb-3 d-block d-lg-none text-uppercase font-weight-bolder" data-toggle="collapse" href="#collapseYearOfIssue" role="button" aria-expanded="true" aria-controls="collapseYearOfIssue">
+      <span class="d-flex justify-content-between"><i class="icone- icon-arrow-down-sign-to-navigate-3"></i>Year of issue</span>
+    </p>
+    <p class="h5 mb-3 d-none d-lg-block text-uppercase font-weight-bolder">Year of issue</p>
+
+    <div class="collapse show" id="collapseYearOfIssue">
+      <div class="mb-4 form-row">
+        <div class="col">
+          <input type="text" class="form-control" placeholder="20">
         </div>
-    
-        <div class="checkbox">
-          <label>
-            <div class="mr-2">Price incl.VAT (<span>1424</span>)</div>
-            <input type="checkbox" value="">
-            <span class="cr"></i></span>
-          </label>
+
+        <div class="col">
+          <input type="text" class="form-control" placeholder="1">
         </div>
       </div>
     </div>
+  </div>
   
-    <div class="mb-4 pb-4 border-bottom">
-      <p class="h5 mb-3 d-block d-lg-none text-uppercase font-weight-bolder" data-toggle="collapse" href="#collapseBrand" role="button" aria-expanded="true" aria-controls="collapseBrand">
-        <span class="d-flex justify-content-between"><i class="icone- icon-arrow-down-sign-to-navigate-3"></i>Brand</span>
-      </p>
-      <p class="h5 mb-3 d-none d-lg-block text-uppercase font-weight-bolder">Brand</p>
-  
-      <div class="collapse show" id="collapseBrand">
-        <select class="selectpicker" data-style-base="mb-2 form-control form-control-select" data-style="">
-          <option selected>Brand</option>
-          <option value="1">One</option>
-          <option value="2">Two</option>
-          <option value="3">Three</option>
-        </select>
-  
-        <select class="selectpicker" data-style-base="mb-2 form-control form-control-select" data-style="">
-          <option selected>Model</option>
-          <option value="1">One</option>
-          <option value="2">Two</option>
-          <option value="3">Three</option>
-        </select>
-  
-        <select class="selectpicker" data-style-base="mb-3 form-control form-control-select" data-style="">
-          <option selected>Generation</option>
-          <option value="1">One</option>
-          <option value="2">Two</option>
-          <option value="3">Three</option>
-        </select>
-      </div>
-  
-      <a href="#" class="text-primary font-weight-bold">Add another mark</a>
-    </div>
-    
-  
-    <div class="mb-4 border-bottom">
-      <p class="h5 mb-3 d-block d-lg-none text-uppercase font-weight-bolder" data-toggle="collapse" href="#collapseYearOfIssue" role="button" aria-expanded="true" aria-controls="collapseYearOfIssue">
-        <span class="d-flex justify-content-between"><i class="icone- icon-arrow-down-sign-to-navigate-3"></i>Year of issue</span>
-      </p>
-      <p class="h5 mb-3 d-none d-lg-block text-uppercase font-weight-bolder">Year of issue</p>
-  
-      <div class="collapse show" id="collapseYearOfIssue">
-        <div class="mb-4 form-row">
-          <div class="col">
-            <input type="text" class="form-control" placeholder="20">
-          </div>
-  
-          <div class="col">
-            <input type="text" class="form-control" placeholder="1">
-          </div>
-        </div>
-      </div>
-    </div>
-    
+  <div class="collapse" id="moreFilterSettings">
     <div class="mb-4 pb-4 border-bottom">
       <!-- <p class="h5 mb-3 d-block d-lg-none text-uppercase font-weight-bolder" data-toggle="collapse" href="#collapseBodyType" role="button" aria-expanded="true" aria-controls="collapseBodyType">
         <span class="d-flex justify-content-between"><i class="icone- icon-arrow-down-sign-to-navigate-3"></i>Body type</span>
@@ -441,9 +440,8 @@
       </div>
     </div>
   </div>
-  <div class="position-relative">
-    <button type="button" class="d-flex btn-primary rounded-bottom btn-extra-options">
-      Extra options
-    </button>
-  </div>
+
+  <button class="btn btn-primary btn-more-filter-settings text-uppercase font-weight-bold" type="button" data-toggle="collapse" data-target="#moreFilterSettings" aria-expanded="false" aria-controls="moreFilterSettings">
+    extra options
+  </button>
 </div>
