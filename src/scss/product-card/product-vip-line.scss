@@ -7,6 +7,11 @@
   .image-block {
     width: 35%;
     
+    @include media-breakpoint-down(md) {
+      width: 100%;
+      border-color: transparent;
+    }
+    
     .i-box {
       max-width: 100%;
       height: 165px;
@@ -15,6 +20,10 @@
 
   .content-block {
     width: 65%;
+    
+    @include media-breakpoint-down(md) {
+      width: 100%;
+    }
   }
 
   .vip-marker {
@@ -29,6 +38,12 @@
     padding-right: 15px;
     background: #F50000;
     border-radius: 23.5px;
+
+    @include media-breakpoint-down(md) {
+      top: auto;
+      bottom: 20%;
+      background: transparent;
+    }
 
     .icon {
       display: flex;
