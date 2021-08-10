@@ -73,7 +73,7 @@
     color: $white;
     font-weight: 600;
 
-    background: #3FB465;
+    background-color: #3FB465;
     border-radius: 4px;
     padding: 0;
 
@@ -93,6 +93,10 @@
   }
 
   .content-block {
+    svg {
+      width: 1rem;
+    }
+
     .title {
       font-weight: 700;
       font-size: 13px;
@@ -116,6 +120,10 @@
     position: absolute;
     top: 20px;
     right: 0;
+
+    @include media-breakpoint-down(lg) {
+      top: 1em;
+    }
   }
 }
 

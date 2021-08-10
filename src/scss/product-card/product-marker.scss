@@ -2,7 +2,7 @@
 @import "node_modules/bootstrap-scss/mixins";
 
 .marker {
-  top: 15px;
+  top: 0;
   right: 0px;
   padding: 4px 10px;
   padding-left: 15px;
@@ -10,11 +10,20 @@
   font-weight: 600;
   color: $white;
 
+  @include media-breakpoint-down(lg) {
+    padding-left: 5px;
+  }
+
+  @include media-breakpoint-down(md) {
+    padding: 2px 5px;
+    font-size: 1rem;
+  }
+
   &.stock {
     background: #F71A3F;
 
     &::before {
-      border: 1em solid #f71a3f;
+      border-color:#f71a3f;
     }
   }
 
@@ -22,7 +31,7 @@
     background: #3FD1FF;
 
     &::before {
-      border: 1em solid #3FD1FF;
+      border-color:#3FD1FF;
     }
   }
 
@@ -30,7 +39,7 @@
     background: #B637F2;
 
     &::before {
-      border: 1em solid #B637F2;
+      border-color:#B637F2;
     }
   }
 
@@ -38,7 +47,7 @@
     background: #FF862F;
 
     &::before {
-      border: 1em solid #FF862F;
+      border-color:#FF862F;
     }
   }
 
@@ -52,9 +61,16 @@
 
     height: 100%;
     border-left-color: transparent !important;
-  }
+    border-style: solid;
+    border-width: 1em;
 
-  @include media-breakpoint-down(lg) {
-    padding-left: 5px;
+    @include media-breakpoint-down(lg) {
+      left: -22px;
+    }
+
+    @include media-breakpoint-down(md) {
+      left: -17px;
+      border-width: 0.9em;
+    }
   }
 }
