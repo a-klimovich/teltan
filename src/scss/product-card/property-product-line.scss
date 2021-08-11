@@ -7,9 +7,10 @@
     padding: 0;
 
     .i-box {
-      height: 111px;
+      height: 100%;
+      max-width: auto;
 
-      @include media-breakpoint-up(lg) {
+      @include media-breakpoint-down(md) {
         height: 167px;
       }
     }

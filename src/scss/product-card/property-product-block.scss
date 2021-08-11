@@ -2,14 +2,31 @@
 @import "node_modules/bootstrap-scss/mixins";
 
 
-.product-card.property-product-line {
-  @include media-breakpoint-down(lg) {
-    .image-block {
-      width: 100%;
+.product-card.property-product {
+  .image-block {
+    padding: 0;
+  }
+
+  .content-block {
+    .title {
+      font-weight: 800;
+      text-transform: uppercase;
+      font-size: 13px;
+
+      @include media-breakpoint-down(md) {
+        font-size: 12px;
+      }
     }
-    .i-box {
-      max-width: auto;
+
+    .location {
+      svg {
+        fill: #747474;
+      }
     }
+  }
+
+  .marker {
+    top: 10px;
   }
 }
 // TODO

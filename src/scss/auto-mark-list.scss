@@ -1,0 +1,34 @@
+@import "variables";
+@import "node_modules/bootstrap-scss/mixins";
+
+.auto-mark-list {
+  padding: 31px 64px;
+
+  ul {
+    li {
+      width: 25%;
+      font-size: 13px;
+      margin-bottom: 1em;
+
+      @include media-breakpoint-down(md) {
+        width: 50%;
+      }
+
+      a:hover {
+        text-decoration: underline;
+
+        span {
+          color: #33e56d;
+        }
+      }
+
+      a span {
+        color: #999999;
+      }
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    padding: 25px 22px;
+  }
+}

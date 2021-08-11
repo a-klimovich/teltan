@@ -1,10 +1,98 @@
-<div class="mb-4 d-flex description-item position-relative">
+<div
+  class="card product-card product-line auto-product-line"
+  style="background-color: @@bg-color"
+>
+  <a class="card-link" href="#">
+    <div class="image-block">
+      <div class="i-box">
+        <img src="@@image" alt="no-img" />
+      </div>
+    </div>
+
+    <div class="px-2 px-lg-3 d-flex justify-content-between like-price">
+      <p class="mb-0 like">
+        <svg id="iconLike" class="iconLike" viewBox="0 0 612 792">
+          <path
+            d="M562.413,284.393c-9.68,41.044-32.121,78.438-64.831,108.07L329.588,542.345l-165.11-149.843 c-32.771-29.691-55.201-67.076-64.892-108.12c-6.965-29.484-4.103-46.14-4.092-46.249l0.147-0.994 c6.395-72.004,56.382-124.273,118.873-124.273c46.111,0,86.703,28.333,105.965,73.933l9.061,21.477l9.061-21.477 c18.958-44.901,61.694-73.922,108.896-73.922c62.481,0,112.478,52.27,119,125.208C566.517,238.242,569.379,254.908,562.413,284.393z"
+          />
+        </svg>
+      </p>
+
+      <p class="mb-0 price">@@price</p>
+    </div>
+
+    <div class="px-2 px-lg-3 content-block">
+      <div class="text-right">
+        <p class="mb-2 mb-lg-3 title">@@title</p>
+
+        <div class="row">
+          <div class="col-12 col-xl">
+            <p class="d-none d-xl-inline-block">
+              <span>@@autoPower</span>
+              <i class="icon-engine"></i>
+            </p>
+            <p class="mb-2 mb-lg-3 location">
+              <span class="mr-2 addres">@@addres</span>
+              <svg
+                class="icon-local"
+                version="1.1"
+                id="Capa_1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                x="0px"
+                y="0px"
+                viewBox="0 0 513.597 513.597"
+                xml:space="preserve"
+              >
+                <g>
+                  <path
+                    d="M263.278,0.107C158.977-3.408,73.323,80.095,73.323,183.602c0,117.469,112.73,202.72,175.915,325.322
+                  c3.208,6.225,12.169,6.233,15.388,0.009c57.16-110.317,154.854-184.291,172.959-290.569
+                  C456.331,108.387,374.776,3.866,263.278,0.107z M256.923,279.773c-53.113,0-96.171-43.059-96.171-96.171
+                  s43.059-96.171,96.171-96.171c53.113,0,96.172,43.059,96.172,96.171S310.036,279.773,256.923,279.773z"
+                  />
+                </g>
+              </svg>
+            </p>
+          </div>
+          <div class="col-12 col-xl-4">
+            <p>
+              <span>@@mileage</span> <i class="ml-2 icon-download-speed"></i>
+            </p>
+            <p class="d-none d-xl-inline-block"><span>@@transmission</span> <i class="ml-2 icon-manual-transmission"></i></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="border-top py-2 d-flex justify-content-between align-items-center text-nowrap product-line__data-viwe">
+        <div class="d-flex">
+          <span class="mr-0 mr-lg-2 views"><span>@@views</span> <i class="icon-visibility"></i></span>
+
+          <span class="d-none d-lg-flex product-line__like">
+            To favorites
+            <svg id="iconLike" class="iconLike" viewBox="0 0 612 792">
+              <path
+                d="M562.413,284.393c-9.68,41.044-32.121,78.438-64.831,108.07L329.588,542.345l-165.11-149.843 c-32.771-29.691-55.201-67.076-64.892-108.12c-6.965-29.484-4.103-46.14-4.092-46.249l0.147-0.994 c6.395-72.004,56.382-124.273,118.873-124.273c46.111,0,86.703,28.333,105.965,73.933l9.061,21.477l9.061-21.477 c18.958-44.901,61.694-73.922,108.896-73.922c62.481,0,112.478,52.27,119,125.208C566.517,238.242,569.379,254.908,562.413,284.393z"
+              />
+            </svg>
+          </span>
+        </div>
+
+        <span class="date">@@date</span>
+      </div>
+    </div>
+  </a>
+
+  @@include('./product-card/product-marker.html', { 'markerColour': 'stock',
+  'text': 'Акция', })
+</div>
+
+<!-- TODO -->
+<!-- <div class="mb-4 d-flex description-item position-relative">
   <div class="w-100 p-3 pr-4 bg-white rounded-left">
     <div class="d-flex justify-content-between border-bottom">
       <div class="w-25 d-none d-lg-flex flex-column justify-content-between">
         <span class="text-primary description-item__praice">$12500</span>
-
-        <!-- <button class="mb-3 btn border-primary text-primary text-uppercase font-weight-bold rounded-sm">Edit</button> -->
       </div>
 
       <div class="w-100 flex-column justify-content-between text-right auto-content-icon">
@@ -58,4 +146,4 @@
   <div class="d-flex d-lg-none justify-content-center align-items-center followThisItem like">
     <svg id="iconLike" class="iconLike" viewBox="0 0 612 792"><path d="M562.413,284.393c-9.68,41.044-32.121,78.438-64.831,108.07L329.588,542.345l-165.11-149.843 c-32.771-29.691-55.201-67.076-64.892-108.12c-6.965-29.484-4.103-46.14-4.092-46.249l0.147-0.994 c6.395-72.004,56.382-124.273,118.873-124.273c46.111,0,86.703,28.333,105.965,73.933l9.061,21.477l9.061-21.477 c18.958-44.901,61.694-73.922,108.896-73.922c62.481,0,112.478,52.27,119,125.208C566.517,238.242,569.379,254.908,562.413,284.393z"/></svg>
   </div>
-</div>
+</div> -->

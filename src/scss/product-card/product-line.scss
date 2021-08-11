@@ -102,11 +102,19 @@
     @include media-breakpoint-down(md) {
       width: 100%;
       padding-top: 0;
+
+      .title {
+        font-size: 12px;
+      }
     }
   }
 
   &__data-viwe {
     padding: 0.5rem 0 !important;
+  }
+
+  .marker {
+    top: 10px;
   }
 }
 
