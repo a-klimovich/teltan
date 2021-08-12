@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+  @@include('./utils/head.html')
+</head>
+<body class="d-flex flex-column min-vh-100">
+   
+  @@include('./header/header-property.html')
+  
+  <main class="mb-5 wrapper flex-grow-1">
+    <div class="pt-3 pt-lg-5 container">
+      <h1 class="mb-4 subtitle">
+        Personal data
+      </h1>
+    </div>
+
+    <div class="property-full-map">
+      <div class="row no-gutters">
+        <div class="col-12 col-lg-7">
+          <div id="map" style="width: 100%; height: 100%"></div>
+        </div>
+  
+        <div class="col-12 col-lg-5">
+          <div class="d-flex justify-content-between justify-content-lg-end products-sort">
+            <div class="d-flex align-items-center py-3">
+              <a href="#" class="mr-2 d-flex justify-content-center align-items-center products-sort__button">
+                <i class="icon-sirting_block"></i>
+              </a>
+            
+              <a href="#" class="mr-2 d-flex justify-content-center align-items-center products-sort__button">
+                <i class="icon-sirting_line"></i>
+              </a>
+
+              <a href="#" class="mr-2 d-flex justify-content-center align-items-center products-sort__button filterTogglerMobile">
+                <span>Filters</span>
+                @@include('../assets/settings.svg')
+              </a>
+            </div>
+
+            <!-- @@include('./filters/property-filter.html') -->
+          </div>
+
+          <div class="cord-container">
+            <div class="px-3 flex-column">
+              <div class="row row-cols-2 row-cols-lg-1">
+                <div class="mb-3 col">
+                  @@include('./product-card/property-product-line.html', {
+                    'image': './img/room_01.png',
+                    'price': '$27 600',
+                    'title': 'Concert tickets for Alisher Morgenstern',
+                    'addres': 'Tel Aviv-Yafo, Tel Aviv District, Israel',
+                    'category': 'Sale of apartaments',
+                    'views': '2531',
+                    'date': 'Yesterday, 20:28',
+                  })
+                </div>
+    
+                <div class="mb-3 col">
+                  @@include('./product-card/property-product-line.html', {
+                    'bg-color': '#FFF5D9',
+                    'image': './img/room_02.png',
+                    'price': '$27 600',
+                    'title': 'Concert tickets for Alisher Morgenstern',
+                    'addres': 'Tel Aviv-Yafo, Tel Aviv District, Israel',
+                    'category': 'Sale of apartaments',
+                    'views': '2531',
+                    'date': 'Yesterday, 20:28',
+                  })
+                </div>
+              </div>
+    
+              <!-- VIP card -->
+              <div class="row row-cols-1">
+                <div class="mb-3 col">
+                  @@include('./product-card/property-product-vip.html', {
+                    'image': './img/room_03.png',
+                    'price': '$27 600',
+                    'title': 'Concert tickets for Alisher Morgenstern',
+                    'addres': 'Tel Aviv-Yafo, Tel Aviv District, Israel',
+                    'category': 'Sale of apartaments',
+                    'views': '2531',
+                    'date': 'Yesterday, 20:28',
+                  })
+                </div>
+                <div class="mb-3 col">
+                  @@include('./product-card/property-product-vip.html', {
+                    'bg-color': '#FFF5D9',
+                    'image': './img/room_03.png',
+                    'price': '$27 600',
+                    'title': 'Concert tickets for Alisher Morgenstern',
+                    'addres': 'Tel Aviv-Yafo, Tel Aviv District, Israel',
+                    'category': 'Sale of apartaments',
+                    'views': '2531',
+                    'date': 'Yesterday, 20:28',
+                  })
+                </div>
+              </div>
+              <!-- VIP card end-->
+    
+              <div class="row row-cols-2 row-cols-lg-1">
+                <div class="mb-3 col">
+                  @@include('./product-card/property-product-line.html', {
+                    'image': './assets/no-image.svg',
+                    'price': '$27 600',
+                    'title': 'Concert tickets for Alisher Morgenstern',
+                    'addres': 'Tel Aviv-Yafo, Tel Aviv District, Israel',
+                    'category': 'Sale of apartaments',
+                    'views': '2531',
+                    'date': 'Yesterday, 20:28',
+                  })
+                </div>
+    
+                <div class="mb-3 col">
+                  @@include('./product-card/property-product-line.html', {
+                    'bg-color': '#FFF5D9',
+                    'image': './img/room_05.png',
+                    'price': '$27 600',
+                    'title': 'Concert tickets for Alisher Morgenstern',
+                    'addres': 'Tel Aviv-Yafo, Tel Aviv District, Israel',
+                    'category': 'Sale of apartaments',
+                    'views': '2531',
+                    'date': 'Yesterday, 20:28',
+                  })
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  @@include('footer.html')
+
+  @@include('./utils/includies.html')
+</body>
+</html>
