@@ -2,14 +2,30 @@
 @import "node_modules/bootstrap-scss/mixins";
 
 .connection-with-seller {
-  padding: 30px;
+  padding: 23px 16px;
+
+  &__title {
+    font-size: 20px;
+    font-weight: 900;
+    text-transform: uppercase;
+  }
+
+  &__price {
+    font-size: 28px;
+    font-weight: bold;
+  }
 
   button {
     padding-left: 15px;
     padding-right: 15px;
     
-    line-height: 40px;
+    line-height: 34px;
     border-radius:  4px;
+  }
+
+  .btn-accelerate-sale {
+    background: linear-gradient(90deg, #F08D46 -0.06%, #FF3E3E 48.93%, #DE5EF5 100%);
+    color: $white;
   }
 
   .btn-show-phone {
@@ -28,21 +44,6 @@
   }
 
   .text-unaurh-user {
-    font-size: 18px;
-  }
-
-  &__title {
-    font-size: 20px;
-    font-weight: 900;
-
-    @include media-breakpoint-up(lg) {
-      font-size: 28px;
-      text-transform: uppercase;
-    }
-  }
-
-  &__price {
-    font-size: 32px;
-    font-weight: bold;
+    font-size: 14px;
   }
 }

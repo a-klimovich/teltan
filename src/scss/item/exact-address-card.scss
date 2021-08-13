@@ -2,7 +2,7 @@
 @import "node_modules/bootstrap-scss/mixins";
 
 .exact-address-card {
-  padding: 30px;
+  padding: 23px 16px;
 
   @include media-breakpoint-up(lg) {
     height: fit-content;
@@ -16,18 +16,9 @@
 
   .map {
     &__address {
-      font-size: 18px;
+      font-size: 14px;
       line-height: 22px;
       letter-spacing: -0.2px;
-    }
-
-    &__image {
-      max-width: 330px;
-      height: 100%;
-
-      @include media-breakpoint-up(lg) {
-        min-height: 204px;
-      }
     }
   }
 }

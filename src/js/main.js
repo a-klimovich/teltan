@@ -21,6 +21,28 @@
     }
   }
 
+  // Item mini map
+  if ($('#itemMiniMap').length) {
+    ymaps.ready(init);
+  
+    function init(){
+      const myLocation = [57.241584, 33.786242];
+  
+      myMap = new ymaps.Map("itemMiniMap", {
+        center: myLocation,
+        zoom: 12,
+      }),
+
+      myMap.controls.remove('geolocationControl');
+      myMap.controls.remove('searchControl');
+      myMap.controls.remove('trafficControl');
+      myMap.controls.remove('typeSelector');
+      myMap.controls.remove('fullscreenControl');
+      myMap.controls.remove('rulerControl');
+      myMap.behaviors.disable(['scrollZoom']);
+    }
+  }
+
   $('.filterTogglerMobile').on('click', (e) => {
     e.preventDefault()
     $filterModalContetn.toggleClass('visible')
@@ -48,6 +70,34 @@
 
   //Content Sliders
   $(document).ready(function(){
+    $('.similar-products-slider').slick({
+      slidesToShow: 4,
+      slidesToScroll: 4,
+      prevArrow: '<div class="prev"><img src="./assets/vip-item-arrow.svg" alt="prev"></div>',
+      nextArrow: '<div class="next"><img src="./assets/vip-item-arrow.svg" alt="next"></div>',
+      responsive: [
+        {
+          breakpoint: 960,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+          }
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+          }
+        }, {
+          breakpoint: 540,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+          }
+        }]
+    });
+
     $('.vip-items-slider').slick({
       slidesToShow: 4,
       slidesToScroll: 4,
@@ -95,9 +145,6 @@
       focusOnSelect: true,
     });
   });
-
-  
-  
 
   // Slider Counter
   const $itemSlider =  $('#itemSlider');
