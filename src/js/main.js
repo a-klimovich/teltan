@@ -46,7 +46,7 @@
     })
   }
 
-  //Slider VIP items
+  //Content Sliders
   $(document).ready(function(){
     $('.vip-items-slider').slick({
       slidesToShow: 4,
@@ -77,7 +77,27 @@
           }
         }]
     });
+
+    $('.slider-for').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      prevArrow: '<div class="carousel-control-prev" data-slide="prev"><i class="icon-left-arrow rotate-180"></i><span class="sr-only">Previous</span></div>',
+      nextArrow: '<div class="carousel-control-next" data-slide="next"><i class="icon-left-arrow"></i><span class="sr-only">Next</span></div>',
+      asNavFor: '.slider-nav'
+    });
+
+    $('.slider-nav').slick({
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      asNavFor: '.slider-for',
+      prevArrow: '<div class="dots-arrow dots-arrow-prev"><i class="icon-left-arrow rotate-180"></i></div>',
+      nextArrow: '<div class="dots-arrow dots-arrow-next"><i class="icon-left-arrow"></i></div>',
+      focusOnSelect: true,
+    });
   });
+
+  
+  
 
   // Slider Counter
   const $itemSlider =  $('#itemSlider');
