@@ -18,64 +18,152 @@
         search results
       </h1>
 
-      <div class="mb-4 d-flex justify-content-between">
+      <div class="mb-4 d-flex">
         @@include('products-sort-reverse.html')
-        @@include('pagination.html')
+        <nav class="mb-4 mb-md-0 justify-content-end pagination" aria-label="">
+          <button class="prev"><img src="./assets/paginaton-arrow.svg" alt=""></button>
+        
+          <div class="mx-3 dots">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        
+          <ul class="p-0 m-0 d-flex flex-row-reverse">
+            <li class="d-none d-md-flex pagination__list-item">
+              <a href="#">1</a>
+            </li>
+        
+            <li class="mr-2 pagination__list-item">
+              <a href="#">2</a>
+            </li>
+        
+            <li class="mr-2 pagination__list-item active">
+              <a href="#">3</a>
+            </li>
+        
+            <li class="mr-2 pagination__list-item">
+              <a href="#">4</a>
+            </li>
+        
+            <li class="d-none d-md-flex mr-2 pagination__list-item">
+              <a href="#">5</a>
+            </li>
+          </ul>
+        
+          <div class="mx-3 dots">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        
+          <button class="next"><img src="./assets/paginaton-arrow.svg" alt=""></button>
+        </nav>
       </div>
     
       <div class="row row-cols-2 row-cols-lg-4">
-        <div class="col">
-          @@include('./product-card/product.html')
+        <div class="mb-4 col">
+          @@include('./product-card/product.html', {
+                'image': './img/flea-item-1.png',
+                'price': '$27 600',
+                'title': 'Concert tickets for Alisher Morgenstern',
+                'category': 'Sale of apartaments',
+                'views': '2531',
+                'date': 'Yesterday, 20:28',
+              })
         </div>
-        <div class="col">
-          @@include('./product-card/product.html')
+        <div class="mb-4 col">
+          @@include('./product-card/product.html', {
+                'image': './img/flea-item-1.png',
+                'price': '$27 600',
+                'title': 'Concert tickets for Alisher Morgenstern',
+                'category': 'Sale of apartaments',
+                'views': '2531',
+                'date': 'Yesterday, 20:28',
+              })
         </div>
-        <div class="col">
-          @@include('./product-card/product.html')
+        <div class="mb-4 col">
+          @@include('./product-card/product.html', {
+                'image': './img/flea-item-1.png',
+                'price': '$27 600',
+                'title': 'Concert tickets for Alisher Morgenstern',
+                'category': 'Sale of apartaments',
+                'views': '2531',
+                'date': 'Yesterday, 20:28',
+              })
         </div>
-        <div class="col">
-          @@include('./product-card/product.html')
+        <div class="mb-4 col">
+          @@include('./product-card/product.html', {
+                'image': './img/flea-item-1.png',
+                'price': '$27 600',
+                'title': 'Concert tickets for Alisher Morgenstern',
+                'category': 'Sale of apartaments',
+                'views': '2531',
+                'date': 'Yesterday, 20:28',
+              })
         </div>
-        <div class="col">
-          @@include('./product-card/product.html')
+        <div class="mb-4 col">
+          @@include('./product-card/product.html', {
+                'image': './img/flea-item-1.png',
+                'price': '$27 600',
+                'title': 'Concert tickets for Alisher Morgenstern',
+                'category': 'Sale of apartaments',
+                'views': '2531',
+                'date': 'Yesterday, 20:28',
+              })
         </div>
-        <div class="col">
-          @@include('./product-card/product.html')
-        </div>
-        <div class="col">
-          @@include('./product-card/product.html')
-        </div>
-        <div class="col">
-          @@include('./product-card/product.html')
-        </div>
-        <div class="col">
-          @@include('./product-card/product.html')
-        </div>
-        <div class="col">
-          @@include('./product-card/product.html')
-        </div>
-        <div class="col">
-          @@include('./product-card/product.html')
-        </div>
-        <div class="col">
-          @@include('./product-card/product.html')
-        </div>
-        <div class="col">
-          @@include('./product-card/product.html')
-        </div>
-        <div class="col">
-          @@include('./product-card/product.html')
-        </div>
-        <div class="col">
-          @@include('./product-card/product.html')
-        </div>
-        <div class="col">
-          @@include('./product-card/product.html')
+        <div class="mb-4 col">
+          @@include('./product-card/product.html', {
+                'image': './img/flea-item-1.png',
+                'price': '$27 600',
+                'title': 'Concert tickets for Alisher Morgenstern',
+                'category': 'Sale of apartaments',
+                'views': '2531',
+                'date': 'Yesterday, 20:28',
+              })
         </div>
       </div>
 
       <div class="d-flex justify-content-end">
-        @@include('pagination.html')
+        <nav class="mb-4 mb-md-0 justify-content-end pagination" aria-label="">
+          <button class="prev"><img src="./assets/paginaton-arrow.svg" alt=""></button>
+        
+          <div class="mx-3 dots">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        
+          <ul class="p-0 m-0 d-flex flex-row-reverse">
+            <li class="d-none d-md-flex pagination__list-item">
+              <a href="#">1</a>
+            </li>
+        
+            <li class="mr-2 pagination__list-item">
+              <a href="#">2</a>
+            </li>
+        
+            <li class="mr-2 pagination__list-item active">
+              <a href="#">3</a>
+            </li>
+        
+            <li class="mr-2 pagination__list-item">
+              <a href="#">4</a>
+            </li>
+        
+            <li class="d-none d-md-flex mr-2 pagination__list-item">
+              <a href="#">5</a>
+            </li>
+          </ul>
+        
+          <div class="mx-3 dots">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        
+          <button class="next"><img src="./assets/paginaton-arrow.svg" alt=""></button>
+        </nav>
       </div>
     </div>
   </main>
