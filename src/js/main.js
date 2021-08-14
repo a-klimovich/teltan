@@ -25,7 +25,7 @@
   if ($('#itemMiniMap').length) {
     ymaps.ready(init);
   
-    function init(){
+    function init() {
       const myLocation = [57.241584, 33.786242];
   
       myMap = new ymaps.Map("itemMiniMap", {
@@ -40,6 +40,19 @@
       myMap.controls.remove('fullscreenControl');
       myMap.controls.remove('rulerControl');
       myMap.behaviors.disable(['scrollZoom']);
+
+      itemFullMap = new ymaps.Map("itemFullMap", {
+        center: myLocation,
+        zoom: 10,
+      }),
+
+      itemFullMap.controls.remove('geolocationControl');
+      itemFullMap.controls.remove('searchControl');
+      itemFullMap.controls.remove('trafficControl');
+      itemFullMap.controls.remove('typeSelector');
+      itemFullMap.controls.remove('fullscreenControl');
+      itemFullMap.controls.remove('rulerControl');
+      itemFullMap.behaviors.disable(['scrollZoom']);
     }
   }
 
