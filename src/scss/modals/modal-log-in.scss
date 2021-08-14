@@ -24,6 +24,10 @@
     }
   }
 
+  .modal-body form {
+    margin-bottom: 0;
+  }
+
   input:checked ~ .remeber-me__label:after {
     display: block;
   }

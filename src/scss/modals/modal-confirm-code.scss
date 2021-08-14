@@ -1,0 +1,91 @@
+@import "../variables";
+@import "node_modules/bootstrap-scss/mixins";
+
+.modal-confirm-code {
+  &__text {
+    margin-bottom: 28px;
+    letter-spacing: 0.2px;
+
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .modal-body,
+  .modal-dialog {
+    max-width: 541px;
+  }
+
+  .modal-body {
+    padding: 30px;
+    padding-left: 23px;
+
+    .btn-refresh {
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 16px;
+    }
+    .btn-close {
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 18px;
+    }
+  }
+
+  .code-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 30px;
+
+    input {
+      text-align: center;
+    }
+
+    &__data {
+      max-width: 55px;
+      max-height: 48px;
+      margin-right: 11px;
+
+      &::placeholder {
+        text-align: center;
+        position: relative;
+        top: 3px;
+        font-weight: 700;
+        font-size: 1.3em;
+        color: #c9c9c9;
+      }
+
+      &:focus::-webkit-input-placeholder {
+        color: transparent;
+      }
+
+      &:focus::-moz-placeholder {
+        color: transparent;
+      }
+
+      &:focus:-moz-placeholder {
+        color: transparent;
+      }
+
+      &:focus:-ms-input-placeholder {
+        color: transparent;
+      }
+    }
+  }
+
+  .btn-confirm-code {
+    min-width: 200px;
+    height: 54px;
+
+    font-size: 18px;
+    font-weight: 900;
+
+    @include media-breakpoint-down(md) {
+      font-size: 14px;
+      line-height: 19px;
+      font-weight: 700;
+    }
+  }
+}
