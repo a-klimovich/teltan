@@ -50,37 +50,39 @@
         </div>
       </div>
 
-      <div class="mb-4 d-flex justify-content-between align-items-center property-step-contact__time">
-        <div class="form_radio_btn">
+      <div class="mb-4 d-flex flex-column-reverse justify-content-between align-items-center property-step-contact__time">
+        <div class="d-none d-lg-inline-block form_radio_btn">
           <input id="anytime" type="checkbox" name="anytime" value="anytime">
           <label class="mb-0" for="anytime">Anytime</label>
         </div>
 
-        <select id="callTo" class="selectpicker" data-style-base="form-control form-control-select" data-style="">
-          <option value="0">to <span>00:00</span></option>
-          <option value="1">to <span>01:00</span></option>
-          <option value="2">to <span>02:00</span></option>
-          <option value="3">to <span>03:00</span></option>
-          <option value="4">to <span>04:00</span></option>
-          <option value="5">to <span>05:00</span></option>
-          <option value="6">to <span>06:00</span></option>
-          <option value="7">to <span>07:00</span></option>
-          <option value="8">to <span>08:00</span></option>
-          <option value="9">to <span>09:00</span></option>
-        </select>
-
-        <select id="callFrom" class="selectpicker" data-style-base="form-control form-control-select" data-style="">
-          <option value="0">from <span>00:00</span></option>
-          <option value="1">from <span>01:00</span></option>
-          <option value="2">from <span>02:00</span></option>
-          <option value="3">from <span>03:00</span></option>
-          <option value="4">from <span>04:00</span></option>
-          <option value="5">from <span>05:00</span></option>
-          <option value="6">from <span>06:00</span></option>
-          <option value="7">from <span>07:00</span></option>
-          <option value="8">from <span>08:00</span></option>
-          <option value="9">from <span>09:00</span></option>
-        </select>
+        <div class="d-flex">
+          <select id="callTo" class="selectpicker" data-style-base="form-control form-control-select" data-style="">
+            <option value="0">to <span>00:00</span></option>
+            <option value="1">to <span>01:00</span></option>
+            <option value="2">to <span>02:00</span></option>
+            <option value="3">to <span>03:00</span></option>
+            <option value="4">to <span>04:00</span></option>
+            <option value="5">to <span>05:00</span></option>
+            <option value="6">to <span>06:00</span></option>
+            <option value="7">to <span>07:00</span></option>
+            <option value="8">to <span>08:00</span></option>
+            <option value="9">to <span>09:00</span></option>
+          </select>
+  
+          <select id="callFrom" class="selectpicker" data-style-base="form-control form-control-select" data-style="">
+            <option value="0">from <span>00:00</span></option>
+            <option value="1">from <span>01:00</span></option>
+            <option value="2">from <span>02:00</span></option>
+            <option value="3">from <span>03:00</span></option>
+            <option value="4">from <span>04:00</span></option>
+            <option value="5">from <span>05:00</span></option>
+            <option value="6">from <span>06:00</span></option>
+            <option value="7">from <span>07:00</span></option>
+            <option value="8">from <span>08:00</span></option>
+            <option value="9">from <span>09:00</span></option>
+          </select>
+        </div>
 
         <p class="text-right m-0 font-weight-bold">Call:</p>
       </div>

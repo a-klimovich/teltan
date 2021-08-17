@@ -1,4 +1,4 @@
-@import '../variables';
+@import "../variables";
 @import "node_modules/bootstrap-scss/mixins";
 
 .auto-ad-step2-3 {
@@ -15,23 +15,25 @@
     }
 
     @include media-breakpoint-down(md) {
-      height: 29px;
+      height: 45px;
     }
   }
 
   .form_radio_btn {
     label {
-      padding: 0 25px;
       width: fit-content;
+      font-size: 14px;
       height: 54px;
-      font-size: 12px;
+      padding: 0 25px;
 
       img {
         min-width: 22px;
       }
 
-      @include media-breakpoint-up(lg) {
-        font-size: 14px;
+      @include media-breakpoint-down(md) {
+        padding: 0 !important;
+        height: 45px !important;
+        font-size: 12px !important;
       }
     }
   }
@@ -59,7 +61,7 @@
 
     &__icon {
       font-size: 84px;
-      
+
       svg {
         width: 84px;
       }
@@ -75,13 +77,13 @@
     &__image {
       max-width: 215px;
       max-height: 180px;
-  
+
       overflow: hidden;
       border: 2px solid transparent;
       border-radius: 8px;
-  
+
       cursor: pointer;
-  
+
       &:hover {
         border-color: #33e56d;
       }

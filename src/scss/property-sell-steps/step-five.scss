@@ -1,3 +1,6 @@
+@import '../variables';
+@import "node_modules/bootstrap-scss/mixins";
+
 .property-step-contact {
 
   &__time {
@@ -16,7 +19,11 @@
   }
 
   .form-group {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+
+    @include media-breakpoint-up(lg) {
+      margin-bottom: 20px;
+    }
   }
 
   &__time {
@@ -27,10 +34,6 @@
         padding: 0 15px;
       }
     }
-  }
-
-  .dropdown.bootstrap-select {
-    width: 140px !important;
   }
 
   .step-five__select {

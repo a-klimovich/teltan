@@ -22,16 +22,24 @@
     }
   }
 
+  p {
+    font-size: 13px;
+  }
+
   input {
-    height: 54px;
+    height: 45px;
+
+    @include media-breakpoint-up(lg) {
+      height: 54px;
+    }
   }
 
   .dropdown.bootstrap-select {
-    width: fit-content !important;
     margin-right: 10px;
     margin-bottom: 10px;
-
+    
     @include media-breakpoint-up(lg) {
+      width: fit-content !important;
       margin-right: 20px;
       margin-bottom: 20px;
     }
@@ -53,12 +61,21 @@
   }
 
   .form_radio_btn {
+    .line-height {
+      height: 45px;
+
+      @include media-breakpoint-up(lg) {
+        height: 54px;
+      }
+    }
+
     label {
       padding: 0 12px;
       width: fit-content;
-      height: 54px;
-
+      height: 45px;
+      
       @include media-breakpoint-up(lg) {
+        height: 54px;
         padding: 0 25px;
       }
     }

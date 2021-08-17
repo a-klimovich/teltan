@@ -75,8 +75,8 @@
     </div>
   </div>
 
-  <div class="mb-4 row">
-    <div class="col-9 col-lg-10">
+  <div class="mb-4 row flex-column-reverse flex-lg-row">
+    <div class="col-12 col-lg-10">
       <div class="d-flex flex-row-reverse">
         <div class="d-flex flex-column align-items-center">
           <div class="mb-3 d-flex justify-content-center align-items-center car-generation__image active">
@@ -98,8 +98,8 @@
       </div>
     </div>
 
-    <div class="col-3 col-lg-2">
-      <p class="m-0 font-weight-bold">Generation:</p>
+    <div class="mb-3 mb-lg-0 col-12 col-lg-2">
+      <p class="m-0 text-right font-weight-bold">Generation:</p>
     </div>
   </div>
 
@@ -300,12 +300,12 @@
   <div class="mb-4 row">
     <div class="col-12 col-lg-10">
       <div class="row d-flex justify-content-between justify-content-lg-end">
-        <div class="col col-lg-1 form_radio_btn">
+        <div class="col col-lg-2 form_radio_btn">
           <input id="kW" type="radio" name="Engine power">
           <label class="w-100" for="kW">kW</label>
         </div>
   
-        <div class="col col-lg-1 form_radio_btn">
+        <div class="col col-lg-2 form_radio_btn">
           <input id="hp" type="radio" name="Engine power">
           <label class="w-100" for="hp">hp</label>
         </div>
@@ -342,9 +342,15 @@
     </div>
   </div>
 
-  <div class="mb-4 row">
+  <!-- <div class="mb-4 row justify-content-end">
     <div class="col-12 col-lg-10">
-      <div class="row d-flex justify-content-end">
+      
+    </div>
+  </div> -->
+
+  <div class="mb-4 row flex-column-reverse flex-lg-row justify-content-end">
+    <div class="col-12 col-lg-10">
+      <div class="row justify-content-end">
         <div class="col col-lg-2 form_radio_btn">
           <input id="DriveUnitFull" type="radio" name="Drive unit">
           <label class="w-100" for="DriveUnitFull">Full</label>
@@ -359,15 +365,13 @@
           <input id="DriveUnitFront" type="radio" name="Drive unit">
           <label class="w-100" for="DriveUnitFront">Front</label>
         </div>
-
-        <div class="ml-3 d-flex d-lg-none justify-content-center align-items-center">
-          <p class="m-0 font-weight-bold">Drive unit:</p>
-        </div>
       </div>
     </div>
 
-    <div class="d-none d-lg-block col-2">
-      <p class="m-0 font-weight-bold">Drive unit:</p>
+    <div class="mb-3 mb-lg-0 col-12 col-lg-2">
+      <div class="d-flex justify-content-end align-items-center justify-content-lg-start">
+        <p class="mb-0 font-weight-bold">Drive unit:</p>
+      </div>
     </div>
   </div>
 

@@ -2,7 +2,7 @@
 @import "node_modules/bootstrap-scss/mixins";
 
 .auto-ad-step4 {
-  min-height: 60vh;
+  margin-bottom: 30px;
   max-width: 100%;
   margin: 0 auto;
 
@@ -46,13 +46,21 @@
 
   #select-currency {
     max-width: 114px;
-    height: 64px;
+    height: 45px;
 
     margin-right: 30px;
   }
 
   #userItemPrice {
     max-width: 244px;
-    height: 64px;
+    height: 45px;
+
+    &::placeholder {
+      font-size: 13px;
+    }
+
+    @include media-breakpoint-up(lg) {
+      height: 54px;
+    }
   }
 }

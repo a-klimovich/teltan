@@ -1,3 +1,6 @@
+@import 'variables';
+@import "node_modules/bootstrap-scss/mixins";
+
 .form_radio_btn {
   display: inline-block;
   max-width: 100%;
@@ -35,5 +38,9 @@
     padding: 0;
     border: 1px solid #e7e7e7;
     user-select: none;
+
+    @include media-breakpoint-down(md) {
+      width: auto;
+    }
   }
 }
