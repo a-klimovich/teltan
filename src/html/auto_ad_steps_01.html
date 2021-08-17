@@ -24,7 +24,7 @@
           <div id="wizard">
             <div>
               <div class="d-none d-lg-flex justify-content-between border-bottom propert-sell-main__header">
-                <div class="d-flex step wizard-step" data-wizard-step="7">
+                <div class="d-flex step wizard-step" data-wizard-step="6">
                   <div class="pr-4 d-flex flex-column text-right">
                     <span class="step__title">Step 5</span>
                     <span class="step__subtitle">Contacts</span>
@@ -35,7 +35,7 @@
                   </div>
                 </div>
     
-                <div class="d-flex step wizard-step" data-wizard-step="6">
+                <div class="d-flex step wizard-step" data-wizard-step="5">
                   <div class="pr-4 d-flex flex-column text-right">
                     <span class="step__title">Step 4</span>
                     <span class="step__subtitle">Terms of sale</span>
@@ -46,7 +46,7 @@
                   </div>
                 </div>
     
-                <div class="d-flex step wizard-step" data-wizard-step="5">
+                <div class="d-flex step wizard-step" data-wizard-step="4">
                   <div class="pr-4 d-flex flex-column text-right">
                     <span class="step__title">Step 3</span>
                     <span class="step__subtitle">Detailed description</span>
@@ -57,7 +57,7 @@
                   </div>
                 </div>
     
-                <div class="d-flex step wizard-step" data-wizard-step="2">
+                <div class="d-flex step wizard-step" data-wizard-step="1">
                   <div class="pr-4 d-flex flex-column text-right">
                     <span class="step__title">Step 2</span>
                     <span class="step__subtitle">Apartment address</span>
@@ -87,46 +87,45 @@
                   @@include('./auto-ad-steps/step1.html')
                 </div>
                 <div class="wizard-content" data-wizard-content="1">
-                  @@include('./property-sell-steps/step-photo.html')
-                </div>
-                <div class="wizard-content" data-wizard-content="2">
                   @@include('./auto-ad-steps/step2.html')
                 </div>
-                <div class="wizard-content" data-wizard-content="3">
+                <div class="wizard-content" data-wizard-content="2">
                   @@include('./auto-ad-steps/step2-2.html')
                 </div>
-                <div class="wizard-content" data-wizard-content="4">
+                <div class="wizard-content" data-wizard-content="3">
                   @@include('./auto-ad-steps/step2-3.html')
                 </div>
-                <div class="wizard-content" data-wizard-content="5">
+                <div class="wizard-content" data-wizard-content="4">
                   @@include('./auto-ad-steps/step3.html')
                 </div>
-                <div class="wizard-content" data-wizard-content="6">
+                <div class="wizard-content" data-wizard-content="5">
                   @@include('./auto-ad-steps/step4.html')
                 </div>
-                <div class="wizard-content" data-wizard-content="7">
+                <div class="wizard-content" data-wizard-content="6">
                   @@include('./auto-ad-steps/step5.html')
                 </div>
 
-                <div class="propert-sell-main__step-control">
-                  <button class="mr-4 btn wizard-control-final">
-                    <span>Submit your ad</span>
-                  </button>
-    
-                  <button class="btn wizard-control-final">
-                    <span>Preview</span>
-                  </button>
-    
-                  <button type="button" class="btn steps-button wizard-control-next">
-                    <span class="btn-icon"><i class="icon-left-arrow"></i></span>
-                    <span>Next step</span>
-                  </button>
 
-                  <button type="button" class="ml-4 btn wizard-control-prev">
-                    <span class="mr-2">Prev step</span>
-                    <span class="btn-icon icon-arrow-right"><i class="icon-left-arrow"></i></span>
-                  </button>
-                </div>
+              </div>
+
+              <div class="propert-sell-main__step-control">
+                <button class="mb-2 btn wizard-control-final">
+                  <span>Submit your ad</span>
+                </button>
+  
+                <button class="mb-2 btn wizard-control-final">
+                  <span>Preview</span>
+                </button>
+  
+                <button type="button" class="mb-2 btn steps-button wizard-control-next">
+                  <span class="btn-icon"><i class="icon-left-arrow"></i></span>
+                  <span>Next step</span>
+                </button>
+
+                <button type="button" class="mb-2 btn wizard-control-prev">
+                  <span class="mr-2">Prev step</span>
+                  <span class="btn-icon icon-arrow-right"><i class="icon-left-arrow"></i></span>
+                </button>
               </div>
             </form>
           </div>

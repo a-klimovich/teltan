@@ -26,8 +26,16 @@
     justify-content: center;
 
     .icon {
-      font-size: 53px;
+      font-size: 34px;
       margin-bottom: 30px;
+
+      img {
+        max-width: 115px;
+      }
+
+      @include media-breakpoint-up(lg) {
+        font-size: 53px;
+      }
     }
   }
 

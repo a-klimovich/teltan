@@ -1,3 +1,6 @@
+@import '../variables';
+@import "node_modules/bootstrap-scss/mixins";
+
 .auto-ad-step2-3 {
   .custom-select {
     width: 150px;
@@ -10,6 +13,10 @@
     &::placeholder {
       color: #5a5a5a;
     }
+
+    @include media-breakpoint-down(md) {
+      height: 29px;
+    }
   }
 
   .form_radio_btn {
@@ -17,6 +24,15 @@
       padding: 0 25px;
       width: fit-content;
       height: 54px;
+      font-size: 12px;
+
+      img {
+        min-width: 22px;
+      }
+
+      @include media-breakpoint-up(lg) {
+        font-size: 14px;
+      }
     }
   }
 
