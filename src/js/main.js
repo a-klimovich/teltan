@@ -12,6 +12,13 @@
         center: myLocation,
         zoom: 12
       }),
+
+      myMap.controls.remove('geolocationControl');
+      myMap.controls.remove('searchControl');
+      myMap.controls.remove('trafficControl');
+      myMap.controls.remove('typeSelector');
+      myMap.controls.remove('fullscreenControl');
+      myMap.controls.remove('rulerControl');
   
       myPlacemark = new ymaps.Placemark(myLocation, {}, {
         preset: 'islands#redIcon'

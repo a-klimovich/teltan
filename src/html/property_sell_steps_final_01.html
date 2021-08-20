@@ -101,20 +101,20 @@
               </div>
 
               <div class="propert-sell-main__step-control">
-                <button class="mr-4 btn wizard-control-final">
+                <button class="btn btn-primary wizard-control-final">
                   <span>Submit your ad</span>
                 </button>
   
-                <button class="btn wizard-control-final">
+                <!-- <button class="btn wizard-control-final">
                   <span>Preview</span>
-                </button>
+                </button> -->
   
                 <button type="button" class="btn steps-button wizard-control-next">
                   <span class="btn-icon"><i class="icon-left-arrow"></i></span>
                   <span>Next step</span>
                 </button>
 
-                <button type="button" class="ml-4 btn wizard-control-prev">
+                <button type="button" class="btn wizard-control-prev">
                   <span class="mr-2">Prev step</span>
                   <span class="btn-icon icon-arrow-right"><i class="icon-left-arrow"></i></span>
                 </button>
@@ -128,18 +128,5 @@
   @@include('footer.html')
 
   @@include('./utils/includies.html')
-  <script src='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js'></script>
-  <script>
-    mapboxgl.accessToken = 'pk.eyJ1IjoiYS1rbGltb2YiLCJhIjoiY2themVqYzI4MGlrZDJxbWlvaDBlMzF6MyJ9.QXFKypM1BnCkQaUZKTuP0g';
-  
-    let map = new mapboxgl.Map({
-      container: 'map',
-      style: 'mapbox://styles/mapbox/streets-v11'
-    });
-
-    map.on('load', function () {
-      map.resize();
-    });
-  </script>
 </body>
 </html>

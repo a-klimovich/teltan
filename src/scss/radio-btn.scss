@@ -40,6 +40,7 @@
     user-select: none;
 
     @include media-breakpoint-down(md) {
+      padding: 6px 8px;
       width: auto;
     }
   }

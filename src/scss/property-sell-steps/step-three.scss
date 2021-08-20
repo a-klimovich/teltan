@@ -4,19 +4,38 @@
 .property.step-three {
   p {
     padding-top: 0;
+  }
 
-    // @include media-breakpoint-up(lg) {
-    //   padding-top: 14px;
-    // }
+  .dropdown.bootstrap-select {
+    .form-control-select {
+      height: 29px;
+    }
+  }
+
+  .full-size-btn {
+    width: 100%;
+    
+    @include media-breakpoint-up(lg) {
+      width: auto;
+    }
+  }
+
+  .text-before-ta {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    color: $black;
   }
 
   label, input, select {
-    width: 150px;
-    height: 54px;
-
+    width: auto;
+    padding: 6px 8px;
     margin-bottom: 0;
-
     color: #5a5a5a;
+
+    @include media-breakpoint-up(lg) {
+      width: 150px;
+    }
   }
 
   input::placeholder {

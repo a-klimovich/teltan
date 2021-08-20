@@ -1,12 +1,26 @@
+@import '../variables';
+@import "node_modules/bootstrap-scss/mixins";
+
 .property-step-price {
-  min-height: 60vh;
+  margin-bottom: 50px;
 
   input {
-    width: 200px;
-    height: 64px;
+    width: 100%px;
+    height: 29px;
+
+    @include media-breakpoint-up(lg) {
+      width: 200px;
+      height: 64px;
+    }
   }
 
-  .form-control-select {
-    width: 100px !important;
+  .dropdown.bootstrap-select {
+    @include media-breakpoint-down(lg) {
+      width: 80px !important;
+    }
+  }
+
+  .property-step-price .form-control-select {
+    width: 100px;
   }
 }

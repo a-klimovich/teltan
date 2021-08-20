@@ -1,4 +1,66 @@
-<div class="d-flex flex-column step-one">
+<div class="d-flex flex-column step-one step-photos">
+  <h2 class="step-one__title">What type of object</h2>
+
+  <div class="mb-4 row">
+    <div class="col-9 col-lg-10">
+      <div class="d-flex justify-content-end flex-wrap">
+        <div class="mr-2 mr-lg-3 mb-2 mb-lg-3 form_radio_btn">
+          <input id="typeResidential" type="radio" name="type">
+          <label class="px-2 py-1" for="typeResidential">Residential</label>
+        </div>
+
+        <div class="mr-2 mr-lg-3 mb-2 mb-lg-3 form_radio_btn">
+          <input id="typeCountryside" type="radio" name="type">
+          <label class="px-2 py-1" for="typeCountryside">Countryside</label>
+        </div>
+
+        <div class="mr-2 mr-lg-3 mb-2 mb-lg-3 form_radio_btn">
+          <input id="typeCommercial" type="radio" name="type">
+          <label class="px-2 py-1" for="typeCommercial">Commercial</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="col d-flex font-weight-bold">
+      <p class="m-0 text-left w-100 font-weight-bold">Type:</p>
+    </div>
+  </div>
+
+  <div class="mb-4 row">
+    <div class="col-9 col-lg-10">
+      <div class="d-flex justify-content-end flex-wrap">
+        <div class="mr-2 mr-lg-3 mb-2 mb-lg-3 form_radio_btn">
+          <input id="typeRentDemand" type="radio" name="typeRent">
+          <label class="px-2 py-1" for="typeRentDemand">Demand - buy, rent</label>
+        </div>
+
+        <div class="mr-2 mr-lg-3 mb-2 mb-lg-3 form_radio_btn">
+          <input id="typeRentHouse" type="radio" name="typeRent">
+          <label class="px-2 py-1" for="typeRentHouse">House, homestead for rent</label>
+        </div>
+
+        <div class="mr-2 mr-lg-3 mb-2 mb-lg-3 form_radio_btn">
+          <input id="typeRentOverseas" type="radio" name="typeRent">
+          <label class="px-2 py-1" for="typeRentOverseas">Overseas property</label>
+        </div>
+
+        <div class="mr-2 mr-lg-3 mb-2 mb-lg-3 form_radio_btn">
+          <input id="typeRentApartament" type="radio" name="typeRent">
+          <label class="px-2 py-1" for="typeRentApartament">Apartament, room for rent</label>
+        </div>
+
+        <div class="mr-2 mr-lg-3 mb-2 mb-lg-3 form_radio_btn">
+          <input id="typeRentCommercial" type="radio" name="typeRent">
+          <label class="px-2 py-1" for="typeRentCommercial">Commercial real estate for rent</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="col d-flex font-weight-bold">
+      <p class="m-0 text-left w-100 font-weight-bold">Type rent:</p>
+    </div>
+  </div>
+  
   <h2 class="step-one__title">What to photograph?</h2>
   
   <p class="step-one__text">Photos are much more important than text. The more photos there are the higher the chance to sell the apartment. Post your best photo first.</p>
@@ -35,26 +97,17 @@
     </div>
   </div>
 
-  <div class="d-flex align-items-center add-file-section">
-    <form class="d-flex justify-content-center align-items-center">
-      <div class="d-none d-lg-flex" id="upload-container">
-        <i class="icon-camera-1"></i>
-        <div>
-          <input id="file-input" type="file" name="file" multiple>
-          <label for="file-input">Drag photos here</label>
-        </div>
-      </div>
+  <div id="fileUploaderRenderContainer" class="mb-3 mb-lg-5 row row-cols-2 row-cols-lg-4 row-cols-xl-5 flex-row-reverse">
+    <input id="fileUploaderFiles" class="d-none" type="file" name="files[]" multiple>
 
-      <span class="d-none d-lg-inline-block add-file-section__delimiter">or</span>
-  
-      <div class="mb-4 mb-lg-0" id="upload-btn">
-        <input id="btnSelectFoto" type="file" name="file" multiple>
-        <label class="px-4 btn btn-primary text-uppercase font-weight-bold" for="btnSelectFoto">
-          <i class="mr-2 icon-camera-1"></i>
-          Select files
+    <div class="col">
+      <div class="d-flex align-items-center justify-content-center">
+        <label for="fileUploaderFiles" class="mb-0 label-add-photo">
+          <p class="mb-2"><i class="icon-camera-1"></i></p>
+          <p class="mb-0 label-add-photo__text">Add photo</p>
         </label>
       </div>
-    </form>
+    </div>
   </div>
 
   <p>Ads are published only with photos</p>
