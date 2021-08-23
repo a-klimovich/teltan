@@ -109,13 +109,37 @@
   }
 
   .content-block {
+    min-height: 131px;
+    
     svg {
       width: 14px;
+    }
+
+    .category, .location {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -moz-box;
+      -moz-box-orient: vertical;
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      line-clamp: 1;
+      box-orient: vertical;
     }
 
     .title {
       font-weight: 700;
       font-size: 13px;
+
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -moz-box;
+      -moz-box-orient: vertical;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      line-clamp: 2;
+      box-orient: vertical;
 
       @include media-breakpoint-down(lg) {
         font-size: 12px;

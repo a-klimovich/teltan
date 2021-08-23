@@ -16,54 +16,63 @@
 
   <main class="mb-5">
     <div class="container">
-      <h1 class="d-none d-lg-block mb-4 subtitle">
+      <h1 class="mb-4 subtitle">
         Tracked
       </h1>
-
-      <a class="mb-3 d-flex d-lg-none justify-content-end align-items-center mobile-nav-link" href="#">
-        <span class="mr-3 text-uppercase font-weight-bolder">Tracked<i class="ml-3 icon-love-2 mobile-nav-link__iocn"></i></span>
-        <span class="text-primary"><i class="icon-left-arrow mobile-nav-link__arrow"></i></span>
-      </a>
     
       <div class="row">
-        <div class="col-12 col-lg-9">
-          <div class="row row-cols-2 row-cols-lg-1">
-            <div class="col">
-              @@include('./user-account/user-tracked-product.html', {
-                image: 'assets/prod-tv.png',
-              })
+        <div class="col-12 col-lg-8 col-xl-9">
+          <div class="mb-5 row d-flex align-items-center">
+            <div class="col-12 col-xl-6 mb-0 mb-md-3 mb-xl-0 justify-content-center">
+              @@include('pagination.html')
             </div>
     
-            <div class="col">
-              @@include('./user-account/user-tracked-product.html', {
-                image: 'img/content-img/1.png',
+            <div class="col-12 col-xl-6 justify-content-center">@@include('products-sort.html')</div>
+          </div>
+
+          <div class="row row-cols-2 row-cols-md-1">
+            <div class="mb-4 col">
+              @@include('./product-card/product-line.html', {
+                'image': './img/iphoneX-flea.png',
+                'price': '$27 600',
+                'title': 'Concert tickets for Alisher Morgenstern',
+                'category': 'Sale of apartaments',
+                'views': '2531',
+                'date': 'Yesterday, 20:28',
               })
             </div>
-    
-            <div class="col">
-              @@include('./user-account/user-tracked-product.html', {
-              image: 'img/content-img/2.png',
-            })
+            <div class="mb-4 col">
+              @@include('./product-card/property-product-line.html', {
+                'image': './img/room_01.png',
+                'price': '$27 600',
+                'title': 'Concert tickets for Alisher Morgenstern',
+                'addres': 'Tel Aviv-Yafo, Tel Aviv District, Israel',
+                'category': 'Sale of apartaments',
+                'views': '2531',
+                'date': 'Yesterday, 20:28',
+              })
             </div>
-            <div class="col">
-              @@include('./user-account/user-tracked-product.html', {
-              image: 'img/content-img/3.png',
-            })
+            <div class="mb-4 col">
+              @@include('./product-card/auto-product-line.html', {
+                'image': './img/civic-auto.png',
+                'price': '$27 600',
+                'title': 'Civic V, 2002',
+                'autoPower': '310 h.p Gas / Petrol, 4.8 l.',
+                'mileage': '286 000 km',
+                'transmission': 'Manual',
+                'addres': 'Tel Aviv-Yafo, Tel Aviv District, Israel',
+                'views': '2531',
+                'date': 'Yesterday, 20:28',
+              })
             </div>
-            <div class="col">
-              @@include('./user-account/user-tracked-product.html', {
-              image: 'img/content-img/4.png',
-            })
-            </div>
-            <div class="col">
-              @@include('./user-account/user-tracked-product.html', {
-              image: 'img/content-img/5.png',
-            })
-            </div>
+          </div>
+
+          <div class="col-12 col-xl-6 mb-0 mb-md-3 mb-xl-0 justify-content-center">
+            @@include('pagination.html')
           </div>
         </div>
   
-        <div class="d-none d-lg-block col-3">
+        <div class="d-none d-lg-block col-4 col-xl-3">
           @@include('./user-account/user-profile-menu.html')
         </div>
       </div>

@@ -2,8 +2,68 @@
 @import "node_modules/bootstrap-scss/mixins";
 
 .user-add-item {
+  @include media-breakpoint-down(lg) {
+  
+  }
+
+  .dropdown.bootstrap-select.w-100 {
+    width: 100% !important;
+  }
+
+  .dropdown.bootstrap-select {
+    width: fit-content !important;
+    margin: 0 0 15px 10px;
+
+
+    .filter-option {
+      margin-left: 1rem;
+    }
+  }
+
+  .auto-ad-step3__colors {
+    label {
+      @include media-breakpoint-down(lg) {
+        width: 32px;
+        height: 32px;
+      }
+    }
+  }
+
+  .section-title {
+    font-weight: 800;
+    font-size: 25px;
+    line-height: 34px;
+    text-transform: uppercase;
+
+    @include media-breakpoint-down(lg) {
+      font-weight: 800;
+      font-size: 16px;
+      line-height: 22px;
+      text-align: right;
+      letter-spacing: 0.01em;
+    }
+  }
+
+  .fleamarket {
+    display: flex;
+    position: static;
+    top: auto;
+    left: auto;
+    width: auto;
+    max-height: 100%;
+    transform: none;
+  }
+
+  .auto-ad-step3__colors .colour-element {
+    display: inline-block;
+  }
+
   input {
     height: 54px;
+    
+    @include media-breakpoint-down(lg) {
+      height: 29px;
+    }
   }
 
   input::placeholder,
@@ -11,76 +71,56 @@
     color: #5a5a5a;
   }
 
-  label,
-  .name-photo-section {
-    font-size: 16px;
-    font-weight: bold;
+  .form_radio_btn label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    width: 160px;
+    height: 54px;
+    border-radius: 8px;
+    margin-bottom: 0;
+    color: #5a5a5a;
+    cursor: pointer;
+    padding: 6px 8px;
+    border: 1px solid #e7e7e7;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    
+    margin: 0 0 15px 10px;
+
+    &.mileage-btn {
+      @include media-breakpoint-down(lg) {
+        max-width: 60px;
+      }
+    }
+
+    @include media-breakpoint-down(lg) {
+      font-size: 12px;
+      height: 29px;
+      border-radius: 3px;
+      margin: 0 0 10px 8px;
+      width: fit-content;
+    }
   }
 
-  .label__name {
+  .form-control-select {
+    @include media-breakpoint-down(lg) {
+      height: 45px;
+    }
+  }
+
+  .label-name {
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 18px;
+    color: $black;
     text-align: right;
 
     @include media-breakpoint-up(lg) {
       text-align: start;
-    }
-  }
-
-  &__photo {
-    .box-label-photo {
-      overflow: hidden;
-    }
-    
-    label {
-      justify-content: flex-end;
-      display: flex;
-    }
-
-    .add-item-photo {
-      width: 65px;
-      height: 65px;
-
-      @include media-breakpoint-up(lg) {
-        width: 100px;
-        height: 100px;
-      }
-
-      i {
-        font-size: 39px;
-      }
-
-      border: 1px solid #f3f3f3;
-      border-radius: 4px;
-
-      cursor: pointer;
-
-      &:hover {
-        color: $primary;
-        border: 1px solid $primary;
-      }
-    }
-
-    input {
-      visibility: hidden;
-    }
-  }
-}
-
-@include media-breakpoint-down(lg) {
-  .card.user-add-item {
-    background-color: transparent;
-    border: transparent;
-    box-shadow: none;
-
-    .user-add-item__photo {
-      .add-item-photo {
-        width: 60px;
-        height: 60px;
-        background-color: #ffffff;
-
-        i {
-          font-size: 1.7em;
-        }
-      }
     }
   }
 }
