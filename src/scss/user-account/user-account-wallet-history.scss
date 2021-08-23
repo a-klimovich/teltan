@@ -2,18 +2,49 @@
 @import "node_modules/bootstrap-scss/mixins";
 
 .wallet-history {
+  .card {
+    padding: 20px;
+    @include media-breakpoint-up(lg) {
+      padding: 30px;
+    }
+  }
+
   button {
-    min-width: 160px;
-    min-height: 48px;
-    border-radius: 4px;
+    min-width: 92px;
+    height: 34px;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 19px;
+
+    @include media-breakpoint-up(lg) {
+      min-width: 110px;
+    }
+  }
+
+  input {
+    padding-right: 2px;
+  }
+
+  .w-100-mobile {
+    @include media-breakpoint-down(md) {
+      width: 100%;
+      button {
+        width: 100%;
+      }
+    }
+  }
+
+  p {
+    @include media-breakpoint-down(md) {
+      font-size: 12px;
+      line-height: 16px;
+      letter-spacing: -0.06em;
+    }
   }
 
   .wallet-balance-name {
     font-size: 16px;
-
-    @include media-breakpoint-up(lg) {
-      font-size: 20px;
-    }
   }
 
   &__title {
@@ -69,10 +100,6 @@
     .state-of-an-account {
       color: $primary;
     }
-  }
-
-  .card {
-    padding: 30px;
   }
 
   .purchase-history {

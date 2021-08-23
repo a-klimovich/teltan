@@ -5,13 +5,13 @@
         1 Tcoin = 0.10 <span class="currency-sign">₪</span>
       </div>
 
-      <div class="d-flex flex-column flex-lg-row justify-content-center align-items-center">
-        <div class="mb-4 mb-lg-0 d-flex justify-content-start justify-content-lg-end">
-          <span class="mr-3 d-flex align-items-center text-uppercase font-weight-bolder wallet-balance-name">My Tcoins: <span class="pl-1 state-of-an-account">25 T</span></span>
+      <div class="d-flex flex-column flex-lg-row justify-content-lg-center align-items-lg-center">
+        <div class="mb-4 mb-lg-0 d-flex flex-column flex-lg-row justify-content-start justify-content-lg-end">
+          <span class="mb-4 mb-lg-0 mr-3 d-flex align-items-center text-uppercase font-weight-bolder wallet-balance-name">My Tcoins: <span class="ml-3 mb-md-0 pl-1 state-of-an-account">25 T</span></span>
           
           <form id="convertor" class="d-flex justify-content-between align-items-center conversion-booth" action="">
             <div class="input-group">
-              <input type="text" class="form-control" placeholder="100" aria-describedby="basic-addon2">
+              <input type="number" class="form-control" placeholder="100" aria-describedby="basic-addon2">
               <div class="input-group-append">
                 <span class="input-group-text" id="tCoin">T</span>
               </div>
@@ -20,7 +20,7 @@
             <span class="mx-3">=</span>
 
             <div class="input-group">
-              <input type="text" class="form-control" placeholder="10" aria-describedby="basic-addon2">
+              <input type="number" class="form-control" placeholder="10" aria-describedby="basic-addon2">
               <div class="input-group-append">
                 <span class="input-group-text" id="shekel">₪</span>
               </div>
@@ -28,35 +28,71 @@
           </form>
         </div>
 
-        <div class="ml-4 d-flex justify-content-center justify-content-lg-start">
+        <div class="ml-lg-4 d-flex justify-content-center justify-content-lg-start w-100-mobile">
           <button for="convertor" type="submit" class="btn btn-primary text-uppercase font-weight-bolder">change</button>
         </div>
       </div>
     </div>
 
     <div class="mb-4 card">
-      <div class="pb-4 mb-4 d-flex flex-row-reverse flex-lg-row justify-content-between align-items-center border-bottom">
-        <span class="m-0 text-nowrap text-uppercase font-weight-bolder wallet-balance-name">My balance: <span class="state-of-an-account">1300 <span class="currency-sign">₪</span></span></span>
+      <div class="pb-4 mb-4 d-flex flex-column flex-lg-row justify-content-between align-items-start align-items-lg-center border-bottom">
+        <span class="mb-4 mb-lg-0 m-0 text-nowrap text-uppercase font-weight-bolder wallet-balance-name">My balance: <span class="ml-3 mb-md-0 state-of-an-account">1300 <span class="currency-sign">₪</span></span></span>
   
-        <div class="d-flex justify-content-center align-items-center">
-          <button type="submit" class="mr-4 d-none d-lg-block btn btn-primary text-uppercase font-weight-bolder">add</button>
-          <span type="button" class="mb-0 d-block d-lg-none text-primary text-uppercase text-uppercase font-weight-bolder">add balance</span>
+        <div class="d-flex justify-content-center align-items-center w-100-mobile">
+          <button type="submit" class="mr-4 btn btn-primary text-uppercase font-weight-bolder">add</button>
 
-          <span class="d-none d-lg-block"><i class="icon-wallet-3"></i></span>
+          <span class="d-block"><i class="icon-wallet-3"></i></span>
         </div>
       </div>
 
-      <div class="d-flex flex-row-reverse flex-lg-row justify-content-between align-items-center">
+      <!-- <div class="d-flex flex-row-reverse flex-lg-row justify-content-between align-items-center">
         <span class="m-0 text-uppercase font-weight-bolder wallet-balance-name">My subscriptions: <span class="state-of-an-account">VIP 10</span></span>
   
         <div class="d-flex justify-content-center align-items-center">
-          <button type="button" class="d-none d-lg-block mr-4 btn btn-primary text-uppercase font-weight-bolder">update</button>
+          
           <button type="button" class="d-none d-lg-block mr-4 btn btn-primary text-uppercase font-weight-bolder">change</button>
 
           <span type="button" class="mr-3 mb-0 d-block d-lg-none text-primary text-uppercase text-uppercase font-weight-bolder">update</span>
           <span type="button" class="mb-0 d-block d-lg-none text-primary text-uppercase text-uppercase font-weight-bolder">change</span>
 
           <span class="d-none d-lg-block icon-crown"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span><span class="path8"></span></span>
+        </div>
+      </div> -->
+
+      <div class="row">
+        <div class="mb-4 col-12 col-xl-4">
+          <span class="m-0 text-uppercase font-weight-bolder wallet-balance-name">My subscriptions:</span>
+        </div>
+
+        <div class="col">
+          <div class="d-flex flex-column">
+            <div class="mb-4 d-flex justify-content-between align-items-center">
+              <div class="d-flex flex-column">
+                <p href="#" class="mb-2 text-primary">пакет на +3 объявления</p>
+                <p class="mb-0 text-secondary">(until 17:55, 14.06.2021)</p>
+              </div>
+  
+              <button type="button" class="btn btn-primary text-uppercase">update</button>
+            </div>
+            
+            <div class="mb-4 d-flex justify-content-between align-items-center">
+              <div class="d-flex flex-column">
+                <p href="#" class="mb-2 text-primary">пакет на +3 объявления объявления объявления объявления</p>
+                <p class="mb-0 text-secondary">(until 17:55, 14.06.2021)</p>
+              </div>
+  
+              <button type="button" class="btn btn-primary text-uppercase">update</button>
+            </div>
+
+            <div class="mb-4 d-flex justify-content-between align-items-center">
+              <div class="d-flex flex-column">
+                <p href="#" class="mb-2 text-primary">пакет на +3 объявления</p>
+                <p class="mb-0 text-secondary">(until 17:55, 14.06.2021)</p>
+              </div>
+  
+              <button type="button" class="btn btn-primary text-uppercase">update</button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
