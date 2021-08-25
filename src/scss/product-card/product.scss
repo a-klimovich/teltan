@@ -103,8 +103,12 @@
 
   .views,
   .date {
+    font-size: 13px;
+    line-height: 18px;
+
     @include media-breakpoint-down(lg) {
       font-size: 10px;
+      line-height: 14px;
     }
   }
 
