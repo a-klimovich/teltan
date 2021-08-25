@@ -146,31 +146,17 @@ textarea {
 
 .breadcrumb-beckground {
   position: relative;
-  padding-bottom: 40px;
-
-  &::before {
-    content: "";
-    display: block;
-    position: absolute;
-    z-index: -1;
-    
-    width: 100%;
-    height: calc(100% + 33px);
-    
-    top: -33px;
-    left: 0;
-
-    background: #fff;
+  padding-bottom: 25px;
+  background-color: $white;
+  margin-top: 12px;
+  
+  @include media-breakpoint-up(md) {
+    margin-top: 20px;
   }
+}
 
-  @media (max-width: 991px) {
-    padding-bottom: 0;
-
-    &::before {
-      height: calc(100% + 20px);
-      top: -20px;
-    }
-  }
+.btn {
+  border-radius: 6px;
 }
 
 .btn-secondary {
