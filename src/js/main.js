@@ -1,5 +1,12 @@
 (function(){
   const $filterModalContetn = $('#filterModalContent')
+  const $itemSlider =  $('#itemSlider');
+
+  // TODO
+
+  // $('.userItemSettings').on('click', () => {
+  //   console.log($('.accardion-wrap').toggleClass('active'))
+  // })
 
   // MAP property content
   if ($('#map').length) {
@@ -167,8 +174,6 @@
   });
 
   // Slider Counter
-  const $itemSlider =  $('#itemSlider');
-
   $itemSlider.on('slid.bs.carousel', function (e) {
     $itemSlider.find('.current-slide-number').text(e.to + 1);
   })

@@ -177,6 +177,19 @@ textarea {
   color: #ffffff;
 }
 
+.btn-accelerate-sale {
+  position: relative;
+  background: linear-gradient(90deg, #F08D46 -0.06%, #FF3E3E 48.93%, #DE5EF5 100%);
+  color: $white;
+  
+  &:hover {
+    color: $white;
+    .user-promote-menu {
+      display: flex;
+    }
+  }
+}
+
 .main-card-deck {
   display: flex;
   flex-flow: row wrap;

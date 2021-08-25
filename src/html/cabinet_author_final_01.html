@@ -16,96 +16,326 @@
 
   <main class="mb-5">
     <div class="container">
-      <h1 class="d-none d-lg-block mb-4 subtitle">
+      <h1 class="mb-4 subtitle">
         Latest offers
       </h1>
-      
-      <a class="mb-3 d-flex d-lg-none justify-content-end align-items-center mobile-nav-link" href="#">
-        <span class="mr-3 text-uppercase font-weight-bolder">My announcements<i class="ml-2 icon-shopping-bag mobile-nav-link__iocn"></i></span>
-        <span class="text-primary"><i class="icon-left-arrow mobile-nav-link__arrow"></i></span>
-      </a>
     
       <div class="row">
-        <div class="col-12 col-lg-9">
-          <div class="row row-cols-2 row-cols-lg-1">
-            <div class="col">
-              @@include('./user-account/user-product.html')
+        <div class="col-12 col-lg-8 col-xl-9">
+
+          <!-- annoucments -->
+          <div class="mb-4">
+            <div class="mb-4 d-flex justify-content-center justify-content-lg-end status-announcement">
+              <div class="form_radio_btn">
+                <input id="falseAnnouncement" type="radio" name="announcement" value="falseAnnouncement">
+                <label class="btn-left" for="falseAnnouncement">Неактивные объявления: <span class="ml-2 falseAnnouncementCounter">8</span></label>
+              </div>
+          
+              <div class="form_radio_btn">
+                <input id="trueAnnouncement" type="radio" name="announcement" value="" checked="">
+                <label class="btn-right" for="trueAnnouncement">Активные объявления: <span class="ml-2 trueAnnouncementCounter">3</span></label>
+              </div>
             </div>
-            <div class="col">
-              @@include('./user-account/user-product.html')
+  
+            <div class="mb-1 p-3 card d-flex flex-column-reverse flex-lg-row announcement-list">
+              <a class="p-3 d-flex justify-content-center align-items-center" data-toggle="collapse" href="#userAnnouncementList" role="button" aria-expanded="false" aria-controls="collapseExample">
+                <i class="icon-arrow-down-sign-to-navigate-3"></i>
+              </a>
+              
+              <div class="w-100 d-flex flex-column flex-xl-row align-items-xl-center justify-content-between">
+                <div class="pl-lg-3 d-flex flex-column text-right">
+                  <p class="header-title font-weight-bold">Бесплатные объявления:</p>
+                  <p>
+                    Property <span class="counters">1</span> из <span class="counters">1</span> / 
+                    Auto <span class="counters">1</span> из <span class="counters">1</span> / 
+                    Flea Market <span class="counters">1</span> из <span class="counters">1</span>
+                  </p>
+                </div>
+  
+                <div class="d-flex flex-column text-right">
+                  <p class="header-title font-weight-bold">Оплаченные объявления:</p>
+                  <p><span class="mr-1 counters">11</span> из <span class="ml-1 counters">20</span></p>
+                </div>
+  
+                <button class="btn btn-primary text-uppercase align-self-end">купить</button>
+              </div>
             </div>
-            <div class="col">
-              <div class="user-product">
-                <div class="card mb-4">
-                  <div class="row flex-column-reverse flex-lg-row">
-                    <div class="col col-lg-8">
-                      <div class="d-flex flex-column user-product__body">
-                        <div class="row border-bottom mb-3">
-                          <div class="d-none d-lg-flex flex-column justify-content-between col-4">
-                            <span class="card-price font-weight-bold text-primary">$ 1203</span>
-                            <button class="d-none d-lg-block btn text-uppercase user-product__btn-edit">Edit</button>
+  
+            <div class="collapse" id="userAnnouncementList">
+              <table class="w-100">
+                <tbody>
+                  <tr class="d-flex">
+                    <td class="d-flex flex-column flex-lg-row justify-content-end">
+                      <div class="m-0 mr-lg-4 d-flex align-items-center justify-content-end justify-content-lg-center category"><img src="./assets/announsment-list-free.svg" alt=""><span class="ml-3">(auto)</span></div>
+                      <div class="d-flex justify-content-end align-items-center justify-content-lg-center font-weight-bold"><span class="mr-1">0</span> из <span class="ml-1">1</span></div>
+                    </td>
+                    
+                    <td class="d-flex justify-content-center align-items-center date-announcment"><span>-</span></td>
+                  </tr>
+  
+                  <tr class="d-flex">
+                    <td class="d-flex flex-column flex-lg-row justify-content-end">
+                      <div class="m-0 mr-lg-4 d-flex align-items-center justify-content-end justify-content-lg-center category"><img src="./assets/announsment-list-free.svg" alt=""><span class="ml-3">(proprerty)</span></div>
+                      <div class="d-flex justify-content-end align-items-center justify-content-lg-center font-weight-bold"><span class="mr-1">1</span> из <span class="ml-1">1</span></div>
+                    </td>
+                    
+                    <td class="d-flex justify-content-center align-items-center date-announcment"><span>(до 17:55, 14.06.2021)</span></td>
+                  </tr>
+  
+                  <tr class="d-flex">
+                    <td class="d-flex flex-column flex-lg-row justify-content-end">
+                      <div class="m-0 mr-lg-4 d-flex align-items-center justify-content-end justify-content-lg-center category"><img src="./assets/announsment-list-free.svg" alt=""><span class="ml-3">(fllea market)</span></div>
+                      <div class="d-flex justify-content-end align-items-center justify-content-lg-center font-weight-bold"><span class="mr-1">1</span> из <span class="ml-1">1</span></div>
+                    </td>
+                    
+                    <td class="d-flex justify-content-center align-items-center date-announcment"><span>(до 17:55, 14.06.2021)</span></td>
+                  </tr>
+  
+                  <tr class="d-flex">
+                    <td class="d-flex flex-column flex-lg-row justify-content-end">
+                      <div class="d-flex justify-content-end align-items-center justify-content-lg-center font-weight-bold"><span class="mr-1">10</span> из <span class="ml-1">20</span></div>
+                    </td>
+                    
+                    <td class="d-flex justify-content-center align-items-center date-announcment"><span>(до 17:55, 14.06.2021)</span></td>
+                  </tr>
+  
+                  <tr class="d-flex">
+                    <td class="d-flex flex-column flex-lg-row justify-content-end">
+                      <div class="d-flex justify-content-end align-items-center justify-content-lg-center font-weight-bold"><span class="mr-1">10</span> из <span class="ml-1">20</span></div>
+                    </td>
+                    
+                    <td class="d-flex justify-content-center align-items-center date-announcment"><span>(до 17:55, 14.06.2021)</span></td>
+                  </tr>
+  
+                  <tr class="d-flex">
+                    <td class="d-flex flex-column flex-lg-row justify-content-end">
+                      <div class="d-flex justify-content-end align-items-center justify-content-lg-center font-weight-bold"><span class="mr-1">10</span> из <span class="ml-1">20</span></div>
+                    </td>
+                    
+                    <td class="d-flex justify-content-center align-items-center date-announcment"><span>(до 17:55, 14.06.2021)</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <!-- annoucments END -->
+
+          <!-- message -->
+          <div class="mb-4 card d-flex flex-column flex-lg-row w-100 justify-content-around no-message">
+            <div class="mb-3 mb-0 d-flex flex-column align-items-center justify-content-center">
+              <p class="mb-4">У вас пока что нет Объявлений</p>
+              <img src="./assets/no-message.svg" alt="">
+            </div>
+
+            <div class="d-flex align-items-center justify-content-center">
+              <button class="btn btn-primary">To add an advert</button>
+            </div>
+          </div>
+          <!-- message END -->
+
+          <!-- user product -->
+          <div class="mb-4 card product-card product-line user-product">
+            <div class="card-link" href="#">
+              <div class="image-block">
+                <div class="i-box">
+                  <img src="#" alt="no-img">
+                </div>
+              </div>
+          
+              <div class="px-2 px-lg-3 content-block">
+                <div class="d-flex flex-column h-100 justify-content-between text-right">
+                  <div class="mb-3 mb-lg-5 d-flex flex-column-reverse flex-lg-row justify-content-between align-items-end">
+                    <p class="price">$12500</p>
+                    <p class="title">KIA SPORTAGE IV 2014</p>
+                  </div>
+                  
+                  <div class="mb-4 d-flex flex-column flex-lg-row">
+                    <div class="edit-user-item">
+                      <button class="mr-lg-4 mb-3 mb-lg-0 btn user-product__btn-edit text-uppercase">Edit</button>
+
+                      <ul class="d-flex flex-column">
+                        <li class="border-bottom">
+                          <div class="custom-control custom-switch activateItem">
+                            <input type="checkbox" class="custom-control-input" id="activateItem">
+                            <label class="custom-control-label" for="activateItem">Активировать</label>
                           </div>
-              
-                          <div class="col col-lg-8 text-right user-product__info">
-                            <div class="px-lg-2 d-flex d-lg-none justify-content-between align-items-center user-product__info-mobile">
-                              <div class="d-flex justify-content-center align-items-center like-btn">
-                                <svg id="iconLike" class="iconLike" viewBox="0 0 612 792"><path d="M562.413,284.393c-9.68,41.044-32.121,78.438-64.831,108.07L329.588,542.345l-165.11-149.843 c-32.771-29.691-55.201-67.076-64.892-108.12c-6.965-29.484-4.103-46.14-4.092-46.249l0.147-0.994 c6.395-72.004,56.382-124.273,118.873-124.273c46.111,0,86.703,28.333,105.965,73.933l9.061,21.477l9.061-21.477 c18.958-44.901,61.694-73.922,108.896-73.922c62.481,0,112.478,52.27,119,125.208C566.517,238.242,569.379,254.908,562.413,284.393z"/></svg>
-                              </div>
-              
-                              <div class="d-flex d-lg-none card-price-mobile">
-                                <span class="font-weight-bold">$ 1203</span>
-                              </div>
-                            </div>
-              
-                            <a href="#" class="card-title font-weight-bold">Acer SB220Q bi 21.5 Inches Full HD (1920 x 1080) IPS Ultra-Thin Zero Frame Monitor (HDMI & VGA Port), Black</a>
-                            
-                            <p class="mb-0 mb-lg-3 d-none d-lg-flex justify-content-end card-text">Appliances, smartphone, apple</p>
+                        </li>
+
+                        <li  class="border-bottom">
+                          <div class="custom-control custom-switch disableItem">
+                            <input type="checkbox" class="custom-control-input" id="disableItem">
+                            <label class="custom-control-label" for="disableItem">Деактивировать</label>
                           </div>
-                        </div>
-              
-                        <div class="mb-3 mb-lg-0 row">
-                          <div class="col col-lg-6">
-                            <div role="button" class="d-none d-lg-inline-block text-nowrap mr-0 mr-lg-3">
-                              <span class="like">To favorites
-                                <svg id="iconLike" class="iconLike" viewBox="0 0 612 792"><path d="M562.413,284.393c-9.68,41.044-32.121,78.438-64.831,108.07L329.588,542.345l-165.11-149.843 c-32.771-29.691-55.201-67.076-64.892-108.12c-6.965-29.484-4.103-46.14-4.092-46.249l0.147-0.994 c6.395-72.004,56.382-124.273,118.873-124.273c46.111,0,86.703,28.333,105.965,73.933l9.061,21.477l9.061-21.477 c18.958-44.901,61.694-73.922,108.896-73.922c62.481,0,112.478,52.27,119,125.208C566.517,238.242,569.379,254.908,562.413,284.393z"/></svg>
-                              </span>
-                            </div>
-              
-                            <div class="d-inline-block text-nowrap">
-                              <span class="mr-2">2 500</span>
-                              <i class="icon-visibility"></i>
-                            </div>
-                          </div>
-              
-                          <div class="col col-lg-6">
-                            <div class="date text-right text-nowrap">
-                              Yesterday, 20:28
-                            </div>
-                          </div>
-                        </div>
-                        
-                        <a class="border border-primary d-flex d-lg-none justify-content-center align-items-center mobile-edit-btn">
-                          <span href="#" class="py-2 font-weight-bold text-primary text-uppercase">edit</span>
-                        </a>
+                        </li>
+
+                        <li  class="border-bottom">
+                          <a class="mr-3" href="#">Edit</a>
+                          <span class="mr-2">@@include('../assets/icon-pan.svg')</span>
+                        </li>
+
+                        <li class="px-3"> 
+                          <button type="button" class="btn p-0 text-secondary">
+                            <span class="mr-2">Удалить</span>
+                            <i class="mr-2 icon-clear"></i>
+                          </button>
+                        </li>
+                      </ul>
+                    </div>
+                    
+                    <div class="userItemSettings">
+                      <button class="btn btn-accelerate-sale text-uppercase font-weight-bold btn-accelerate-sale" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span>@@include('../assets/market-cart.svg')</span>
+                        Ускорить продажу
+                      </button>
+                    
+                      <div class="accardion-wrap">
+                        @@include('./user-account/user-promote-menu.html')
                       </div>
                     </div>
-                
-                    <div class="col col-lg-4 d-flex align-items-center justify-content-center user-product__image">
-                      <div class="p-2 d-flex justify-content-center align-items-center">
-                        <img class="mw-100" src="assets/prod-tv.png" alt="product-">
-                      </div>
-                    </div>
+                    
                   </div>
                 </div>
-              
-                <div type="button" class="b-none d-lg-flex justify-content-center align-items-center user-product__timer">
-                  <span class="text-uppercase font-weight-bold">12:34</span>
+          
+                <div class="border-top py-3 d-flex justify-content-between align-items-center text-nowrap product-line__data-viwe">
+                  <div class="d-flex">
+                    <span class="mr-0 mr-lg-2 views"><span>2 586</span> <i class="icon-visibility"></i></span>
+          
+                    <div class="d-none d-lg-flex justify-content-end align-items-center ml-5 product-line__up-date">
+                      <div class="mr-2 d-flex justify-content-center align-items-center user-product__up-product">
+                        <span class="text-uppercase font-weight-bold">UP</span>
+                      </div>
+
+                      <span class="up-date">18:00, 20.02.2021</span>
+                    </div>
+                  </div>
+          
+                  <span class="date">Yesterday, 20:28</span>
                 </div>
               </div>
             </div>
+
+            <div type="button" class="b-none d-lg-flex justify-content-center align-items-center rise-btn">
+              <span class="mr-1 text-uppercase font-weight-bold up">UP</span>
+              <p class="m-0">Raise (<span>51</span>)</p>
+            </div>
+
+            <div class="d-flex flex-column controls-rise-item">
+              <div class="d-flex justify-content-center align-items-center item">@@include('../assets/icon-crown.svg')</div>
+              <div class="d-flex justify-content-center align-items-center item">@@include('../assets/fill-bottle.svg')</div>
+              <div class="d-flex justify-content-center align-items-center item">@@include('../assets/ribbon.svg')</div>
+              <div class="d-flex justify-content-center align-items-center item">@@include('../assets/levin.svg')</div>
+            </div>
           </div>
+
+          <div class="mb-4 card product-card product-line user-product">
+            <div class="card-link" href="#">
+              <div class="image-block">
+                <div class="i-box">
+                  <img src="#" alt="no-img">
+                </div>
+              </div>
+          
+              <div class="px-2 px-lg-3 content-block">
+                <div class="d-flex flex-column h-100 justify-content-between text-right">
+                  <div class="mb-3 mb-lg-5 d-flex flex-column-reverse flex-lg-row justify-content-between align-items-end">
+                    <p class="price">$12500</p>
+                    <p class="title">KIA SPORTAGE IV 2014</p>
+                  </div>
+                  
+                  <div class="mb-4 d-flex flex-column flex-lg-row position-relative">
+                    <button class="mr-lg-4 mb-3 mb-lg-0 btn user-product__btn-edit text-uppercase">Edit</button>
+                    <button class="btn btn-accelerate-sale text-uppercase font-weight-bold btn-accelerate-sale"><span>@@include('../assets/market-cart.svg')</span> Ускорить продажу</button>
+                  </div>
+                </div>
+          
+                <div class="border-top py-3 d-flex justify-content-between align-items-center text-nowrap product-line__data-viwe">
+                  <div class="d-flex">
+                    <span class="mr-0 mr-lg-2 views"><span>2 586</span> <i class="icon-visibility"></i></span>
+          
+                    <div class="d-none d-lg-flex justify-content-end align-items-center ml-5 product-line__up-date">
+                      <div class="mr-2 d-flex justify-content-center align-items-center user-product__up-product">
+                        <span class="text-uppercase font-weight-bold">UP</span>
+                      </div>
+
+                      <span class="up-date">18:00, 20.02.2021</span>
+                    </div>
+                  </div>
+          
+                  <span class="date">Yesterday, 20:28</span>
+                </div>
+              </div>
+            </div>
+
+            <div type="button" class="b-none d-lg-flex justify-content-center align-items-center rise-btn">
+              <span class="mr-1 text-uppercase font-weight-bold up">UP</span>
+              <p class="m-0">Raise (<span>51</span>)</p>
+            </div>
+
+            <div class="d-flex flex-column controls-rise-item">
+              <div class="d-flex justify-content-center align-items-center item">@@include('../assets/icon-crown.svg')</div>
+              <div class="d-flex justify-content-center align-items-center item">@@include('../assets/fill-bottle.svg')</div>
+              <div class="d-flex justify-content-center align-items-center item">@@include('../assets/ribbon.svg')</div>
+              <div class="d-flex justify-content-center align-items-center item">@@include('../assets/levin.svg')</div>
+            </div>
+          </div>
+
+          <div class="mb-4 card product-card product-line user-product">
+            <div class="card-link" href="#">
+              <div class="image-block">
+                <div class="i-box">
+                  <img src="#" alt="no-img">
+                </div>
+              </div>
+          
+              <div class="px-2 px-lg-3 content-block">
+                <div class="d-flex flex-column h-100 justify-content-between text-right">
+                  <div class="mb-3 mb-lg-5 d-flex flex-column-reverse flex-lg-row justify-content-between align-items-end">
+                    <p class="price">$12500</p>
+                    <p class="title">KIA SPORTAGE IV 2014</p>
+                  </div>
+                  
+                  <div class="mb-4 d-flex flex-column flex-lg-row position-relative">
+                    <button class="mr-lg-4 mb-3 mb-lg-0 btn user-product__btn-edit text-uppercase">Edit</button>
+                    <button class="btn btn-accelerate-sale text-uppercase font-weight-bold btn-accelerate-sale"><span>@@include('../assets/market-cart.svg')</span> Ускорить продажу</button>
+                  </div>
+                </div>
+          
+                <div class="border-top py-3 d-flex justify-content-between align-items-center text-nowrap product-line__data-viwe">
+                  <div class="d-flex">
+                    <span class="mr-0 mr-lg-2 views"><span>2 586</span> <i class="icon-visibility"></i></span>
+          
+                    <div class="d-none d-lg-flex justify-content-end align-items-center ml-5 product-line__up-date">
+                      <div class="mr-2 d-flex justify-content-center align-items-center user-product__up-product">
+                        <span class="text-uppercase font-weight-bold">UP</span>
+                      </div>
+
+                      <span class="up-date">18:00, 20.02.2021</span>
+                    </div>
+                  </div>
+          
+                  <span class="date">Yesterday, 20:28</span>
+                </div>
+              </div>
+            </div>
+
+            <div type="button" class="b-none d-lg-flex justify-content-center align-items-center rise-btn">
+              <span class="mr-1 text-uppercase font-weight-bold up">UP</span>
+              <p class="m-0">Raise (<span>51</span>)</p>
+            </div>
+
+            <div class="d-flex flex-column controls-rise-item">
+              <div class="d-flex justify-content-center align-items-center item">@@include('../assets/icon-crown.svg')</div>
+              <div class="d-flex justify-content-center align-items-center item">@@include('../assets/fill-bottle.svg')</div>
+              <div class="d-flex justify-content-center align-items-center item">@@include('../assets/ribbon.svg')</div>
+              <div class="d-flex justify-content-center align-items-center item">@@include('../assets/levin.svg')</div>
+            </div>
+          </div>
+          <!-- user product END-->
         </div>
-        <div class="d-none d-lg-block col-3">
+        
+
+
+        <div class="d-none d-lg-block col-4 col-xl-3">
           @@include('./user-account/user-profile-menu.html')
         </div>
       </div>
