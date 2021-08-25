@@ -110,6 +110,9 @@
 
   .content-block {
     min-height: 131px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     
     svg {
       width: 14px;

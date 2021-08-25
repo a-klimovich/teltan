@@ -8,17 +8,13 @@
     align-items: center;
     overflow: hidden;
 
-    @include media-breakpoint-down(lg) {
+    @include media-breakpoint-down(md) {
       height: 65% !important;
     }
 
-    @include media-breakpoint-down(md) {
+    @include media-breakpoint-down(sm) {
       height: 62.1% !important;
     }
-
-    // img {
-    //   height: auto;
-    // }
   }
 
   &__mileage,
@@ -33,7 +29,7 @@
       fill: $white;
     }
 
-    @include media-breakpoint-down(lg) {
+    @include media-breakpoint-down(md) {
       color: $black;
       font-size: 10px;
 

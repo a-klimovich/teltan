@@ -95,6 +95,13 @@
     })
   }
 
+  // Main slider
+  $(document).ready(function(){
+    $('.mainSlider').slick({
+      
+    });
+  });
+
   //Content Sliders
   $(document).ready(function(){
     $('.similar-products-slider').slick({

@@ -1,13 +1,23 @@
+#carouselExampleInterval {
+  .carousel-item {
+    max-height: 450px;
+    border-radius: 6px;
+    overflow: hidden;
+  }
+}
+
 .btn-slider-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   position: absolute;
   top: 80%;
   right: 10%;
   pointer-events: auto;
 
-  width: 285px;
-  height: 54px;
-
-  padding-top: 1.1%;
+  width: 245px;
+  height: 45px;
 }
 
 @media (max-width: 991px) {

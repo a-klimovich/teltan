@@ -16,6 +16,10 @@
   border-radius: 7px;
 
   @include media-breakpoint-down(lg) {
+    height: 342px;
+  }
+
+  @include media-breakpoint-down(md) {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
@@ -37,11 +41,27 @@
     height: 100%;
 
     img {
-      width: 100%;
-      z-index: -1;
+      height: 100%;
+      object-fit: cover;
+      -o-object-position: center;
+      object-position: center;
+      background-color: $white;
+
+      &::before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        display: flex;
+        background-color: #EEEDED;
+        background-image: url('../assets/no-image.svg');
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
     }
 
-    @include media-breakpoint-down(lg) {
+    @include media-breakpoint-down(md) {
       border-bottom: 1px solid #E7E7E7;
       height: 70%;
       z-index: 1;
@@ -61,7 +81,7 @@
   .info {
     position: absolute;
 
-    @include media-breakpoint-down(lg) {
+    @include media-breakpoint-down(md) {
       z-index: 2;
     }
   }
@@ -73,7 +93,7 @@
     background: rgba(255, 255, 255, 0.6);
     border-radius: 1px;
 
-    @include media-breakpoint-down(lg) {
+    @include media-breakpoint-down(md) {
       left: 10px;
     }
   }
@@ -82,7 +102,7 @@
     bottom: 0;
     color: $white;
     
-    @include media-breakpoint-down(lg) {
+    @include media-breakpoint-down(md) {
       position: relative;
       
       .price {
@@ -92,11 +112,30 @@
       .title {
         color: $black !important;
         font-size: 12px;
+
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -moz-box;
+        -moz-box-orient: vertical;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        line-clamp: 2;
+        box-orient: vertical;
       }
 
       .knock-stream {
         position: relative;
-        top: 0px;
+        top: 0;
+        transform: translateY(-50%);
+
+        p {
+          margin-bottom: 0;
+        }
+
+        .price {
+          background: $primary;
+        }
       }
     }
 
