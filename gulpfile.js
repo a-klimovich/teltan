@@ -24,11 +24,9 @@ const vendorsCSS = [
 ]
 const files = {
   html: srcDirectory + 'html/**/*.html',
-  scss: srcDirectory + 'scss/**/*.scss',
+  scss: srcDirectory + ['scss/**/*.scss'],
   js: srcDirectory + 'js/**/*.js',
 }
-
-
 
 gulp.task('fileinclude', function() {
   gulp.src(['index.html'])
@@ -54,14 +52,17 @@ function html() {
 function styles() {
   return src(files.scss)
     .pipe( scss() )
-    .pipe( postcss([ autoprefixer(), cssnano() ]) )
+    .pipe( postcss([ 
+      autoprefixer(),
+      // cssnano() 
+    ]) )
     .pipe( concat('styles.css') )
     .pipe( dest(buildDirectory + 'css/') )
 }
 
 function vendorsStyles() {
   return src(vendorsCSS)
-    .pipe( postcss([ cssnano() ]) )
+    // .pipe( postcss([ cssnano() ]) )
     .pipe( concat('vendors.css') )
     .pipe( dest(buildDirectory + 'css/') )
 }

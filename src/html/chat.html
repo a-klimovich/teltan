@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+  @@include('./utils/head.html')
+</head>
+<body>
+   
+  @@include('./header/header.html')
+
+  <!-- Modal -->
+  <div class="container-fluid breadcrumb-beckground p-0 mb-4 mb-lg-5">
+    <div class="container">
+      @@include('breadcrumbs.html')
+    </div>
+  </div>
+
+  <main class="mb-5">
+    <div class="container">
+      <h1 class="mb-4 subtitle">
+        My messages
+      </h1>
+    
+      <div class="row">
+        <div class="col-12 col-lg-8 col-xl-9">
+          <!-- main chat controls -->
+          <div class="d-flex flex-column flex-lg-row justify-content-between align-items-end">
+            <div class="d-flex justify-content-end justify-content-lg-start">
+              <button type="button" class="mr-3 mb-4 btn btn-delete-all">
+                <i class="mr-2 icon-clear"></i>
+                <span class="btn-delete-all__text">delete all</span>
+              </button>
+
+              <button type="button" class="mb-4 btn btn-blocked border-danger">
+                <span>@@include('../assets/icon-red-blocked.svg')</span>
+                <span class="text-danger btn-delete-all__text">Block</span>
+              </button>
+            </div>
+
+            <button type="button" class="mb-4 btn btn-go-back d-flex justify-content-center align-items-center border-primary">
+              <span class="mr-2 btn-delete-all__text">Back</span>
+              <span>@@include('../assets/arrow-lest-btn.svg')</span>
+            </button>
+          </div>
+
+          <!-- MAIN CHAT WINDOW -->
+          <div class="chat card py-4 py-lg-3 px-4 px-lg-5">
+            <div class="chat__title d-flex flex-column align-items-end border-bottom">
+              <p class="font-weight-bolder text-uppercase">A set of stands for plants</p>
+              <p class="font-weight-bold text-primary">$ 50 800</p>
+            </div>
+
+            <div class="chat__message-window">
+              <div class="d-flex flex-column text-right message">
+                <p class="user-info text-secondary"><span class="pr-3 mr-3 border-right">Yesterday, 20:20</span>  <span>Evgenia Zhykova</span></p>
+
+                <p class="text">
+                  Produces — pursue fault has pursue to will anyone those who loves procure occur was. Account rejects, desires happiness complete painful praising from builder all enjoy not can, take but ever desires there one, do
+                </p>
+              </div>
+
+              <div class="d-flex flex-column text-right message message-sand">
+                <p class="user-info text-secondary"><span class="pr-3 mr-3 border-right">Yesterday, 20:20</span>  <span>Evgenia Zhykova</span></p>
+
+                <p class="text">
+                  desires happiness complete painful praising from builder all enjoy not can, take but ever desires there one, do
+                </p>
+              </div>
+              <div class="d-flex flex-column text-right message">
+                <p class="user-info text-secondary"><span class="pr-3 mr-3 border-right">Yesterday, 20:20</span>  <span>Evgenia Zhykova</span></p>
+
+                <p class="text">
+                  Produces — pursue fault has pursue to will anyone those who loves procure occur was. Account rejects, desires happiness complete painful praising from builder all enjoy not can, take but ever desires there one, do
+                </p>
+              </div>
+
+              <div class="d-flex flex-column text-right message message-sand">
+                <p class="user-info text-secondary"><span class="pr-3 mr-3 border-right">Yesterday, 20:20</span>  <span>Evgenia Zhykova</span></p>
+
+                <p class="text">
+                  desires happiness complete painful praising from builder all enjoy not can, take but ever desires there one, do
+                </p>
+              </div>
+              <div class="d-flex flex-column text-right message">
+                <p class="user-info text-secondary"><span class="pr-3 mr-3 border-right">Yesterday, 20:20</span>  <span>Evgenia Zhykova</span></p>
+
+                <p class="text">
+                  Produces — pursue fault has pursue to will anyone those who loves procure occur was. Account rejects, desires happiness complete painful praising from builder all enjoy not can, take but ever desires there one, do
+                </p>
+              </div>
+
+              <div class="d-flex flex-column text-right message message-sand">
+                <p class="user-info text-secondary"><span class="pr-3 mr-3 border-right">Yesterday, 20:20</span>  <span>Evgenia Zhykova</span></p>
+
+                <p class="text">
+                  desires happiness complete painful praising from builder all enjoy not can, take but ever desires there one, do
+                </p>
+              </div>
+            </div>
+
+            <div class="mb-4 d-flex flex-column">
+              <div class="mb-4 d-flex justify-content-center align-items-center">
+                <label class="mr-3 mb-0 d-flex add-file-label" for="addFileChat">
+                  <span class="mr-2">@@include('../assets/add-file.svg')</span>
+                  <span class="pt-1 d-none d-md-inline text-primary text-nowrap">Add file</span>
+                </label>
+                <input class="add-file-input" type="file" name="addFileChat" id="addFileChat">
+  
+                <div class="mr-3 input-group">
+                  <input type="text" name="messageText" id="" class="form-control" placeholder="Write a message...">
+                </div>
+  
+                <button type="button" class="btn text-uppercase font-weight-bold btn-send-message">
+                  <span class="d-none d-md-inline">send</span>
+                  <span class="d-inline d-md-none">@@include('../assets/sand-message.svg')</span>
+                </button>
+              </div>
+
+              <div class="d-flex justify-content-end flex-wrap" id="chatUploadFileBox">
+                <div class="ml-3 d-flex align-items-center justify-content-center upload-file">
+                  <button type="button" class="mr-2 close" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+
+                  <span class="upload-file__name">File 111.png</span>
+                </div>
+
+                <div class="ml-3 d-flex align-items-center justify-content-center upload-file">
+                  <button type="button" class="mr-2 close" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+
+                  <span class="upload-file__name">File 111.png</span>
+                </div>
+                <div class="ml-3 d-flex align-items-center justify-content-center upload-file">
+                  <button type="button" class="mr-2 close" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+
+                  <span class="upload-file__name">File 111.png</span>
+                </div>
+
+                <div class="ml-3 d-flex align-items-center justify-content-center upload-file">
+                  <button type="button" class="mr-2 close" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+
+                  <span class="upload-file__name">File 111.png</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="d-flex flex-column disableChat">
+              <p class="text-right text-secondary">This user has been blocked by you in may 03, 2021</p>
+
+              <div class="mb-4 d-flex justify-content-center align-items-center">
+                <label class="mr-3 mb-0 d-flex add-file-label" for="addFileChat" disabled >
+                  <span class="mr-2">@@include('../assets/add-file.svg')</span>
+                  <span class="pt-1 d-none d-md-inline text-secondary text-nowrap">Add file</span>
+                </label>
+                <input class="add-file-input" type="file" name="files[]" id="addFileChat" disabled >
+  
+                <div class="mr-3 input-group">
+                  <input type="text" name="messageText" id="" class="form-control" placeholder="Write a message..." disabled >
+                </div>
+  
+                <button type="button" class="btn text-uppercase font-weight-bold btn-send-message" disabled >
+                  <span class="d-none d-md-inline">send</span>
+                  <span class="d-inline d-md-none">@@include('../assets/sand-message.svg')</span>
+                </button>
+              </div>
+
+              <div class="d-flex flex-column align-items-end text-danger disableChat__message">
+                <p class="mb-2">This user has been blocked by you</p>
+                <p class="mb-0">You cannot send and receive messages in this chat</p>
+                <span class="icon">@@include('../assets/icon-red-blocked.svg')</span>
+              </div>
+            </div>
+          </div>
+          <!-- MAIN CHAT WINDOW -->
+
+        </div>
+        
+        <div class="d-none d-lg-block col-4 col-xl-3">
+          @@include('./user-account/user-profile-menu.html')
+        </div>
+      </div>
+    </div>
+  </main>
+
+  @@include('footer.html')
+
+  @@include('./utils/includies.html')
+</body>
+</html>

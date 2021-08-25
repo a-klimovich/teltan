@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  @@include('./utils/head.html')
+</head>
+<body>
+   
+  @@include('./header/header.html')
+
+  <!-- Modal -->
+  <div class="container-fluid breadcrumb-beckground p-0 mb-4 mb-lg-5">
+    <div class="container">
+      @@include('breadcrumbs.html')
+    </div>
+  </div>
+
+  <main class="mb-5">
+    <div class="container">
+      <h1 class="mb-4 subtitle">
+        Personal data
+      </h1>
+    
+      <div class="row">
+        <div class="col-12 col-lg-8 col-xl-9">
+          <form class="card change-personal-data">
+            <div class="d-flex flex-column flex-xl-row-reverse align-items-end form-group">
+              <label for="userPhone">Phone</label>
+              <input type="tel" class="form-control" id="userPhone" placeholder="Enter phone">
+            </div>
+
+            <div class="d-flex flex-column flex-xl-row-reverse align-items-end form-group">
+              <label for="userEmail">Email</label>
+              <input type="email" class="form-control" id="userEmail" aria-describedby="emailHelp" placeholder="Enter email">
+            </div>
+
+            <div class="d-flex flex-column flex-xl-row-reverse align-items-end form-group">
+              <label for="userName">Name</label>
+              <input type="text" class="form-control" id="userName" placeholder="Enter name">
+            </div>
+            
+            <button type="submit" class="btn btn-primary">Update</button>
+          </form>
+        </div>
+        
+        <div class="d-none d-lg-block col-4 col-xl-3">
+          @@include('./user-account/user-profile-menu.html')
+        </div>
+      </div>
+    </div>
+  </main>
+
+  @@include('footer.html')
+
+  @@include('./utils/includies.html')
+</body>
+</html>

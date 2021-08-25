@@ -2,10 +2,6 @@
 @import "node_modules/bootstrap-scss/mixins";
 
 .user-add-item {
-  @include media-breakpoint-down(lg) {
-  
-  }
-
   .dropdown.bootstrap-select.w-100 {
     width: 100% !important;
   }
