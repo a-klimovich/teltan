@@ -95,6 +95,16 @@
     })
   }
 
+  if ($(window).width() <= 748) {
+    $('.fleamarket-mobile > .nav > .nav-link').on('click', () => {
+      $('.fleamarket').addClass('show')
+    })
+  
+    $('.btn-back').on('click', () => {
+      $('.fleamarket').removeClass('show')
+    })
+  }
+
   // Main slider
   $(document).ready(function(){
     $('.mainSlider').slick({

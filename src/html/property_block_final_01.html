@@ -6,38 +6,23 @@
 <body class="d-flex flex-column min-vh-100">
    
   @@include('./header/header-property.html')
-  @@include('./header/header-search-mobile.html')
-
-  <div class="p-0 d-block d-lg-none container-fluid breadcrumb-beckground">
-    <div class="container">
-      <div class="d-flex justify-content-center align-items-bottom">
-        <button class="rounded-top btn-property-rent-mobile">
-          <span class="h6 font-weight-bold mr-2">Rent</span>
-          <i class="icon-arrow-down-sign-to-navigate-3"></i>
-        </button>
-      </div>
-    </div>
-  </div>
 
   <main class="mb-4 wrapper flex-grow-1">
     <div class="pt-5 container">
-      <div class="mb-4 row">
-        <div class="mb-4 mb-lg-0 col-12 col-lg-9">
-          <div class="d-flex justify-content-between">
-            @@include('pagination.html')
-            @@include('products-sort.html')
-          </div>
-        </div>
-
-        <div class="col-12 col-lg-3">
-          <h1 class="subtitle">
-            the property
-          </h1>
-        </div>
-      </div>
+      <h1 class="mb-4 subtitle">
+        the property
+      </h1>
 
       <div class="row">
         <div class="col-12 col-lg-9 d-flex flex-column justify-content-between">
+
+          <div class="mb-5 row d-flex align-items-center">
+            <div class="col-12 col-xl-6 justify-content-center">
+              @@include('pagination.html')
+            </div>
+    
+            <div class="col-12 col-xl-6 justify-content-center">@@include('products-sort.html')</div>
+          </div>
 
           <!-- Block products card -->
           <div class="row row-cols-2 row-cols-lg-3">
@@ -142,19 +127,21 @@
             </div>
           </div>
           <!-- Block products card  END-->
-
-          <div class="mt-5 mb-5">
-            @@include('under-contetn-pagination.html')
-          </div>
-          
-          @@include('text-about-category.html', {
-            subtitle: 'the property'
-          })
         </div>
         
         <div class="col col-lg-3">
           @@include('./filters/property-filter.html')
         </div>
+      </div>
+
+      <div class="col-9">
+        <div class="mt-5 mb-5 d-flex justify-content-center">
+          @@include('pagination.html')
+        </div>
+        
+        @@include('text-about-category.html', {
+          subtitle: 'the property',
+        })
       </div>
     </div>
   </main>
