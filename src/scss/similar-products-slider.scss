@@ -3,7 +3,11 @@
 
 .similar-products-slider {
   .slick-slide {
-    margin: 15px;
+    margin: 5px;
+
+    @include media-breakpoint-up(md) {
+      margin: 15px;
+    }
   }
 
   .slick-arrow {
@@ -18,8 +22,9 @@
 
     @include media-breakpoint-down(md) {
       top: auto;
-      bottom: -30px;
+      bottom: -35px;
       height: auto;
+      width: 15px;
     }
 
     &.prev {

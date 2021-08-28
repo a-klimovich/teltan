@@ -77,6 +77,16 @@
     top: 15px;
   }
 
+  .decor-crown-image {
+    position: absolute;
+    bottom: 23px;
+    left: 21px;
+
+    @include media-breakpoint-up(md) {
+      display: none;
+    }
+  }
+
   .data,
   .marker,
   .info {

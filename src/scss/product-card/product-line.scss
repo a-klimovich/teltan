@@ -30,11 +30,10 @@
     padding: 0.6rem;
     padding-bottom: 0.6rem;
     width: 33%;
+    margin: -1px;
 
     @include media-breakpoint-down(md) {
       padding: 0.6rem;
-      padding-bottom: 0;
-      padding-top: 0;
       width: 100%;
     }
 

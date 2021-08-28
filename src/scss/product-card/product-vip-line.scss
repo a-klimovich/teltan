@@ -6,6 +6,7 @@
 
   .image-block {
     width: 35%;
+    margin: 0;
     
     @include media-breakpoint-down(md) {
       width: 100%;

@@ -102,7 +102,7 @@
     });
   });
 
-  //Content Sliders
+  //Similar Contetn Sliders / VIP content slider
   $(document).ready(function(){
     $('.similar-products-slider').slick({
       slidesToShow: 4,
@@ -126,8 +126,8 @@
         }, {
           breakpoint: 540,
           settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1,
+            slidesToShow: 2,
+            slidesToScroll: 2,
           }
         }]
     });

@@ -137,6 +137,7 @@
     .title {
       font-weight: 700;
       font-size: 13px;
+      text-transform: uppercase;
 
       overflow: hidden;
       text-overflow: ellipsis;
@@ -150,6 +151,7 @@
 
       @include media-breakpoint-down(lg) {
         font-size: 12px;
+        text-transform: capitalize;
       }
     }
 

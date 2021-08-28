@@ -6,22 +6,17 @@
 <body>
   @@include('./header/header.html')
 
-  <div class="mt-5 p-0 d-block d-lg-none container-fluid breadcrumb-beckground">
+  <div class="container-fluid breadcrumb-beckground p-0 mb-4">
     <div class="container">
-      <div class="d-flex justify-content-center align-items-bottom">
-        <button class="rounded-top btn-property-rent-mobile">
-          <span class="h6 font-weight-bold mr-2">Rent</span>
-          <i class="icon-arrow-down-sign-to-navigate-3"></i>
-        </button>
-      </div>
+      @@include('breadcrumbs.html')
     </div>
   </div>
 
   <main class="mt-4 mb-5">
     <div class="container">
-      <p class="h3 mb-3 d-none d-lg-block text-uppercase font-weight-bolder text-right">Stylish Duplex Apartment - Nahalat Binyamin Market</p>
+      <!-- <p class="h3 mb-3 d-none d-lg-block text-uppercase font-weight-bolder text-right">Stylish Duplex Apartment - Nahalat Binyamin Market</p> -->
 
-      <div class="mb-4 pb-3 d-none d-lg-flex justify-content-end subtitle date-under-property-item">
+      <!-- <div class="mb-4 pb-3 d-none d-lg-flex justify-content-end subtitle date-under-property-item">
         <div class="mr-4 date text-right">
           Yesterday, 20:28
         </div>
@@ -35,7 +30,7 @@
           <span class="mr-2">2 500</span>
           <i class="icon-visibility"></i>
         </div>
-      </div>
+      </div> -->
 
       <div class="row flex-column-reverse flex-lg-row mb-4">
         <div class="col-12 col-lg-4 flex-column">
@@ -49,47 +44,26 @@
             title: 'Stylish Duplex Apartment - Nahalat Binyamin Market'
           })
 
-
-          <div class="d-block d-lg-none">
-            @@include('./item/property-about-item.html')
-          </div>
-
           @@include('./item/seller-card.html')
           @@include('./item/exact-address-card.html')
-
-          <div class="d-block d-lg-none">
-              <h1 class="mb-lg-4 subtitle">
-              Description
-            </h1>
-            
-            @@include('./item/property-item-description.html')
-          </div>
-          
-          <div class="mb-4 d-none d-lg-block">
-            @@include('./product-card/property-product.html')
-          </div>
-          <div class="mb-4 d-none d-lg-block">
-            @@include('./product-card/property-product.html')
-          </div>
-          <div class="mb-4 d-none d-lg-block">
-            @@include('./product-card/property-product.html')
-          </div>
         </div>
 
         <div class="col-12 col-lg-8">
           @@include('./item/item-slider.html')
           
-          <div class="d-none d-lg-block">
-            @@include('./item/property-about-item.html')
+          @@include('./item/property-about-item.html')
           
-              <p class=" h1 mb-4 subtitle">
-              Description
-            </p>
-            
+          <p class=" h1 mb-4 subtitle">
+            Description
+          </p>
+          
+          <div class="mb-4">
             @@include('./item/property-item-description.html')
           </div>
         </div>
       </div>
+
+      @@include('similar-products-slider.html')
     </div>
   </main>
 

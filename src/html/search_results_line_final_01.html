@@ -20,9 +20,20 @@
         search results
       </h1>
 
-      <div class="mb-4 d-flex justify-content-between">
+      <div class="mb-5 row d-flex justify-content-between align-items-center">
+        <div class="mb-4 mb-xl-0 col-12 col-xl-4 justify-content-start">
+          @@include('products-sort.html')
+        </div>
+        
+        <div class="col-12 col-xl-5 justify-content-start">
+          @@include('pagination.html')
+        </div>
+      </div>
+
+      <!-- TODO -->
+      <!-- <div class="mb-4 d-flex justify-content-between">
         @@include('products-sort-reverse.html')
-        <nav class="mb-4 mb-md-0 justify-content-end pagination" aria-label="">
+        <nav class="mb-4 mb-xl-0 justify-content-end pagination" aria-label="">
           <button class="prev"><img src="./assets/paginaton-arrow.svg" alt=""></button>
         
           <div class="mx-3 dots">
@@ -61,7 +72,7 @@
         
           <button class="next"><img src="./assets/paginaton-arrow.svg" alt=""></button>
         </nav>
-      </div>
+      </div> -->
     
       <div class="row row-cols-1">
         <div class="mb-4 col">
