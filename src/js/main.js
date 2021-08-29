@@ -1,12 +1,9 @@
 (function(){
   const $filterModalContetn = $('#filterModalContent')
+  const $filterTogglerPropertFullMap =  $('.filterTogglerPropertFullMap');
   const $itemSlider =  $('#itemSlider');
 
   // TODO
-
-  // $('.userItemSettings').on('click', () => {
-  //   console.log($('.accardion-wrap').toggleClass('active'))
-  // })
 
   // MAP property content
   if ($('#map').length) {
@@ -75,7 +72,14 @@
     $filterModalContetn.toggleClass('visible')
 
     $('body').toggleClass('filter-open')
+    $('.cord-container').removeClass('overlay')
   })
+
+  $('.filterTogglerPropertFullMap').on('click', () => {
+    $('.cord-container').addClass('overlay')
+  })
+
+  $('.cord-container.overlay > ')
 
   $(document).mouseup(e => {
     if(!$filterModalContetn.is(e.target) && $filterModalContetn.has(e.target).length === 0) {
@@ -106,11 +110,11 @@
   }
 
   // Main slider
-  $(document).ready(function(){
-    $('.mainSlider').slick({
+  // $(document).ready(function(){
+  //   $('.mainSlider').slick({
       
-    });
-  });
+  //   });
+  // });
 
   //Similar Contetn Sliders / VIP content slider
   $(document).ready(function(){

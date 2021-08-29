@@ -2,13 +2,41 @@
 @import "node_modules/bootstrap-scss/mixins";
 
 .property-full-map {
+
+  .map-box {
+    width: 65%;
+    height: 785px;
+    float: left;
+
+    @include media-breakpoint-down(lg) {
+      width: 100%;
+      height: 390px;
+      margin-top: 80px;
+    }
+  }
+
   .products-sort {
     height: auto;
     background-color: $white;
     position: absolute;
     z-index: 1;
-    padding-right: 20px;
+    padding: 0 20px;
+    width: 35%;
 
+    @include media-breakpoint-down(lg) {
+      width: 100%;
+      background-color: transparent;
+      padding-right: 15px;
+    }
+
+    .btn-closer {
+      font-size: 16px;
+
+      i:before {
+        color: #626262;
+      }
+    }
+    
     &__button {
       width: auto;
       padding: 10px;
@@ -31,11 +59,65 @@
   .cord-container {
     height: 100%;
     max-height: 785px;
-    width: 100%;
+    width: 35%;
     overflow: hidden;
     overflow-y: auto;
     background-color: $white;
     padding-top: 80px;
+    position: relative;
+
+    @include media-breakpoint-down(lg) {
+      width: 100%;
+      padding-top: 30px;
+    }
+
+    .filter {
+      display: none;
+    }
+
+    &.overlay {
+      overflow: hidden;
+
+      .filter {
+        position: absolute;
+        display: block;
+        z-index: 9;
+        max-width: 60%;
+        top: 18px;
+        right: 45px;
+        left: auto;
+        max-height: 660px;
+        overflow-y: auto;
+
+        .btn-more-filter-settings {
+          display: flex;
+          width: calc(100% + 3rem);
+          justify-content: center;
+          position: relative;
+          left: -1.5rem;
+          top: 1.5rem;
+          margin: 0;
+        }
+
+        .menu-closer {
+          display: flex;
+        }
+      }
+
+      .full-scrin-filter {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background: rgba(0, 0, 0, 0.5);
+        top: 0;
+        left: 0;
+        z-index: 5;
+  
+        @include media-breakpoint-down(lg) {
+          position: fixed;
+        }
+      }
+    }
 
     .product-card {
       box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
