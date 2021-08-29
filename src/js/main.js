@@ -75,15 +75,25 @@
     $('.cord-container').removeClass('overlay')
   })
 
+  $('.filterPropertyCloser').on('click', (e) => {
+    e.preventDefault()
+    $filterModalContetn.toggleClass('visible')
+
+    $('.cord-container').removeClass('overlay')
+  })
+
   $('.filterTogglerPropertFullMap').on('click', () => {
     $('.cord-container').addClass('overlay')
   })
 
-  $('.cord-container.overlay > ')
 
   $(document).mouseup(e => {
     if(!$filterModalContetn.is(e.target) && $filterModalContetn.has(e.target).length === 0) {
       $filterModalContetn.removeClass('visible')
+      $('body').removeClass('filter-open')
+    }
+
+    if(!$filterTogglerPropertFullMap.is(e.target) && $filterTogglerPropertFullMap.has(e.target).length === 0) {
       $('body').removeClass('filter-open')
     }
   })

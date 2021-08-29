@@ -3,24 +3,19 @@
 
 .subtitle {
   position: relative;
-
-  padding-bottom: 15px;
-  
+  padding-bottom: 1.5rem;
   font-weight: 900;
-  
+  letter-spacing: 0.085em;
   text-transform: uppercase;
   text-align: right;
 
   &::after {
     content: '';
     position: absolute;
-
     bottom: 0;
     right: 0;
-    
     width: 75px;
     height: 5px;
-    
     background: $primary;
   }
 }

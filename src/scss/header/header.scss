@@ -35,6 +35,13 @@
       .icon-language {
         top: -1px;
       }
+
+      &[aria-expanded="true"] {
+        .icon-arrow-down-sign-to-navigate-3 {
+          transform: rotate(180deg);
+          top: 0;
+        }
+      }
     }
 
     .dropdown-menu.languages {

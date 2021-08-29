@@ -7,7 +7,7 @@
    
   @@include('./header/header.html')
 
-  <div class="mb-4"></div>
+  <div class="mb-5"></div>
 
   <!-- Modal -->
   <div class="container-fluid mb-4 mb-lg-5">
@@ -26,7 +26,7 @@
       <div class="d-flex flex-column">
         <!-- PROPERTY MARKET -->
         <div class="mb-4">
-          <p class="h2 mb-lg-4 subtitle">
+          <p class="h2 mb-4 subtitle">
             property
           </p>
     
@@ -59,6 +59,7 @@
           <div class="row row-cols-2 row-cols-lg-4">
             <div class="mb-4 col">
               @@include('./product-card/auto-product.html', {
+                'bg-color': '#FFF5D9',
                 'image': './img/room_02.png',
                 'price': '$23 750',
                 'title': 'BMW F10',
@@ -106,7 +107,7 @@
 
         <!-- AUTO MARKET -->
         <div class="mb-4">
-          <p class="h2 mb-lg-4 subtitle">
+          <p class="h2 mb-4 subtitle">
             auto
           </p>
     
@@ -139,6 +140,7 @@
           <div class="row row-cols-2 row-cols-lg-4">
             <div class="mb-4 col">
               @@include('./product-card/auto-product.html', {
+                'bg-color': '#FFF5D9',
                 'image': './img/bmw-f10-auto.png',
                 'price': '$23 750',
                 'title': 'BMW F10',
@@ -186,7 +188,7 @@
 
         <!-- FLEA-MARKET -->
         <div class="mb-4">
-          <p class="h2 mb-lg-4 subtitle">
+          <p class="h2 mb-4 subtitle">
             Flea Market
           </p>
     
@@ -216,7 +218,7 @@
   
           <div class="row row-cols-2 row-cols-lg-4">
             <div class="mb-3 col">
-              @@include('./product-card/product.html', {
+              @@include('./product-card/product-mark_stock.html', {
                 'image': './img/flea-item-1.png',
                 'price': '$27 600',
                 'title': 'Concert tickets for Alisher Morgenstern',
@@ -227,7 +229,8 @@
             </div>
   
             <div class="mb-3 col">
-              @@include('./product-card/product.html', {
+              @@include('./product-card/product-mark_hot.html', {
+                'bg-color': '#FFF5D9',
                 'image': './assets/no-image.svg',
                 'price': '$27 600',
                 'title': 'Concert tickets for Alisher Morgenstern',
@@ -238,7 +241,7 @@
             </div>
   
             <div class="mb-3 col">
-              @@include('./product-card/product.html', {
+              @@include('./product-card/product-mark_profitable.html', {
                 'image': './img/flea-item-2.png',
                 'price': '$27 600',
                 'title': 'Concert tickets for Alisher Morgenstern',
@@ -249,7 +252,7 @@
             </div>
   
             <div class="mb-3 col">
-              @@include('./product-card/product.html', {
+              @@include('./product-card/product-mark_urgently.html', {
                 'image': './img/flea-item-3.png',
                 'price': '$27 600',
                 'title': 'Concert tickets for Alisher Morgenstern',
