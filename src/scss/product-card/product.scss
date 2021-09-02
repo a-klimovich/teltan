@@ -135,7 +135,7 @@
     }
 
     .title {
-      font-weight: 700;
+      font-weight: 800;
       font-size: 13px;
       text-transform: uppercase;
 
@@ -182,11 +182,11 @@
 
   .marker {
     position: absolute;
-    top: 20px;
+    top: 12px;
     right: 0;
 
     @include media-breakpoint-down(lg) {
-      top: 1em;
+      top: 9px;
     }
   }
 }

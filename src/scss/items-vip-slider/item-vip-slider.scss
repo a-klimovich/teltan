@@ -1,0 +1,54 @@
+@import '../variables';
+@import "node_modules/bootstrap-scss/mixins";
+
+.item-vip-slider {
+  &_full-image {
+    .image-block {
+      padding: 0 !important;
+    }
+  }
+
+  .image-block {
+    height: 180px;
+
+    .i-box {
+      height: 100% !important;
+    }
+  }
+
+  .content-block {
+    position: relative;
+    justify-content: space-between !important;
+    padding-top: 9px;
+    padding-bottom: 15px;
+
+    .like {
+      position: absolute;
+    }
+
+    .title {
+      text-transform: uppercase !important;
+      margin-bottom: auto !important;
+    }
+
+    .category {
+      font-weight: 500 !important;
+      font-size: 13px;
+      line-height: 18px;
+      color: #888888;
+      text-transform: uppercase;
+      margin-bottom: 5px;
+    }
+
+    .price {
+      top: auto;
+    }
+  }
+
+  .decor-crown-image {
+    svg {
+      width: 22px !important;
+      height: 19px;
+    }
+  }
+}

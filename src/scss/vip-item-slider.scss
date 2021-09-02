@@ -2,6 +2,12 @@
 @import "node_modules/bootstrap-scss/mixins";
 
 .vip-items-slider {
+  margin-bottom: 62px;
+
+  @include media-breakpoint-down(md) {
+    margin-bottom: 35px;
+  }
+  
   .slick-slide {
     margin: 15px;
   }
@@ -20,14 +26,26 @@
     img {
       width: 12px;
     }
+
+    @include media-breakpoint-down(md) {
+      width: auto;
+    }
   }
 
   .prev {
     left: -50px;
     transform: rotate(180deg);
+    
+    @include media-breakpoint-down(md) {
+      left: -10px;
+    }
   }
 
   .next {
     right: -50px;
+    
+    @include media-breakpoint-down(md) {
+      right: -10px;
+    }
   }
 }

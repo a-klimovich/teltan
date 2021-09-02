@@ -170,18 +170,16 @@
           }
         },
         {
-          breakpoint: 768,
+          breakpoint: 786,
           settings: {
             slidesToShow: 2,
             slidesToScroll: 2,
-            arrows: false,
           }
         }, {
           breakpoint: 540,
           settings: {
             slidesToShow: 1,
             slidesToScroll: 1,
-            arrows: false,
           }
         }]
     });
