@@ -5,7 +5,7 @@
   position: relative;
 
   .accardion-wrap {
-    display: block;
+    display: none;
     max-height: 50vh;
     overflow-y: auto;
     position: absolute;
@@ -16,6 +16,14 @@
     &.active {
       display: block;
     }
+  }
+}
+
+.edit-item-menu_item1 {
+  display: none;
+
+  &.active {
+    display: flex;
   }
 }
 

@@ -119,12 +119,17 @@
     })
   }
 
-  // Main slider
-  // $(document).ready(function(){
-  //   $('.mainSlider').slick({
-      
-  //   });
-  // });
+  // Dropdown cabinet item menu
+  $('#dropdownMenuLink').on('click', (e) => {
+    e.preventDefault()
+    $('.accardion-wrap').toggleClass('active')
+  })
+
+  $('.user-product__btn-edit').on('click', (e) => {
+    e.preventDefault()
+    $('.edit-item-menu_item1').toggleClass('active')
+  })
+  
 
   //Similar Contetn Sliders / VIP content slider
   $(document).ready(function(){
