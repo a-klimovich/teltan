@@ -161,6 +161,10 @@
 
       .addres {
         margin-right: .4rem;
+
+        @include media-breakpoint-down(md) {
+          font-size: 10px;
+        }
       }
 
       .icon-local {
