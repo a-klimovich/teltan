@@ -14,6 +14,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    white-space: nowrap;
   }
 
   .decor-rec {
@@ -41,6 +42,7 @@
 
     .text {
       padding: 0 .6rem;
+      font-size: 10px;
     }
 
     .decor-rec {

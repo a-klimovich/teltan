@@ -6,8 +6,16 @@
   </p>
 
   <div class="row no-gutters">
-    <button class="mr-2 col btn btn-show-phone text-uppercase font-weight-bold">Show Phone</button>
+    <button class="mr-2 col btn btn-show-phone text-uppercase font-weight-bold" data-toggle="collapse" href="#showContactPhone" role="button" aria-expanded="false" aria-controls="showContactPhone">Show Phone</button>
+
     <button class="ml-2 col btn btn-primary text-uppercase font-weight-bold" data-toggle="modal" data-target="#modalSandMessage">Send Message</button>
   </div>
+
+  <ul class="text-right collapse contact-list" id="showContactPhone">
+    <li><a href="tel:+74956751020">+7 495 675 10 20</a></li>
+    <li><a href="tel:+74956751020">+7 495 675 10 20</a></li>
+    <li><a href="tel:+74956751020">+7 495 675 10 20</a></li>
+  </ul>
+  
   @@include('./modals/modal-sand-message.html')
 </div>

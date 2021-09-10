@@ -15,6 +15,22 @@
     font-weight: bold;
   }
 
+  .contact-list {
+    list-style: none;
+    margin-bottom: 0px;
+    padding-top: 20px;
+    font-weight: 600;
+    font-size: 13px;
+    
+    @include media-breakpoint-up(md) {
+      font-size: 15px;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+  }
+
   button {
     padding-left: 15px;
     padding-right: 15px;

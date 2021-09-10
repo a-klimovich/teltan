@@ -26,63 +26,14 @@
     font-size: 13px;
     color: #747474;
 
+    @include media-breakpoint-down(md) {
+      font-size: 10px;
+    }
+
     svg, i {
       font-size: 16px;
       width: 16px;
       fill: #747474;
     }
   }
-
-  // .image {
-  //   position: relative;
-  //   height: 112px;
-
-  //   background-image: url('./assets/no-image.svg');
-
-  //   margin-bottom: 20px;
-
-  //   a {
-  //     display: flex;
-  //     justify-content: center;
-  //     height: 100%;
-  //   }
-
-  //   img {
-  //     position: absolute;
-  //     display: block;
-  //     width: 100%;
-  //   }
-
-  //   @include media-breakpoint-up(lg) {
-  //     height: 180px;
-  //   }
-  // }
-
-  // .like-and-price {
-  //   position: absolute;
-  //   transform: translate(0px, -50%);
-
-  //   .like {
-  //     width: 26px;
-  //     height: 26px;
-  //     border-radius: 4px;
-      
-  //     background: #f4f4f4;
-  //     cursor: pointer;
-
-  //     .iconLike  {
-  //       width: 1rem;
-  //     }
-  //   }
-
-  //   .price {
-  //     padding: 5px 15px;
-  //     border-radius: 4px;
-
-  //     font-weight: 700;
-      
-  //     background: $primary;
-  //     color: $white;
-  //   }
-  // }
 }
