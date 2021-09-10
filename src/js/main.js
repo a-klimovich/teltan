@@ -3,8 +3,6 @@
   const $filterTogglerPropertFullMap =  $('.filterTogglerPropertFullMap');
   const $itemSlider =  $('#itemSlider');
 
-  // TODO
-
   // MAP property content
   if ($('#map').length) {
     ymaps.ready(init);
@@ -86,7 +84,6 @@
     $('.cord-container').addClass('overlay')
   })
 
-
   $(document).mouseup(e => {
     if(!$filterModalContetn.is(e.target) && $filterModalContetn.has(e.target).length === 0) {
       $filterModalContetn.removeClass('visible')
@@ -129,7 +126,14 @@
     e.preventDefault()
     $('.edit-item-menu_item1').toggleClass('active')
   })
+
+  $('.add-item-favorite').on('click', () => {
+    $('.add-item-favorite').toggleClass('active')
+  })
   
+  $('.followThisItem').on('click', function() {
+    $(this).toggleClass('active')
+  })
 
   //Similar Contetn Sliders / VIP content slider
   $(document).ready(function(){

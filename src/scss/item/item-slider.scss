@@ -2,6 +2,45 @@
 @import "node_modules/bootstrap-scss/mixins";
 
 .item-slider {
+  position: relative;
+
+  .add-item-favorite {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    top: 20px;
+    left: 20px;
+
+    z-index: 2;
+    
+    width: 34px;
+    height: 34px;
+    border-radius: 4px;
+    
+    background: #F4F4F4;
+    cursor: pointer;
+
+    .iconLike {
+      margin-bottom: -4px;
+    }
+
+    &:hover {
+      svg {
+        fill: #F237D2;
+        stroke: #F237D2;
+      }
+    }
+
+    &.active {
+      svg {
+        fill: #F237D2;
+        stroke: #F237D2;
+      }
+    }
+  }
+
   .slider-for {
     .slide {
       height: 215px;

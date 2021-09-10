@@ -2,6 +2,11 @@
 @import "node_modules/bootstrap-scss/mixins";
 
 .similar-products-slider {
+
+  .iconLike {
+    width: 13px;
+  }
+
   .slick-slide {
     margin: 5px;
 

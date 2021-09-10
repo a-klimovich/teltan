@@ -1,3 +1,10 @@
+.followThisItem.active {
+  svg {
+    stroke: #f00bc8;
+    fill: #f237d2;
+  }
+}
+
 .product-line__like {
   &:hover {
     .iconLike {
