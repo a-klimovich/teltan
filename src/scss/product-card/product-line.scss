@@ -8,7 +8,9 @@
 
   @include media-breakpoint-down(md) {
     flex-direction: column;
+  }
 
+  @include media-breakpoint-down(lg) {
     .product-line__like {
       display: none;
     }

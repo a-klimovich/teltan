@@ -38,11 +38,19 @@
           font-weight: 400;
         }
       }
+
+      @include media-breakpoint-down(md) {
+        padding-right: 23px;
+      }
     }
 
     .modal-body {
       height: 50vh;
       padding: 26px 63px 63px 63px;
+
+      @include media-breakpoint-down(md) {
+        padding: 26px 23px 63px 23px;
+      }
     }
   }
 }

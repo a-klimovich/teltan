@@ -9,7 +9,7 @@
     margin-top: 0;
     padding: 12px 0;
 
-    @include media-breakpoint-down(lg) {
+    @include media-breakpoint-down(md) {
       display: none;
     }
   }
