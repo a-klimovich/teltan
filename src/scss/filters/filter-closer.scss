@@ -2,6 +2,11 @@
 @import "node_modules/bootstrap-scss/mixins";
 
 .filter-closer {
+
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+
   &:hover {
     color: inherit;
   }

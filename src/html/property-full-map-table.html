@@ -5,9 +5,15 @@
 </head>
 <body class="d-flex flex-column min-vh-100">
    
-  @@include('./header/header-property.html')
+  @@include('./header/header.html')
   
   <main class="mb-5 wrapper flex-grow-1">
+    <div class="container-fluid breadcrumb-beckground p-0 mb-4">
+      <div class="container">
+        @@include('breadcrumbs.html')
+      </div>
+    </div>
+
     <div class="pt-3 pt-lg-5 container">
       <h2 class="mb-4 subtitle">
         Personal data

@@ -6,19 +6,14 @@
 <body>
   @@include('./header/header-auto.html')
 
-  <div class="mt-5 mb-4 p-0 d-block d-lg-none container-fluid breadcrumb-beckground">
+  <div class="container-fluid breadcrumb-beckground p-0 mb-3 mb-lg-4">
     <div class="container">
-      <div class="d-flex justify-content-center align-items-bottom">
-        <button class="rounded-top btn-property-rent-mobile">
-          <span class="h6 font-weight-bold mr-2">With mileage</span>
-          <i class="icon-arrow-down-sign-to-navigate-3"></i>
-        </button>
-      </div>
+      @@include('breadcrumbs.html')
     </div>
   </div>
 
   <main class="mb-5">
-    <div class="pt-5 container">
+    <div class="container">
       @@include('./vip-item-slider.html')
 
       <h2 class="mb-4 subtitle">

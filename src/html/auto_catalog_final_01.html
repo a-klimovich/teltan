@@ -6,8 +6,14 @@
 <body>
   @@include('./header/header-auto.html')
 
+  <div class="container-fluid breadcrumb-beckground p-0 mb-3 mb-lg-4">
+    <div class="container">
+      @@include('breadcrumbs.html')
+    </div>
+  </div>
+
   <main class="mb-5">
-    <div class="pt-5 container">
+    <div class="container">
       @@include('./vip-item-slider.html')
 
       <h2 class="mb-5 subtitle">

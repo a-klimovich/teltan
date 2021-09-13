@@ -29,6 +29,12 @@
   &__header {
     padding-bottom: 26px;
     margin-bottom: 38px;
+
+    @include media-breakpoint-down(md) {
+      border-bottom: none !important;
+      padding-bottom: 0;
+      margin-bottom: 30px;
+    }
   }
 
   &__step-control {
@@ -78,11 +84,32 @@
     color: #bababa;
   }
 
-  &.active {
-    font-weight: 700;
+  @include media-breakpoint-down(md) {
+    &__title {
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 16px;
+      color: #999999;
+    }
+  
+    &__subtitle {
+      display: none;
+    }
+  
+    &__icone {
+      display: none !important;
+    }
+  }
 
+  &.active {
+    
     .step__title {
       font-weight: bold;
+      
+      @include media-breakpoint-down(md) {
+        font-weight: 800;
+        color: $primary;
+      }
     }
 
     .step__subtitle {

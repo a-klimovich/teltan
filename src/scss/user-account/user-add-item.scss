@@ -48,6 +48,17 @@
     width: auto;
     max-height: 100%;
     transform: none;
+
+
+    @include media-breakpoint-down(md) {
+      .tab-content {
+        margin-right: -10px;
+  
+        .tab-pane {
+          padding-right: 10px;
+        }
+      }
+    }
   }
 
   .auto-ad-step3__colors .colour-element {

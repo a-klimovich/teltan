@@ -2,7 +2,24 @@
 @import "node_modules/bootstrap-scss/mixins";
 
 .auto-mark-list {
-  padding: 31px 64px;
+  padding-top: 31px;
+  padding-bottom: 31px;
+  padding-right: 63px;
+  padding-left: 20px;
+
+  a {
+    i.icon-arrow-down-sign-to-navigate-3 {
+      font-size: 13px;
+      font-weight: 700;
+      transform: rotate(180deg);
+    }
+  }
+
+  a.collapsed {
+    i.icon-arrow-down-sign-to-navigate-3 {
+      transform: rotate(0deg);
+    }
+  }
 
   ul {
     li {
@@ -10,12 +27,25 @@
       font-size: 13px;
       margin-bottom: 1em;
 
+      
+
+      a {
+        font-size: 13px;
+        line-height: 18px;
+        color: #444444;
+      }
+
       @include media-breakpoint-down(md) {
         width: 50%;
+
+        a {
+          font-style: 10px;
+        }
       }
 
       a:hover {
-        text-decoration: underline;
+        border-bottom: 1px solid #33e56d;
+        color: #33e56d;
 
         span {
           color: #33e56d;
