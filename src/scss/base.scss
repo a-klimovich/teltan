@@ -154,8 +154,13 @@ textarea {
   }
 }
 
+button {
+  -webkit-appearance: none;
+}
+
 .btn {
   border-radius: 6px;
+  -webkit-appearance: none;
 }
 
 .btn-secondary {

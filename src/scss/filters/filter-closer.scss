@@ -2,6 +2,7 @@
 @import "node_modules/bootstrap-scss/mixins";
 
 .filter-closer {
+  -webkit-appearance: none;
 
   appearance: none;
   -moz-appearance: none;

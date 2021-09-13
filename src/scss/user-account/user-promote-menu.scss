@@ -198,10 +198,15 @@
 
 
     }
+    
     &__title {
       font-weight: 600;
       font-size: 13px;
       line-height: 18px;
+
+      @include media-breakpoint-down(md) {
+        margin-right: 10px;
+      }
     }
   }
 

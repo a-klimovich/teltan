@@ -107,6 +107,11 @@
       top: 4.8px;
       left: auto;
       background-color: $white;
+
+      @include media-breakpoint-down(md) {
+        right: calc(1px - -10px);
+        top: 3.8px;
+      }
     }
   }
 }
