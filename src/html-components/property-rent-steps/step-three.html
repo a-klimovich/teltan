@@ -1,101 +1,250 @@
-<div class="step-three">
-  <h3 class="mb-3 mb-lg-4 text-center text-uppercase font-weight-bolder auto-step2__title">What are you renting?</h3>
+<div class="property step-three">
+  <h3 class="mb-3 mb-lg-4 text-center text-uppercase font-weight-bolder auto-step2__title">What apartment are you renting?</h3>
 
-  <div method="#" action="/" class="mb-4 property-rent-three">
-    <div class="d-flex flex-wrap justify-content-center">
-      <div class="mr-3 mr-lg-4 mb-3 mb-lg-4 form_radio_btn">
-        <input id="checkbox-household-appliances" type="checkbox" name="householdAppliances">
-        <label for="checkbox-household-appliances">Without household appliances</label>
-      </div>
-      <div class="mr-3 mr-lg-4 mb-3 mb-lg-4 form_radio_btn">
-        <input id="checkbox-dishwasher" type="checkbox" name="dishwasher">
-        <label for="checkbox-dishwasher">Dishwasher</label>
-      </div>
-      <div class="mr-3 mr-lg-4 mb-3 mb-lg-4 form_radio_btn">
-        <input id="checkboxFridge" type="checkbox" name="Fridge">
-        <label for="checkboxFridge">Fridge</label>
-      </div>
-      <div class="mr-3 mr-lg-4 mb-3 mb-lg-4 form_radio_btn">
-        <input id="checkboxWasher" type="checkbox" name="Washer">
-        <label for="checkboxWasher">Washer</label>
-      </div>
-      <div class="mr-3 mr-lg-4 mb-3 mb-lg-4 form_radio_btn">
-        <input id="checkboxMicrowave" type="checkbox" name="Microwave">
-        <label for="checkboxMicrowave">Microwave</label>
-      </div>
-      <div class="mr-3 mr-lg-4 mb-3 mb-lg-4 form_radio_btn">
-        <input id="checkboxPlate" type="checkbox" name="Plate">
-        <label for="checkboxPlate">Plate</label>
-      </div>
-      <div class="mr-3 mr-lg-4 mb-3 mb-lg-4 form_radio_btn">
-        <input id="checkboxAirConditioning" type="checkbox" name="Air conditioning">
-        <label for="checkboxAirConditioning">Air conditioning</label>
-      </div>
-      <div class="mr-3 mr-lg-4 mb-3 mb-lg-4 form_radio_btn">
-        <input id="checkboxMultimedia" type="checkbox" name="Without multimedia">
-        <label for="checkboxMultimedia">Without multimedia</label>
-      </div>
-      <div class="mr-3 mr-lg-4 mb-3 mb-lg-4 form_radio_btn">
-        <input id="checkboxSatelliteTv" type="checkbox" name="Satellite TV">
-        <label for="checkboxSatelliteTv">Satellite TV</label>
-      </div>
-      <div class="mr-3 mr-lg-4 mb-3 mb-lg-4 form_radio_btn">
-        <input id="checkboxCableTv" type="checkbox" name="Cable, digital TV">
-        <label for="checkboxCableTv">Cable, digital TV</label>
-      </div>
-      <div class="mr-3 mr-lg-4 mb-3 mb-lg-4 form_radio_btn">
-        <input id="checkboxTv" type="checkbox" name="TV">
-        <label for="checkboxTv">TV</label>
-      </div>
-      <div class="mr-3 mr-lg-4 mb-3 mb-lg-4 form_radio_btn">
-        <input id="checkboxWiFi" type="checkbox" name="Wi-Fi">
-        <label for="checkboxWiFi">Wi-Fi</label>
-      </div>
-      <div class="mr-3 mr-lg-4 mb-3 mb-lg-4 form_radio_btn">
-        <input id="checkboxSignaling" type="checkbox" name="Signaling">
-        <label for="checkboxSignaling">Signaling</label>
-      </div>
-      <div class="mr-3 mr-lg-4 mb-3 mb-lg-4 form_radio_btn">
-        <input id="checkboxUnderfloorHeating" type="checkbox" name="Underfloor heating">
-        <label for="checkboxUnderfloorHeating">Underfloor heating</label>
-      </div>
-      <div class="mr-3 mr-lg-4 mb-3 mb-lg-4 form_radio_btn">
-        <input id="checkboxPanoramicWindows" type="checkbox" name="Panoramic windows">
-        <label for="checkboxPanoramicWindows">Panoramic windows</label>
-      </div>
-      <div class="mr-3 mr-lg-4 mb-3 mb-lg-4 form_radio_btn">
-        <input id="checkboxGarage" type="checkbox" name="Garage">
-        <label for="checkboxGarage">Garage</label>
-      </div>
-      <div class="mr-3 mr-lg-4 mb-3 mb-lg-4 form_radio_btn">
-        <input id="checkboxElevator" type="checkbox" name="Elevator">
-        <label for="checkboxElevator">Elevator</label>
-      </div>
-      <div class="mr-3 mr-lg-4 mb-3 mb-lg-4 form_radio_btn">
-        <input id="checkboxElectricGenerator" type="checkbox" name="Autonomous electric generator">
-        <label for="checkboxElectricGenerator">Autonomous electric generator</label>
-      </div>
-      <div class="mr-3 mr-lg-4 mb-3 mb-lg-4 form_radio_btn">
-        <input id="checkboxSmartHome" type="checkbox" name="Smart home technology">
-        <label for="checkboxSmartHome">Smart home technology</label>
-      </div>
-      <div class="mr-3 mr-lg-4 mb-3 mb-lg-4 form_radio_btn">
-        <input id="checkboxCctv" type="checkbox" name="CCTV">
-        <label for="checkboxCctv">CCTV</label>
-      </div>
-      <div class="mr-3 mr-lg-4 mb-3 mb-lg-4 form_radio_btn">
-        <input id="checkboxWardrobe" type="checkbox" name="Wardrobe">
-        <label for="checkboxWardrobe">Wardrobe</label>
+  <div class="mb-3 mb-lg-4 row flex-column-reverse flex-lg-row">
+    <div class="col-12 col-lg-10">
+      <div class="d-flex justify-content-center justify-content-lg-end align-items-center">
+        <div class="mr-3 form_radio_btn">
+          <input id="radio-resale" type="radio" name="Condition" value="resale">
+          <label for="radio-resale">Resale</label>
+        </div>
+
+        <div class="form_radio_btn">
+          <input id="radioNewBuilding" type="radio" name="Condition" value="newBuilding">
+          <label for="radioNewBuilding">New Building</label>
+        </div>
       </div>
     </div>
 
-    <div class="d-flex flex-column">
-      <p class="pt-0 text-center">
-        Tell us about what makes your apartment special. Describe the area where the housing is located. Indicate if there is a kindergarten, school, <br>
-        clinic nearby. Check the view from the window. The more detailed it will be description, the more likely it is to sell the apartment.
-      </p>
+    <div class="col-12 col-lg-2">
+      <p class="mb-3 m-lg-0 d-flex justify-content-center justify-content-lg-start font-weight-bold">Condition:</p>
+    </div>
+  </div>
+
+  <div class="mb-3 mb-lg-4 row flex-column-reverse flex-lg-row">
+    <div class="col-12 col-lg-10">
+      <div class="d-flex justify-content-end align-items-center flex-wrap">
+        <div class="mb-3 mr-2 mr-lg-3 form_radio_btn">
+          <input id="radio-block" type="radio" name="wallMaterial" value="block">
+          <label for="radio-block">Block</label>
+        </div>
+
+        <div class="mb-3 mr-2 mr-lg-3 form_radio_btn">
+          <input id="radio-monolith" type="radio" name="wallMaterial" value="monolith">
+          <label for="radio-monolith">Monolith</label>
+        </div>
+
+        <div class="mb-3 mr-2 mr-lg-3 form_radio_btn">
+          <input id="radio-brick" type="radio" name="wallMaterial" value="brick">
+          <label for="radio-brick">Brick</label>
+        </div>
+
+        <div class="mb-3 mr-2 mr-lg-0 form_radio_btn">
+          <input id="radio-panel" type="radio" name="wallMaterial" value="panel">
+          <label for="radio-panel">Panel</label>
+        </div>
+
+        <div class="mb-3 mr-2 mr-lg-3 form_radio_btn">
+          <input id="radio-without-finishing" type="radio" name="wallMaterial" value="withoutFinishing">
+          <label for="radio-without-finishing">Without finishing</label>
+        </div>
+
+        <div class="mb-3 mr-2 mr-lg-0 form_radio_btn">
+          <input id="radio-renovated" type="radio" name="wallMaterial" value="renovated">
+          <label for="radio-renovated">Renovated</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-lg-2">
+      <p class="mb-3 m-lg-0 d-flex justify-content-center justify-content-lg-start font-weight-bold">Wall material:</p>
+    </div>
+  </div>
+
+  <div class="mb-3 mb-lg-4 row flex-column-reverse flex-lg-row">
+    <div class="col-12 col-lg-10">
+      <div class="d-flex flex-wrap text justify-content-end align-items-center">
+        <div class="mb-3 mr-2 mr-lg-3 form_radio_btn">
+          <input id="radio-5-rooms" type="radio" name="numberOfRooms" value="oneRoom">
+          <label for="radio-5-rooms">5-rooms apart.</label>
+        </div>
+
+        <div class="mb-3 mr-2 mr-lg-3 form_radio_btn">
+          <input id="radio-4-rooms" type="radio" name="numberOfRooms" value="twoRooms">
+          <label for="radio-4-rooms">4-rooms apart.</label>
+        </div>
+
+        <div class="mb-3 mr-2 mr-lg-3 form_radio_btn">
+          <input id="radio-3-rooms" type="radio" name="numberOfRooms" value="threeRooms">
+          <label for="radio-3-rooms">3-rooms apart.</label>
+        </div>
+
+        <div class="mb-3 mr-2 mr-lg-0 form_radio_btn">
+          <input id="radio-2-rooms" type="radio" name="numberOfRooms" value="fourRooms">
+          <label for="radio-2-rooms">2-rooms apart.</label>
+        </div>
+
+        <div class="mb-3 mr-2 mr-lg-0 form_radio_btn">
+          <input id="radio-1-rooms" type="radio" name="numberOfRooms" value="fiveRooms">
+          <label for="radio-1-rooms">1-room apart.</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-lg-2">
+      <p class="mb-3 m-lg-0 d-flex justify-content-center justify-content-lg-start font-weight-bold">Number of rooms:</p>
+    </div>
+  </div>
+
+  <div class="mb-3 mb-lg-4 row flex-column-reverse flex-lg-row">
+    <div class="col-12 col-lg-10">
+      <div class="d-flex justify-content-center justify-content-lg-end align-items-center">
+        <div class="mr-3 form_radio_btn full-size-btn">
+          <input id="radio-no-balcony" type="radio" name="balcony" value="false">
+          <label for="radio-no-balcony">No</label>
+        </div>
+
+        <div class="form_radio_btn full-size-btn">
+          <input id="radio-yes-balcony" type="radio" name="balcony" value="true">
+          <label for="radio-yes-balcony">Yes</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-lg-2">
+      <p class="mb-3 m-lg-0 d-flex justify-content-center justify-content-lg-start font-weight-bold">Balcony (loggia):</p>
+    </div>
+  </div>
+
+  <div class="mb-3 mb-lg-4 row flex-column-reverse flex-lg-row">
+    <div class="col-12 col-lg-10">
+      <div class="d-flex justify-content-center justify-content-lg-end align-items-center">
+        <div class="mr-3 form_radio_btn full-size-btn">
+          <input id="radio-no-parking" type="radio" name="Parking" value="false">
+          <label for="radio-no-parking">No</label>
+        </div>
+        <div class="form_radio_btn full-size-btn">
+          <input id="radio-yes-parking" type="radio" name="Parking" value="true">
+          <label for="radio-yes-parking">Yes</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-lg-2">
+      <p class="mb-3 m-lg-0 d-flex justify-content-center justify-content-lg-start font-weight-bold">Parking space:</p>
+    </div>
+  </div>
+
+  <div class="mb-3 mb-lg-4 row flex-column-reverse flex-lg-row">
+    <div class="col-12 col-lg-10">
+      <div class="d-flex justify-content-center justify-content-lg-end align-items-center">
+        <div class="mr-3 form_radio_btn full-size-btn">
+          <input id="radio-no-kitchen" type="radio" name="Kitchen" value="false">
+          <label for="radio-no-kitchen">No</label>
+        </div>
+        <div class="form_radio_btn full-size-btn">
+          <input id="radio-yes-kitchen" type="radio" name="Kitchen" value="true">
+          <label for="radio-yes-kitchen">Yes</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-lg-2">
+      <p class="mb-3 m-lg-0 d-flex justify-content-center justify-content-lg-start font-weight-bold">Kitchen combined with living room</p>
+    </div>
+  </div>
+
+  <div class="mb-3 mb-lg-4 row flex-column-reverse justify-content-end flex-lg-row">
+    <div class="col-12 col-lg-3">
+      <select class="selectpicker" data-style-base="form-control form-control-select" data-style="">
+        <option value="no-value">n/a</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+      </select>
+    </div>
+
+    <div class="col-12 col-lg-2">
+      <p class="mb-3 m-lg-0 d-flex justify-content-center justify-content-lg-start font-weight-bold">Floor:</p>
+    </div>
+  </div>
+
+  <div class="mb-3 mb-lg-4 row flex-column-reverse justify-content-end flex-lg-row">
+    <div class="col-12 col-lg-3">
+      <select id="floor" class="mr-3 selectpicker" data-style-base="form-control form-control-select" data-style="">
+        <option value="no-value">n/a</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+      </select>
+    </div>
+
+    <div class="col-12 col-lg-2">
+      <p class="mb-3 m-lg-0 d-flex justify-content-center justify-content-lg-start font-weight-bold">Floors in the house:</p>
+    </div>
+  </div>
+
+  <div class="mb-3 mb-lg-4 row flex-column-reverse flex-lg-row">
+    <div class="col-12 col-lg-10">
+      <div class="d-flex flex-wrap justify-content-center justify-content-lg-end">
+        <div class="mr-0 mr-lg-3 form-group">
+          <input class="form-control" type="text" placeholder="Kitchen" required>
+        </div>
+
+        <div class="mr-0 mr-lg-3 form-group">
+          <input class="form-control" type="text" placeholder="Residential" required>
+        </div>
+
+        <div class="form-group">
+          <input class="form-control" type="text" placeholder="General" required>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-lg-2">
+      <p class="mb-3 m-lg-0 d-flex justify-content-center justify-content-lg-start font-weight-bold">Area, m2:</p>
+    </div>
+  </div>
+
+  <div class="mb-3 mb-lg-4 row flex-column-reverse flex-lg-row">
+    <div class="col-12 col-lg-10">
+      <div class="d-flex justify-content-center justify-content-lg-end form-group">
+        <input class="form-control" type="number" placeholder="m" required>
+      </div>
+    </div>
+
+    <div class="col-12 col-lg-2">
+      <p class="mb-3 m-lg-0 d-flex justify-content-center justify-content-lg-start font-weight-bold">Ceiling height:</p>
+    </div>
+  </div>
+
+  <div class="d-none d-lg-flex mb-3 mb-lg-4 row flex-column-reverse flex-lg-row">
+    <div class="col-12 col-lg-10">
+      <div class="d-flex justify-content-center justify-content-lg-end form-group">
+        <input class="form-control" type="number" placeholder="Year" required>
+      </div>
+    </div>
+
+    <div class="col-12 col-lg-2">
+      <p class="mb-3 m-lg-0 d-flex justify-content-center justify-content-lg-start font-weight-bold">Year built:</p>
+    </div>
+  </div>
+
+
+  <div class="mb-5 d-flex flex-column">
+    <p class="pt-0 text-right text-before-ta">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
   
-      <textarea class="w-100 p-3 pt-2 border rounded" placeholder="Description" name="discriptions" id="text-discriptions" rows="6"></textarea>
-    </div>
+    <textarea class="w-100 p-3 pt-2 border rounded" placeholder="Description" name="discriptions" id="text-discriptions" rows="4"></textarea>
   </div>
 </div>

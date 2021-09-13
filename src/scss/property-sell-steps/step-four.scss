@@ -2,7 +2,11 @@
 @import "node_modules/bootstrap-scss/mixins";
 
 .property-step-price {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+  
+  @include media-breakpoint-up(md) {
+    margin-bottom: 50px;
+  }
 
   input {
     width: 100%px;
