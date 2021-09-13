@@ -117,8 +117,8 @@
 
   <div class="mb-4 row">
     <div class="col-12 col-lg-10">
-      <div id="bodyTypesCar" class="d-none d-lg-flex flex-wrap flex-row-reverse justify-content-between body-type-car">
-        <div class="form_radio_btn mb-4">
+      <div id="bodyTypesCar" class="row row-cols-3 d-none d-lg-flex flex-wrap flex-row-reverse justify-content-between body-type-car">
+        <div class="col form_radio_btn mb-4">
           <input id="typeSedan" type="radio" name="Body type">
           <label class="d-flex flex-column position-relative" for="typeSedan">
             <span class="body-type-car__icon"><i class="icon-car-3"></i></span>
@@ -126,7 +126,7 @@
           </label>
         </div>
 
-        <div class="form_radio_btn mb-4">
+        <div class="col form_radio_btn mb-4">
           <input id="typeHatchback" type="radio" name="Body type">
           <label class="d-flex flex-column position-relative" for="typeHatchback">
             <span class="body-type-car__icon"><i class="icon-car-2"></i></span>
@@ -134,7 +134,7 @@
           </label>
         </div>
 
-        <div class="form_radio_btn mb-4">
+        <div class="col form_radio_btn mb-4">
           <input id="typeSuv" type="radio" name="Body type">
           <label class="d-flex flex-column position-relative" for="typeSuv">
             <span class="body-type-car__icon"><i class="icon-jeep"></i></span>
@@ -142,7 +142,7 @@
           </label>
         </div>
 
-        <div class="form_radio_btn mb-4">
+        <div class="col form_radio_btn mb-4">
           <input id="typeWagon" type="radio" name="Body type">
           <label class="d-flex flex-column position-relative" for="typeWagon">
             <span class="body-type-car__icon"><i class="icon-car-4"></i></span>
@@ -150,7 +150,7 @@
           </label>
         </div>
 
-        <div class="form_radio_btn mb-4">
+        <div class="col form_radio_btn mb-4">
           <input id="typeLiftback" type="radio" name="Body type">
           <label class="d-flex flex-column position-relative" for="typeLiftback">
             <span class="body-type-car__icon"><i class="icon-car-5"></i></span>
@@ -158,7 +158,7 @@
           </label>
         </div>
 
-        <div class="form_radio_btn mb-4">
+        <div class="col form_radio_btn mb-4">
           <input id="typeMinivan" type="radio" name="Body type">
           <label class="d-flex flex-column position-relative" for="typeMinivan">
             <span class="body-type-car__icon"><i class="icon-van"></i></span>
@@ -166,7 +166,7 @@
           </label>
         </div>
 
-        <div class="form_radio_btn mb-4">
+        <div class="col form_radio_btn mb-4">
           <input id="typeMinibus" type="radio" name="Body type">
           <label class="d-flex flex-column position-relative" for="typeMinibus">
             <span class="body-type-car__icon"><i class="icon-minibus"></i></span>
@@ -174,11 +174,7 @@
           </label>
         </div>
 
-        <a type="button" id="btnShowMoreBodyTypes" class="rounded border show-more-types">
-          <span class="font-weight-bold">Show all</span>
-        </a>
-
-        <div class="form_radio_btn mb-4 show-additionally">
+        <div class="col form_radio_btn mb-4">
           <input id="typeCoupe" type="radio" name="Body type">
           <label class="d-flex flex-column position-relative" for="typeCoupe">
             <span class="body-type-car__icon"><i class="icon-car-6"></i></span>
@@ -186,7 +182,14 @@
           </label>
         </div>
 
-        <div class="form_radio_btn mb-4 show-additionally">
+        <div class="col" id="btnShowMoreBodyTypes">
+          <a type="button" class="rounded border show-more-types">
+            <span class="font-weight-bold">Show all</span>
+          </a>
+        </div>
+
+
+        <div class="col form_radio_btn mb-4 show-additionally">
           <input id="typeLemousine" type="radio" name="Body type">
           <label class="d-flex flex-column position-relative" for="typeLemousine">
             <span class="body-type-car__icon">
@@ -214,7 +217,7 @@
           </label>
         </div>
 
-        <div class="form_radio_btn mb-4 show-additionally">
+        <div class="col form_radio_btn mb-4 show-additionally">
           <input id="typeCabriolet" type="radio" name="Body type">
           <label class="d-flex flex-column position-relative" for="typeCabriolet">
             <span class="body-type-car__icon"><i class="icon-cabriolet"></i></span>
@@ -222,7 +225,7 @@
           </label>
         </div>
 
-        <div class="form_radio_btn mb-4 show-additionally">
+        <div class="col form_radio_btn mb-4 show-additionally">
           <input id="typePickup" type="radio" name="Body type">
           <label class="d-flex flex-column position-relative" for="typePickup">
             <span class="body-type-car__icon"><i class="icon-pick-up-car"></i></span>
@@ -230,7 +233,7 @@
           </label>
         </div>
 
-        <div class="form_radio_btn mb-4 show-additionally">
+        <div class="col form_radio_btn mb-4 show-additionally">
           <input id="typeVan" type="radio" name="Body type">
           <label class="d-flex flex-column position-relative" for="typeVan">
             <span class="body-type-car__icon"><i class="icon-van-1"></i></span>

@@ -14,20 +14,23 @@
     </div>
   </div>
 
-  <main class="mb-5">
+  <main class="mb-4">
     <div class="container">
-      <h2 class="mb-4 subtitle">
-        my messages
-      </h2>
+      <div class="d-flex flex-column-reverse flex-lg-row justify-content-between">
+        <div class="d-flex justify-content-end justify-content-lg-start">
+          <button type="button" class="mb-4 btn btn-delete-all">
+            <i class="mr-2 icon-clear"></i>
+            <span class="btn-delete-all__text">delete all</span>
+          </button>
+        </div>
+        
+        <h2 class="mb-4 subtitle">
+          my messages
+        </h2>
+      </div>
     
       <div class="row">
         <div class="col-12 col-lg-9">
-          <div class="d-flex justify-content-end justify-content-lg-start">
-            <button type="button" class="mb-4 btn btn-delete-all">
-              <i class="mr-2 icon-clear"></i>
-              <span class="btn-delete-all__text">delete all</span>
-            </button>
-          </div>
 
           <div class="mb-4 card d-flex flex-column flex-lg-row w-100 justify-content-around no-message">
             <div class="mb-3 mb-0 d-flex flex-column align-items-center justify-content-center">
@@ -36,10 +39,32 @@
             </div>
           </div>
 
-          @@include('./user-account/user-account-message.html')
-          @@include('./user-account/user-account-message.html')
-          @@include('./user-account/user-account-message.html')
+          @@include('./user-account/user-account-message.html', {
+            'name': 'Irina Morozova',
+            'itemName': 'PlayStation 4 Pro 1TB Console',
+            'text': 'Produces — pursue fault has pursue to will anyone those who loves procure occur was. Account rejects, desires happiness complete painful praising from builder all enjoy not can, take but ever desires there one, do. Truth praising idea, him, can of explain fault born not.',
+            'date': ' Yesterday, 20:28',
+            'image': './img/earphones.png',
+            'counterMessage': '99+',
+          })
 
+          
+          @@include('./user-account/user-account-nomessage.html',{
+            'name': 'Irina Morozova',
+            'itemName': 'PlayStation 4 Pro 1TB Console',
+            'text': 'Produces — pursue fault has pursue to will anyone those who loves procure occur was. Account rejects, desires happiness complete painful praising from builder all enjoy not can, take but ever desires there one, do. Truth praising idea, him, can of explain fault born not.',
+            'date': ' Yesterday, 20:28',
+          })
+
+          @@include('./user-account/user-account-message.html', {
+            'name': 'Irina Morozova',
+            'itemName': 'PlayStation 4 Pro 1TB Console',
+            'text': 'Produces — pursue fault has pursue to will anyone those who loves procure occur was. Account rejects, desires happiness complete painful praising from builder all enjoy not can, take but ever desires there one, do. Truth praising idea, him, can of explain fault born not.',
+            'date': ' Yesterday, 20:28',
+            'image': './img/earphones.png',
+            'counterMessage': '99+',
+          })
+          
           @@include('./user-account/user-account-message-blocked.html')
         </div>
         <div class="d-none d-lg-block col-lg-3">

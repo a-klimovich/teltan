@@ -76,6 +76,32 @@
       }
     }
 
+    .header__hamburger-menu {
+      display: none;
+      position: absolute;
+      bottom: 0;
+      right: 50%;
+      z-index: 9;
+
+      &.active {
+        display: flex;
+      }
+
+      .fleamarket.catalog-categories {
+        display: flex;
+        width: 285px;
+        transform: translateX(-75%);
+      }
+
+      .tab-content {
+        margin-right: 0;
+
+        .tab-pane {
+          padding-right: 20px;
+        }
+      }
+    }
+
     .btn-your-add {
       background: #3fb465;
       border-radius: 6px;

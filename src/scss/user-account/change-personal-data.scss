@@ -9,6 +9,7 @@
   button {
     width: 147px;
     height: 47px;
+    margin-top: 17px;
     align-self: center;
 
     @include media-breakpoint-down(md) {
@@ -16,20 +17,39 @@
     }
   }
 
-  .form-group {
-    width: 500px;
-    max-width: 100%;
+  .form-control {
+    border: 1px solid #CED4DA;
+    border-radius: 6px;
+    
+    @include media-breakpoint-down(md) {
+      border-radius: 3px;
+    }
+  }
 
-    align-self: self-end;
+  .form-group {
+    position: relative;
+    width: calc(516px + 65px);
+    max-width: 100%;
+    margin-bottom: 14px;
 
     label {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
       font-weight: bold;
       font-size: 13px;
       line-height: 18px;
+
+      @include media-breakpoint-down(md) {
+        position: static;
+        transform: none;
+      }
     }
 
     input {
-      margin-right: 25px;
+      margin-right: 65px;
+      height: 43px;
 
       @include media-breakpoint-down(md) {
         margin-right: 0;

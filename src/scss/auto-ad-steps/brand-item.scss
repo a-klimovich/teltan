@@ -8,7 +8,11 @@
   border-radius: 8px;
   width: 100%;
 
+  white-space: nowrap;
+
   @include media-breakpoint-up(lg) {
+    white-space: initial;
+
     padding: 0 20px;
   }
 }

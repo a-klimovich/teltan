@@ -116,6 +116,10 @@
     })
   }
 
+  $('.hamburger').on('click', () => {
+    $('.header__hamburger-menu').toggleClass('active')
+  })
+
   // Dropdown cabinet item menu
   $('#dropdownMenuLink').on('click', (e) => {
     e.preventDefault()

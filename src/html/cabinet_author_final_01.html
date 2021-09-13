@@ -21,7 +21,7 @@
       </h2>
     
       <div class="row">
-        <div class="col-12 col-lg-8 col-xl-9">
+        <div class="col-12 col-xl-9">
 
           <!-- annoucments -->
           <div class="mb-4">
@@ -138,7 +138,7 @@
             <div class="card-link" href="#">
               <div class="image-block">
                 <div class="i-box">
-                  <img src="#" alt="no-img">
+                  <img src="./img/slider-item-img-03.png" alt="no-img">
                 </div>
               </div>
           
@@ -227,115 +227,34 @@
             </div>
           </div>
 
-          <div class="mb-4 card product-card product-line user-product">
-            <div class="card-link" href="#">
-              <div class="image-block">
-                <div class="i-box">
-                  <img src="#" alt="no-img">
-                </div>
-              </div>
-          
-              <div class="px-2 px-lg-3 content-block">
-                <div class="d-flex flex-column h-100 justify-content-between text-right">
-                  <div class="mb-3 mb-lg-5 d-flex flex-column-reverse flex-lg-row justify-content-between align-items-end">
-                    <p class="price">$12500</p>
-                    <p class="title">KIA SPORTAGE IV 2014</p>
-                  </div>
-                  
-                  <div class="mb-4 d-flex flex-column flex-lg-row position-relative">
-                    <button class="mr-lg-4 mb-3 mb-lg-0 btn user-product__btn-edit text-uppercase">Edit</button>
-                    <button class="btn btn-accelerate-sale text-uppercase font-weight-bold btn-accelerate-sale"><span>@@include('../assets/market-cart.svg')</span> Ускорить продажу</button>
-                  </div>
-                </div>
-          
-                <div class="border-top py-3 d-flex justify-content-between align-items-center text-nowrap product-line__data-viwe">
-                  <div class="d-flex">
-                    <span class="mr-0 mr-lg-2 views"><span>2 586</span> <i class="icon-visibility"></i></span>
-          
-                    <div class="d-none d-lg-flex justify-content-end align-items-center ml-5 product-line__up-date">
-                      <div class="mr-2 d-flex justify-content-center align-items-center user-product__up-product">
-                        <span class="text-uppercase font-weight-bold">UP</span>
-                      </div>
+          @@include('./user-account/user-product-editable.html', {
+            'imageItem': './img/flea-item-3.png',
+            'price': '$12500',
+            'title': 'KIA SPORTAGE IV 2014 KIA SPORTAGE IV 2014 KIA SPORTAGE IV 2014',
+          })
 
-                      <span class="up-date">18:00, 20.02.2021</span>
-                    </div>
-                  </div>
-          
-                  <span class="date">Yesterday, 20:28</span>
-                </div>
-              </div>
-            </div>
+          @@include('./user-account/user-product-editable-noup.htm', {
+            'price': '$12500',
+            'title': 'KIA SPORTAGE IV 2014',
+          })
 
-            <div type="button" class="b-none d-lg-flex justify-content-center align-items-center rise-btn">
-              <span class="mr-1 text-uppercase font-weight-bold up">UP</span>
-              <p class="m-0">Raise (<span>51</span>)</p>
-            </div>
+          @@include('./user-account/user-product-editable.html', {
+            'imageItem': './img/slider-item-img-03.png',
+            'price': '$12500',
+            'title': 'KIA SPORTAGE IV 2014 KIA SPORTAGE IV 2014 KIA SPORTAGE IV 2014',
+          })
 
-            <div class="d-flex flex-column controls-rise-item">
-              <div class="d-flex justify-content-center align-items-center item">@@include('../assets/icon-crown.svg')</div>
-              <div class="d-flex justify-content-center align-items-center item">@@include('../assets/fill-bottle.svg')</div>
-              <div class="d-flex justify-content-center align-items-center item">@@include('../assets/ribbon.svg')</div>
-              <div class="d-flex justify-content-center align-items-center item">@@include('../assets/levin.svg')</div>
-            </div>
-          </div>
-
-          <div class="mb-4 card product-card product-line user-product">
-            <div class="card-link" href="#">
-              <div class="image-block">
-                <div class="i-box">
-                  <img src="#" alt="no-img">
-                </div>
-              </div>
-          
-              <div class="px-2 px-lg-3 content-block">
-                <div class="d-flex flex-column h-100 justify-content-between text-right">
-                  <div class="mb-3 mb-lg-5 d-flex flex-column-reverse flex-lg-row justify-content-between align-items-end">
-                    <p class="price">$12500</p>
-                    <p class="title">KIA SPORTAGE IV 2014</p>
-                  </div>
-                  
-                  <div class="mb-4 d-flex flex-column flex-lg-row position-relative">
-                    <button class="mr-lg-4 mb-3 mb-lg-0 btn user-product__btn-edit text-uppercase">Edit</button>
-                    <button class="btn btn-accelerate-sale text-uppercase font-weight-bold btn-accelerate-sale"><span>@@include('../assets/market-cart.svg')</span> Ускорить продажу</button>
-                  </div>
-                </div>
-          
-                <div class="border-top py-3 d-flex justify-content-between align-items-center text-nowrap product-line__data-viwe">
-                  <div class="d-flex">
-                    <span class="mr-0 mr-lg-2 views"><span>2 586</span> <i class="icon-visibility"></i></span>
-          
-                    <div class="d-none d-lg-flex justify-content-end align-items-center ml-5 product-line__up-date">
-                      <div class="mr-2 d-flex justify-content-center align-items-center user-product__up-product">
-                        <span class="text-uppercase font-weight-bold">UP</span>
-                      </div>
-
-                      <span class="up-date">18:00, 20.02.2021</span>
-                    </div>
-                  </div>
-          
-                  <span class="date">Yesterday, 20:28</span>
-                </div>
-              </div>
-            </div>
-
-            <div type="button" class="b-none d-lg-flex justify-content-center align-items-center rise-btn">
-              <span class="mr-1 text-uppercase font-weight-bold up">UP</span>
-              <p class="m-0">Raise (<span>51</span>)</p>
-            </div>
-
-            <div class="d-flex flex-column controls-rise-item">
-              <div class="d-flex justify-content-center align-items-center item">@@include('../assets/icon-crown.svg')</div>
-              <div class="d-flex justify-content-center align-items-center item">@@include('../assets/fill-bottle.svg')</div>
-              <div class="d-flex justify-content-center align-items-center item">@@include('../assets/ribbon.svg')</div>
-              <div class="d-flex justify-content-center align-items-center item">@@include('../assets/levin.svg')</div>
-            </div>
-          </div>
+          @@include('./user-account/user-product-editable-noup.htm', {
+            'imageItem': './img/slider-item-img-03.png',
+            'price': '$12500',
+            'title': 'KIA SPORTAGE IV 2014 KIA SPORTAGE IV 2014 KIA SPORTAGE IV 2014',
+          })
           <!-- user product END-->
         </div>
         
 
 
-        <div class="d-none d-lg-block col-4 col-xl-3">
+        <div class="d-none d-xl-block col-4 col-xl-3">
           @@include('./user-account/user-profile-menu.html')
         </div>
       </div>
