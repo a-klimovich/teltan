@@ -3,74 +3,40 @@
   const $filterTogglerPropertFullMap =  $('.filterTogglerPropertFullMap');
   const $itemSlider =  $('#itemSlider');
 
-  // MAP property content
-  if ($('#map').length) {
-    ymaps.ready(init);
-  
-    function init(){
-      const myLocation = [54.241584, 25.786242];
-  
-      myMap = new ymaps.Map("map", {
-        center: myLocation,
-        zoom: 12
-      }),
+  mapboxgl.accessToken = 'pk.eyJ1IjoiYS1rbGltb2YiLCJhIjoiY2themVqYzI4MGlrZDJxbWlvaDBlMzF6MyJ9.QXFKypM1BnCkQaUZKTuP0g';
 
-      myMap.controls.remove('geolocationControl');
-      myMap.controls.remove('searchControl');
-      myMap.controls.remove('trafficControl');
-      myMap.controls.remove('typeSelector');
-      myMap.controls.remove('fullscreenControl');
-      myMap.controls.remove('rulerControl');
-  
-      myPlacemark = new ymaps.Placemark(myLocation, {}, {
-        preset: 'islands#redIcon'
-      });
-  
-      myMap.geoObjects.add(myPlacemark);
-    }
+  if($('#map').length > 0) {
+    var map = new mapboxgl.Map({
+      container: 'map',
+      style: 'mapbox://styles/mapbox/streets-v11'
+    });
   }
 
-  // Item mini map
-  if ($('#itemMiniMap').length) {
-    ymaps.ready(init);
-  
-    function init() {
-      const myLocation = [57.241584, 33.786242];
-  
-      myMap = new ymaps.Map("itemMiniMap", {
-        center: myLocation,
-        zoom: 12,
-      }),
+  if($('#mapMini').length > 0) {
+    var map = new mapboxgl.Map({
+      container: 'mapMini',
+      style: 'mapbox://styles/mapbox/streets-v11'
+    });
+  }
 
-      myMap.controls.remove('geolocationControl');
-      myMap.controls.remove('searchControl');
-      myMap.controls.remove('trafficControl');
-      myMap.controls.remove('typeSelector');
-      myMap.controls.remove('fullscreenControl');
-      myMap.controls.remove('rulerControl');
-      myMap.behaviors.disable(['scrollZoom']);
-
-      itemFullMap = new ymaps.Map("itemFullMap", {
-        center: myLocation,
-        zoom: 10,
-      }),
-
-      itemFullMap.controls.remove('geolocationControl');
-      itemFullMap.controls.remove('searchControl');
-      itemFullMap.controls.remove('trafficControl');
-      itemFullMap.controls.remove('typeSelector');
-      itemFullMap.controls.remove('fullscreenControl');
-      itemFullMap.controls.remove('rulerControl');
-      itemFullMap.behaviors.disable(['scrollZoom']);
-    }
+  if($('#mapFullSize').length > 0) {
+    var map = new mapboxgl.Map({
+      container: 'mapFullSize',
+      style: 'mapbox://styles/mapbox/streets-v11'
+    });
   }
 
   $('.filterTogglerMobile').on('click', (e) => {
     e.preventDefault()
     $filterModalContetn.toggleClass('visible')
-
+    
     $('body').toggleClass('filter-open')
     $('.cord-container').removeClass('overlay')
+  })
+
+  $('.filterAutoToggler').on('click', () => {
+    e.preventDefault()
+    $filterModalContetn.toggleClass('visible')
   })
 
   $('.filterPropertyCloser').on('click', (e) => {
