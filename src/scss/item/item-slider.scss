@@ -4,6 +4,12 @@
 .item-slider {
   position: relative;
 
+  // modal
+  .close {
+    font-size: 20px;
+  }
+  // END modal
+
   .add-item-favorite {
     display: flex;
     justify-content: center;
