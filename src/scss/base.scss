@@ -25,6 +25,10 @@ body {
   height: 100%;
   display: flex;
   flex-direction: column;
+
+  &.overflow-h {
+    overflow: hidden;
+  }
 }
 
 header {

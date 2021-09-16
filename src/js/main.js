@@ -5,6 +5,29 @@
 
   mapboxgl.accessToken = 'pk.eyJ1IjoiYS1rbGltb2YiLCJhIjoiY2themVqYzI4MGlrZDJxbWlvaDBlMzF6MyJ9.QXFKypM1BnCkQaUZKTuP0g';
 
+  // MOBILE MENU --START--
+  $('.hamburger').on('click', () => {
+    $('.mobile-menu').addClass('active')
+     $('body').addClass('overflow-h')
+  })
+
+  $('.mobile-menu .closer').on('click', (e) => {
+    $('.mobile-menu').removeClass('active')
+     $('body').removeClass('overflow-h')
+  })
+
+  $('.menu__nav .nav-item').on('click', function (e) {
+    e.preventDefault()
+    const menuBtn = $(this).data('menu-btn')
+    $(`.menu.submenu[data-submenu=${menuBtn}]`).addClass('active')
+  })
+
+  $('.menu__header .back-menu').on('click', function (e) {
+    e.preventDefault()
+    $('.menu.submenu').removeClass('active')
+  })
+  // MOBILE MENU --END--
+
   if($('#map').length > 0) {
     var map = new mapboxgl.Map({
       container: 'map',
@@ -84,14 +107,7 @@
 
   $('.hamburger').on('click', (e) => {
     e.preventDefault()
-    $('.main-menu-mobile').addClass('active')
-    $('body').addClass('menu-overlay')
-  })
-
-  $('#v-pills-tab > button').on('click', (e) => {
-    e.preventDefault()
-    $('.main-menu-mobile').removeClass('active')
-    $('body').removeClass('menu-overlay')
+    $('.mobile-menu').addClass('active')
   })
 
   // Dropdown cabinet item menu
