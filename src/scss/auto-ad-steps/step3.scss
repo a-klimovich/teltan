@@ -12,12 +12,20 @@
       display: block;
       width: 42px;
       height: 42px;
+      margin-right: 5px;
     }
 
     input[type=radio] {
       &:checked + label {
         box-shadow: inset 0px 0px 2px 2px #33e56d;
         border-color: #33e56d;
+      }
+    }
+
+    @include media-breakpoint-down(md) {
+      .colour-element {
+        width: 30px;
+        height: 30px;
       }
     }
   }

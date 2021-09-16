@@ -34,9 +34,9 @@
     $('.cord-container').removeClass('overlay')
   })
 
-  $('.filterAutoToggler').on('click', () => {
+  $('.filterAutoToggler').on('click', (e) => {
     e.preventDefault()
-    $filterModalContetn.toggleClass('visible')
+    $filterModalContetn.remove('visible')
   })
 
   $('.filterPropertyCloser').on('click', (e) => {
@@ -82,8 +82,16 @@
     })
   }
 
-  $('.hamburger').on('click', () => {
-    $('.header__hamburger-menu').toggleClass('active')
+  $('.hamburger').on('click', (e) => {
+    e.preventDefault()
+    $('.main-menu-mobile').addClass('active')
+    $('body').addClass('menu-overlay')
+  })
+
+  $('#v-pills-tab > button').on('click', (e) => {
+    e.preventDefault()
+    $('.main-menu-mobile').removeClass('active')
+    $('body').removeClass('menu-overlay')
   })
 
   // Dropdown cabinet item menu

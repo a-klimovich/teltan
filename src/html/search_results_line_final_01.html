@@ -20,20 +20,56 @@
         search results
       </h2>
 
-      <div class="mb-5 row flex-row-reverse d-flex justify-content-between align-items-center">
-        <div class="mb-4 mb-xl-0 col-12 col-xl-4 justify-content-start">
-          @@include('products-sort.html')
+      <div class="mb-5 row d-flex align-items-center">
+        <div class="col-12 col-xl-5 justify-content-center">
+          <nav class="mb-4 mb-xl-0 justify-content-between justify-content-md-center justify-content-lg-start pagination" aria-label="">
+            <button class="prev"><img src="./assets/paginaton-arrow.svg" alt=""></button>
+          
+            <div class="mx-3 dots">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          
+            <ul class="p-0 m-0 d-flex flex-row-reverse">
+              <li class="d-none d-md-flex pagination__list-item">
+                <a href="#">1</a>
+              </li>
+          
+              <li class="mr-2 pagination__list-item">
+                <a href="#">2</a>
+              </li>
+          
+              <li class="mr-2 pagination__list-item active">
+                <a href="#">3</a>
+              </li>
+          
+              <li class="mr-2 pagination__list-item">
+                <a href="#">4</a>
+              </li>
+          
+              <li class="d-none d-md-flex mr-2 pagination__list-item">
+                <a href="#">5</a>
+              </li>
+            </ul>
+          
+            <div class="mx-3 dots">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          
+            <button class="next"><img src="./assets/paginaton-arrow.svg" alt=""></button>
+          </nav>
         </div>
-        
-        <div class="col-12 col-xl-5 justify-content-start">
-          @@include('pagination.html')
-        </div>
+
+        <div class="col-12 col-xl-7 justify-content-center">@@include('products-sort.html')</div>
       </div>
 
-      <div class="row row-cols-1">
+      <div class="row row-cols-2 row-cols-lg-1">
         <div class="mb-4 col">
           @@include('./product-card/product-line.html', {
-            'image': './img/room_01.png',
+            'image': './img/flea-item-3.png',
             'price': '$27 600',
             'title': 'Concert tickets for Alisher Morgenstern',
             'category': 'Sale of apartaments',
@@ -53,23 +89,15 @@
           })
         </div>
         <div class="mb-4 col">
-          @@include('./product-card/property-product-line.html', {
-            'image': './img/room_01.png',
+          @@include('./product-card/auto-product-line.html', {
+            'bg-color': '#FFF5D9',
+            'image': './img/bmw-f10-auto.png',
             'price': '$27 600',
-            'title': 'Concert tickets for Alisher Morgenstern',
+            'title': 'Civic V, 2002',
+            'autoPower': '310 h.p Gas / Petrol, 4.8 l.',
+            'mileage': '286 000 km',
+            'transmission': 'Manual',
             'addres': 'Tel Aviv-Yafo, Tel Aviv District, Israel',
-            'category': 'Sale of apartaments',
-            'views': '2531',
-            'date': 'Yesterday, 20:28',
-          })
-        </div>
-        <div class="mb-4 col">
-          @@include('./product-card/property-product-vip.html', {
-            'image': './img/room_03.png',
-            'price': '$27 600',
-            'title': 'Concert tickets for Alisher Morgenstern',
-            'addres': 'Tel Aviv-Yafo, Tel Aviv District, Israel',
-            'category': 'Sale of apartaments',
             'views': '2531',
             'date': 'Yesterday, 20:28',
           })
@@ -117,6 +145,10 @@
           <button class="next"><img src="./assets/paginaton-arrow.svg" alt=""></button>
         </nav>
       </div>
+    </div>
+
+    <div class="d-flex d-lg-none">
+      @@include('./filters/auto-filter.html')
     </div>
   </main>
 

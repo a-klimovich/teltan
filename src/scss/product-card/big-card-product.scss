@@ -15,6 +15,10 @@
 
   border-radius: 7px;
 
+  @include media-breakpoint-up(lg) {
+    background-color: transparent !important;
+  }
+
   @include media-breakpoint-down(lg) {
     height: 342px;
   }
