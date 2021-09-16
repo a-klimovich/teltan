@@ -2,11 +2,13 @@
   class="card product-card product-line auto-product-line"
   style="background-color: @@bg-color"
 >
-  <a class="card-link" href="#">
+  <div class="card-link" href="#">
     <div class="image-block">
-      <div class="i-box">
-        <img src="@@image" alt="no-img" />
-      </div>
+      <a href="#">
+        <div class="i-box">
+          <img src="@@image" alt="no-img" />
+        </div>
+      </a>
     </div>
 
     <div class="px-2 px-lg-3 d-flex justify-content-between like-price">
@@ -25,7 +27,7 @@
       <div class="text-right">
         <p class="mb-2 mb-lg-3 title">@@title</p>
 
-        <div class="row">
+        <div class="row flex-column-reverse flex-lg-row">
           <div class="col-12 col-xl">
             <p class="d-none d-xl-inline-block">
               <span>@@autoPower</span>
@@ -56,9 +58,7 @@
             </p>
           </div>
           <div class="col-12 col-xl-4">
-            <p>
-              <span>@@mileage</span> <i class="ml-2 icon-download-speed"></i>
-            </p>
+            <p class="mb-2 mileage">286 000 km<i class="ml-2 icon-download-speed"></i></p>
             <p class="d-none d-xl-inline-block"><span>@@transmission</span> <i class="ml-2 icon-manual-transmission"></i></p>
           </div>
         </div>
@@ -81,7 +81,7 @@
         <span class="date">@@date</span>
       </div>
     </div>
-  </a>
+  </div>
 
   @@include('./product-card/product-marker.html', { 'markerColour': '#F71A3F',
   'text': 'Акция', })

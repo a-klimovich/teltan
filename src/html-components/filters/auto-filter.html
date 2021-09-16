@@ -331,53 +331,66 @@
       <p class="h5 mb-3 d-block text-uppercase font-weight-bolder">Colour</p>
   
       <div class="d-flex flex-wrap palette">
-        <input type="radio" class="d-none" name="color" id="colourGradient">
-        <label class="colour-element colour-gradient" for="colourGradient"></label>
-  
-        <input type="radio" class="d-none" name="color" id="colourCandy">
-        <label class="colour-element colour-candy" for="colourCandy"></label>
-  
-        <input type="radio" class="d-none" name="color" id="colourBurgundy">
-        <label class="colour-element colour-burgundy" for="colourBurgundy"></label>
-  
-        <input type="radio" class="d-none" name="color" id="colourCrem">
-        <label class="colour-element colour-crem" for="colourCrem"></label>
-  
-        <input type="radio" class="d-none" name="color" id="colourBrown">
-        <label class="colour-element colour-brown" for="colourBrown"></label>
-  
-        <input type="radio" class="d-none" name="color" id="colourPurple">
-        <label class="colour-element colour-purple" for="colourPurple"></label>
-  
-        <input type="radio" class="d-none" name="color" id="colourBlue">
-        <label class="colour-element colour-blue" for="colourBlue"></label>
-  
-        <input type="radio" class="d-none" name="color" id="colourSky">
-        <label class="colour-element colour-sky" for="colourSky"></label>
-  
-        <input type="radio" class="d-none" name="color" id="colourGreen">
-        <label class="colour-element colour-green" for="colourGreen"></label>
-  
-        <input type="radio" class="d-none" name="color" id="colourYellow">
-        <label class="colour-element colour-yellow" for="colourYellow"></label>
-        
-        <input type="radio" class="d-none" name="color" id="colourOrange">
-        <label class="colour-element colour-orange" for="colourOrange"></label>
-        
-        <input type="radio" class="d-none" name="color" id="colourRed">
-        <label class="colour-element colour-red" for="colourRed"></label>
-        
-        <input type="radio" class="d-none" name="color" id="colourSilver">
-        <label class="colour-element colour-silver" for="colourSilver"></label>
-        
-        <input type="radio" class="d-none" name="color" id="colourMetalic">
-        <label class="colour-element colour-metalic" for="colourMetalic"></label>
-        
-        <input type="radio" class="d-none" name="color" id="colourWhite">
-        <label class="colour-element colour-white" for="colourWhite"></label>
-        
-        <input type="radio" class="d-none" name="color" id="colourBlack">
-        <label class="colour-element colour-black" for="colourBlack"></label>
+        @@include('./color-input.html', {
+          'idColor': 'gradient',
+          'colorItem': 'conic-gradient(from 45deg , #ffe600, #ffa200, #f92400, #999999, #e5e5e5, #4fadff, #9f40ff, #926547, #c5172d)'
+        })
+        @@include('./color-input.html', {
+          'idColor': 'orange',
+          'colorItem': '#ffe600'
+        })
+        @@include('./color-input.html', {
+          'idColor': 'red',
+          'colorItem': '#ffa200'
+        })
+        @@include('./color-input.html', {
+          'idColor': 'silver',
+          'colorItem': '#f92400'
+        })
+        @@include('./color-input.html', {
+          'idColor': 'metalic',
+          'colorItem': '#999999'
+        })
+        @@include('./color-input.html', {
+          'idColor': 'white',
+          'colorItem': '#e5e5e5'
+        })
+        @@include('./color-input.html', {
+          'idColor': 'black',
+          'colorItem': '#ffffff'
+        })
+        @@include('./color-input.html', {
+          'idColor': 'sky',
+          'colorItem': '#000000'
+        })
+        @@include('./color-input.html', {
+          'idColor': 'blue',
+          'colorItem': '#4fadff'
+        })
+        @@include('./color-input.html', {
+          'idColor': 'purple',
+          'colorItem': '#102efe'
+        })
+        @@include('./color-input.html', {
+          'idColor': 'brown',
+          'colorItem': '#9f40ff'
+        })
+        @@include('./color-input.html', {
+          'idColor': 'crem',
+          'colorItem': '#926547'
+        })
+        @@include('./color-input.html', {
+          'idColor': 'burgundy',
+          'colorItem': '#f1d9b2'
+        })
+        @@include('./color-input.html', {
+          'idColor': 'candy',
+          'colorItem': '#c5172d'
+        })
+        @@include('./color-input.html', {
+          'idColor': 'yellow',
+          'colorItem': '#efbe60'
+        })
       </div>
     </div>
   

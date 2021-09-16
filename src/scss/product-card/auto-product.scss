@@ -34,6 +34,10 @@
       font-size: 16px;
       width: 16px;
       fill: #747474;
+
+      @include media-breakpoint-down(md) {
+        font-size: 11px;
+      }
     }
   }
 }

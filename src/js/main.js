@@ -227,6 +227,7 @@
   }
 
   new Filter('#brandFilter')
+  new Filter('#userItemFilter')
   new Filter('#nameFilter')
 
   /**

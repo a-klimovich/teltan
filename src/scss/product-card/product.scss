@@ -128,13 +128,11 @@
 
     .category, .location {
       overflow: hidden;
-      display: -moz-box;
-      -moz-box-orient: vertical;
-      display: -webkit-box;
-      -webkit-line-clamp: 1;
-      -webkit-box-orient: vertical;
-      line-clamp: 1;
-      box-orient: vertical;
+      max-height: 1.3rem;
+      
+      @include media-breakpoint-down(lg) {
+        max-height: 1.6rem;
+      }
     }
 
     .title {
@@ -155,15 +153,22 @@
       @include media-breakpoint-down(lg) {
         font-size: 12px;
         text-transform: capitalize;
+        -webkit-line-clamp: 1;
+        line-clamp: 1;
       }
     }
 
     .location {
       position: relative;
-      padding-right: 16px;
+      padding-right: 24px;
+      text-overflow: clip;
 
+      @include media-breakpoint-down(md) {
+        padding-right: 16px;
+      }
+      
       .addres {
-        margin-right: .4rem;
+        text-overflow: clip;
 
         @include media-breakpoint-down(md) {
           font-size: 10px;
@@ -173,8 +178,17 @@
       .icon-local {
         position: absolute;
         top: 2px;
-        right: 0;
+        right: 1px;
+
+        @include media-breakpoint-down(md) {
+          width: 11px;
+          right: 0;
+        }
       }
+    }
+
+    .mileage {
+      font-size: 1rem;
     }
 
     .category {
