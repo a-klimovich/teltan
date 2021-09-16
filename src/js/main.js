@@ -105,11 +105,6 @@
     })
   }
 
-  $('.hamburger').on('click', (e) => {
-    e.preventDefault()
-    $('.mobile-menu').addClass('active')
-  })
-
   // Dropdown cabinet item menu
   $('#dropdownMenuLink').on('click', (e) => {
     e.preventDefault()
