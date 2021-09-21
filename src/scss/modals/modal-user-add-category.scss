@@ -39,9 +39,10 @@
       position: absolute;
       font-size: 40px;
       font-weight: 300;
+      line-height: 1rem;
       
-      top: -62px;
-      left: -36px;
+      top: -40px;
+      left: -35px;
       
       @include media-breakpoint-up(lg) {
         top: -21px;

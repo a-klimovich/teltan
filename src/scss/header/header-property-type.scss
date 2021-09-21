@@ -6,7 +6,7 @@
   justify-content: center;
   align-items: center;
 
-  background-image: url("../assets/property-header-bg.png");
+  background-image: url("../assets/property-header-bg-progressive.jpeg");
   background-attachment: fixed;
   background-position-y: center;
   background-repeat: no-repeat;
@@ -74,11 +74,31 @@
     }
 
     .navbar-nav {
+      @include media-breakpoint-down(md) {
+        li:first-child::after {
+          background-color: transparent;
+        }
+      }
+
       &__list {
-        padding: 0 50px;
+        padding: 0 60px;
         display: flex;
         justify-content: flex-end;
         position: relative;
+        
+        @include media-breakpoint-down(md) {
+          padding: 0 50px;
+        }
+
+        &:after {
+          content: '';
+          position: absolute;
+          left: 0;
+          top: 0;
+          height: 100%;
+          width: 1px;
+          background-color: #DEE2E6;
+        }
 
         &::before {
           content: '';
@@ -86,8 +106,8 @@
           width: 0.6rem;
           height: 0.6rem;
           position: absolute;
-          left: 0;
-          top: 25%;
+          left: 40px;
+          top: 0.8rem;
           border: 2px solid #212529;
           transform: rotate(-45deg);
           border-top: transparent;
@@ -97,7 +117,7 @@
         &:hover {
           &::before {
             transform: rotate(135deg);
-            top: 35%;
+            top: 1.1rem;
           }
 
           .dropdown-custom {

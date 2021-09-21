@@ -4,6 +4,12 @@
 .filter {
   overflow: hidden;
 
+  @include media-breakpoint-down(md) {
+    .collapse {
+      display: block !important;
+    }
+  }
+
   .btn-more-filter-settings {
     margin: -1.5rem;
     margin-top: 0;

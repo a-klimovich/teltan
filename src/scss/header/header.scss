@@ -109,26 +109,45 @@
 
     .search-resault {
       display: none;
-      position: absolute;
-      top: calc(100% + 7px);
-      padding-right: 5px;
       align-items: flex-end;
       flex-wrap: nowrap;
-      z-index: 5;
+
+      position: absolute;
+      top: calc(100% + 7px);
+      right: 0;
+      
+      width: 100%;
       max-height: 384px;
+      z-index: 9;
       overflow: hidden;
       overflow-y: auto;
+      
       background-color: $white;
       box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
       border-radius: 5px;
-      width: calc(100% - 1rem);
+
+      padding-right: 21px;
       
       font-weight: normal;
       font-size: 13px;
       line-height: 18px;
+      text-align: right;
 
       span {
         color: #808D98;
+      }
+
+      a {
+        position: relative;
+        padding-right: 25px;
+        vertical-align: middle;
+
+        svg {
+          position: absolute;
+          top: 50%;
+          right: 0;
+          transform: translateY(-50%);
+        }
       }
     }
 

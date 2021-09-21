@@ -1,0 +1,13 @@
+@import "variables";
+@import "node_modules/bootstrap-scss/mixins";
+
+
+.info-page {
+  a {
+    color: #007FF4;
+  
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

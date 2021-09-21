@@ -98,6 +98,10 @@ ol {
   }
 }
 
+ul > li, ol > li {
+  line-height: 1.8;
+}
+
 h2, .h2 {
   font-style: normal;
   font-weight: bold;
@@ -194,13 +198,12 @@ textarea {
   }
 }
 
-button {
+button, *[type=button] {
   -webkit-appearance: none;
 }
 
 .btn {
   border-radius: 6px;
-  -webkit-appearance: none;
 }
 
 .btn-secondary {
