@@ -31,22 +31,26 @@
   if($('#map').length > 0) {
     var map = new mapboxgl.Map({
       container: 'map',
-      style: 'mapbox://styles/mapbox/streets-v11'
+      style: 'mapbox://styles/mapbox/streets-v11',
     });
   }
 
   if($('#mapMini').length > 0) {
     var map = new mapboxgl.Map({
       container: 'mapMini',
-      style: 'mapbox://styles/mapbox/streets-v11'
+      style: 'mapbox://styles/mapbox/streets-v11',
     });
   }
 
   if($('#mapFullSize').length > 0) {
     var map = new mapboxgl.Map({
       container: 'mapFullSize',
-      style: 'mapbox://styles/mapbox/streets-v11'
-    });
+      style: 'mapbox://styles/mapbox/streets-v11',
+    })
+
+    $("#itemMapFullSize").on('shown.bs.modal', function () {
+      map.resize();
+    })
   }
 
   $('.filterTogglerMobile').on('click', (e) => {
@@ -280,6 +284,7 @@
 
       this.selectStep(this.activeStep);
     }
+
 
     get stepsNumber() {
       return this.content.length;

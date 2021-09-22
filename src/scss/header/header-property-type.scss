@@ -74,12 +74,6 @@
     }
 
     .navbar-nav {
-      @include media-breakpoint-down(md) {
-        li:first-child::after {
-          background-color: transparent;
-        }
-      }
-
       &__list {
         padding: 0 60px;
         display: flex;
@@ -112,12 +106,22 @@
           transform: rotate(-45deg);
           border-top: transparent;
           border-right: transparent;
+
+          @include media-breakpoint-down(md) {
+            left: 33px;
+            top: 1.2rem;
+          }
         }
 
         &:hover {
           &::before {
             transform: rotate(135deg);
             top: 1.1rem;
+
+            
+            @include media-breakpoint-down(md) {
+              top: 1.4rem;
+            }
           }
 
           .dropdown-custom {

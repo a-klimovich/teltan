@@ -64,6 +64,7 @@
       background-color: transparent;
       color: $primary;
       font-size: 15px;
+      top: -10px;
     }
 
     @include media-breakpoint-down(md) {
@@ -92,7 +93,7 @@
     padding-bottom: 0;
 
     .title {
-      max-width: 350px;
+      max-width: 75%;
       font-weight: 800;
       font-size: 15px;
       line-height: 21px;
@@ -102,8 +103,9 @@
     @include media-breakpoint-down(md) {
       width: 100%;
       padding-top: 0;
-
+      
       .title {
+        max-width: 90%;
         font-size: 12px;
       }
     }

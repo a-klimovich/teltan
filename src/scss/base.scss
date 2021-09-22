@@ -137,12 +137,17 @@ h6, .h6 {
   line-height: 22px;
 }
 
-input,
-textarea {
+input, textarea, select {
+  font-size: 16px;
+
   text-align: right;
 
   &::placeholder {
     text-align: right;
+  }
+
+  @media (min-width: 768px) {
+    font-size: 14px;
   }
 }
 
