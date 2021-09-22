@@ -5,7 +5,7 @@
   margin-bottom: 30px;
 
   @include media-breakpoint-down(md) {
-    margin-bottom: 50px;
+    margin-bottom: 20px;
   }
 
   .iconLike {
@@ -40,31 +40,16 @@
     height: 100%;
     justify-content: center;
 
-    @include media-breakpoint-down(md) {
-      top: auto;
-      bottom: -33px;
-      height: auto;
-      width: 15px;
-    }
-
     &.prev {
       left: -20px;
 
       img {
         transform: rotate(180deg);
       }
-
-      @include media-breakpoint-down(md) {
-        left: 40%;
-      }
     }
 
     &.next {
       right: -20px;
-
-      @include media-breakpoint-down(md) {
-        right: 40%;
-      }
     }
   }
 }

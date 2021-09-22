@@ -1,0 +1,30 @@
+@import "../variables";
+@import "node_modules/bootstrap-scss/mixins";
+
+#chatUploadFileBox {
+  .upload-file {
+    background-color: #EDEDED;
+    padding: 4px 7px;
+    border-radius: 3px;
+    overflow: hidden;
+    margin-bottom: 7px;
+    max-height: 23px;
+    
+    .close {
+      font-weight: 500;
+      float: left;
+      padding: 0;
+
+      &:hover {
+        color: $primary;
+      }
+    }
+
+    &__name {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 70px;
+    }
+  }
+}

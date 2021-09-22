@@ -12,6 +12,10 @@
   background-repeat: no-repeat;
   min-height: 208px;
 
+  @include media-breakpoint-down(md) {
+    background-attachment: initial;
+  }
+
   .nav {
     flex-wrap: nowrap;
 

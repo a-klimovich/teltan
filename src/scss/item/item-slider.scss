@@ -51,6 +51,12 @@
   }
 
   .slider-for {
+    margin-bottom: 50px;
+
+    @include media-breakpoint-up(lg) {
+      margin-bottom: initial;
+    }
+
     .slide {
       height: 215px;
       border-radius: 5px;
@@ -98,6 +104,11 @@
 
   .slider-nav {
     margin-bottom: 30px;
+    display: none;
+
+    @include media-breakpoint-up(lg) {
+      display: block;
+    }
 
     @include media-breakpoint-up(lg) {
       margin: 10px;

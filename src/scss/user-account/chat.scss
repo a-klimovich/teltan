@@ -68,33 +68,6 @@
     }
   }
 
-  #chatUploadFileBox {
-
-    .upload-file {
-      background-color: #EDEDED;
-      padding: 4px 7px;
-      border-radius: 3px;
-      overflow: hidden;
-      margin-bottom: 7px;
-      
-      .close {
-        font-weight: 500;
-        float: left;
-
-        &:hover {
-          color: $primary;
-        }
-      }
-
-      &__name {
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        max-width: 70px;
-      }
-    }
-  }
-
   .sand-files-box {
     .sand-file {
       width: 89px;
