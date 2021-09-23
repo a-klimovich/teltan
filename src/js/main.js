@@ -1,7 +1,18 @@
 (function(){
   const $filterModalContetn = $('#filterModalContent')
-  const $filterTogglerPropertFullMap =  $('.filterTogglerPropertFullMap');
   const $itemSlider =  $('#itemSlider');
+
+  const $header = $(".header");
+  const scroll = 0;
+  const active = "active";
+  
+  $(window).scroll(function() {
+    if ($(window).scrollTop() > scroll) {
+      $header.addClass(active);
+    } else {
+      $header.removeClass(active);
+    }
+  });
 
   mapboxgl.accessToken = 'pk.eyJ1IjoiYS1rbGltb2YiLCJhIjoiY2themVqYzI4MGlrZDJxbWlvaDBlMzF6MyJ9.QXFKypM1BnCkQaUZKTuP0g';
 

@@ -2,9 +2,21 @@
 @import "node_modules/bootstrap-scss/mixins";
 
 .header {
+  position: fixed;
+  width: 100%;
+  padding-top: 1rem;
+  padding-bottom: .8rem;
+  z-index: 99;
+
   font-size: 13px;
   font-weight: 700;
   line-height: 18px;
+
+  &.active {
+    transition: all .7s;
+    background: $white;
+    box-shadow: $box-shadow;
+  }
 
   a {
     &:hover {
