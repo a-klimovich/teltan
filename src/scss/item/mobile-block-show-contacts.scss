@@ -1,0 +1,54 @@
+@import "../variables";
+@import "node_modules/bootstrap-scss/mixins";
+
+.mobile-block-show-contacts {
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  bottom: 0;
+
+  @include media-breakpoint-up(lg) {
+    display: none;
+  }
+  
+  &.show {
+    ul {
+      display: block;
+    }
+  }
+
+  ul {
+    display: none;
+    padding: 1rem;
+    background-color: $white;
+    border-top: {
+      left-radius: 3px;
+      right-radius: 3px;
+    };
+    margin-bottom: 0;
+    box-shadow: $box-shadow;
+
+    li {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 40px;
+      font-size: 14px;
+      font-weight: 700;
+    }
+  }
+
+  .close {
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    font-size: 30px;
+    padding: 10px;
+    font-weight: 400;
+  }
+
+  .btn {
+    height: 48px;
+    box-shadow: inset 1px 1px 20px -10px rgba(70, 69, 69, 58%);
+  }
+}

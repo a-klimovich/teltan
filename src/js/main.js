@@ -5,16 +5,33 @@
   const $header = $(".header");
   const scroll = 0;
   const active = "active";
+  let prevScrollTop = 0
   
   $(window).scroll(function() {
-    if ($(window).scrollTop() > scroll) {
+    const scrollTop = $(window).scrollTop()
+
+    if(prevScrollTop < scrollTop){
+      $header.addClass('hiddenSearch')
+    } else {
+      $header.removeClass('hiddenSearch')
+    }
+
+    if (scrollTop > scroll) {
       $header.addClass(active);
     } else {
       $header.removeClass(active);
     }
+
+    prevScrollTop = scrollTop;
   });
 
   mapboxgl.accessToken = 'pk.eyJ1IjoiYS1rbGltb2YiLCJhIjoiY2themVqYzI4MGlrZDJxbWlvaDBlMzF6MyJ9.QXFKypM1BnCkQaUZKTuP0g';
+
+  // MODALS start
+  $('#registerModal').on('shown.bs.modal', function () {
+    $("#logInModal").modal('hide');
+  });
+  // MODALS end
 
   // MOBILE MENU --START--
   $('.hamburger').on('click', () => {
@@ -41,21 +58,21 @@
 
   // MAPS START
   if($('#map').length > 0) {
-    var map = new mapboxgl.Map({
+    const map = new mapboxgl.Map({
       container: 'map',
       style: 'mapbox://styles/mapbox/streets-v11',
     });
   }
 
   if($('#mapMini').length > 0) {
-    var map = new mapboxgl.Map({
+    const map = new mapboxgl.Map({
       container: 'mapMini',
       style: 'mapbox://styles/mapbox/streets-v11',
     });
   }
 
   if($('#mapFullSize').length > 0) {
-    var map = new mapboxgl.Map({
+    const map = new mapboxgl.Map({
       container: 'mapFullSize',
       style: 'mapbox://styles/mapbox/streets-v11',
     })
@@ -65,6 +82,14 @@
     })
   }
   // MAPS END
+
+  $('#showListUserNumber').on('click', () => {
+    $('.mobile-block-show-contacts').toggleClass('show')
+  })
+
+  $('#closeNumberList').on('click', () => {
+    $('.mobile-block-show-contacts').removeClass('show')
+  })
 
   $('.filterTogglerMobile').on('click', (e) => {
     e.preventDefault()
@@ -187,6 +212,9 @@
     });
 
     $('.slider-for').slick({
+      centerMode: true,
+      centerPadding: '0px',
+      
       slidesToShow: 1,
       slidesToScroll: 1,
       prevArrow: '<div class="carousel-control-prev" data-slide="prev"><i class="icon-left-arrow rotate-180"></i><span class="sr-only">Previous</span></div>',
@@ -266,11 +294,15 @@
 
     activeStep = 0;
 
-    constructor(options) {
+    afterSelectCb = () => {}
+
+    constructor(options = {}, afterSelectCb) {
       this.options = {
         ...this.options,
-        options,
+        ...options,
       };
+
+      this.afterSelectCb = afterSelectCb;
 
       this.steps = $(`${this.options.wrapperSelector} ${this.options.stepSelector}`);
       this.content = $(`${this.options.wrapperSelector} ${this.options.contentSelector}`);
@@ -330,10 +362,19 @@
         this.prevControl.addClass(activeClass)
         this.finalControl.addClass(activeClass)
       }
+
+      this.afterSelectCb(index)
     }
   }
 
-  new Wizard();
+  new Wizard({}, () => {
+    if($('#map').length > 0) {
+      const map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v11',
+      });
+    }
+  });
 
   /**
    * File uploader

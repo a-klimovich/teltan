@@ -6,7 +6,7 @@
   width: 100%;
   padding-top: 1rem;
   padding-bottom: .8rem;
-  z-index: 99;
+  z-index: 4;
 
   font-size: 13px;
   font-weight: 700;
@@ -16,6 +16,14 @@
     transition: all .7s;
     background: $white;
     box-shadow: $box-shadow;
+  }
+
+  @include media-breakpoint-down (lg) {
+    &.hiddenSearch {
+      .search-input-main {
+        display: none;
+      }
+    }
   }
 
   a {

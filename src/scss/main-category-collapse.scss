@@ -1,9 +1,29 @@
+@import "./variables";
+@import "node_modules/bootstrap-scss/mixins";
+
 .collapse-menu-on-drop {
+  @include media-breakpoint-down(lg) {
+    &.collapse.show, &.collapsing {
+      z-index: 3;
+      position: absolute;
+      left: 0px;
+      top: 310px;
+    }
+  }
+  @include media-breakpoint-down(md) {
+    &.collapse.show, &.collapsing {
+      top: 250px;
+    }
+  }
 
   .list-wrap {
     a {
       font-weight: 700;
       padding-right: 20px;
+
+      @include media-breakpoint-down(md) {
+        font-size: 14px;
+      }
     }
 
     li {
