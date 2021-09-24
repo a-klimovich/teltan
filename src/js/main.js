@@ -215,29 +215,88 @@
     // заменить для карточки товаров
 
     $('.slider-for').slick({
-      centerMode: true,
-      centerPadding: '0px',
-      
       slidesToShow: 1,
       slidesToScroll: 1,
       prevArrow: '<div class="carousel-control-prev" data-slide="prev"><i class="icon-left-arrow rotate-180"></i><span class="sr-only">Previous</span></div>',
       nextArrow: '<div class="carousel-control-next" data-slide="next"><i class="icon-left-arrow"></i><span class="sr-only">Next</span></div>',
-      asNavFor: '.slider-nav'
-    });
-
-    $('.slider-nav').slick({
-      slidesToShow: 4,
-      slidesToScroll: 1,
-      asNavFor: '.slider-for',
-      prevArrow: '<div class="dots-arrow dots-arrow-prev"><i class="icon-left-arrow rotate-180"></i></div>',
-      nextArrow: '<div class="dots-arrow dots-arrow-next"><i class="icon-left-arrow"></i></div>',
-      focusOnSelect: true,
       responsive: [{
-        breakpoint: 786,
-        settings: "unslick"
+        breakpoint: 768,
+        settings: {
+          centerPadding: '15%',
+        }
       }]
     });
+
+    $('.slider-nav div[data-slide]').click(function(e) {
+      e.preventDefault();
+      var slideno = $(this).data('slide');
+      $('.slider-for').slick('slickGoTo', slideno);
+    });
+
+    // $('.slider-nav').slick({
+    //   slidesToShow: 4,
+    //   slidesToScroll: 1,
+    //   asNavFor: '.slider-for',
+    //   prevArrow: '<div class="dots-arrow dots-arrow-prev"><i class="icon-left-arrow rotate-180"></i></div>',
+    //   nextArrow: '<div class="dots-arrow dots-arrow-next"><i class="icon-left-arrow"></i></div>',
+    //   focusOnSelect: true,
+    //   responsive: [{
+    //     breakpoint: 786,
+    //     settings: "unslick"
+    //   }]
+    // });
+
+     // ITEM SLITER on modal window
+     $('.mainItemSlider').slick({
+      slidesToShow: 1,
+      arrows: false,
+      vertical: true,
+      verticalSwiping: true,
+      centerMode: true,
+      centerPadding: '20%',
+      asNavFor: '.navMainItemSlider',
+      responsive: [{
+        breakpoint: 768,
+        settings: {
+          vertical: false,
+          verticalSwiping: false,
+          centerPadding: 0,
+          centerMode: false,
+        }
+      }]
+    });
+    
+    $('.navMainItemSlider').slick({
+      slidesToShow: 9,
+      slidesToScroll: 9,
+      centerPadding: '24px',
+      vertical: true,
+      centerMode: true,
+      focusOnSelect: true,
+      prevArrow: '<div class="dots-arrow dots-arrow-prev"><i class="icon-left-arrow rotate-180"></i></div>',
+      nextArrow: '<div class="dots-arrow dots-arrow-next"><i class="icon-left-arrow"></i></div>',
+      asNavFor: '.mainItemSlider',
+      responsive: [{
+        breakpoint: 768,
+        settings: "unslick",
+      }]
+    });
+
+    $('#fullScrImage').on('shown.bs.modal', function () {
+      $('.mainItemSlider').slick('refresh')
+      $('.navMainItemSlider').slick('refresh')
+    })
+
+    if ($(window).width() < 768) {
+      $('#fullScrImage').on('shown.bs.modal', function () {
+        $('body .modal-backdrop.show').css({"opacity": '1'})
+      })
+    }
   });
+
+  $('.modalSandMessage').on('shown.bs.modal', () => {
+    $('#fullScrImage').modal('hide')
+  })
 
   // Slider Counter
   $itemSlider.on('slid.bs.carousel', function (e) {

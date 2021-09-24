@@ -4,6 +4,10 @@
 .item-slider {
   position: relative;
 
+  @include media-breakpoint-down(md) {
+    margin: 0 -15px;
+  }
+
   // modal
   .close {
     font-size: 20px;
@@ -46,6 +50,43 @@
       svg {
         fill: #F237D2;
         stroke: #F237D2;
+      }
+    }
+  }
+
+  // TODO
+  #carouselBsItem {
+    margin-bottom: 150px;
+
+    .carousel-item {
+      height: 460px;
+
+      img {
+        object-fit: cover;
+        height: 100%;
+      }
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+      max-height: 460px;
+    }
+
+    .dotsCarouselBsItem {
+      position: static;
+      margin: 10px 0 0 0;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+  
+      .dot {
+        height: 75.24px;
+        width: 19%;
+
+        img {
+          display: block;
+          height: 100%;
+          object-fit: cover;
+        }
       }
     }
   }
@@ -104,35 +145,26 @@
 
   .slider-nav {
     margin-bottom: 30px;
-    display: none;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
 
-    @include media-breakpoint-up(lg) {
-      display: block;
+    @include media-breakpoint-down(md) {
+      display: none;
     }
 
-    @include media-breakpoint-up(lg) {
-      margin: 10px;
-    }
-
-    .slick-slide {
-      margin: 6px;
-
-      @include media-breakpoint-up(lg) {
-        margin: 12px;
-      }
-    }
-
-    .slick-current {
-      .dots {
+    .dot {
+      &::selection {
         border: 3px solid #3FB465;
       }
     }
 
-    .dots {
+    .dot {
       display: flex;
       justify-content: center;
       align-items: center;
       background-position: center;
+      flex: 0 0 20%;
       height: 39px;
       overflow: hidden;
       border-radius: 5px;
@@ -170,37 +202,31 @@
       }
     }
 
-    .dots-arrow {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: $white;
-      box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
-      border-radius: 5px;
-      width: 35px;
-      height: 21.98px;
-      top: 37%;
-      position: absolute;
-      z-index: 1;
-      font-size: 12px;
-      color: #8C8C8C;
+    .all-photo {
+      position: relative;
 
-      @include media-breakpoint-down(lg) {
-        display: none;
-        visibility: hidden;
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.5);
       }
-
-      .icon-left-arrow.rotate-180 {
-        transform: rotate(180deg);
+      
+      .text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        font-weight: 600;
+        font-size: 13px;
+        line-height: 18px;
+        color: $white;
+        white-space: nowrap;
       }
-    }
-
-    .dots-arrow-prev {
-      left: 0;
-    }
-
-    .dots-arrow-next {
-      right: 0;
     }
   }
 }
