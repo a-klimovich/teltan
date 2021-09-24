@@ -34,18 +34,26 @@
   </div>
 
   <div class="modal fade" id="fullScrImage">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-      <div class="modal-content">
-        <div class="pb-0 modal-header">
-          <button type="button" class="m-0 mr-auto close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-  
-          <p class="mb-3 modal-title subtitle" id="staticBackdropLabel">KIA SPORTAGE IV 2014</p>
-        </div>
-  
-        <div class="modal-body">
-          <img src="./img/slider-item-img-01.png" alt="">
+    <button type="button" class="m-0 mr-auto close" data-dismiss="modal" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+
+    <div class="row">
+      <div class="col-4">
+        @@include('./item/connection-with-seller.html')
+        @@include('./item/connection-with-seller-registred.html')
+        @@include('./item/connection-with-seller-edit.html')
+      </div>
+
+      <div class="col-8">
+        <div class="row">
+          <div class="col-9">
+            <div class="slider-item-big">slider 1</div>
+          </div>
+
+          <div class="col-3">
+            <div class="slider-item-little">slider 2</div>
+          </div>
         </div>
       </div>
     </div>

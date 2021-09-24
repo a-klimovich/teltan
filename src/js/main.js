@@ -211,6 +211,9 @@
         }]
     });
 
+    // $('.vip-items-slider').slick({...constWithMainOptions, otherOptions});
+    // заменить для карточки товаров
+
     $('.slider-for').slick({
       centerMode: true,
       centerPadding: '0px',
@@ -513,6 +516,27 @@
       </div>
     </div>`,
   )
+
+  if($('#fileUploaderRenderMessageContainer').length > 0) {
+    new FileUploader(
+      // container where will images rendered (prepend method useing)
+      '#fileUploaderRenderMessageContainer',
+      // single input file element, all files will be merged there
+      '#fileUploaderMessageFiles',
+      // render image templte
+      // {{example}} - placeholders for templateOptions render (dataUrl at lest required)
+      // data-file-id - container
+      // data-file-remove-id - data for remove btn (whould has the same as container value)
+  
+      `<div class="ml-3 d-flex align-items-center justify-content-center upload-file" data-file-id="{{name}}">
+        <button type="button" class="mr-2 close" data-file-remove-id="{{name}}">
+          <span>&times;</span>
+        </button>
+  
+        <span class="upload-file__name">{{name}}</span>
+      </div>`,
+    )
+  }
 
   /**
    * Range sliders
