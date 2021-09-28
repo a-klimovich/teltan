@@ -10,7 +10,7 @@
   $(window).scroll(function() {
     const scrollTop = $(window).scrollTop()
 
-    if(prevScrollTop < scrollTop){
+    if(prevScrollTop < scrollTop + 1){
       $header.addClass('hiddenSearch')
     } else {
       $header.removeClass('hiddenSearch')
@@ -213,7 +213,7 @@
 
     // $('.vip-items-slider').slick({...constWithMainOptions, otherOptions});
     // заменить для карточки товаров
-
+    
     $('.slider-for').slick({
       slidesToShow: 1,
       slidesToScroll: 1,
@@ -222,10 +222,13 @@
       responsive: [{
         breakpoint: 768,
         settings: {
-          centerPadding: '15%',
+          centerPadding: '7%',
+          centerMode: true,
+          arrows: false,
         }
       }]
     });
+    
 
     $('.slider-nav div[data-slide]').click(function(e) {
       e.preventDefault();
@@ -233,19 +236,29 @@
       $('.slider-for').slick('slickGoTo', slideno);
     });
 
-     // ITEM SLITER on modal window
+    // ITEM SLITER on modal window
+    let $status = $('.slider-counter-mobile');
+    let $slickElement = $('.mainItemSlider');
+
+    $slickElement.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
+      //currentSlide is undefined on init -- set it to 0 in this case (currentSlide is 0 based)
+      var i = (currentSlide ? currentSlide : 0) + 1;
+      $status.text(i + '/' + slick.slideCount);
+    });
+
      $('.mainItemSlider').slick({
       slidesToShow: 1,
       arrows: false,
       vertical: true,
-      verticalSwiping: true,
       centerMode: true,
+      verticalSwiping: true,
       centerPadding: '20%',
       asNavFor: '.navMainItemSlider',
       responsive: [{
         breakpoint: 768,
         settings: {
           vertical: false,
+          centerPadding: '15%',
           verticalSwiping: false,
           centerPadding: 0,
           centerMode: false,

@@ -99,10 +99,12 @@
 
     .slide {
       height: 215px;
+      padding: 0 5px;
       border-radius: 5px;
       overflow: hidden;
-
+      
       @include media-breakpoint-up(md) {
+        padding: 0 0;
         height: 369px;
       }
 
