@@ -28,8 +28,12 @@
   mapboxgl.accessToken = 'pk.eyJ1IjoiYS1rbGltb2YiLCJhIjoiY2themVqYzI4MGlrZDJxbWlvaDBlMzF6MyJ9.QXFKypM1BnCkQaUZKTuP0g';
 
   // MODALS start
-  $('#registerModal').on('shown.bs.modal', function () {
+  $('#registerModal').on('show.bs.modal', function () {
     $("#logInModal").modal('hide');
+  });
+  
+  $("#registerModal").on('shown.bs.modal', function () {
+    $("body").addClass('modal-open');
   });
   // MODALS end
 
@@ -95,7 +99,6 @@
     e.preventDefault()
     $filterModalContetn.toggleClass('visible')
     
-    $('body').toggleClass('filter-open')
     $('.cord-container').removeClass('overlay')
   })
 
@@ -108,7 +111,6 @@
 
   $('.filterTogglerPropertFullMap').on('click', () => {
     $('.cord-container').addClass('overlay')
-    $('body').toggleClass('filter-open')
   })
 
   $('.collaps-text-about-btn').on('click', function() {
@@ -210,9 +212,6 @@
           }
         }]
     });
-
-    // $('.vip-items-slider').slick({...constWithMainOptions, otherOptions});
-    // заменить для карточки товаров
     
     $('.slider-for').slick({
       slidesToShow: 1,
@@ -255,7 +254,7 @@
       centerPadding: '20%',
       asNavFor: '.navMainItemSlider',
       responsive: [{
-        breakpoint: 768,
+        breakpoint: 856,
         settings: {
           vertical: false,
           centerPadding: '15%',
@@ -277,7 +276,7 @@
       nextArrow: '<div class="dots-arrow dots-arrow-next"><i class="icon-left-arrow"></i></div>',
       asNavFor: '.mainItemSlider',
       responsive: [{
-        breakpoint: 768,
+        breakpoint: 856,
         settings: "unslick",
       }]
     });
@@ -297,11 +296,23 @@
         $('body .modal-backdrop.show').css({"opacity": '0.5'})
         $(".item-slider > .add-item-favorite").css({'z-index': '2', 'top': '20px', 'right': 'auto', 'left': '20px'})
       })
+    } else {
+      $('#fullScrImage').on('shown.bs.modal', function () {
+        $('body .modal-backdrop.show').css({'opacity': '0.8', 'background-color' : '#d5d5d5'})
+      })
+
+      $('#fullScrImage').on('hide.bs.modal', function () {
+        $('body .modal-backdrop.show').css({'opacity': '0.8', 'background-color' : '#d5d5d5'})
+      })
     }
   });
 
-  $('.modalSandMessage').on('shown.bs.modal', () => {
+  $('#modalSandMessage').on('show.bs.modal', () => {
     $('#fullScrImage').modal('hide')
+  })
+
+  $('#modalSandMessage').on('shown.bs.modal', () => {
+    $('body').addClass('modal-open')
   })
 
   // Slider Counter

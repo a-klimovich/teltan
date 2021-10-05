@@ -1,0 +1,27 @@
+@import "../variables";
+@import "node_modules/bootstrap-scss/mixins";
+
+.change-pass {
+  input {
+    height: 47px;
+    border: 1px solid $secondary;
+    padding: 3px 10px;
+    
+    &:active, &:hover, &:focus {
+      outline: 0;
+      outline-offset: 0;
+    }
+  }
+
+  button {
+    @include media-breakpoint-down(lg) {
+      font-size: 13px;
+    }
+  }
+
+  p {
+    @include media-breakpoint-down(lg) {
+      font-size: 13px;
+    }
+  }
+}

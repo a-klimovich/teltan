@@ -100,18 +100,20 @@
   
       <div class="fullScreenItemModal__content">
         <div class="row h-100">
-          <div class="col-3 d-none d-xl-block seller-cards">
+          <div class="col-3 seller-cards">
             <!-- @@include('./item/connection-with-seller.html') -->
             @@include('./item/connection-with-seller-registred.html')
             @@include('./item/connection-with-seller-edit.html')
           </div>
     
-          <div class="col-12 col-xl-9">
+          <div class="main-contetnt col-12 col-xl-9">
             <div class="row h-100">
-              <div class="col-12 col-lg-9 col-xl-10">
+              <div class="col-12 col-xl-10">
                 <div class="mainItemSlider">
                   <div class="slide">
-                    <img src="" alt="">
+                    <div class="h-100 d-flex justify-content-center align-items-center" style="background: #EEEDED">
+                      @@include('../assets/no-image.svg')
+                    </div>
                   </div>
               
                   <div class="slide">
@@ -164,7 +166,7 @@
                 </div>
               </div>
     
-              <div class="d-none d-lg-flex col-lg-3 col-xl-2">
+              <div class="d-none d-xl-flex col-xl-2">
                 <div class="dots navMainItemSlider">
                   <div class="dots__dot">
                     <img src="" alt="">

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  @@include('./utils/head.html')
+</head>
+<body>
+   
+  @@include('./header/header.html')
+
+
+  <main class="mb-5">
+    <div class="container-fluid breadcrumb-beckground p-0 mb-3 mb-lg-4">
+      <div class="container">
+        @@include('breadcrumbs.html')
+      </div>
+    </div>
+
+    <div class="container">
+      <h2 class="mb-4 subtitle">Change password</h2>
+
+      
+      <div class="change-pass card py-5 px-4">
+        <p class="text-right">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore assumenda, iure, id nisi laborum nostrum esse provident qui perferendis inventore voluptates illo aut sunt ullam voluptatem laudantium deserunt nesciunt tempore?</p>
+        
+        <form action="post" class="d-flex flex-column align-items-end">
+          <input type="email" placeholder="Enter your e-mail" class="w-100 mb-4" required>
+
+          <button class="btn btn-primary">Change</button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  @@include('footer.html')
+
+  @@include('./utils/includies.html')
+</body>
+</html>

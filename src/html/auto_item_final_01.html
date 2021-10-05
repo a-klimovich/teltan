@@ -16,16 +16,18 @@
     
     <div class="container">
       <div class="mb-4 row flex-column-reverse flex-lg-row">
-        <div class="d-block d-lg-none">
+        <div class="col-12 d-block d-lg-none">
           @@include('./item/seller-card.html')
         </div>
 
         <div class="col-12 col-lg-4 flex-column">
-          @@include('./item/connection-with-seller.html')
-          @@include('./item/connection-with-seller-registred.html')
-          @@include('./item/connection-with-seller-edit.html')
+          <div class="d-none d-lg-block">
+            @@include('./item/connection-with-seller.html')
+            @@include('./item/connection-with-seller-registred.html')
+            @@include('./item/connection-with-seller-edit.html')
+          </div>
 
-          <div class="mb-4 p-3 card">
+          <div class="mb-4 p-3 card d-none d-lg-block">
             @@include('./item/auto-description.html')
           </div>
 
@@ -36,6 +38,16 @@
 
         <div class="col-12 col-lg-8">
           @@include('./item/item-slider.html')
+
+          <div class="d-block d-lg-none">
+            @@include('./item/connection-with-seller.html')
+            @@include('./item/connection-with-seller-registred.html')
+            @@include('./item/connection-with-seller-edit.html')
+            
+            <div class="mb-4 p-3 card">
+              @@include('./item/auto-description.html')
+            </div>
+          </div>
 
           <div class="mb-5 card">
             @@include('./item/about-auto-item.html')

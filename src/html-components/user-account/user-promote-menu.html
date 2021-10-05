@@ -144,6 +144,78 @@
   </div>
 
   <div class="promote-card">
+    <!-- ID "headingSelectColorItem" shold be UNIC for every product card -->
+    <div class="card-header" id="headingSelectColorItem">
+      <!-- Change for every button "data-target", "aria-controls" data value "#ID under section"-->
+      <button class="btn btn-link btn-block text-right collapsed" type="button" data-toggle="collapse" data-target="#selectColorItem" aria-expanded="false" aria-controls="selectColorItem">
+        <div class="pr-4 d-flex justify-content-between align-items-center">
+          <span class="plus"></span>
+          <span class="card-header__title">Выделить лентой</span>
+        </div>
+        <span class="card-header__icon">@@include('../assets/ribbon.svg')</span>
+        
+      </button>
+    </div>
+
+    <!-- ID "selectColorItem" shold be UNIC for every product card -->
+    <!-- data-parent = MAIN ID data-parent="#accordionUserItem" -->
+    <div id="selectColorItem" class="collapse" aria-labelledby="headingSelectColorItem" data-parent="#accordionUserItem">
+      <div class="p-3 bg-lightgray">
+        <div class="mb-4 p-3 card">
+          <p class="mb-3 font-weight-bold content-subtitle">Что дает поднятие объявления?</p>
+
+          <ul>
+            <li class="mb-3">Объявление поднимется в начало списка в категории и на главной Куфара</li>
+            <li class="mb-3">Минимум в 3 раза больше просмотров и откликов</li>
+            <li>Обновление срока размещения</li>
+          </ul>
+        </div>
+
+        <p class="mb-3 font-weight-bold content-subtitle">Выберите тип поднятия:</p>
+
+        <div class="mb-4 px-3 card">
+          <div class="py-3 border-bottom d-flex justify-content-between">
+            <span class="font-weight-bold">2,09 ₪</span>
+
+            <label class="custom-radio-btn">
+              <input type="radio" name="riseProduct">
+              <span>1 поднятие</span>
+              <span class="checkbox"></span>
+            </label>
+          </div>
+
+          <div class="py-3 border-bottom d-flex justify-content-between">
+            <span class="font-weight-bold">3,50 ₪</span>
+
+            <label class="custom-radio-btn">
+              <input type="radio" name="riseProduct">
+              <span>2 поднятие</span>
+              <span class="checkbox"></span>
+            </label>
+          </div>
+
+          <div class="py-3 d-flex justify-content-between">
+            <span class="font-weight-bold">5,00 ₪</span>
+
+            <label class="custom-radio-btn">
+              <input type="radio" name="riseProduct">
+              <span>4 поднятие</span>
+              <span class="checkbox"></span>
+            </label>
+          </div>
+        </div>
+
+        <p class="mb-3 font-weight-bold content-subtitle">Выберите способ оплаты:</p>
+
+        <div class="d-flex flex-column justify-content-end align-items-end">
+          <button type="button" class="mb-3 btn btn-primary btn-paid"><span class="mr-2">@@include('../assets/icon-coin.svg')</span> Оплатить Tcoins</button>
+          <button type="button" class="btn btn-primary btn-paid"><span class="mr-2">@@include('../assets/icon-card.svg')</span> Оплатить картой</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="promote-card">
     <!-- ID "headingSelectRiddonItem" shold be UNIC for every product card -->
     <div class="card-header" id="headingSelectRiddonItem">
       <!-- data-target="#selectRiddonItem" depend on "accordionUserItem" -->
@@ -151,7 +223,7 @@
       <button class="btn btn-link btn-block text-right collapsed" type="button" data-toggle="collapse" data-target="#selectRiddonItem" aria-expanded="false" aria-controls="selectRiddonItem">
         <div class="pr-4 d-flex justify-content-between align-items-center">
           <span class="plus"></span>
-          <span class="card-header__title">Выделить лентой</span>
+          <span class="card-header__title">Выделить цветом</span>
         </div>
         <span class="card-header__icon">@@include('../assets/fill-bottle.svg')</span>
       </button>
@@ -222,78 +294,6 @@
                 'markerColour': '#FF862F',
                 'text': 'Срочная продажа',
               })
-              <span class="checkbox"></span>
-            </label>
-          </div>
-        </div>
-
-        <p class="mb-3 font-weight-bold content-subtitle">Выберите способ оплаты:</p>
-
-        <div class="d-flex flex-column justify-content-end align-items-end">
-          <button type="button" class="mb-3 btn btn-primary btn-paid"><span class="mr-2">@@include('../assets/icon-coin.svg')</span> Оплатить Tcoins</button>
-          <button type="button" class="btn btn-primary btn-paid"><span class="mr-2">@@include('../assets/icon-card.svg')</span> Оплатить картой</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="promote-card">
-    <!-- ID "headingSelectColorItem" shold be UNIC for every product card -->
-    <div class="card-header" id="headingSelectColorItem">
-      <!-- Change for every button "data-target", "aria-controls" data value "#ID under section"-->
-      <button class="btn btn-link btn-block text-right collapsed" type="button" data-toggle="collapse" data-target="#selectColorItem" aria-expanded="false" aria-controls="selectColorItem">
-        <div class="pr-4 d-flex justify-content-between align-items-center">
-          <span class="plus"></span>
-          <span class="card-header__title">Выделить цветом</span>
-        </div>
-        <span class="card-header__icon">@@include('../assets/ribbon.svg')</span>
-        
-      </button>
-    </div>
-
-    <!-- ID "selectColorItem" shold be UNIC for every product card -->
-    <!-- data-parent = MAIN ID data-parent="#accordionUserItem" -->
-    <div id="selectColorItem" class="collapse" aria-labelledby="headingSelectColorItem" data-parent="#accordionUserItem">
-      <div class="p-3 bg-lightgray">
-        <div class="mb-4 p-3 card">
-          <p class="mb-3 font-weight-bold content-subtitle">Что дает поднятие объявления?</p>
-
-          <ul>
-            <li class="mb-3">Объявление поднимется в начало списка в категории и на главной Куфара</li>
-            <li class="mb-3">Минимум в 3 раза больше просмотров и откликов</li>
-            <li>Обновление срока размещения</li>
-          </ul>
-        </div>
-
-        <p class="mb-3 font-weight-bold content-subtitle">Выберите тип поднятия:</p>
-
-        <div class="mb-4 px-3 card">
-          <div class="py-3 border-bottom d-flex justify-content-between">
-            <span class="font-weight-bold">2,09 ₪</span>
-
-            <label class="custom-radio-btn">
-              <input type="radio" name="riseProduct">
-              <span>1 поднятие</span>
-              <span class="checkbox"></span>
-            </label>
-          </div>
-
-          <div class="py-3 border-bottom d-flex justify-content-between">
-            <span class="font-weight-bold">3,50 ₪</span>
-
-            <label class="custom-radio-btn">
-              <input type="radio" name="riseProduct">
-              <span>2 поднятие</span>
-              <span class="checkbox"></span>
-            </label>
-          </div>
-
-          <div class="py-3 d-flex justify-content-between">
-            <span class="font-weight-bold">5,00 ₪</span>
-
-            <label class="custom-radio-btn">
-              <input type="radio" name="riseProduct">
-              <span>4 поднятие</span>
               <span class="checkbox"></span>
             </label>
           </div>

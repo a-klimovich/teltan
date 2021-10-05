@@ -102,6 +102,10 @@
       padding: 0 5px;
       border-radius: 5px;
       overflow: hidden;
+
+      &[data-toggle=modal] {
+        cursor: zoom-in;
+      }
       
       @include media-breakpoint-up(md) {
         padding: 0 0;

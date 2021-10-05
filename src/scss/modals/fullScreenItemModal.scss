@@ -14,7 +14,20 @@
     height: 100vh;
 
     .seller-cards {
-      padding-top: 40px;
+      padding-top: 60px;
+      display: block;
+    
+      @media (max-width: 1200px) {
+        display: none;
+      }
+    }
+
+    .main-contetnt {
+      
+      @media (max-width: 1200px) {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
     }
 
     .mainItemSlider {
@@ -39,6 +52,8 @@
 
           @include media-breakpoint-down(lg) {
             object-fit: contain;
+            max-width: 100%;
+            max-height: 100%;
           }
 
           &::before {
@@ -135,8 +150,8 @@
 
   .close {
     position: absolute;
-    top: 0;
-    left: 0;
+    top:5px;
+    left:5px;
     padding: 14px;
     font-size: 34px;
     z-index: 20;

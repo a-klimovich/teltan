@@ -21,15 +21,17 @@
         </div>
         
         <div class="col-12 col-lg-4 flex-column">
-          @@include('./item/connection-card-property.html', {
-            title: 'Stylish Duplex Apartment - Nahalat Binyamin Market'
-          })
-          @@include('./item/connection-card-property-registred.html', {
-            title: 'Stylish Duplex Apartment - Nahalat Binyamin Market'
-          })
-          @@include('./item/connection-card-property-edit.html', {
-            title: 'Stylish Duplex Apartment - Nahalat Binyamin Market'
-          })
+          <div class="d-none d-lg-block">
+            @@include('./item/connection-card-property.html', {
+              title: 'Stylish Duplex Apartment - Nahalat Binyamin Market'
+            })
+            @@include('./item/connection-card-property-registred.html', {
+              title: 'Stylish Duplex Apartment - Nahalat Binyamin Market'
+            })
+            @@include('./item/connection-card-property-edit.html', {
+              title: 'Stylish Duplex Apartment - Nahalat Binyamin Market'
+            })
+          </div>
 
           <div class="d-none d-lg-block">
             @@include('./item/seller-card.html')
@@ -40,6 +42,18 @@
 
         <div class="col-12 col-lg-8">
           @@include('./item/item-slider.html')
+
+          <div class="d-block d-lg-none">
+            @@include('./item/connection-card-property.html', {
+              title: 'Stylish Duplex Apartment - Nahalat Binyamin Market'
+            })
+            @@include('./item/connection-card-property-registred.html', {
+              title: 'Stylish Duplex Apartment - Nahalat Binyamin Market'
+            })
+            @@include('./item/connection-card-property-edit.html', {
+              title: 'Stylish Duplex Apartment - Nahalat Binyamin Market'
+            })
+          </div>
           
           @@include('./item/property-about-item.html')
 
