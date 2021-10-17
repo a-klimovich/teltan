@@ -116,6 +116,37 @@
   }
 }
 
+div[data-filter=unActiveAnnouncement] {
+  .product-card.product-line.user-product {
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 1;
+      background: rgba(181, 181, 181, 0.4);
+    }
+
+    .image-block {
+      margin: 0;
+    }
+
+    .edit-user-item {
+      z-index: 2;
+
+      .user-product__btn-edit {
+        background: $white;
+      }
+    }
+
+    .rise-btn {
+      z-index: 2;
+    }
+  }
+}
+
 #userAnnouncementList {
   border-radius: 6px;
   

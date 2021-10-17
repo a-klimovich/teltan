@@ -7,6 +7,8 @@
   position: sticky;
   bottom: 0;
 
+  background-color: $white;
+
   @include media-breakpoint-up(lg) {
     display: none;
   }
@@ -38,6 +40,21 @@
     }
   }
 
+  .button-wrap {
+    padding: 5px 15px;
+
+    .btn {
+      height: 48px;
+      border-radius: 3px;
+    }
+    
+    .btn.btn-show-phone {
+      margin-right: 10px;
+      border: 1px solid #3FB465;
+      color: $primary;
+    }
+  }
+
   .close {
     position: absolute;
     top: 5px;
@@ -45,10 +62,5 @@
     font-size: 30px;
     padding: 10px;
     font-weight: 400;
-  }
-
-  .btn {
-    height: 48px;
-    box-shadow: inset 1px 1px 20px -10px rgba(70, 69, 69, 58%);
   }
 }

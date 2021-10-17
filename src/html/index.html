@@ -96,12 +96,21 @@
           <ul>
             <li class="list-group-item"><a type="button" data-toggle="modal" data-target="#confirmCode" href="#">СМС поддтверждение - confirm_code_final_01</a></li>
               @@include('./modals/modal-confirm-code.html')
+              
             <li class="list-group-item"><a type="button" data-toggle="modal" data-target="#logInModal" href="#">Форма авторизации sign_in_final_01</a></li>
               @@include('./modals/modal-log-in.html')
+              
             <li class="list-group-item"><a type="button" data-toggle="modal" data-target="#registerModal" href="#">Форма регистрации register_final_01</a></li>
               @@include('./modals/modal-registration.html')
+              
             <li class="list-group-item"><a type="button" data-toggle="modal" data-target="#modalSandMessage" href="#">Форма сообщения - modal-message</a></li>
               @@include('./modals/modal-sand-message.html')
+           
+            <li class="list-group-item" id="alertInformer"><a type="button">форма - информер</a></li>
+              @@include('./alerts/alert-informer.html')
+
+            <li class="list-group-item" id="alertConfirmation"><a type="button">форма - подтверждения</a></li>
+              @@include('./alerts/alert-confirmation.html')
           </ul>
         </div>
       </div>

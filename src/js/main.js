@@ -209,6 +209,7 @@
           settings: {
             slidesToShow: 1,
             slidesToScroll: 1,
+            arrows: false,
           }
         }]
     });
@@ -693,3 +694,21 @@
   new RangeSlider('rangeSliderMainFilterMobile');
 })();
 
+  /**
+   * Alerts
+   */
+  $('#alertInformer').on('click', function () {
+    $('.alert-informer').addClass('show');
+    
+    setTimeout(function () {
+      $('.alert-informer').removeClass('show');
+    }, 1000)
+  })
+
+  $('#alertConfirmation').on('click', function () {
+    $('.alert-confirmation').addClass('show');
+  })
+
+  $('.allert .close').click(() => {
+    $('.allert').removeClass('show')
+  })
