@@ -27,6 +27,11 @@
       @media (max-width: 1200px) {
         flex: 0 0 100%;
         max-width: 100%;
+        padding-left: 55px;
+      }
+
+      @include media-breakpoint-down(lg) {
+        padding-left: 0;
       }
     }
 
@@ -37,7 +42,7 @@
       align-items: center;
       height: 100vh;
 
-      @include media-breakpoint-down(lg) {
+      @include media-breakpoint-down(xl) {
         flex-direction: row;
       }
 

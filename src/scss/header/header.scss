@@ -19,9 +19,25 @@
   }
 
   @include media-breakpoint-down (lg) {
+    &__search {
+      height: 78px;
+      transition: all .8s;
+    }
+
+    
+    .search-input-main {
+      transition: all .45s;
+      opacity: 1;
+    }
+    
     &.hiddenSearch {
+      .header__search {
+        height: 33px;
+      }
+      
       .search-input-main {
-        display: none;
+        visibility: hidden;
+        opacity: 0;
       }
     }
   }

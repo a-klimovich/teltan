@@ -5,12 +5,12 @@
   const $header = $(".header");
   const scroll = 0;
   const active = "active";
-  let prevScrollTop = 0
+  let prevScrollTop = 0;
   
   $(window).scroll(function() {
     const scrollTop = $(window).scrollTop()
 
-    if(prevScrollTop < scrollTop + 1){
+    if(prevScrollTop < scrollTop){
       $header.addClass('hiddenSearch')
     } else {
       $header.removeClass('hiddenSearch')
@@ -251,7 +251,7 @@
       vertical: true,
       centerMode: true,
       verticalSwiping: true,
-      centerPadding: '20%',
+      centerPadding: '18%',
       asNavFor: '.navMainItemSlider',
       responsive: [{
         breakpoint: 856,
@@ -282,8 +282,20 @@
     });
 
     $('#fullScrImage').on('shown.bs.modal', function () {
-      $('.mainItemSlider').slick('refresh')
-      $('.navMainItemSlider').slick('refresh')
+      $('.mainItemSlider').slick('refresh');
+      $('.navMainItemSlider').slick('refresh');
+
+      $(this).scroll(function() {
+        const scrollTop = $(window).scrollTop()
+
+        if(prevScrollTop < scrollTop){
+          $('.mainItemSlider').slick('slickNext')
+        } else {
+          $('.mainItemSlider').slick('slickPrev')
+        }
+
+        prevScrollTop = scrollTop;
+      })
     })
 
     if ($(window).width() < 768) {
@@ -313,6 +325,25 @@
 
   $('#modalSandMessage').on('shown.bs.modal', () => {
     $('body').addClass('modal-open')
+
+    new FileUploader(
+      // container where will images rendered (prepend method useing)
+      '#fileUploaderRenderMessageContainer',
+      // single input file element, all files will be merged there
+      '#fileUploaderMessageFiles',
+      // render image templte
+      // {{example}} - placeholders for templateOptions render (dataUrl at lest required)
+      // data-file-id - container
+      // data-file-remove-id - data for remove btn (whould has the same as container value)
+  
+      `<div class="ml-3 d-flex align-items-center justify-content-center upload-file" data-file-id="{{name}}">
+        <button type="button" class="mr-2 close" data-file-remove-id="{{name}}">
+          <span>&times;</span>
+        </button>
+  
+        <span class="upload-file__name">{{name}}</span>
+      </div>`,
+    )
   })
 
   // Slider Counter
@@ -544,12 +575,12 @@
 
     removeFile = (fileId) => {
       const dt = new DataTransfer()
-      const filteredFiles = Array.from(this.fileList).filter((file) => file.name !== fileId)
-      filteredFiles.forEach((file) => dt.items.add(file))
+      // const filteredFiles = Array.from(this.fileList).filter((file) => file.name !== fileId)
+      // filteredFiles.forEach((file) => dt.items.add(file))
 
-      this.fileList = dt.files
+      // this.fileList = dt.files
 
-      this.updateOutputInput()
+      // this.updateOutputInput()
 
       $(`[data-file-id="${fileId}"]`).remove()
     }
@@ -592,27 +623,6 @@
       </div>
     </div>`,
   )
-
-  if($('#fileUploaderRenderMessageContainer').length > 0) {
-    new FileUploader(
-      // container where will images rendered (prepend method useing)
-      '#fileUploaderRenderMessageContainer',
-      // single input file element, all files will be merged there
-      '#fileUploaderMessageFiles',
-      // render image templte
-      // {{example}} - placeholders for templateOptions render (dataUrl at lest required)
-      // data-file-id - container
-      // data-file-remove-id - data for remove btn (whould has the same as container value)
-  
-      `<div class="ml-3 d-flex align-items-center justify-content-center upload-file" data-file-id="{{name}}">
-        <button type="button" class="mr-2 close" data-file-remove-id="{{name}}">
-          <span>&times;</span>
-        </button>
-  
-        <span class="upload-file__name">{{name}}</span>
-      </div>`,
-    )
-  }
 
   /**
    * Range sliders
