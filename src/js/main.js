@@ -434,7 +434,7 @@
 
 
     get stepsNumber() {
-      return this.content.length;
+      this.content.length;
     }
 
     selectStep = (index) => {
@@ -712,3 +712,95 @@
   $('.allert .close').click(() => {
     $('.allert').removeClass('show')
   })
+
+  // Dependense list
+  if ($('#dependentListsCountry').length != 0) {
+  let cities = {
+    bra: ["Сан-Паулу", "Рио-де-Жанейро"],
+    rus: ["Москва", "Санкт-Петербург"],
+    ind: ["Мумбаи", "Дели"],
+    chn: ["Шанхай", "Пекин"],
+    zaf: ["Йоханнесбург", "Кейптаун"]
+  };
+  let country = document.getElementById("dependentListsCountry");
+  let city = document.querySelector("#dependentListsCity");
+  
+  window.onload = selectCountry;
+  country.onchange = selectCountry;
+
+    function selectCountry(ev){
+      city.innerHTML = "";
+      var c = this.value || "bra", o;
+      for(let i = 0; i < cities[c].length; i++){
+        o = new Option(cities[c][i],i,false,false);
+        city.add(o);
+      };
+    }
+  }
+
+  // Header Property Filter
+  let category = 'House';
+  let type = 'Rent';
+
+  function getFilterContent() {
+    const container = $('#filterPropertyBox');
+    const content = $('.filterContent')
+    const active = 'active';
+    const clear = () => {container.find(content).removeClass(active)}
+
+    if (category === 'House' && type === 'Rent') {
+      clear();
+      container.find(`[data-filter-content=0]`).addClass('active')
+    }
+
+    if (category === 'House' && type === 'Sale') {
+      clear();
+      container.find(`[data-filter-content=1]`).addClass('active')
+    }
+
+    if (category === 'Commercial' && type === 'Rent') {
+      clear();
+      container.find(`[data-filter-content=2]`).addClass('active')
+    }
+
+    if (category === 'Commercial' && type === 'Sale') {
+      clear();
+      container.find(`[data-filter-content=3]`).addClass('active')
+    }
+
+    if (category === 'NewBuilding' && type === 'Rent') {
+      clear();
+      container.find(`[data-filter-content=4]`).addClass('active')
+    }
+
+    if (category === 'NewBuilding' && type === 'Sale') {
+      clear();
+      container.find(`[data-filter-content=5]`).addClass('active')
+    }
+  }
+
+
+
+  $('#propertyCategoryHouse').change(function(){
+    category = 'House';
+    getFilterContent()
+  })
+  $('#propertyCategoryCommercial').change(function(){
+    category = 'Commercial';
+    getFilterContent()
+  })
+  $('#propertyCategoryNewBuilding').change(function(){
+    category = 'NewBuilding';
+    getFilterContent()
+  })
+
+  $('#propertyTypeRent').change(function(){
+    type = 'Rent'
+    getFilterContent()
+  })
+  $('#propertyTypeSale').change(function(){
+    type = 'Sale'
+    getFilterContent()
+  })
+
+  

@@ -1,0 +1,35 @@
+@import "../../variables";
+@import "node_modules/bootstrap-scss/mixins";
+
+.modal-filter-header {
+  
+  label.parameter input {
+    display: none;
+  }
+
+  label.parameter {
+    margin-bottom: 0;
+    background: #ededed;
+    height: 26px;
+    margin-right: 5px;
+  }
+
+  label.parameter input + div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 8px;
+
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 15px;
+    color: #333333;
+  }
+
+  label.parameter input:checked + div {
+    background-color: $primary;
+    color: $white;
+  }
+}

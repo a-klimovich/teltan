@@ -1,0 +1,73 @@
+<div class="modal-filter-header modal fade" id="moreFilterPropertySale">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header flex-row-reverse align-items-center justify-content-between">
+        <h5 class="modal-title">Еще фильтры</h5>
+        <button type="button" class="close ml-0" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <div class="row mb-4">
+          <div class="col-10">
+            <div class="d-flex flex-row-reverse align-items-center">
+              <input  type="text" placeholder="От">
+              <input class="mr-2" type="text" placeholder="До">
+            </div>
+          </div>
+          <div class="col-2 text-nowrap">
+            Площадь общая
+          </div>
+        </div>
+
+        <div class="row mb-4 ">
+          <div class="col-10">
+            <div class="d-flex flex-row-reverse align-items-center justify-content-between">
+              <input type="text" placeholder="От">
+              <input type="text" placeholder="До">
+
+              <input type="checkbox" name="flore" id="notFirstFlore">
+              <label class="mb-0" for="notFirstFlore">Не первый</label>
+              
+              <input type="checkbox" name="flore" id="notLastFlore">
+              <label class="mb-0" for="notLastFlore">Не последний</label>
+            </div>
+          </div>
+          <div class="col-2">
+            Этаж
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-10">
+            <div class="d-flex flex-wrap flex-row-reverse align-items-center">
+              <label class="parameter" for="rentParam-1">
+                <input id="rentParam-1" data-title='Параметр 1' type="checkbox">
+                <div>Параметр 1</div>
+              </label>
+
+              <label class="parameter" for="rentParam-2">
+                <input id="rentParam-2" data-title='Параметр 2' type="checkbox">
+                <div>Параметр 2</div>
+              </label>
+
+              <label class="parameter" for="rentParam-3">
+                <input id="rentParam-3" data-title='Параметр 3' type="checkbox">
+                <div>Параметр 3</div>
+              </label>
+            </div>
+          </div>
+          <div class="col-2">
+            Ремонт
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-footer flex-row-reverse border-top-0">
+        <button type="button" class="btn text-primary" data-dismiss="modal">Сбросить фильтры</button>
+        <button type="button" class="btn btn-primary">Применить</button>
+      </div>
+    </div>
+  </div>
+</div>

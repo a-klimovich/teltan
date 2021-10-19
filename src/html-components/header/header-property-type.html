@@ -1,192 +1,71 @@
 <div class="d-lg-flex header-property-type-menu">
+
   <div class="container">
+    <div class="d-flex align-items-center justify-content-end">
+      <ul class="mb-0 header-property-type-menu__type-list">
+        <li>
+          <label class="custom-radio" for="propertyCategoryHouse">
+            <input class="" type="radio" name="propertyCategory" id="propertyCategoryHouse" checked>
+            <span>Жилая</span>
+          </label>
+        </li>
 
-    <nav>
-      <div class="nav nav-tabs justify-content-end" id="nav-tab" role="tablist">
-        <a class="nav-item nav-link radius-top-left active" id="nav-residential-tab" data-toggle="tab" href="#nav-residential" role="tab" aria-controls="nav-residential" aria-selected="true">Residential</a>
-        <a class="nav-item nav-link" id="nav-countryside-tab" data-toggle="tab" href="#nav-countryside" role="tab" aria-controls="nav-countryside" aria-selected="false">Countryside</a>
-        <a class="nav-item nav-link radius-top-right" id="nav-commercial-tab" data-toggle="tab" href="#nav-commercial" role="tab" aria-controls="nav-commercial" aria-selected="false">commercial</a>
+        <span class="text-white mx-3">/</span>
+
+        <li>
+          <label class="custom-radio" for="propertyCategoryCommercial">
+            <input class="" type="radio" name="propertyCategory" id="propertyCategoryCommercial">
+            <span>Коммерческая</span>
+          </label>
+        </li>
+
+        <span class="text-white mx-3">/</span>
+
+        <li>
+          <label class="custom-radio" for="propertyCategoryNewBuilding">
+            <input class="" type="radio" name="propertyCategory" id="propertyCategoryNewBuilding">
+            <span>Новостройки</span>
+          </label>
+        </li>
+      </ul>
+
+      <div class="d-flex nav-category-type">
+        <label class="label-type">
+          <input id="propertyTypeRent" name="propertyType" type="radio" checked>
+          <div>Снять</div>
+        </label>
+
+        <label class="label-type">
+          <input id="propertyTypeSale" name="propertyType" type="radio">
+          <div>Купить</div>
+        </label>
       </div>
-    </nav>
+    </div>
 
-    <div class="tab-content" id="nav-tabContent">
-      <div class="tab-pane fade show active" id="nav-residential" role="tabpanel" aria-labelledby="nav-residential-tab">
-        <ul class="flex-row navbar-nav">
-          <li class="navbar-nav__list">
-            <a class="nav-link" href="#">
-              Rent
-            </a>
+    <div id="filterPropertyBox">
+      <form class="filterContent active" data-filter-content='0'>
+        @@include('./header/header-filters/filter-house-rent.html')
+      </form>
 
-            <ul class="dropdown-custom">
-              <li class="dropdown-item">
-                <a href="#">Overseas property</a>
-              </li>
-              
-              <li class="dropdown-item">
-                <a href="#">House, homestead for rent</a>
-              </li>
-              
-              <li class="dropdown-item">
-                <a href="#">Demand - buy, rent</a>
-              </li>
-              
-              <li class="dropdown-item">
-                <a href="#">Commercial real estate for rent</a>
-              </li>
-              
-              <li class="dropdown-item">
-                <a href="#">Apartament, room for rent</a>
-              </li>
-            </ul>
-          </li>
+      <form class="filterContent " data-filter-content='1'>
+        @@include('./header/header-filters/filter-house-sale.html')
+      </form>
 
-          <li class="navbar-nav__list">
-            <a class="nav-link" href="#">
-              Buy
-            </a>
+      <form class="filterContent " data-filter-content='2'>
+        @@include('./header/header-filters/filter-commercial-rent.html')
+      </form>
 
-            <ul class="dropdown-custom">
-              <li class="dropdown-item">
-                <a href="#">Overseas property</a>
-              </li>
+      <form class="filterContent " data-filter-content='3'>
+        @@include('./header/header-filters/filter-commercial-sale.html')
+      </form>
 
-              <li class="dropdown-item">
-                <a href="#">House, homestead for rent</a>
-              </li>
+      <form class="filterContent " data-filter-content='4'>
+        <!-- TODO -->
+      </form>
 
-              <li class="dropdown-item">
-                <a href="#">Demand - buy, rent</a>
-              </li>
-
-              <li class="dropdown-item">
-                <a href="#">Commercial real estate for rent</a>
-              </li>
-
-              <li class="dropdown-item">
-                <a href="#">Apartament, room for rent</a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-      <div class="tab-pane fade" id="nav-countryside" role="tabpanel" aria-labelledby="nav-countryside-tab">
-        <ul class="flex-row navbar-nav">
-          <li class="navbar-nav__list">
-            <a class="nav-link" href="#">
-              Rent
-            </a>
-
-            <ul class="dropdown-custom">
-              <li class="dropdown-item">
-                <a href="#">Overseas property</a>
-              </li>
-              
-              <li class="dropdown-item">
-                <a href="#">House, homestead for rent</a>
-              </li>
-              
-              <li class="dropdown-item">
-                <a href="#">Demand - buy, rent</a>
-              </li>
-              
-              <li class="dropdown-item">
-                <a href="#">Commercial real estate for rent</a>
-              </li>
-              
-              <li class="dropdown-item">
-                <a href="#">Apartament, room for rent</a>
-              </li>
-            </ul>
-          </li>
-
-          <li class="navbar-nav__list">
-            <a class="nav-link" href="#">
-              Buy
-            </a>
-
-            <ul class="dropdown-custom">
-              <li class="dropdown-item">
-                <a href="#">Overseas property</a>
-              </li>
-
-              <li class="dropdown-item">
-                <a href="#">House, homestead for rent</a>
-              </li>
-
-              <li class="dropdown-item">
-                <a href="#">Demand - buy, rent</a>
-              </li>
-
-              <li class="dropdown-item">
-                <a href="#">Commercial real estate for rent</a>
-              </li>
-
-              <li class="dropdown-item">
-                <a href="#">Apartament, room for rent</a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-      <div class="tab-pane fade" id="nav-commercial" role="tabpanel" aria-labelledby="nav-commercial-tab">
-        <ul class="flex-row navbar-nav">
-          <li class="navbar-nav__list">
-            <a class="nav-link" href="#">
-              Rent
-            </a>
-
-            <ul class="dropdown-custom">
-              <li class="dropdown-item">
-                <a href="#">Overseas property</a>
-              </li>
-              
-              <li class="dropdown-item">
-                <a href="#">House, homestead for rent</a>
-              </li>
-              
-              <li class="dropdown-item">
-                <a href="#">Demand - buy, rent</a>
-              </li>
-              
-              <li class="dropdown-item">
-                <a href="#">Commercial real estate for rent</a>
-              </li>
-              
-              <li class="dropdown-item">
-                <a href="#">Apartament, room for rent</a>
-              </li>
-            </ul>
-          </li>
-
-          <li class="navbar-nav__list">
-            <a class="nav-link" href="#">
-              Buy
-            </a>
-
-            <ul class="dropdown-custom">
-              <li class="dropdown-item">
-                <a href="#">Overseas property</a>
-              </li>
-
-              <li class="dropdown-item">
-                <a href="#">House, homestead for rent</a>
-              </li>
-
-              <li class="dropdown-item">
-                <a href="#">Demand - buy, rent</a>
-              </li>
-
-              <li class="dropdown-item">
-                <a href="#">Commercial real estate for rent</a>
-              </li>
-
-              <li class="dropdown-item">
-                <a href="#">Apartament, room for rent</a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </div>
+      <form class="filterContent " data-filter-content='5'>
+        <!-- TODO -->
+      </form>
     </div>
   </div>
 </div>

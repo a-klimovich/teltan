@@ -1,0 +1,48 @@
+<div class="prop-rent-form">
+  <input class="search-input" type="text" placeholder="Город, адрес, метро, район, ж/д, шоссе или ЖК">
+
+  <button type="button" class="custom-btn-property btn-price">
+    <i class="icon-arrow-down-sign-to-navigate-3"></i>
+    <span>Цена</span>
+  </button>
+
+  <button type="button" class="custom-btn-property btn-room-number">
+    <i class="icon-arrow-down-sign-to-navigate-3"></i>
+    <span>Площадь общая</span>
+  </button>
+
+  <div class="dropdown-menu dropdown-menu_room-number">
+    
+  </div>
+
+  <button type="button" class="custom-btn-property btn-property-type">
+    <i class="icon-arrow-down-sign-to-navigate-3"></i>
+    <span>Тип недвижимости</span>
+  </button>
+
+  <div class="dropdown-menu dropdown-menu_prop-type">
+    
+  </div>
+</div>
+
+<div class="d-flex sub-menu-prop">
+  <button type="#" class="btn btn-primary font-weight-bold submit-btn-search">Найти</button>
+  <button type="#" class="btn bg-white text-primary font-weight-bold border-primary btn-show-map">Показать на карте</button>
+
+  <div class="list-filter-options d-flex justify-content-end align-items-center">
+    <div class="option-item">
+      <button type="button" class="closer">
+        <span aria-hidden="true">&times;</span>
+      </button>
+
+      <span class="title">Цена</span>
+    </div>
+  </div>
+
+  <a href="#" type="button" class="btn-more-filters d-flex justify-content-between align-items-center text-white" data-toggle="modal" data-target="#moreFilterPropertyCommercial">
+    <i class="icon-arrow-down-sign-to-navigate-3"></i>
+    Еще параметры
+  </a>
+
+  @@include('./modals/header-property/commercial-sale.html')
+</div>
