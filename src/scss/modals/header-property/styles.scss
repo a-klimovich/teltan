@@ -2,7 +2,41 @@
 @import "node_modules/bootstrap-scss/mixins";
 
 .modal-filter-header {
-  
+
+  .input-group-modal {
+    input {
+      border: 1px solid #C9C9C9;
+      border-radius: 3px;
+      text-align: left;
+      max-width: 129px;
+      outline: transparent;
+      padding-right: 20px;
+
+      &::placeholder {
+        font-size: 12px;
+        line-height: 16px;
+        color: #999999;
+        text-align: left;
+      }
+    }
+
+    .input-decoration {
+      position: relative;
+
+      span {
+        position: absolute;
+        top: 2px;
+        right: 20px;
+      }
+    }
+  }
+
+  .check-box-prop-filter {
+    .cb-wrap {
+      margin-bottom: 0;
+    }
+  }
+
   label.parameter input {
     display: none;
   }

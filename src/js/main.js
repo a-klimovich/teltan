@@ -783,24 +783,108 @@
 
   $('#propertyCategoryHouse').change(function(){
     category = 'House';
-    getFilterContent()
+    getFilterContent();
+    
+    $('.dropdown-prise').removeClass('active')
+    $('.dropdown-room-number').removeClass('active')
+    $('.dropdown-building-type').removeClass('active')
+    $('.dropdown-area').removeClass('active')
   })
   $('#propertyCategoryCommercial').change(function(){
     category = 'Commercial';
-    getFilterContent()
+    getFilterContent();
+    
+    $('.dropdown-prise').removeClass('active')
+    $('.dropdown-room-number').removeClass('active')
+    $('.dropdown-building-type').removeClass('active')
+    $('.dropdown-area').removeClass('active')
   })
   $('#propertyCategoryNewBuilding').change(function(){
     category = 'NewBuilding';
-    getFilterContent()
+    getFilterContent();
+    
+    $('.dropdown-prise').removeClass('active')
+    $('.dropdown-room-number').removeClass('active')
+    $('.dropdown-building-type').removeClass('active')
+    $('.dropdown-area').removeClass('active')
   })
 
   $('#propertyTypeRent').change(function(){
     type = 'Rent'
     getFilterContent()
+
+    $('.dropdown-prise').removeClass('active')
+    $('.dropdown-room-number').removeClass('active')
+    $('.dropdown-building-type').removeClass('active')
+    $('.dropdown-area').removeClass('active')
   })
   $('#propertyTypeSale').change(function(){
     type = 'Sale'
     getFilterContent()
+
+    $('.dropdown-prise').removeClass('active')
+    $('.dropdown-room-number').removeClass('active')
+    $('.dropdown-building-type').removeClass('active')
+    $('.dropdown-area').removeClass('active')
   })
 
-  
+  $('.buttonShowPropertyFilterPrice').click(() => {
+    $('.dropdown-prise').toggleClass('active')
+  })
+  $('.buttonShowPropertyFilterRoom').click(() => {
+    $('.dropdown-room-number').toggleClass('active')
+  })
+  $('.buttonShowPropertyFilterType').click(() => {
+    $('.dropdown-building-type').toggleClass('active')
+  })
+  $('.buttonShowPropertyFilterArea').click(() => {
+    $('.dropdown-area').toggleClass('active')
+  }) 
+
+
+  // Price filter
+  let userPrise = [0, 0];
+  const showUserPrice = document.getElementById('houseRentUserPrise');
+
+  function howItPrice() {
+    if (userPrise[0] > 0) {
+      showUserPrice.textContent = `от ${userPrise[0]}`
+    }
+
+    if (userPrise[0] > userPrise[1] && userPrise[1] > 1) {
+      showUserPrice.textContent = `до ${userPrise[1]}`
+    }
+
+    if (userPrise[1] > 0) {
+      showUserPrice.textContent = `до ${userPrise[1]}`
+    }
+
+    if (userPrise[0] > 0 && userPrise[1] > 0) {
+      showUserPrice.textContent = `${userPrise[0]} - ${userPrise[1]}`
+    }
+
+    if (userPrise[0] === userPrise[1]) {
+      showUserPrice.textContent = `от ${userPrise[0]}`
+    }
+  }
+
+  $('#inputPriceRentMin').keyup(function () {
+    userPrise[0] = this.value;
+    howItPrice();
+  })
+
+  $('#inputPriceRentMax').keyup(function () {
+    userPrise[1] = this.value;
+    howItPrice();
+  })
+
+  // Room counter filter
+  const roomFilterCountre = [];
+  const countRoomNumberFilter = document.getElementById('#countRoomNumberFilter')
+
+  document.querySelectorAll('#room-filter label').forEach(function(item, idx) {
+
+    item.addEventListener('change', function() {
+      
+    })
+  })
