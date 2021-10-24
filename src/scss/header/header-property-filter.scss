@@ -14,39 +14,38 @@
 
   @include media-breakpoint-down(md) {
     background-attachment: initial;
+    min-height: 120px;
   }
 
-  &__type-list {
+  .header-property__category-list {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 5px 20px;
     background: rgba(0, 0, 0, 0.5);
     border-radius: 3px;
-    list-style: none;
-    max-height: 27px;
+    padding: 0 22px;
 
-    label.custom-radio {
-      margin-bottom: 0;
-      cursor: pointer;
-    }
 
-    label.custom-radio input {
-      display: none;
-    }
-
-    label.custom-radio input+span{
+    a {
       font-size: 13px;
       font-weight: 600;
       color: white;
       text-decoration: underline;
       margin-bottom: 0;
-    }
 
-    label.custom-radio input:checked+span {
-      text-decoration: none;
-      font-weight: 600;
+      &:hover {
+        text-decoration: none;
+      }
+
+      &.active {
+        text-decoration: none;
+        font-weight: bold;
+      }
     }
+  }
+
+  .hide {
+    display: none;
   }
 
   .nav-category-type {
@@ -258,6 +257,8 @@
       max-width: 570px;
       margin-right: 20px;
       padding: 0 13px;
+      flex-wrap: wrap;
+      position: relative;
 
       .option-item {
         position: relative;
@@ -269,6 +270,8 @@
         height: 26px;
         background: #EDEDED;
         border-radius: 3px;
+        margin: 0 0.6rem;
+        margin-bottom: 0.5rem;
 
         .title {
           font-weight: 600;
@@ -288,6 +291,27 @@
           background: transparent;
           padding: 0;
           color: #999999;
+        }
+      }
+
+      .showAllTags {
+        position: absolut;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 0 10px;
+        padding-left: 25px;
+        height: 26px;
+        background: #EDEDED;
+        border-radius: 3px;
+        margin: 0 0.6rem;
+        margin-bottom: 0.5rem;
+
+        span {
+          width: 3px;
+          height: 3px;
+          border-radius: 50%;
+          background: #333333;
         }
       }
     }

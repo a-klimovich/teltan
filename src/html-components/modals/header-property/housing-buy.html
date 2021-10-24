@@ -1,4 +1,4 @@
-<div class="modal-filter-header modal fade" id="moreFilterPropertySale">
+<div class="modal-filter-header modal fade" id="moreFilterPropertyBuy">
   <div class="modal-dialog modal-dialog-centered modal-lg">
     <div class="modal-content">
       <div class="modal-header flex-row-reverse align-items-center justify-content-between">
@@ -14,12 +14,12 @@
             <div class="input-group-modal">
               <div class="d-flex flex-row-reverse align-items-center">
                 <div class="input-decoration">
-                  <input id="inputAreaSaleHouseMin" type="text" placeholder="От">
+                  <input type="text" name="fullAreaBuy" placeholder="От">
                   <span class="decoration">m2</span>
                 </div>
           
                 <div class="input-decoration">
-                  <input id="inputAreaSaleHouseMax" class="mr-3" type="text" placeholder="До">
+                  <input class="mr-3" name="fullAreaBuy" type="text" placeholder="До">
                   <span class="decoration">m2</span>
                 </div>
               </div>
@@ -37,26 +37,26 @@
 
               <div class="d-flex input-group-modal">
                 <div class="input-decoration">
-                  <input id="inputFloreHouseMin" class="mr-3" type="text" placeholder="От">
+                  <input name="fleatBuy" class="mr-3" type="text" placeholder="От">
                 </div>
           
                 <div class="input-decoration">
-                  <input id="inputFloreHouseMax" type="text" placeholder="До">
+                  <input name="fleatBuy" type="text" placeholder="До">
                 </div>
               </div>
 
               <div class="d-flex check-box-prop-filter">
                 <div class="mr-5">
-                  <label for="noFirstFlore" class="cb-wrap">
+                  <label class="cb-wrap">
                     <span class="text">Не первый</span>
-                    <input type="checkbox" name="" id="noFirstFlore">
+                    <input type="checkbox" name="noFirstFloreBuy" value="Не первый">
                     <span class="checkmark"></span>
                   </label>
                 </div>
 
-                <label for="noLastFlore" class="cb-wrap">
+                <label class="cb-wrap">
                   <span class="text">Не последний</span>
-                  <input type="checkbox" name="" id="noLastFlore">
+                  <input type="checkbox" name="noLastFloreBuy" value="Не последний">
                   <span class="checkmark"></span>
                 </label>
               </div>
@@ -68,26 +68,26 @@
           </div>
         </div>
 
-        <div class="row">
+        <div class="row mb-4">
           <div class="col-10">
             <div class="d-flex flex-wrap flex-row-reverse align-items-center">
-              <label class="parameter" for="rentParam-1">
-                <input id="rentParam-1" data-title='Параметр 1' type="checkbox">
+              <label class="parameter">
+                <input  name="repair1Buy" value="Ремонт - 1" type="checkbox">
                 <div>Параметр 1</div>
               </label>
 
-              <label class="parameter" for="rentParam-2">
-                <input id="rentParam-2" data-title='Параметр 2' type="checkbox">
+              <label class="parameter">
+                <input  name="repair2Buy" value="Ремонт - 2" type="checkbox">
                 <div>Параметр 2</div>
               </label>
 
-              <label class="parameter" for="rentParam-3">
-                <input id="rentParam-3" data-title='Параметр 3' type="checkbox">
+              <label class="parameter">
+                <input  name="repair3Buy" value="Ремонт - 3" type="checkbox">
                 <div>Параметр 3</div>
               </label>
             </div>
           </div>
-          <div class="col-2">
+          <div class="col-2 text-right">
             Ремонт
           </div>
         </div>

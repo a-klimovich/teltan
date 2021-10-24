@@ -12,6 +12,10 @@
       outline: transparent;
       padding-right: 20px;
 
+      @include media-breakpoint-down(ld) {
+        max-width: 100%;
+      }
+
       &::placeholder {
         font-size: 12px;
         line-height: 16px;
@@ -25,8 +29,10 @@
 
       span {
         position: absolute;
-        top: 2px;
-        right: 20px;
+        top: 5px;
+        right: 5px;
+        font-size: 13px;
+        font-weight: bold;
       }
     }
   }
@@ -46,6 +52,7 @@
     background: #ededed;
     height: 26px;
     margin-right: 5px;
+    margin-bottom: 7px;
   }
 
   label.parameter input + div {

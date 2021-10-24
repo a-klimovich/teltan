@@ -3,6 +3,7 @@
     <div class="modal-content">
       <div class="modal-header flex-row-reverse align-items-center justify-content-between">
         <h5 class="modal-title">Еще фильтры</h5>
+
         <button type="button" class="close ml-0" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -14,12 +15,12 @@
             <div class="input-group-modal">
               <div class="d-flex flex-row-reverse align-items-center">
                 <div class="input-decoration">
-                  <input id="inputAreaRentHouseMin" type="text" placeholder="От">
+                  <input type="text" name="fullAreaRent" placeholder="От">
                   <span class="decoration">m2</span>
                 </div>
           
                 <div class="input-decoration">
-                  <input id="inputAreaRentHouseMax" class="mr-3" type="text" placeholder="До">
+                  <input class="mr-3" name="fullAreaRent" type="text" placeholder="До">
                   <span class="decoration">m2</span>
                 </div>
               </div>
@@ -37,26 +38,26 @@
 
               <div class="d-flex input-group-modal">
                 <div class="input-decoration">
-                  <input id="inputFloreHouseRentMin" class="mr-3" type="text" placeholder="От">
+                  <input name="fleatRent" class="mr-3" type="text" placeholder="От">
                 </div>
           
                 <div class="input-decoration">
-                  <input id="inputFloreHouseRentMax" type="text" placeholder="До">
+                  <input name="fleatRent" type="text" placeholder="До">
                 </div>
               </div>
 
               <div class="d-flex check-box-prop-filter">
                 <div class="mr-5">
-                  <label for="noFirstRentFlore" class="cb-wrap">
+                  <label class="cb-wrap">
                     <span class="text">Не первый</span>
-                    <input type="checkbox" name="" id="noFirstRentFlore">
+                    <input type="checkbox" name="noFirstFloreRent" value="Не первый">
                     <span class="checkmark"></span>
                   </label>
                 </div>
 
-                <label for="noLastRentFlore" class="cb-wrap">
+                <label class="cb-wrap">
                   <span class="text">Не последний</span>
-                  <input type="checkbox" name="" id="noLastRentFlore">
+                  <input type="checkbox" name="noLastFloreRent" value="Не последний">
                   <span class="checkmark"></span>
                 </label>
               </div>
@@ -71,18 +72,18 @@
         <div class="row mb-4">
           <div class="col-10">
             <div class="d-flex flex-wrap flex-row-reverse align-items-center">
-              <label class="parameter" for="saleParam-1">
-                <input id="saleParam-1" data-title='Параметр 1' type="checkbox">
+              <label class="parameter">
+                <input  name="repair1Rent" value="Ремонт - 1" type="checkbox">
                 <div>Параметр 1</div>
               </label>
 
-              <label class="parameter" for="saleParam-2">
-                <input id="saleParam-2" data-title='Параметр 2' type="checkbox">
+              <label class="parameter">
+                <input  name="repair2Rent" value="Ремонт - 2" type="checkbox">
                 <div>Параметр 2</div>
               </label>
 
-              <label class="parameter" for="saleParam-3">
-                <input id="saleParam-3" data-title='Параметр 3' type="checkbox">
+              <label class="parameter">
+                <input  name="repair3Rent" value="Ремонт - 3" type="checkbox">
                 <div>Параметр 3</div>
               </label>
             </div>
@@ -95,18 +96,18 @@
         <div class="row mb-4 ">
           <div class="col-10">
             <div class="d-flex flex-wrap flex-row-reverse align-items-center">
-              <label class="parameter" for="equipmentParam-1">
-                <input id="equipmentParam-1" data-title='Параметр 1' type="checkbox">
+              <label class="parameter">
+                <input name="equipment1Rent" value="Оснащение 1" type="checkbox">
                 <div>Параметр 1</div>
               </label>
 
-              <label class="parameter" for="equipmentParam-2">
-                <input id="equipmentParam-2" data-title='Параметр 2' type="checkbox">
+              <label class="parameter">
+                <input name="equipment2Rent" value="Оснащение 2" type="checkbox">
                 <div>Параметр 2</div>
               </label>
 
-              <label class="parameter" for="equipmentParam-3">
-                <input id="equipmentParam-3" data-title='Параметр 3' type="checkbox">
+              <label class="parameter">
+                <input name="equipment3Rent" value="Оснащение 3" type="checkbox">
                 <div>Параметр 3</div>
               </label>
             </div>
@@ -119,18 +120,18 @@
         <div class="row mb-4">
           <div class="col-10">
             <div class="d-flex flex-wrap flex-row-reverse align-items-center">
-              <label class="parameter" for="paymentType-1">
-                <input id="paymentType-1" data-title='Параметр 1' type="checkbox">
+              <label class="parameter">
+                <input name="paymentType1Rent" value="payment type 1" type="checkbox">
                 <div>Параметр 1</div>
               </label>
 
-              <label class="parameter" for="paymentType-2">
-                <input id="paymentType-2" data-title='Параметр 2' type="checkbox">
+              <label class="parameter">
+                <input name="paymentType2Rent" value="payment type 2" type="checkbox">
                 <div>Параметр 2</div>
               </label>
 
-              <label class="parameter" for="paymentType-3">
-                <input id="paymentType-3" data-title='Параметр 3' type="checkbox">
+              <label class="parameter">
+                <input name="paymentType3Rent" value="payment type 3" type="checkbox">
                 <div>Параметр 3</div>
               </label>
             </div>
@@ -143,18 +144,18 @@
         <div class="row mb-4">
           <div class="col-10">
             <div class="d-flex flex-wrap flex-row-reverse align-items-center">
-              <label class="parameter" for="accommodations-1">
-                <input id="accommodations-1" data-title='Параметр 1' type="checkbox">
+              <label class="parameter">
+                <input name="accommodations1Rent" value="accommodations - 1" type="checkbox">
                 <div>Параметр 1</div>
               </label>
 
-              <label class="parameter" for="accommodations-2">
-                <input id="accommodations-2" data-title='Параметр 2' type="checkbox">
+              <label class="parameter">
+                <input name="accommodations2Rent" value="accommodations - 2" type="checkbox">
                 <div>Параметр 2</div>
               </label>
 
-              <label class="parameter" for="accommodations-3">
-                <input id="accommodations-3" data-title='Параметр 3' type="checkbox">
+              <label class="parameter">
+                <input name="accommodations3Rent" value="accommodations - 3" type="checkbox">
                 <div>Параметр 3</div>
               </label>
             </div>

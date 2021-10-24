@@ -739,140 +739,224 @@
     }
   }
 
-  // Header Property Filter
-  let category = 'House';
-  let type = 'Rent';
+// Header property filters
 
-  function getFilterContent() {
-    const container = $('#filterPropertyBox');
-    const content = $('.filterContent')
-    const active = 'active';
-    const clear = () => {container.find(content).removeClass(active)}
+  const dropdownElems = [$('.dropdown-prise'), $('.dropdown-room-number'), $('.dropdown-building-type'), $('.dropdown-area')]
 
-    if (category === 'House' && type === 'Rent') {
-      clear();
-      container.find(`[data-filter-content=0]`).addClass('active')
-    }
-
-    if (category === 'House' && type === 'Sale') {
-      clear();
-      container.find(`[data-filter-content=1]`).addClass('active')
-    }
-
-    if (category === 'Commercial' && type === 'Rent') {
-      clear();
-      container.find(`[data-filter-content=2]`).addClass('active')
-    }
-
-    if (category === 'Commercial' && type === 'Sale') {
-      clear();
-      container.find(`[data-filter-content=3]`).addClass('active')
-    }
-
-    if (category === 'NewBuilding' && type === 'Rent') {
-      clear();
-      container.find(`[data-filter-content=4]`).addClass('active')
-    }
-
-    if (category === 'NewBuilding' && type === 'Sale') {
-      clear();
-      container.find(`[data-filter-content=5]`).addClass('active')
-    }
-  }
-
-  const arrElem = [$('.dropdown-prise'), $('.dropdown-room-number'), $('.dropdown-building-type'), $('.dropdown-area')]
-
-  $('#propertyCategoryHouse').change(function(){
-    category = 'House';
-    getFilterContent();
-    
-
-    arrElem.forEach((itm) => {
-      itm.removeClass('active')
-    })
-  })
-  $('#propertyCategoryCommercial').change(function(){
-    category = 'Commercial';
-    getFilterContent();
-    
-    arrElem.forEach((itm) => {
-      itm.removeClass('active')
-    })
-  })
-  $('#propertyCategoryNewBuilding').change(function(){
-    category = 'NewBuilding';
-    getFilterContent();
-    
-    arrElem.forEach((itm) => {
-      itm.removeClass('active')
-    })
-  })
-
-  $('#propertyTypeRent').change(function(){
-    type = 'Rent'
-    getFilterContent()
-
-    arrElem.forEach((itm) => {
-      itm.removeClass('active')
-    })
-  })
-  $('#propertyTypeSale').change(function(){
-    type = 'Sale'
-    getFilterContent()
-
-    arrElem.forEach((itm) => {
-      itm.removeClass('active')
-    })
-  })
-
-  $('.buttonShowPropertyFilterPrice').click(() => {
-    arrElem[0].toggleClass('active')
+  $('.buttonShowPropertyFilterPrice').click(function(e) {
+    dropdownElems[0].toggleClass('active')
   })
   $('.buttonShowPropertyFilterRoom').click(() => {
-    arrElem[1].toggleClass('active')
+    dropdownElems[1].toggleClass('active')
   })
   $('.buttonShowPropertyFilterType').click(() => {
-    arrElem[2].toggleClass('active')
+    dropdownElems[2].toggleClass('active')
   })
   $('.buttonShowPropertyFilterArea').click(() => {
-    arrElem[3].toggleClass('active')
+    dropdownElems[3].toggleClass('active')
   }) 
 
   // Price filter
   let userPrise = [0, 0];
-  const showUserPrice = document.getElementById('houseRentUserPrise');
+  let userAreaRange = [0, 0];
+  let isCategory = '';
+  const showUserPrice = document.querySelector('.houseRentUserPrise');
+  const showUserPriceBuy = document.querySelector('.houseBuyUserPrise');
+  const showAreaRange = document.querySelector('.rentAreaCommerce');
+  const showAreaRangeBuy = document.querySelector('.buyAreaCommerce');
 
-  function howItPrice() {
+
+  function howItPrice(priceElement) {
     if (userPrise[0] > 0) {
-      showUserPrice.textContent = `от ${userPrise[0]}`
+      priceElement.textContent = `от ${userPrise[0]}`
     }
 
     if (userPrise[0] > userPrise[1] && userPrise[1] > 1) {
-      showUserPrice.textContent = `до ${userPrise[1]}`
+      priceElement.textContent = `до ${userPrise[1]}`
     }
 
     if (userPrise[1] > 0) {
-      showUserPrice.textContent = `до ${userPrise[1]}`
+      priceElement.textContent = `до ${userPrise[1]}`
     }
 
     if (userPrise[0] > 0 && userPrise[1] > 0) {
-      showUserPrice.textContent = `${userPrise[0]} - ${userPrise[1]}`
+      priceElement.textContent = `${userPrise[0]} - ${userPrise[1]}`
     }
 
     if (userPrise[0] === userPrise[1]) {
-      showUserPrice.textContent = `от ${userPrise[0]}`
+      priceElement.textContent = `от ${userPrise[0]}`
     }
   }
 
-  $('#inputPriceRentMin').keyup(function () {
+  function howItAreaRange(priceElement) {
+    if (userAreaRange[0] > 0) {
+      priceElement.textContent = `от ${userAreaRange[0]}`
+    }
+
+    if (userAreaRange[0] > userAreaRange[1] && userAreaRange[1] > 1) {
+      priceElement.textContent = `до ${userAreaRange[1]}`
+    }
+
+    if (userAreaRange[1] > 0) {
+      priceElement.textContent = `до ${userAreaRange[1]}`
+    }
+
+    if (userAreaRange[0] > 0 && userAreaRange[1] > 0) {
+      priceElement.textContent = `${userAreaRange[0]} - ${userAreaRange[1]}`
+    }
+
+    if (userAreaRange[0] === userAreaRange[1]) {
+      priceElement.textContent = `от ${userAreaRange[0]}`
+    }
+  }
+
+  // PRICE RANGE
+  $('.priceMin').keyup(function () {
     userPrise[0] = this.value;
-    howItPrice();
+
+    if (isCategory === 'rent') {
+      howItPrice(showUserPrice);
+    } else {
+      howItPrice(showUserPriceBuy);
+    }
   })
 
-  $('#inputPriceRentMax').keyup(function () {
+  $('.priceMax').keyup(function () {
     userPrise[1] = this.value;
-    howItPrice();
+   
+    if (isCategory === 'rent') {
+      howItPrice(showUserPrice);
+    } else {
+      howItPrice(showUserPriceBuy);
+    }
   })
 
-  // TODO работает , запихнуть в проект
-// https://codesandbox.io/s/jquery-playground-forked-nrbj7?file=/index.html
+  // AREA RANGE
+  $('.inputAreaMin').keyup(function () {
+    userAreaRange[0] = this.value;
+
+    if (isCategory === 'rent') {
+      howItAreaRange(showAreaRange);
+    } else {
+      howItAreaRange(showAreaRangeBuy);
+    }
+  })
+
+  $('.inputAreaMax').keyup(function () {
+    userAreaRange[1] = this.value;
+   
+    if (isCategory === 'rent') {
+      howItAreaRange(showAreaRange);
+    } else {
+      howItAreaRange(showAreaRangeBuy);
+    }
+  })
+
+
+const categorySelector = ".category";
+const rentForm = "#mainFiltersRent";
+const buyForm = "#mainFiltersBuy";
+const rentModelForm = "#modalFiltersRent";
+const buyModelForm = "#modalFiltersBuy";
+
+const categoryName = $(categorySelector).attr("name");
+
+const forms = $(`${rentForm}, ${rentModelForm}, ${buyForm}, ${buyModelForm}`);
+
+// рендер тегов
+const renderTags = () => {
+  $(".tags").empty();
+
+  Object.entries(data).forEach(([name, value]) => {
+    if (![categoryName].includes(name) && value) {
+      const text = Array.isArray(value) ? value.join(", ") : value;
+
+      $(".tags").append(`<div class="option-item"><button type="button" data-clear-name="${name}" class="closer" ><span aria-hidden="true">&times;</span></button><span class="title">${text}</span></div>`);
+    }
+  });
+};
+
+// сохранение данных в скрытую форму для отправки
+const setDataToForm = (data) => {
+  $("#allFilters").val(JSON.stringify(data));
+  console.log(data);
+};
+
+// формирование и запись данных
+const updateData = (values) => {
+  data = {
+    [categoryName]: $(`${categorySelector}:checked`).val(),
+    ...values
+  };
+
+  renderTags();
+
+  document.querySelectorAll('.tags .option-item').forEach((item, idx) => {
+    if (idx >= 8) {
+      // TODO add btn to show all tags
+    }
+  }) 
+
+  isCategory = data.category
+  setDataToForm(data);
+};
+
+// изменение категории
+$(categorySelector).on("change", (e) => {
+  $(".main-filters, .modals").toggleClass("hide");
+
+  // ресет сохраненных данных
+  updateData({});
+
+  // ресет всех форм
+  $(rentForm)[0].reset();
+  $(buyForm)[0].reset();
+  $(rentModelForm)[0].reset();
+  $(buyModelForm)[0].reset();
+});
+
+// отправка форм на изменение филдов
+forms.find("input").on("change", function () {
+  $(this).parents().filter("form").submit();
+});
+
+// прерываем отправку формы и записываем данные
+forms.submit(function (e) {
+  e.preventDefault();
+
+  const formData = $(this)
+    .serializeArray()
+    .reduce((acc, { name, value }) => {
+      if (acc[name]) {
+        if (Array.isArray(acc[name])) {
+          return { ...acc, [name]: [...acc[name], value] };
+        } else {
+          return { ...acc, [name]: [acc[name], value] };
+        }
+      }
+
+      return { ...acc, [name]: value };
+    }, {});
+
+  updateData(formData);
+});
+
+// удаление тега и очистка значений в формах по кликку на него
+$(document).on("click", "[data-clear-name]", function (e) {
+  const name = $(this).data("clearName");
+
+  forms
+    .find(`input[name="${name}"]`)
+    .each(function () {
+      switch ($(this).attr("type")) {
+        case "checkbox":
+          $(this).prop("checked", false);
+          break;
+
+        default:
+          $(this).val("");
+          break;
+      }
+    })
+    .submit();
+});

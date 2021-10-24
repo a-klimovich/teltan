@@ -1,0 +1,592 @@
+<div class="d-block d-lg-none mb-5 px-3 property-menu-mobile">
+  <div class="d-flex d-lg-none justify-content-end nav-category-type">
+    <label class="label-type">
+      <input class="category" name="category" value="rent" type="radio" checked>
+      <div>Снять</div>
+    </label>
+
+    <label class="label-type">
+      <input class="category" name="category" value="buy" type="radio">
+      <div>Купить</div>
+    </label>
+  </div>
+  <!-- RENT -->
+  <form id="mainFiltersRent" class="main-filters">
+    <div class="mb-4">
+
+      <div class="card-header bg-white text-right pr-4 d-flex justify-content-end" id="headingOne">
+        <button class="w-100 text-right btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Тип недвижимости 
+        </button>
+  
+        <i class="icon-arrow-down-sign-to-navigate-3 d-flex justify-content-center align-items-center"></i>
+      </div>
+  
+      <div id="collapseOne" class="collapse show" aria-labelledby="headingOne">
+        <div class="card-body bg-white">
+          <div class="d-flex flex-column align-items-end check-box-prop-filter">
+            <label class="cb-wrap">
+              <span class="text">Квартира в новостройке</span>
+              <input type="checkbox" name="areaTypeBuilduing" value="Квартира в новостройке">
+              <span class="checkmark"></span>
+            </label>
+    
+            <label class="cb-wrap">
+              <span class="text">Квартира во вторичке</span>
+              <input type="checkbox" name="areaTypeBuilduing" value="Уживаная квартира">
+              <span class="checkmark"></span>
+            </label>
+    
+            <label class="cb-wrap">
+              <span class="text">Комната</span>
+              <input type="checkbox" name="areaTypeBuilduing" value="Комната">
+              <span class="checkmark"></span>
+            </label>
+    
+            <label class="cb-wrap">
+              <span class="text">Доля</span>
+              <input type="checkbox" name="areaTypeBuilduing" value="Доля">
+              <span class="checkmark"></span>
+            </label>
+    
+            <label class="cb-wrap">
+              <span class="text">Часть дома</span>
+              <input type="checkbox" name="areaTypeBuilduing" value="Часть дома">
+              <span class="checkmark"></span>
+            </label>
+    
+            <label class="cb-wrap">
+              <span class="text">Таун хаус</span>
+              <input type="checkbox" name="areaTypeBuilduing" value="town-hous">
+              <span class="checkmark"></span>
+            </label>
+    
+            <label class="cb-wrap">
+              <span class="text">Участок</span>
+              <input type="checkbox" name="areaTypeBuilduing" value="area">
+              <span class="checkmark"></span>
+            </label>
+    
+          </div>
+        </div>
+      </div>
+  
+      <div class="card-header bg-white text-right pr-4 d-flex justify-content-end" id="headingTwo">
+        <button class="w-100 text-right btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          Число комнат
+        </button>
+  
+        <i class="icon-arrow-down-sign-to-navigate-3 d-flex justify-content-center align-items-center"></i>
+      </div>
+      <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo">
+        <div class="card-body bg-white flex-column">
+          <div class="mb-4 room-number flex-row-reverse">
+            <label class="chackbox-label">
+              <input type="checkbox" name="area" value='1'>
+              <div>1</div>
+            </label>
+      
+            <label class="chackbox-label">
+              <input type="checkbox" name="area" value='1.5'>
+              <div>1,5</div>
+            </label>
+      
+            <label class="chackbox-label">
+              <input type="checkbox" name="area" value='2'>
+              <div>2</div>
+            </label>
+      
+            <label class="chackbox-label">
+              <input type="checkbox" name="area" value='2,5'>
+              <div>2,5</div>
+            </label>
+      
+            <label class="chackbox-label">
+              <input type="checkbox" name="area" value='3'>
+              <div>3</div>
+            </label>
+      
+            <label class="chackbox-label">
+              <input type="checkbox" name="area" value='3,5'>
+              <div>3,5</div>
+            </label>
+      
+            <label class="chackbox-label">
+              <input type="checkbox" name="area" value='4'>
+              <div>4</div>
+            </label>
+      
+            <label class="chackbox-label">
+              <input type="checkbox" name="area" value='4,5'>
+              <div>4,5</div>
+            </label>
+      
+            <label class="chackbox-label">
+              <input type="checkbox" name="area" value='5'>
+              <div>5</div>
+            </label>
+      
+            <label class="chackbox-label">
+              <input  type="checkbox" name="area" value='5,5'>
+              <div>5,5</div>
+            </label>
+      
+            <label class="chackbox-label">
+              <input  type="checkbox" name="area" value='6'>
+              <div>6+</div>
+            </label>
+          </div>
+  
+          <div class="d-flex flex-column align-items-end check-box-prop-filter">
+            <label class="cb-wrap">
+              <span class="text">Студия</span>
+              <input type="checkbox" id="input-studio-rent" value="Студия">
+              <span class="checkmark"></span>
+            </label>
+      
+            <label class="cb-wrap">
+              <span class="text">Свободная планировка</span>
+              <input type="checkbox" id="input-free-layout-rent" value="Свободная планировка">
+              <span class="checkmark"></span>
+            </label>
+          </div>
+        </div>
+      </div>
+  
+      <div class="card-header bg-white text-right pr-4 d-flex justify-content-end" id="headingThree">
+        <button class="w-100 text-right btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          Цена
+        </button>
+  
+        <i class="icon-arrow-down-sign-to-navigate-3 d-flex justify-content-center align-items-center"></i>
+      </div>
+  
+      <div id="collapseThree" class="collapse" aria-labelledby="headingThree">
+        <div class="card-body price-input-box bg-white d-flex">
+          <div class="input-decoration">
+            <input class="priceMin" class="mr-3" type="text" name="price" placeholder="От">
+            <span class="decoration">₪</span>
+          </div>
+    
+          <div class="input-decoration">
+            <input class="priceMax" type="text" name="price" placeholder="До">
+            <span class="decoration">₪</span>
+          </div>
+        </div>
+      </div>
+  
+      <div class="d-flex">
+        <input class="w-100 search-input" type="text" placeholder="Город, адрес, метро, район, ж/д, шоссе или ЖК">
+      </div>
+    </div>
+  
+    <div class="mb-4 d-flex flex-column align-items-center" id="extraMObileOptionsProperty">
+      <div class="btn-mobile-extra-options collapsed" data-toggle="collapse" data-target="#extraMObileOptionsPropertyMmm" aria-expanded="false" aria-controls="extraMObileOptionsPropertyMmm">
+        <span>Расширенный поиск</span>
+        <i class="icon-arrow-down-sign-to-navigate-3 d-flex justify-content-center align-items-center"></i>
+      </div>
+    </div>
+  
+    <div id="extraMObileOptionsPropertyMmm" class="collapse" aria-labelledby="extraMObileOptionsProperty">
+      <div class="card-body modal-filter-header">
+        <div class="mb-4">
+          <div class="mb-3 d-flex justify-content-end">
+            <span class="rentAreaCommerce">Площадь общая</span>
+          </div>
+    
+          <div class="d-flex input-group-modal">
+            <div class="w-50 mr-3 input-decoration">
+              <input class="w-100 inputAreaMin" name="rentAreaCommerce" value="" type="text" placeholder="От">
+              <span class="decoration">m2</span>
+            </div>
+      
+            <div class="w-50 input-decoration">
+              <input class="w-100 inputAreaMax" name="rentAreaCommerce" value="" type="text" placeholder="До">
+              <span class="decoration">m2</span>
+            </div>
+          </div>
+        </div>
+  
+  
+        <div class="mb-4">
+          <div class="mb-3 d-flex justify-content-end text-right">
+            Этаж
+          </div>
+  
+          <div class="mb-4 d-flex input-group-modal">
+            <div class="w-50 mr-3 input-decoration">
+              <input name="fleatBuy" class="w-100" type="text" placeholder="От">
+            </div>
+      
+            <div class="w-50 input-decoration">
+              <input name="fleatBuy" class="w-100" type="text" placeholder="До">
+            </div>
+          </div>
+    
+          <div class="d-flex flex-column check-box-prop-filter">
+            <label class="mb-3 cb-wrap">
+              <span class="text">Не первый</span>
+              <input type="checkbox" name="noFirstFloreBuy" value="Не первый">
+              <span class="checkmark"></span>
+            </label>
+    
+            <label class="cb-wrap">
+              <span class="text">Не последний</span>
+              <input type="checkbox" name="noLastFloreBuy" value="Не последний">
+              <span class="checkmark"></span>
+            </label>
+          </div>
+        </div>
+  
+        <div>
+          <div class="mb-3 d-flex justify-content-end text-right">
+            Ремонт
+          </div>
+  
+          <div class="d-flex flex-wrap align-items-end">
+            <label class="parameter">
+              <input  name="repair1Buy" value="Ремонт - 1" type="checkbox">
+              <div>Параметр 1</div>
+            </label>
+  
+            <label class="parameter">
+              <input  name="repair2Buy" value="Ремонт - 2" type="checkbox">
+              <div>Параметр 2</div>
+            </label>
+  
+            <label class="parameter">
+              <input  name="repair3Buy" value="Ремонт - 3" type="checkbox">
+              <div>Параметр 3</div>
+            </label>
+  
+            <label class="parameter">
+              <input  name="repair4Buy" value="Ремонт - 3" type="checkbox">
+              <div>Параметр 3</div>
+            </label>
+  
+            <label class="parameter">
+              <input  name="repair5Buy" value="Ремонт - 3" type="checkbox">
+              <div>Параметр 3</div>
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+  <!-- RENT END -->
+
+  <!-- BUY -->
+  <form id="mainFiltersBuy" class="main-filters hide">
+    <div class="mb-4" >
+  
+      <div class="card-header bg-white text-right pr-4 d-flex justify-content-end" id="buyCollapseType">
+        <button class="w-100 text-right btn btn-link" data-toggle="collapse" data-target="#buyCollapseType1" aria-expanded="true" aria-controls="buyCollapseType1">
+          Тип недвижимости 
+        </button>
+  
+        <i class="icon-arrow-down-sign-to-navigate-3 d-flex justify-content-center align-items-center"></i>
+      </div>
+  
+      <div id="buyCollapseType1" class="collapse show" aria-labelledby="buyCollapseType">
+        <div class="card-body bg-white">
+          <div class="d-flex flex-column align-items-end check-box-prop-filter">
+            <label class="cb-wrap">
+              <span class="text">Квартира в новостройке</span>
+              <input type="checkbox" name="areaTypeBuilduing" value="Квартира в новостройке">
+              <span class="checkmark"></span>
+            </label>
+    
+            <label class="cb-wrap">
+              <span class="text">Квартира во вторичке</span>
+              <input type="checkbox" name="areaTypeBuilduing" value="Уживаная квартира">
+              <span class="checkmark"></span>
+            </label>
+    
+            <label class="cb-wrap">
+              <span class="text">Комната</span>
+              <input type="checkbox" name="areaTypeBuilduing" value="Комната">
+              <span class="checkmark"></span>
+            </label>
+    
+            <label class="cb-wrap">
+              <span class="text">Доля</span>
+              <input type="checkbox" name="areaTypeBuilduing" value="Доля">
+              <span class="checkmark"></span>
+            </label>
+    
+            <label class="cb-wrap">
+              <span class="text">Часть дома</span>
+              <input type="checkbox" name="areaTypeBuilduing" value="Часть дома">
+              <span class="checkmark"></span>
+            </label>
+    
+            <label class="cb-wrap">
+              <span class="text">Таун хаус</span>
+              <input type="checkbox" name="areaTypeBuilduing" value="town-hous">
+              <span class="checkmark"></span>
+            </label>
+    
+            <label class="cb-wrap">
+              <span class="text">Участок</span>
+              <input type="checkbox" name="areaTypeBuilduing" value="area">
+              <span class="checkmark"></span>
+            </label>
+    
+          </div>
+        </div>
+      </div>
+  
+      <div class="card-header bg-white text-right pr-4 d-flex justify-content-end" id="buyHeadingTwo">
+        <button class="w-100 text-right btn btn-link collapsed" data-toggle="collapse" data-target="#buyCollapseTwo" aria-expanded="false" aria-controls="buyCollapseTwo">
+          Число комнат
+        </button>
+  
+        <i class="icon-arrow-down-sign-to-navigate-3 d-flex justify-content-center align-items-center"></i>
+      </div>
+      <div id="buyCollapseTwo" class="collapse" aria-labelledby="buyHeadingTwo">
+        <div class="card-body bg-white flex-column">
+          <div class="mb-4 room-number flex-row-reverse">
+            <label class="chackbox-label">
+              <input type="checkbox" name="area" value='1'>
+              <div>1</div>
+            </label>
+      
+            <label class="chackbox-label">
+              <input type="checkbox" name="area" value='1.5'>
+              <div>1,5</div>
+            </label>
+      
+            <label class="chackbox-label">
+              <input type="checkbox" name="area" value='2'>
+              <div>2</div>
+            </label>
+      
+            <label class="chackbox-label">
+              <input type="checkbox" name="area" value='2,5'>
+              <div>2,5</div>
+            </label>
+      
+            <label class="chackbox-label">
+              <input type="checkbox" name="area" value='3'>
+              <div>3</div>
+            </label>
+      
+            <label class="chackbox-label">
+              <input type="checkbox" name="area" value='3,5'>
+              <div>3,5</div>
+            </label>
+      
+            <label class="chackbox-label">
+              <input type="checkbox" name="area" value='4'>
+              <div>4</div>
+            </label>
+      
+            <label class="chackbox-label">
+              <input type="checkbox" name="area" value='4,5'>
+              <div>4,5</div>
+            </label>
+      
+            <label class="chackbox-label">
+              <input type="checkbox" name="area" value='5'>
+              <div>5</div>
+            </label>
+      
+            <label class="chackbox-label">
+              <input  type="checkbox" name="area" value='5,5'>
+              <div>5,5</div>
+            </label>
+      
+            <label class="chackbox-label">
+              <input  type="checkbox" name="area" value='6'>
+              <div>6+</div>
+            </label>
+          </div>
+  
+          <div class="d-flex flex-column align-items-end check-box-prop-filter">
+            <label class="cb-wrap">
+              <span class="text">Студия</span>
+              <input type="checkbox" id="input-studio-rent" value="Студия">
+              <span class="checkmark"></span>
+            </label>
+      
+            <label class="cb-wrap">
+              <span class="text">Свободная планировка</span>
+              <input type="checkbox" id="input-free-layout-rent" value="Свободная планировка">
+              <span class="checkmark"></span>
+            </label>
+          </div>
+        </div>
+      </div>
+  
+      <div class="card-header bg-white text-right pr-4 d-flex justify-content-end" id="buyHeadingThree">
+        <button class="w-100 text-right btn btn-link collapsed" data-toggle="collapse" data-target="#buyCollapseThree" aria-expanded="false" aria-controls="collapseThree">
+          Цена
+        </button>
+  
+        <i class="icon-arrow-down-sign-to-navigate-3 d-flex justify-content-center align-items-center"></i>
+      </div>
+  
+      <div id="buyCollapseThree" class="collapse" aria-labelledby="buyHeadingThree">
+        <div class="card-body price-input-box bg-white d-flex">
+          <div class="input-decoration">
+            <input class="priceMin" class="mr-3" type="text" name="price" placeholder="От">
+            <span class="decoration">₪</span>
+          </div>
+    
+          <div class="input-decoration">
+            <input class="priceMax" type="text" name="price" placeholder="До">
+            <span class="decoration">₪</span>
+          </div>
+        </div>
+      </div>
+  
+      <div class="d-flex">
+        <input class="w-100 search-input" type="text" placeholder="Город, адрес, метро, район, ж/д, шоссе или ЖК">
+      </div>
+    </div>
+  
+    <div class="mb-4 d-flex flex-column align-items-center" id="buyExtraMObileOptionsProperty">
+      <div class="btn-mobile-extra-options collapsed" data-toggle="collapse" data-target="#buyExtraMObileOptionsPropertyMmm" aria-expanded="false" aria-controls="buyExtraMObileOptionsPropertyMmm">
+        <span>Расширенный поиск</span>
+        <i class="icon-arrow-down-sign-to-navigate-3 d-flex justify-content-center align-items-center"></i>
+      </div>
+    </div>
+  
+    <div id="buyExtraMObileOptionsPropertyMmm" class="collapse" aria-labelledby="buyExtraMObileOptionsProperty">
+      <div class="card-body modal-filter-header">
+        <div class="mb-4">
+          <div class="mb-3 d-flex justify-content-end">
+            <span class="rentAreaCommerce">Площадь общая</span>
+          </div>
+    
+          <div class="d-flex input-group-modal">
+            <div class="w-50 mr-3 input-decoration">
+              <input class="w-100 inputAreaMin" name="rentAreaCommerce" value="" type="text" placeholder="От">
+              <span class="decoration">m2</span>
+            </div>
+      
+            <div class="w-50 input-decoration">
+              <input class="w-100 inputAreaMax" name="rentAreaCommerce" value="" type="text" placeholder="До">
+              <span class="decoration">m2</span>
+            </div>
+          </div>
+        </div>
+  
+  
+        <div class="mb-4">
+          <div class="mb-3 d-flex justify-content-end text-right">
+            Этаж
+          </div>
+  
+          <div class="mb-4 d-flex input-group-modal">
+            <div class="w-50 mr-3 input-decoration">
+              <input name="fleatBuy" class="w-100" type="text" placeholder="От">
+            </div>
+      
+            <div class="w-50 input-decoration">
+              <input name="fleatBuy" class="w-100" type="text" placeholder="До">
+            </div>
+          </div>
+    
+          <div class="d-flex flex-column check-box-prop-filter">
+            <label class="mb-3 cb-wrap">
+              <span class="text">Не первый</span>
+              <input type="checkbox" name="noFirstFloreBuy" value="Не первый">
+              <span class="checkmark"></span>
+            </label>
+    
+            <label class="cb-wrap">
+              <span class="text">Не последний</span>
+              <input type="checkbox" name="noLastFloreBuy" value="Не последний">
+              <span class="checkmark"></span>
+            </label>
+          </div>
+        </div>
+  
+        <div class="mb-4">
+          <div class="mb-3 d-flex justify-content-end text-right">
+            Ремонт
+          </div>
+  
+          <div class="d-flex flex-wrap align-items-end">
+            <label class="parameter">
+              <input  name="repair1Buy" value="Ремонт - 1" type="checkbox">
+              <div>Параметр 1</div>
+            </label>
+  
+            <label class="parameter">
+              <input  name="repair2Buy" value="Ремонт - 2" type="checkbox">
+              <div>Параметр 2</div>
+            </label>
+  
+            <label class="parameter">
+              <input  name="repair3Buy" value="Ремонт - 3" type="checkbox">
+              <div>Параметр 3</div>
+            </label>
+  
+            <label class="parameter">
+              <input  name="repair4Buy" value="Ремонт - 3" type="checkbox">
+              <div>Параметр 3</div>
+            </label>
+  
+            <label class="parameter">
+              <input  name="repair5Buy" value="Ремонт - 3" type="checkbox">
+              <div>Параметр 3</div>
+            </label>
+          </div>
+        </div>
+  
+        <div class="mb-4">
+          <div class="mb-3 d-flex justify-content-end text-right">
+            Оснащение
+          </div>
+  
+          <div class="d-flex flex-wrap align-items-end">
+            <label class="parameter">
+              <input name="equipment1Rent" value="Оснащение 1" type="checkbox">
+              <div>Параметр 1</div>
+            </label>
+  
+            <label class="parameter">
+              <input name="equipment2Rent" value="Оснащение 2" type="checkbox">
+              <div>Параметр 2</div>
+            </label>
+  
+            <label class="parameter">
+              <input name="equipment3Rent" value="Оснащение 3" type="checkbox">
+              <div>Параметр 3</div>
+            </label>
+          </div>
+        </div>
+        
+        <div class="mb-4">
+          <div class="mb-3 d-flex justify-content-end text-right">
+            Вид оплаты
+          </div>
+  
+          <div class="d-flex flex-wrap align-items-end">
+            <label class="parameter">
+              <input name="accommodations1Rent" value="accommodations - 1" type="checkbox">
+              <div>Параметр 1</div>
+            </label>
+  
+            <label class="parameter">
+              <input name="accommodations2Rent" value="accommodations - 2" type="checkbox">
+              <div>Параметр 2</div>
+            </label>
+  
+            <label class="parameter">
+              <input name="accommodations3Rent" value="accommodations - 3" type="checkbox">
+              <div>Параметр 3</div>
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+  <!-- BUY END -->
+  <div class="d-flex flex-column">
+    <button type="#" class="btn btn-primary font-weight-bold submit-btn-search rounded-0 mb-3" form="sandRequest">Найти</button>
+    <button type="#" class="btn bg-white text-primary font-weight-bold border-primary btn-show-map rounded-0">Показать на карте</button>
+  </div>
+</div>

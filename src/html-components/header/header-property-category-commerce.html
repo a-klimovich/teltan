@@ -1,5 +1,4 @@
 <div class="header-property-type-menu">
-
   <div class="d-flex d-lg-none justify-content-center container p-0">
     <ul class="w-100 mb-0 header-property__category-list">
       <li>
@@ -24,13 +23,13 @@
     <div class="d-flex align-items-center justify-content-end">
       <ul class="mb-0 header-property__category-list">
         <li>
-          <a href="./property_final_01.html" class="active">Жилая</a>
+          <a href="./property_final_01.html">Жилая</a>
         </li>
 
         <span class="text-white mx-3">/</span>
 
         <li>
-          <a href="./property-commerc-filter.html">Коммерческая</a>
+          <a href="./property-commerc-filter.html" class="active">Коммерческая</a>
         </li>
 
         <span class="text-white mx-3">/</span>
@@ -67,93 +66,32 @@
         
           <div class="dropdown-card dropdown-filter dropdown-prise">
             <div class="input-decoration">
-              <input class="priceMin" class="mr-3" type="text" name="price" placeholder="От">
+              <input class="priceMin" class="mr-3" type="text" name="price" value="" placeholder="От">
               <span class="decoration">₪</span>
             </div>
       
             <div class="input-decoration">
-              <input class="priceMax" type="text" name="price" placeholder="До">
+              <input class="priceMax" type="text" name="price" value="" placeholder="До">
               <span class="decoration">₪</span>
             </div>
           </div>
         </div>
       
         <div class="w-15 position-relative">
-          <button type="button" class="custom-btn-property btn-room-number buttonShowPropertyFilterRoom">
+          <button type="button" class="custom-btn-property btn-price buttonShowPropertyFilterArea">
             <i class="icon-arrow-down-sign-to-navigate-3"></i>
-            <span>Число комнат</span>
+            <span class="rentAreaCommerce">Площадь общая</span>
           </button>
-      
-          <div class="dropdown-card dropdown-room-number">
-            <div class="mb-4 room-number flex-row-reverse">
-              <label class="chackbox-label">
-                <input type="checkbox" name="area" value='1'>
-                <div>1</div>
-              </label>
         
-              <label class="chackbox-label">
-                <input type="checkbox" name="area" value='1.5'>
-                <div>1,5</div>
-              </label>
-        
-              <label class="chackbox-label">
-                <input type="checkbox" name="area" value='2'>
-                <div>2</div>
-              </label>
-        
-              <label class="chackbox-label">
-                <input type="checkbox" name="area" value='2,5'>
-                <div>2,5</div>
-              </label>
-        
-              <label class="chackbox-label">
-                <input type="checkbox" name="area" value='3'>
-                <div>3</div>
-              </label>
-        
-              <label class="chackbox-label">
-                <input type="checkbox" name="area" value='3,5'>
-                <div>3,5</div>
-              </label>
-        
-              <label class="chackbox-label">
-                <input type="checkbox" name="area" value='4'>
-                <div>4</div>
-              </label>
-        
-              <label class="chackbox-label">
-                <input type="checkbox" name="area" value='4,5'>
-                <div>4,5</div>
-              </label>
-        
-              <label class="chackbox-label">
-                <input type="checkbox" name="area" value='5'>
-                <div>5</div>
-              </label>
-        
-              <label class="chackbox-label">
-                <input  type="checkbox" name="area" value='5,5'>
-                <div>5,5</div>
-              </label>
-        
-              <label class="chackbox-label">
-                <input  type="checkbox" name="area" value='6'>
-                <div>6+</div>
-              </label>
+          <div class="dropdown-card dropdown-filter dropdown-area">
+            <div class="input-decoration">
+              <input class="inputAreaMin mr-3" name="rentAreaCommerce" value="" type="text" placeholder="От">
+              <span class="decoration">m2</span>
             </div>
       
-            <div class="d-flex flex-column align-items-end check-box-prop-filter">
-              <label class="cb-wrap">
-                <span class="text">Студия</span>
-                <input type="checkbox" id="input-studio-rent" value="Студия">
-                <span class="checkmark"></span>
-              </label>
-        
-              <label class="cb-wrap">
-                <span class="text">Свободная планировка</span>
-                <input type="checkbox" id="input-free-layout-rent" value="Свободная планировка">
-                <span class="checkmark"></span>
-              </label>
+            <div class="input-decoration">
+              <input class="inputAreaMax" name="rentAreaCommerce" value="" type="text" placeholder="До">
+              <span class="decoration">m2</span>
             </div>
           </div>
         </div>
@@ -207,7 +145,6 @@
                 <input type="checkbox" name="areaTypeBuilduing" value="area">
                 <span class="checkmark"></span>
               </label>
-      
             </div>
           </div>
         </div>
@@ -221,15 +158,14 @@
       
         <div class="list-filter-options d-flex justify-content-end align-items-center tags">
           <!-- TAGS PLACE -->
-          <!-- TODO add btn to show all tags -->
         </div>
       
-        <a href="#" type="button" class="btn-more-filters d-flex justify-content-between align-items-center text-white" data-toggle="modal" data-target="#moreFilterPropertyRent">
+        <a href="#" type="button" class="btn-more-filters d-flex justify-content-between align-items-center text-white" data-toggle="modal" data-target="#moreFilterPropertyCommercialRent">
           <i class="icon-arrow-down-sign-to-navigate-3"></i>
           Еще параметры
         </a>
       
-        @@include('./modals/header-property/housing-rent.html')
+        @@include('./modals/header-property/commercial-rent.html')
       </div>
     </form>
 
@@ -247,93 +183,32 @@
         
           <div class="dropdown-card dropdown-filter dropdown-prise">
             <div class="input-decoration">
-              <input class="priceMin" class="mr-3" type="text" name="price" placeholder="От">
+              <input class="priceMin" class="mr-3" type="text" name="price" value="" placeholder="От">
               <span class="decoration">₪</span>
             </div>
       
             <div class="input-decoration">
-              <input class="priceMax" type="text" name="price" placeholder="До">
+              <input class="priceMax" type="text" name="price" value="" placeholder="До">
               <span class="decoration">₪</span>
             </div>
           </div>
         </div>
       
         <div class="w-15 position-relative">
-          <button type="button" class="custom-btn-property btn-room-number buttonShowPropertyFilterRoom">
+          <button type="button" class="custom-btn-property btn-price buttonShowPropertyFilterArea">
             <i class="icon-arrow-down-sign-to-navigate-3"></i>
-            <span class="countRoomNumberFilter">Число комнат</span>
+            <span class="buyAreaCommerce">Площадь общая</span>
           </button>
-      
-          <div class="dropdown-card dropdown-room-number">
-            <div class="mb-4 room-number flex-row-reverse">
-              <label class="chackbox-label">
-                <input type="checkbox" name="area" value='1'>
-                <div>1</div>
-              </label>
         
-              <label class="chackbox-label">
-                <input type="checkbox" name="area" value='1.5'>
-                <div>1,5</div>
-              </label>
-        
-              <label class="chackbox-label">
-                <input type="checkbox" name="area" value='2'>
-                <div>2</div>
-              </label>
-        
-              <label class="chackbox-label">
-                <input type="checkbox" name="area" value='2,5'>
-                <div>2,5</div>
-              </label>
-        
-              <label class="chackbox-label">
-                <input type="checkbox" name="area" value='3'>
-                <div>3</div>
-              </label>
-        
-              <label class="chackbox-label">
-                <input type="checkbox" name="area" value='3,5'>
-                <div>3,5</div>
-              </label>
-        
-              <label class="chackbox-label">
-                <input type="checkbox" name="area" value='4'>
-                <div>4</div>
-              </label>
-        
-              <label class="chackbox-label">
-                <input type="checkbox" name="area" value='4,5'>
-                <div>4,5</div>
-              </label>
-        
-              <label class="chackbox-label">
-                <input type="checkbox" name="area" value='5'>
-                <div>5</div>
-              </label>
-        
-              <label class="chackbox-label"">
-                <input  type="checkbox" name="area" value='5,5'>
-                <div>5,5</div>
-              </label>
-        
-              <label class="chackbox-label"">
-                <input  type="checkbox" name="area" value='6'>
-                <div>6+</div>
-              </label>
+          <div class="dropdown-card dropdown-filter dropdown-area">
+            <div class="input-decoration">
+              <input class="inputAreaMin mr-3" name="buyAreaCommerce" value="" type="text" placeholder="От">
+              <span class="decoration">m2</span>
             </div>
       
-            <div class="d-flex flex-column align-items-end check-box-prop-filter">
-              <label class="cb-wrap">
-                <span class="text">Студия</span>
-                <input type="checkbox" name="input-studio-rent" value="Студия">
-                <span class="checkmark"></span>
-              </label>
-        
-              <label class="cb-wrap" for="input-free-layout-rent">
-                <span class="text">Свободная планировка</span>
-                <input type="checkbox" name="input-free-layout-rent" value="Свободная планировка">
-                <span class="checkmark"></span>
-              </label>
+            <div class="input-decoration">
+              <input class="inputAreaMax" name="buyAreaCommerce" value="" type="text" placeholder="До">
+              <span class="decoration">m2</span>
             </div>
           </div>
         </div>
@@ -403,12 +278,12 @@
           <!-- TAGS PLACE -->
         </div>
       
-        <a href="#" type="button" class="btn-more-filters d-flex justify-content-between align-items-center text-white" data-toggle="modal" data-target="#moreFilterPropertyBuy">
+        <a href="#" type="button" class="btn-more-filters d-flex justify-content-between align-items-center text-white" data-toggle="modal" data-target="#moreFilterPropertyCommercial">
           <i class="icon-arrow-down-sign-to-navigate-3"></i>
           Еще параметры
         </a>
       
-        @@include('./modals/header-property/housing-buy.html')
+        @@include('./modals/header-property/commercial-buy.html')
       </div>
     </form>
 
