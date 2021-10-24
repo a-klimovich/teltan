@@ -391,7 +391,7 @@
   /**
    * Wizard
    */
-  class Wizard {
+   class Wizard {
     options = {
       wrapperSelector: '#wizard',
       stepSelector: '.wizard-step',
@@ -434,7 +434,7 @@
 
 
     get stepsNumber() {
-      this.content.length;
+      return this.content.length;
     }
 
     selectStep = (index) => {
@@ -694,10 +694,11 @@
   new RangeSlider('rangeSliderMainFilterMobile');
 })();
 
+
   /**
    * Alerts
    */
-  $('#alertInformer').on('click', function () {
+   $('#alertInformer').on('click', function () {
     $('.alert-informer').addClass('show');
     
     setTimeout(function () {
@@ -715,13 +716,13 @@
 
   // Dependense list
   if ($('#dependentListsCountry').length != 0) {
-  let cities = {
-    bra: ["Сан-Паулу", "Рио-де-Жанейро"],
-    rus: ["Москва", "Санкт-Петербург"],
-    ind: ["Мумбаи", "Дели"],
-    chn: ["Шанхай", "Пекин"],
-    zaf: ["Йоханнесбург", "Кейптаун"]
-  };
+    let cities = {
+      bra: ["Сан-Паулу", "Рио-де-Жанейро"],
+      rus: ["Москва", "Санкт-Петербург"],
+      ind: ["Мумбаи", "Дели"],
+      chn: ["Шанхай", "Пекин"],
+      zaf: ["Йоханнесбург", "Кейптаун"]
+    };
   let country = document.getElementById("dependentListsCountry");
   let city = document.querySelector("#dependentListsCity");
   
@@ -779,68 +780,63 @@
     }
   }
 
-
+  const arrElem = [$('.dropdown-prise'), $('.dropdown-room-number'), $('.dropdown-building-type'), $('.dropdown-area')]
 
   $('#propertyCategoryHouse').change(function(){
     category = 'House';
     getFilterContent();
     
-    $('.dropdown-prise').removeClass('active')
-    $('.dropdown-room-number').removeClass('active')
-    $('.dropdown-building-type').removeClass('active')
-    $('.dropdown-area').removeClass('active')
+
+    arrElem.forEach((itm) => {
+      itm.removeClass('active')
+    })
   })
   $('#propertyCategoryCommercial').change(function(){
     category = 'Commercial';
     getFilterContent();
     
-    $('.dropdown-prise').removeClass('active')
-    $('.dropdown-room-number').removeClass('active')
-    $('.dropdown-building-type').removeClass('active')
-    $('.dropdown-area').removeClass('active')
+    arrElem.forEach((itm) => {
+      itm.removeClass('active')
+    })
   })
   $('#propertyCategoryNewBuilding').change(function(){
     category = 'NewBuilding';
     getFilterContent();
     
-    $('.dropdown-prise').removeClass('active')
-    $('.dropdown-room-number').removeClass('active')
-    $('.dropdown-building-type').removeClass('active')
-    $('.dropdown-area').removeClass('active')
+    arrElem.forEach((itm) => {
+      itm.removeClass('active')
+    })
   })
 
   $('#propertyTypeRent').change(function(){
     type = 'Rent'
     getFilterContent()
 
-    $('.dropdown-prise').removeClass('active')
-    $('.dropdown-room-number').removeClass('active')
-    $('.dropdown-building-type').removeClass('active')
-    $('.dropdown-area').removeClass('active')
+    arrElem.forEach((itm) => {
+      itm.removeClass('active')
+    })
   })
   $('#propertyTypeSale').change(function(){
     type = 'Sale'
     getFilterContent()
 
-    $('.dropdown-prise').removeClass('active')
-    $('.dropdown-room-number').removeClass('active')
-    $('.dropdown-building-type').removeClass('active')
-    $('.dropdown-area').removeClass('active')
+    arrElem.forEach((itm) => {
+      itm.removeClass('active')
+    })
   })
 
   $('.buttonShowPropertyFilterPrice').click(() => {
-    $('.dropdown-prise').toggleClass('active')
+    arrElem[0].toggleClass('active')
   })
   $('.buttonShowPropertyFilterRoom').click(() => {
-    $('.dropdown-room-number').toggleClass('active')
+    arrElem[1].toggleClass('active')
   })
   $('.buttonShowPropertyFilterType').click(() => {
-    $('.dropdown-building-type').toggleClass('active')
+    arrElem[2].toggleClass('active')
   })
   $('.buttonShowPropertyFilterArea').click(() => {
-    $('.dropdown-area').toggleClass('active')
+    arrElem[3].toggleClass('active')
   }) 
-
 
   // Price filter
   let userPrise = [0, 0];
@@ -878,13 +874,5 @@
     howItPrice();
   })
 
-  // Room counter filter
-  const roomFilterCountre = [];
-  const countRoomNumberFilter = document.getElementById('#countRoomNumberFilter')
-
-  document.querySelectorAll('#room-filter label').forEach(function(item, idx) {
-
-    item.addEventListener('change', function() {
-      
-    })
-  })
+  // TODO работает , запихнуть в проект
+// https://codesandbox.io/s/jquery-playground-forked-nrbj7?file=/index.html
