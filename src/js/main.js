@@ -237,14 +237,14 @@
     });
 
     // ITEM SLITER on modal window
-    let $status = $('.slider-counter-mobile');
-    let $slickElement = $('.mainItemSlider');
+    // let $status = $('.slider-counter-mobile');
+    // let $slickElement = $('.mainItemSlider');
 
-    $slickElement.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
-      //currentSlide is undefined on init -- set it to 0 in this case (currentSlide is 0 based)
-      var i = (currentSlide ? currentSlide : 0) + 1;
-      $status.text(i + '/' + slick.slideCount);
-    });
+    // $slickElement.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
+    //   // currentSlide is undefined on init -- set it to 0 in this case (currentSlide is 0 based)
+    //   var i = (currentSlide ? currentSlide : 0) + 1;
+    //   $status.text(i + '/' + slick.slideCount);
+    // });
 
      $('.mainItemSlider').slick({
       slidesToShow: 1,
@@ -282,46 +282,39 @@
       }]
     });
 
-    $('#fullScrImage').on('shown.bs.modal', function () {
+    $('#modalFullSize').on('shown.bs.modal', function () {
       $('.mainItemSlider').slick('refresh');
       $('.navMainItemSlider').slick('refresh');
-
-      $(this).scroll(function() {
-        const scrollTop = $(window).scrollTop()
-
-        if(prevScrollTop < scrollTop){
-          $('.mainItemSlider').slick('slickNext')
-        } else {
-          $('.mainItemSlider').slick('slickPrev')
-        }
-
-        prevScrollTop = scrollTop;
-      })
     })
 
     if ($(window).width() < 768) {
-      $('#fullScrImage').on('shown.bs.modal', function () {
+      $('#modalFullSize').on('shown.bs.modal', function () {
         $('body .modal-backdrop.show').css({"opacity": '1'})
         $(".item-slider > .add-item-favorite").css({'z-index': '2000', 'top': '-100%', 'right': '20px', 'left': 'auto'})
       })
 
-      $('#fullScrImage').on('hide.bs.modal', function () {
+      $('#modalFullSize').on('hide.bs.modal', function () {
         $('body .modal-backdrop.show').css({"opacity": '0.5'})
         $(".item-slider > .add-item-favorite").css({'z-index': '2', 'top': '20px', 'right': 'auto', 'left': '20px'})
       })
     } else {
-      $('#fullScrImage').on('shown.bs.modal', function () {
+      $('#modalFullSize').on('shown.bs.modal', function () {
         $('body .modal-backdrop.show').css({'opacity': '0.8', 'background-color' : '#d5d5d5'})
       })
 
-      $('#fullScrImage').on('hide.bs.modal', function () {
+      $('#modalFullSize').on('hide.bs.modal', function () {
         $('body .modal-backdrop.show').css({'opacity': '0.8', 'background-color' : '#d5d5d5'})
       })
     }
   });
 
+    // Slider Counter
+  $itemSlider.on('slid.bs.carousel', function (e) {
+    $itemSlider.find('.current-slide-number').text(e.to + 1);
+  })
+
   $('#modalSandMessage').on('show.bs.modal', () => {
-    $('#fullScrImage').modal('hide')
+    $('#modalFullSize').modal('hide')
   })
 
   $('#modalSandMessage').on('shown.bs.modal', () => {
@@ -345,11 +338,6 @@
         <span class="upload-file__name">{{name}}</span>
       </div>`,
     )
-  })
-
-  // Slider Counter
-  $itemSlider.on('slid.bs.carousel', function (e) {
-    $itemSlider.find('.current-slide-number').text(e.to + 1);
   })
 
   /**
@@ -698,7 +686,7 @@
   /**
    * Alerts
    */
-   $('#alertInformer').on('click', function () {
+  $('#alertInformer').on('click', function () {
     $('.alert-informer').addClass('show');
     
     setTimeout(function () {
@@ -764,6 +752,11 @@
   const showUserPriceBuy = document.querySelector('.houseBuyUserPrise');
   const showAreaRange = document.querySelector('.rentAreaCommerce');
   const showAreaRangeBuy = document.querySelector('.buyAreaCommerce');
+
+  const typePropertyRentCommerce = document.querySelector('.typePropertyRentCommerce')
+  const typePropertyBuyCommerce = document.querySelector('.typePropertyBuyCommerce')
+  const typePropertyRent = document.querySelector('.typePropertyRent')
+  const typePropertyBuy = document.querySelector('.typePropertyBuy')
 
 
   function howItPrice(priceElement) {
@@ -859,6 +852,7 @@ const buyForm = "#mainFiltersBuy";
 const rentModelForm = "#modalFiltersRent";
 const buyModelForm = "#modalFiltersBuy";
 
+
 const categoryName = $(categorySelector).attr("name");
 
 const forms = $(`${rentForm}, ${rentModelForm}, ${buyForm}, ${buyModelForm}`);
@@ -879,7 +873,6 @@ const renderTags = () => {
 // сохранение данных в скрытую форму для отправки
 const setDataToForm = (data) => {
   $("#allFilters").val(JSON.stringify(data));
-  console.log(data);
 };
 
 // формирование и запись данных
@@ -890,12 +883,6 @@ const updateData = (values) => {
   };
 
   renderTags();
-
-  document.querySelectorAll('.tags .option-item').forEach((item, idx) => {
-    if (idx >= 8) {
-      // TODO add btn to show all tags
-    }
-  }) 
 
   isCategory = data.category
   setDataToForm(data);
@@ -914,6 +901,17 @@ $(categorySelector).on("change", (e) => {
   $(rentModelForm)[0].reset();
   $(buyModelForm)[0].reset();
 });
+
+$('.ressetFilterAll').on('click', () => {
+  // ресет сохраненных данных
+  updateData({});
+
+  // ресет всех форм
+  $(rentForm)[0].reset();
+  $(buyForm)[0].reset();
+  $(rentModelForm)[0].reset();
+  $(buyModelForm)[0].reset();
+})
 
 // отправка форм на изменение филдов
 forms.find("input").on("change", function () {

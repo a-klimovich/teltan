@@ -278,6 +278,10 @@
           font-size: 11px;
           line-height: 15px;
           color: #333333;
+          max-width: 190px;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
         }
 
         .closer {
