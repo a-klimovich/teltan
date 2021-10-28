@@ -6,13 +6,13 @@
   const scroll = 0;
   const active = "active";
   let prevScrollTop = 0;
-  
+
   $(window).scroll(function() {
     const scrollTop = $(window).scrollTop()
 
-    if(prevScrollTop < scrollTop){
+    if(prevScrollTop < scrollTop && prevScrollTop > 0){
       $header.addClass('hiddenSearch')
-    } else {
+    } else if(prevScrollTop - 20 > scrollTop){
       $header.removeClass('hiddenSearch')
     }
 
@@ -237,14 +237,14 @@
     });
 
     // ITEM SLITER on modal window
-    // let $status = $('.slider-counter-mobile');
-    // let $slickElement = $('.mainItemSlider');
+    let $status = $('.slider-counter-mobile');
+    let $slickElement = $('.mainItemSlider');
 
-    // $slickElement.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
-    //   // currentSlide is undefined on init -- set it to 0 in this case (currentSlide is 0 based)
-    //   var i = (currentSlide ? currentSlide : 0) + 1;
-    //   $status.text(i + '/' + slick.slideCount);
-    // });
+    $slickElement.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
+      // currentSlide is undefined on init -- set it to 0 in this case (currentSlide is 0 based)
+      var i = (currentSlide ? currentSlide : 0) + 1;
+      $status.text(i + '/' + slick.slideCount);
+    });
 
      $('.mainItemSlider').slick({
       slidesToShow: 1,
@@ -281,6 +281,16 @@
         settings: "unslick",
       }]
     });
+
+    $('.mainItemSlider').on('wheel', (function(e) {
+      e.preventDefault();
+
+      if (e.originalEvent.deltaY < 0) {
+        $(this).slick('slickNext');
+      } else {
+        $(this).slick('slickPrev');
+      }
+    }));
 
     $('#modalFullSize').on('shown.bs.modal', function () {
       $('.mainItemSlider').slick('refresh');
@@ -727,27 +737,39 @@
     }
   }
 
-// Header property filters
-
+// Header property filters / dropdown
   const dropdownElems = [$('.dropdown-prise'), $('.dropdown-room-number'), $('.dropdown-building-type'), $('.dropdown-area')]
 
   $('.buttonShowPropertyFilterPrice').click(function(e) {
-    dropdownElems[0].toggleClass('active')
+    remooveDropDownActiveMenu(dropdownElems[0])
   })
+
   $('.buttonShowPropertyFilterRoom').click(() => {
-    dropdownElems[1].toggleClass('active')
+    remooveDropDownActiveMenu(dropdownElems[1])
   })
+
   $('.buttonShowPropertyFilterType').click(() => {
-    dropdownElems[2].toggleClass('active')
+    remooveDropDownActiveMenu(dropdownElems[2])
   })
+
   $('.buttonShowPropertyFilterArea').click(() => {
-    dropdownElems[3].toggleClass('active')
+    remooveDropDownActiveMenu(dropdownElems[3])
   }) 
+
+  function remooveDropDownActiveMenu(elem) {
+    elem.attr("class").split(/\s+/).forEach((item) => {
+      if(item === 'active') {
+        elem.removeClass('active')
+      } else {
+        dropdownElems.forEach(i => i.removeClass('active'));
+        elem.addClass('active')
+      }
+    })
+  }
 
   // Price filter
   let userPrise = [0, 0];
   let userAreaRange = [0, 0];
-  let isCategory = '';
   const showUserPrice = document.querySelector('.houseRentUserPrise');
   const showUserPriceBuy = document.querySelector('.houseBuyUserPrise');
   const showAreaRange = document.querySelector('.rentAreaCommerce');
@@ -807,7 +829,7 @@
   $('.priceMin').keyup(function () {
     userPrise[0] = this.value;
 
-    if (isCategory === 'rent') {
+    if (data.category === 'rent') {
       howItPrice(showUserPrice);
     } else {
       howItPrice(showUserPriceBuy);
@@ -817,7 +839,7 @@
   $('.priceMax').keyup(function () {
     userPrise[1] = this.value;
    
-    if (isCategory === 'rent') {
+    if (data.category === 'rent') {
       howItPrice(showUserPrice);
     } else {
       howItPrice(showUserPriceBuy);
@@ -828,7 +850,7 @@
   $('.inputAreaMin').keyup(function () {
     userAreaRange[0] = this.value;
 
-    if (isCategory === 'rent') {
+    if (data.category === 'rent') {
       howItAreaRange(showAreaRange);
     } else {
       howItAreaRange(showAreaRangeBuy);
@@ -838,7 +860,7 @@
   $('.inputAreaMax').keyup(function () {
     userAreaRange[1] = this.value;
    
-    if (isCategory === 'rent') {
+    if (data.category === 'rent') {
       howItAreaRange(showAreaRange);
     } else {
       howItAreaRange(showAreaRangeBuy);
@@ -847,28 +869,65 @@
 
 
 const categorySelector = ".category";
+const categoryMobileSelector = ".categoryMobile"
 const rentForm = "#mainFiltersRent";
 const buyForm = "#mainFiltersBuy";
 const rentModelForm = "#modalFiltersRent";
 const buyModelForm = "#modalFiltersBuy";
+const roomNumer = $('.countRoomNumberFilter');
+const typeProperty = $('.typeProperty');
 
+let data = {}
 
 const categoryName = $(categorySelector).attr("name");
+const categoryNameMobile = $(categoryMobileSelector).attr("name");
 
 const forms = $(`${rentForm}, ${rentModelForm}, ${buyForm}, ${buyModelForm}`);
 
 // рендер тегов
 const renderTags = () => {
-  $(".tags").empty();
-
+  $(".tags .option-item").remove();
+  
   Object.entries(data).forEach(([name, value]) => {
     if (![categoryName].includes(name) && value) {
       const text = Array.isArray(value) ? value.join(", ") : value;
+      
+      if (!data.area || /^\s*$/.test(data.area)) {
+        roomNumer.empty()
+        roomNumer.append('Число комнат');
+      }
+      if (data.area) {
+        roomNumer.empty()
+        roomNumer.append(data.area);
+      }
+      if (Array.isArray(data.area)) {
+        roomNumer.empty()
+        console.log(data.area);
+        roomNumer.append(data.area.join(', '));
+      }
 
-      $(".tags").append(`<div class="option-item"><button type="button" data-clear-name="${name}" class="closer" ><span aria-hidden="true">&times;</span></button><span class="title">${text}</span></div>`);
+      if (!data.areaTypeBuilduing || /^\s*$/.test(data.areaTypeBuilduing)) {
+        typeProperty.empty()
+        typeProperty.append('Тип недвижимости');
+      }
+      if (data.areaTypeBuilduing) {
+        typeProperty.empty()
+        typeProperty.append(data.areaTypeBuilduing);
+      }
+      if (Array.isArray(data.areaTypeBuilduing)) {
+        typeProperty.empty()
+        typeProperty.append(data.areaTypeBuilduing.join(', '));
+      }
+
+      $(".tags").append(`<div class="option-item"><button type="button" data-clear-name="${name}" class="closer" ><span aria-hidden="true">&times;</span></button><span class="title">${text}</span></div>`)
     }
   });
 };
+
+$('.showAllTags').on('click', () => {
+  $('.tags').toggleClass('active')
+  $('.showAllTags').removeClass('active')
+})
 
 // сохранение данных в скрытую форму для отправки
 const setDataToForm = (data) => {
@@ -877,19 +936,40 @@ const setDataToForm = (data) => {
 
 // формирование и запись данных
 const updateData = (values) => {
+  const screenWidth = window.screen.width;
+
   data = {
     [categoryName]: $(`${categorySelector}:checked`).val(),
     ...values
   };
 
+  if (screenWidth < 768) {
+    data = {
+      [categoryNameMobile]: $(`${categoryMobileSelector}:checked`).val(),
+      ...values
+    };
+  }
+
   renderTags();
 
-  isCategory = data.category
   setDataToForm(data);
 };
 
 // изменение категории
 $(categorySelector).on("change", (e) => {
+  $(".main-filters, .modals").toggleClass("hide");
+
+  // ресет сохраненных данных
+  updateData({});
+
+  // ресет всех форм
+  $(rentForm)[0].reset();
+  $(buyForm)[0].reset();
+  $(rentModelForm)[0].reset();
+  $(buyModelForm)[0].reset();
+});
+
+$(categoryMobileSelector).on("change", (e) => {
   $(".main-filters, .modals").toggleClass("hide");
 
   // ресет сохраненных данных
@@ -943,11 +1023,14 @@ forms.submit(function (e) {
 $(document).on("click", "[data-clear-name]", function (e) {
   const name = $(this).data("clearName");
 
+  console.log(name)
+
   forms
     .find(`input[name="${name}"]`)
     .each(function () {
       switch ($(this).attr("type")) {
         case "checkbox":
+        case "radio":
           $(this).prop("checked", false);
           break;
 

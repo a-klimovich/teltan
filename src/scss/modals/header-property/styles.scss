@@ -3,6 +3,21 @@
 
 .modal-filter-header {
 
+  .close {
+    font-size: 32px;
+    font-weight: 400;
+  }
+
+  .modal-title {
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 18px;
+  }
+
+  .modal-lg {
+    max-width: 920px;
+  }
+
   .input-group-modal {
     input {
       border: 1px solid #C9C9C9;
@@ -51,8 +66,8 @@
     margin-bottom: 0;
     background: #ededed;
     height: 26px;
-    margin-right: 5px;
-    margin-bottom: 7px;
+    margin: 3px;
+    cursor: pointer;
   }
 
   label.parameter input + div {

@@ -26,7 +26,11 @@
       </h1>
 
       <div class="row">
-        <div class="col-12 col-lg-9 d-flex flex-column">
+        <div class="col d-flex flex-column">
+          <div class="property-map">
+            <div id="map" style="width: 100%; height: 100%"></div>
+            <button class="show-all-items">Показать объявления на карте</button>
+          </div>
 
           <div class="mb-5 row d-flex align-items-center">
             <div class="col-12 col-xl-6 justify-content-center">
@@ -37,7 +41,18 @@
           </div>
 
           <!-- Block products card -->
-          <div class="row row-cols-2 row-cols-lg-3">
+          <div class="row row-cols-2 row-cols-lg-4">
+            <div class="mb-4 col">
+              @@include('./product-card/property-product.html', {
+                'image': './img/room_01.png',
+                'price': '$27 600',
+                'title': 'Concert tickets for Alisher Morgenstern',
+                'addres': 'Tel Aviv-Yafo, Tel Aviv District, Israel',
+                'category': 'Sale of apartaments',
+                'views': '2531',
+                'date': 'Yesterday, 20:28',
+              })
+            </div>
             <div class="mb-4 col">
               @@include('./product-card/property-product.html', {
                 'image': './img/room_01.png',
@@ -103,7 +118,18 @@
           <!-- Vip card END -->
 
           <!-- Block products card -->
-          <div class="row row-cols-2 row-cols-lg-3">
+          <div class="row row-cols-2 row-cols-lg-4">
+            <div class="mb-4 col">
+              @@include('./product-card/property-product.html', {
+                'image': './img/room_01.png',
+                'price': '$27 600',
+                'title': 'Concert tickets for Alisher Morgenstern',
+                'addres': 'Tel Aviv-Yafo, Tel Aviv District, Israel',
+                'category': 'Sale of apartaments',
+                'views': '2531',
+                'date': 'Yesterday, 20:28',
+              })
+            </div>
             <div class="mb-4 col">
               @@include('./product-card/property-product.html', {
                 'image': './img/room_01.png',
@@ -147,10 +173,6 @@
           @@include('text-about-category.html', {
             subtitle: 'the property',
           })
-        </div>
-        
-        <div class="col col-lg-3">
-          @@include('./filters/property-filter.html')
         </div>
       </div>
     </div>

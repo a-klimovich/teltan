@@ -11,10 +11,20 @@
   background-position-y: center;
   background-repeat: no-repeat;
   min-height: 208px;
+  
+  // TODO
+  margin-bottom: -1.3rem;
+
 
   @include media-breakpoint-down(md) {
     background-attachment: initial;
     min-height: 120px;
+  }
+
+  .countRoomNumberFilter, .typeProperty  {
+    white-space: nowrap;
+    max-height: 1.2rem;
+    overflow: hidden;
   }
 
   .header-property__category-list {
@@ -24,6 +34,7 @@
     background: rgba(0, 0, 0, 0.5);
     border-radius: 3px;
     padding: 0 22px;
+    list-style: none;
 
 
     a {
@@ -200,6 +211,7 @@
   
         label.chackbox-label {
           margin: 4px;
+          cursor: pointer;
         }
   
         label.chackbox-label input + div {
@@ -253,12 +265,53 @@
     }
 
     .list-filter-options {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
       width: 100%;
       max-width: 570px;
       margin-right: 20px;
       padding: 0 13px;
       flex-wrap: wrap;
       position: relative;
+
+      .tags {
+        flex-wrap: wrap;
+        max-height: 36px;
+        overflow: hidden;
+        padding: 0 11px;
+
+        &.active {
+          max-height: 100%;
+          overflow: visible;
+          z-index: 1;
+        }
+      }
+      
+      .showAllTags {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 39px;
+        height: 26.28px;
+        background: #EDEDED;
+        border-radius: 3px;
+        cursor: pointer;
+        border: none;
+        margin: 0;
+        padding: 0 6px;
+        
+        &.active {
+          display: none;
+        }
+
+        span {
+          width: 3px;
+          height: 3px;
+          background: $black;
+          border-radius: 50%;
+        }
+      }
 
       .option-item {
         position: relative;
@@ -270,8 +323,7 @@
         height: 26px;
         background: #EDEDED;
         border-radius: 3px;
-        margin: 0 0.6rem;
-        margin-bottom: 0.5rem;
+        margin: 5px 0.6rem;
 
         .title {
           font-weight: 600;
@@ -295,27 +347,6 @@
           background: transparent;
           padding: 0;
           color: #999999;
-        }
-      }
-
-      .showAllTags {
-        position: absolut;
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        padding: 0 10px;
-        padding-left: 25px;
-        height: 26px;
-        background: #EDEDED;
-        border-radius: 3px;
-        margin: 0 0.6rem;
-        margin-bottom: 0.5rem;
-
-        span {
-          width: 3px;
-          height: 3px;
-          border-radius: 50%;
-          background: #333333;
         }
       }
     }

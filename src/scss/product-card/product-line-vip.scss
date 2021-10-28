@@ -30,7 +30,6 @@
 
   .content-block {
     width: 100%;
-    max-width: 471px;
     
     @include media-breakpoint-down(md) {
       width: 100%;
