@@ -19,6 +19,13 @@
     }
   }
 
+  .time {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    color: #555555;
+  }
+
   ul {
     display: none;
     padding: 1rem;
@@ -32,11 +39,12 @@
 
     li {
       display: flex;
-      justify-content: center;
+      justify-content: flex-end;
       align-items: center;
       height: 40px;
       font-size: 14px;
       font-weight: 700;
+      padding-right: 23px;
     }
   }
 

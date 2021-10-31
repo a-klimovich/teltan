@@ -8,11 +8,15 @@
   @@include('./header/header.html')
   
   <main class="mb-5 wrapper flex-grow-1">
+    @@include('./header/header-property-type.html')
+
     <div class="container-fluid breadcrumb-beckground p-0 mb-4">
       <div class="container">
         @@include('breadcrumbs.html')
       </div>
     </div>
+
+    @@include('./header/propert-menu-mobile.html')
 
     <div class="container">
       <h1 class="h2 mb-4 subtitle">
@@ -40,22 +44,11 @@
               <a type="button" class="mr-2 d-none d-lg-flex justify-content-center align-items-center products-sort__button">
                 <i class="icon-sirting_line"></i>
               </a>
-  
-              <a type="button" class="mr-2 d-flex justify-content-center align-items-center products-sort__button filterTogglerPropertFullMap">
-                <span class="d-none d-lg-inline-block">Filters</span>
-                @@include('../assets/settings.svg')
-              </a>
             </div>
           </div>
         </div>
 
         <div class="cord-container">
-          <div class="full-scrin-filter">
-            @@include('./filters/property-filter.html')
-          </div>
-
-          <div class="px-3 ">
-
             <div class="row row-cols-2 row-cols-lg-2">
               <div class="mb-3 col">
                 @@include('./product-card/property-product.html', {
@@ -137,10 +130,10 @@
                 })
               </div>
             </div>
-          </div>
 
-          <div class="cord_pagination">
-            @@include('pagination.html')
+            <div class="cord_pagination">
+              @@include('pagination.html')
+            </div>
           </div>
         </div>
       </div>

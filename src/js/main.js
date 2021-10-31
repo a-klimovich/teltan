@@ -109,10 +109,6 @@
     $('.cord-container').removeClass('overlay')
   })
 
-  $('.filterTogglerPropertFullMap').on('click', () => {
-    $('.cord-container').addClass('overlay')
-  })
-
   $('.collaps-text-about-btn').on('click', function() {
     $(this).closest('.collaps-text-about').find('.collaps-text-about-text').toggleClass('show')
   })
@@ -739,20 +735,25 @@
 
 // Header property filters / dropdown
   const dropdownElems = [$('.dropdown-prise'), $('.dropdown-room-number'), $('.dropdown-building-type'), $('.dropdown-area')]
+  const dropdownBtn = [$('.buttonShowPropertyFilterPrice'), $('.buttonShowPropertyFilterRoom'), $('.buttonShowPropertyFilterType'), $('.buttonShowPropertyFilterArea')]
 
   $('.buttonShowPropertyFilterPrice').click(function(e) {
+    $(this).toggleClass('active')
     remooveDropDownActiveMenu(dropdownElems[0])
   })
 
-  $('.buttonShowPropertyFilterRoom').click(() => {
+  $('.buttonShowPropertyFilterRoom').click(function() {
+    $(this).toggleClass('active')
     remooveDropDownActiveMenu(dropdownElems[1])
   })
 
-  $('.buttonShowPropertyFilterType').click(() => {
+  $('.buttonShowPropertyFilterType').click(function() {
+    $(this).toggleClass('active')
     remooveDropDownActiveMenu(dropdownElems[2])
   })
 
-  $('.buttonShowPropertyFilterArea').click(() => {
+  $('.buttonShowPropertyFilterArea').click(function() {
+    $(this).toggleClass('active')
     remooveDropDownActiveMenu(dropdownElems[3])
   }) 
 
@@ -891,7 +892,7 @@ const renderTags = () => {
   Object.entries(data).forEach(([name, value]) => {
     if (![categoryName].includes(name) && value) {
       const text = Array.isArray(value) ? value.join(", ") : value;
-      
+
       if (!data.area || /^\s*$/.test(data.area)) {
         roomNumer.empty()
         roomNumer.append('Число комнат');
@@ -902,7 +903,6 @@ const renderTags = () => {
       }
       if (Array.isArray(data.area)) {
         roomNumer.empty()
-        console.log(data.area);
         roomNumer.append(data.area.join(', '));
       }
 
@@ -917,6 +917,12 @@ const renderTags = () => {
       if (Array.isArray(data.areaTypeBuilduing)) {
         typeProperty.empty()
         typeProperty.append(data.areaTypeBuilduing.join(', '));
+      }
+
+      if (name === '') {
+
+      } else {
+
       }
 
       $(".tags").append(`<div class="option-item"><button type="button" data-clear-name="${name}" class="closer" ><span aria-hidden="true">&times;</span></button><span class="title">${text}</span></div>`)
@@ -943,6 +949,7 @@ const updateData = (values) => {
     ...values
   };
 
+
   if (screenWidth < 768) {
     data = {
       [categoryNameMobile]: $(`${categoryMobileSelector}:checked`).val(),
@@ -950,9 +957,9 @@ const updateData = (values) => {
     };
   }
 
-  renderTags();
-
+  
   setDataToForm(data);
+  renderTags();
 };
 
 // изменение категории
@@ -1002,6 +1009,7 @@ forms.find("input").on("change", function () {
 forms.submit(function (e) {
   e.preventDefault();
 
+  // TODO проблема тут с удалением
   const formData = $(this)
     .serializeArray()
     .reduce((acc, { name, value }) => {
@@ -1016,14 +1024,12 @@ forms.submit(function (e) {
       return { ...acc, [name]: value };
     }, {});
 
-  updateData(formData);
+    updateData(formData);
 });
 
 // удаление тега и очистка значений в формах по кликку на него
 $(document).on("click", "[data-clear-name]", function (e) {
   const name = $(this).data("clearName");
-
-  console.log(name)
 
   forms
     .find(`input[name="${name}"]`)
