@@ -873,9 +873,10 @@ const categorySelector = ".category";
 const categoryMobileSelector = ".categoryMobile"
 const rentForm = "#mainFiltersRent";
 const buyForm = "#mainFiltersBuy";
-const rentModelForm = "#modalFiltersRent";
-const buyModelForm = "#modalFiltersBuy";
+const rentFormMobile = "#mainFiltersRentMobile";
+const buyFormMobile = "#mainFiltersBuyMobile";
 const roomNumer = $('.countRoomNumberFilter');
+const priceFilter = $('.houseRentUserPrise');
 const typeProperty = $('.typeProperty');
 
 let data = {}
@@ -883,51 +884,116 @@ let data = {}
 const categoryName = $(categorySelector).attr("name");
 const categoryNameMobile = $(categoryMobileSelector).attr("name");
 
-const forms = $(`${rentForm}, ${rentModelForm}, ${buyForm}, ${buyModelForm}`);
+const forms = $(`${rentForm}, ${buyForm}, ${rentFormMobile}, ${buyFormMobile}`);
+
+const hendleMoreTags = (dataArray) => {
+  const nonEmptyCount = dataArray.reduce((acc, [_, value]) => value ? acc + 1 : acc, 0)
+  
+  console.log(nonEmptyCount);
+
+  if (nonEmptyCount <= 4) {
+    $('.showAllTags').removeClass('active')
+  } else {
+    $('.showAllTags').addClass('active')
+  }
+}
 
 // рендер тегов
 const renderTags = () => {
   $(".tags .option-item").remove();
+
+  const dataArray = Object.entries(data)
   
-  Object.entries(data).forEach(([name, value]) => {
+  dataArray.forEach(([name, value]) => {
     if (![categoryName].includes(name) && value) {
       const text = Array.isArray(value) ? value.join(", ") : value;
 
-      if (!data.area || /^\s*$/.test(data.area)) {
-        roomNumer.empty()
-        roomNumer.append('Число комнат');
-      }
-      if (data.area) {
-        roomNumer.empty()
-        roomNumer.append(data.area);
-      }
-      if (Array.isArray(data.area)) {
-        roomNumer.empty()
-        roomNumer.append(data.area.join(', '));
-      }
+      switch (name) {
+        case 'area':
+          {
+            if (Array.isArray(value)) {
+              roomNumer.empty()
+              roomNumer.append(`${value[0]} - ${value[value.length - 1]}`);
+            } else if (value === '') {
+              roomNumer.empty()
+              roomNumer.append("Число комнат");
+            } else {
+              roomNumer.empty()
+              roomNumer.append(value);
+            }
+          }
+          break;
 
-      if (!data.areaTypeBuilduing || /^\s*$/.test(data.areaTypeBuilduing)) {
-        typeProperty.empty()
-        typeProperty.append('Тип недвижимости');
-      }
-      if (data.areaTypeBuilduing) {
-        typeProperty.empty()
-        typeProperty.append(data.areaTypeBuilduing);
-      }
-      if (Array.isArray(data.areaTypeBuilduing)) {
-        typeProperty.empty()
-        typeProperty.append(data.areaTypeBuilduing.join(', '));
-      }
+        case 'price':
+        case 'rentAreaCommerce':
+        case 'buyAreaCommerce':
+          break;
 
-      if (name === '') {
+        case 'fullAreaRent':
+        case 'fullAreaBuy':
+          {
+            if (value === '') {
+              $(".tags").append(`<div class="option-item"><button type="button" data-clear-name="${name}" class="closer" ><span aria-hidden="true">&times;</span></button><span class="title"><strong>м²</strong> от ${value} :Площадь общая</span></div>`)
+            } else {
+              $(".tags").append(`<div class="option-item"><button type="button" data-clear-name="${name}" class="closer" ><span aria-hidden="true">&times;</span></button><span class="title"><strong>м²</strong> от ${value[1]} до ${value[0]} :Площадь общая</span></div>`)
+            }
+          }
+          break;
 
-      } else {
+        case 'noFirstFloreRent': 
+          $(".tags").append(`<div class="option-item"><button type="button" data-clear-name="${name}" class="closer" ><span aria-hidden="true">&times;</span></button><span class="title">${value} :Этаж</span></div>`)
 
+          break;
+
+        case 'noLastFloreRent': 
+          $(".tags").append(`<div class="option-item"><button type="button" data-clear-name="${name}" class="closer" ><span aria-hidden="true">&times;</span></button><span class="title">${value} :Этаж</span></div>`)
+          break;
+
+        case 'fleatRent': 
+        case 'fleatBuy': 
+          {
+            if (Array.isArray(value)) {
+              $(".tags").append(`<div class="option-item"><button type="button" data-clear-name="${name}" class="closer" ><span aria-hidden="true">&times;</span></button><span class="title">${value[0]} - ${value[1]}: Этаж</span></div>`)
+            } else {
+              $(".tags").append(`<div class="option-item"><button type="button" data-clear-name="${name}" class="closer" ><span aria-hidden="true">&times;</span></button><span class="title">${value}: Этаж</span></div>`)
+            }
+          }
+          break;
+
+        case 'equipment1Rent':
+        case 'equipment2Rent':
+        case 'equipment3Rent':
+        case 'equipment4Rent':
+        case 'equipment5Rent':
+          
+          $(".tags").append(`<div class="option-item"><button type="button" data-clear-name="${name}" class="closer" ><span aria-hidden="true">&times;</span></button><span class="title">Есть :${value}</span></div>`)
+          break;
+
+        case 'areaTypeBuilduing':
+          if (Array.isArray(value)) {
+            typeProperty.empty()
+            typeProperty.append(data.areaTypeBuilduing.join(', '));
+          } else {
+            typeProperty.empty()
+            typeProperty.append(data.areaTypeBuilduing);
+          }
+
+          break;
+
+        case 'paymentType':
+
+          $(".tags").append(`<div class="option-item"><button type="button" data-clear-name="${name}" class="closer" ><span aria-hidden="true">&times;</span></button><span class="title">${value} :Вид оплаты</span></div>`)
+          break;
+
+        default:
+          // do this
+          $(".tags").append(`<div class="option-item"><button type="button" data-clear-name="${name}" class="closer" ><span aria-hidden="true">&times;</span></button><span class="title">${text}</span></div>`)
+          break;
       }
-
-      $(".tags").append(`<div class="option-item"><button type="button" data-clear-name="${name}" class="closer" ><span aria-hidden="true">&times;</span></button><span class="title">${text}</span></div>`)
     }
   });
+
+  hendleMoreTags(dataArray)
 };
 
 $('.showAllTags').on('click', () => {
@@ -962,42 +1028,32 @@ const updateData = (values) => {
   renderTags();
 };
 
-// изменение категории
-$(categorySelector).on("change", (e) => {
-  $(".main-filters, .modals").toggleClass("hide");
-
+const resetAllForms = () => {
   // ресет сохраненных данных
   updateData({});
 
   // ресет всех форм
   $(rentForm)[0].reset();
   $(buyForm)[0].reset();
-  $(rentModelForm)[0].reset();
-  $(buyModelForm)[0].reset();
+  $(rentFormMobile)[0].reset();
+  $(buyFormMobile)[0].reset();
+}
+
+// изменение категории
+$(categorySelector).on("change", (e) => {
+  $(".main-filters, .modals").toggleClass("hide");
+
+  resetAllForms()
 });
 
 $(categoryMobileSelector).on("change", (e) => {
   $(".main-filters, .modals").toggleClass("hide");
 
-  // ресет сохраненных данных
-  updateData({});
-
-  // ресет всех форм
-  $(rentForm)[0].reset();
-  $(buyForm)[0].reset();
-  $(rentModelForm)[0].reset();
-  $(buyModelForm)[0].reset();
+  resetAllForms()
 });
 
 $('.ressetFilterAll').on('click', () => {
-  // ресет сохраненных данных
-  updateData({});
-
-  // ресет всех форм
-  $(rentForm)[0].reset();
-  $(buyForm)[0].reset();
-  $(rentModelForm)[0].reset();
-  $(buyModelForm)[0].reset();
+  resetAllForms()
 })
 
 // отправка форм на изменение филдов
@@ -1009,7 +1065,6 @@ forms.find("input").on("change", function () {
 forms.submit(function (e) {
   e.preventDefault();
 
-  // TODO проблема тут с удалением
   const formData = $(this)
     .serializeArray()
     .reduce((acc, { name, value }) => {
@@ -1024,6 +1079,8 @@ forms.submit(function (e) {
       return { ...acc, [name]: value };
     }, {});
 
+    console.log({formData})
+
     updateData(formData);
 });
 
@@ -1031,7 +1088,9 @@ forms.submit(function (e) {
 $(document).on("click", "[data-clear-name]", function (e) {
   const name = $(this).data("clearName");
 
-  forms
+  const form = $(this).parents().filter("form");
+
+  form
     .find(`input[name="${name}"]`)
     .each(function () {
       switch ($(this).attr("type")) {
