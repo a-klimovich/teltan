@@ -770,7 +770,7 @@
 
   // Price filter
   let userPrise = [0, 0];
-  let userAreaRange = [0, 0];
+  // let userAreaRange = [0, 0];
   const showUserPrice = document.querySelector('.houseRentUserPrise');
   const showUserPriceBuy = document.querySelector('.houseBuyUserPrise');
   const showAreaRange = document.querySelector('.rentAreaCommerce');
@@ -804,27 +804,27 @@
     }
   }
 
-  function howItAreaRange(priceElement) {
-    if (userAreaRange[0] > 0) {
-      priceElement.textContent = `от ${userAreaRange[0]}`
-    }
+  // function howItAreaRange(priceElement) {
+  //   if (userAreaRange[0] > 0) {
+  //     priceElement.textContent = `от ${userAreaRange[0]}`
+  //   }
 
-    if (userAreaRange[0] > userAreaRange[1] && userAreaRange[1] > 1) {
-      priceElement.textContent = `до ${userAreaRange[1]}`
-    }
+  //   if (userAreaRange[0] > userAreaRange[1] && userAreaRange[1] > 1) {
+  //     priceElement.textContent = `до ${userAreaRange[1]}`
+  //   }
 
-    if (userAreaRange[1] > 0) {
-      priceElement.textContent = `до ${userAreaRange[1]}`
-    }
+  //   if (userAreaRange[1] > 0) {
+  //     priceElement.textContent = `до ${userAreaRange[1]}`
+  //   }
 
-    if (userAreaRange[0] > 0 && userAreaRange[1] > 0) {
-      priceElement.textContent = `${userAreaRange[0]} - ${userAreaRange[1]}`
-    }
+  //   if (userAreaRange[0] > 0 && userAreaRange[1] > 0) {
+  //     priceElement.textContent = `${userAreaRange[0]} - ${userAreaRange[1]}`
+  //   }
 
-    if (userAreaRange[0] === userAreaRange[1]) {
-      priceElement.textContent = `от ${userAreaRange[0]}`
-    }
-  }
+  //   if (userAreaRange[0] === userAreaRange[1]) {
+  //     priceElement.textContent = `от ${userAreaRange[0]}`
+  //   }
+  // }
 
   // PRICE RANGE
   $('.priceMin').keyup(function () {
@@ -848,25 +848,25 @@
   })
 
   // AREA RANGE
-  $('.inputAreaMin').keyup(function () {
-    userAreaRange[0] = this.value;
+  // $('.inputAreaMin').keyup(function () {
+  //   userAreaRange[0] = this.value;
 
-    if (data.category === 'rent') {
-      howItAreaRange(showAreaRange);
-    } else {
-      howItAreaRange(showAreaRangeBuy);
-    }
-  })
+  //   if (data.category === 'rent') {
+  //     howItAreaRange(showAreaRange);
+  //   } else {
+  //     howItAreaRange(showAreaRangeBuy);
+  //   }
+  // })
 
-  $('.inputAreaMax').keyup(function () {
-    userAreaRange[1] = this.value;
+  // $('.inputAreaMax').keyup(function () {
+  //   userAreaRange[1] = this.value;
    
-    if (data.category === 'rent') {
-      howItAreaRange(showAreaRange);
-    } else {
-      howItAreaRange(showAreaRangeBuy);
-    }
-  })
+  //   if (data.category === 'rent') {
+  //     howItAreaRange(showAreaRange);
+  //   } else {
+  //     howItAreaRange(showAreaRangeBuy);
+  //   }
+  // })
 
 
 const categorySelector = ".category";
@@ -886,10 +886,9 @@ const categoryNameMobile = $(categoryMobileSelector).attr("name");
 
 const forms = $(`${rentForm}, ${buyForm}, ${rentFormMobile}, ${buyFormMobile}`);
 
+// Handler show full string with tags parametr filter
 const hendleMoreTags = (dataArray) => {
   const nonEmptyCount = dataArray.reduce((acc, [_, value]) => value ? acc + 1 : acc, 0)
-  
-  console.log(nonEmptyCount);
 
   if (nonEmptyCount <= 4) {
     $('.showAllTags').removeClass('active')
@@ -913,7 +912,22 @@ const renderTags = () => {
           {
             if (Array.isArray(value)) {
               roomNumer.empty()
-              roomNumer.append(`${value[0]} - ${value[value.length - 1]}`);
+
+              const valArea = value.reduce((acc, n, i, array) => {
+                if (i === 0 || i === array.length - 1) {
+                    acc.push(n + (i === 0 && array.length > 1 ? '-' : ''));
+                } else {
+                    let nextEl = array[i+1];
+            
+                    if (nextEl && nextEl - n > 0.5) {
+                        acc.push(n, ', ' , nextEl + (i + 1 === array.length - 1 ? '' : '-'));
+                    }
+                }
+                return acc;
+            }, []).join('');
+
+            roomNumer.append(valArea);
+
             } else if (value === '') {
               roomNumer.empty()
               roomNumer.append("Число комнат");
@@ -949,13 +963,13 @@ const renderTags = () => {
           $(".tags").append(`<div class="option-item"><button type="button" data-clear-name="${name}" class="closer" ><span aria-hidden="true">&times;</span></button><span class="title">${value} :Этаж</span></div>`)
           break;
 
-        case 'fleatRent': 
-        case 'fleatBuy': 
+        case 'fleatRent':
+        case 'fleatBuy':
           {
             if (Array.isArray(value)) {
-              $(".tags").append(`<div class="option-item"><button type="button" data-clear-name="${name}" class="closer" ><span aria-hidden="true">&times;</span></button><span class="title">${value[0]} - ${value[1]}: Этаж</span></div>`)
+              $(".tags").append(`<div class="option-item"><button type="button" data-clear-name="${name}" class="closer" ><span aria-hidden="true">&times;</span></button><span class="title">${value[0]} - ${value[1]} : Этаж</span></div>`)
             } else {
-              $(".tags").append(`<div class="option-item"><button type="button" data-clear-name="${name}" class="closer" ><span aria-hidden="true">&times;</span></button><span class="title">${value}: Этаж</span></div>`)
+              $(".tags").append(`<div class="option-item"><button type="button" data-clear-name="${name}" class="closer" ><span aria-hidden="true">&times;</span></button><span class="title">${value} : Этаж</span></div>`)
             }
           }
           break;
@@ -995,11 +1009,6 @@ const renderTags = () => {
 
   hendleMoreTags(dataArray)
 };
-
-$('.showAllTags').on('click', () => {
-  $('.tags').toggleClass('active')
-  $('.showAllTags').removeClass('active')
-})
 
 // сохранение данных в скрытую форму для отправки
 const setDataToForm = (data) => {
@@ -1078,8 +1087,6 @@ forms.submit(function (e) {
 
       return { ...acc, [name]: value };
     }, {});
-
-    console.log({formData})
 
     updateData(formData);
 });
