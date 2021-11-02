@@ -890,7 +890,7 @@ const forms = $(`${rentForm}, ${buyForm}, ${rentFormMobile}, ${buyFormMobile}`);
 const hendleMoreTags = (dataArray) => {
   const nonEmptyCount = dataArray.reduce((acc, [_, value]) => value ? acc + 1 : acc, 0)
 
-  if (nonEmptyCount <= 4) {
+  if (nonEmptyCount <= 3) {
     $('.showAllTags').removeClass('active')
   } else {
     $('.showAllTags').addClass('active')
@@ -936,6 +936,14 @@ const renderTags = () => {
               roomNumer.append(value);
             }
           }
+          break;
+
+        case 'check-in-date': 
+        {
+          if (value) {
+            $(".tags").append(`<div class="option-item"><button type="button" data-clear-name="${name}" class="closer" ><span aria-hidden="true">&times;</span></button><span class="title">${value} :Дата въезда</span></div>`)
+          }
+        }
           break;
 
         case 'price':
