@@ -1,8 +1,8 @@
 <div class="card product-card product-line product-line-vip" style="background-color: @@bg-color">
-  <a class="card-link" href="#">
+  <div class="card-link">
     <div class="image-block">
       <div class="i-box">
-        <img src="@@image" alt="no-img">
+        <a href="#"><img src="@@image" alt="no-img"></a>
       </div>
     </div>
 
@@ -24,8 +24,8 @@
 
     <div class="px-2 px-lg-3 content-block">
       <div class="text-right">
-        <p class="mb-2 mb-lg-3 title">@@title</p>
-        <p class="mb-2 mb-lg-4 category">@@category</p>
+        <a href="#" class="mb-2 mb-lg-3 title">@@title</a>
+        <a href="#" class="mb-2 mb-lg-4 category">@@category</a>
       </div>
 
       <div class="border-top py-2 d-flex justify-content-between align-items-center text-nowrap product-line__data-viwe">
@@ -40,7 +40,7 @@
         <span class="date">@@date</span>
       </div>
     </div>
-  </a>
+  </div>
 
   @@include('./product-card/product-marker.html', {
     'markerColour': '#F71A3F',
