@@ -697,7 +697,7 @@
     
     setTimeout(function () {
       $('.alert-informer').removeClass('show');
-    }, 1000)
+    }, 2500)
   })
 
   $('#alertConfirmation').on('click', function () {
@@ -770,7 +770,7 @@
 
   // Price filter
   let userPrise = [0, 0];
-  // let userAreaRange = [0, 0];
+  let userAreaRange = [0, 0];
   const showUserPrice = document.querySelector('.houseRentUserPrise');
   const showUserPriceBuy = document.querySelector('.houseBuyUserPrise');
   const showAreaRange = document.querySelector('.rentAreaCommerce');
@@ -804,27 +804,27 @@
     }
   }
 
-  // function howItAreaRange(priceElement) {
-  //   if (userAreaRange[0] > 0) {
-  //     priceElement.textContent = `от ${userAreaRange[0]}`
-  //   }
+  function howItAreaRange(priceElement) {
+    if (userAreaRange[0] > 0) {
+      priceElement.textContent = `от ${userAreaRange[0]}`
+    }
 
-  //   if (userAreaRange[0] > userAreaRange[1] && userAreaRange[1] > 1) {
-  //     priceElement.textContent = `до ${userAreaRange[1]}`
-  //   }
+    if (userAreaRange[0] > userAreaRange[1] && userAreaRange[1] > 1) {
+      priceElement.textContent = `до ${userAreaRange[1]}`
+    }
 
-  //   if (userAreaRange[1] > 0) {
-  //     priceElement.textContent = `до ${userAreaRange[1]}`
-  //   }
+    if (userAreaRange[1] > 0) {
+      priceElement.textContent = `до ${userAreaRange[1]}`
+    }
 
-  //   if (userAreaRange[0] > 0 && userAreaRange[1] > 0) {
-  //     priceElement.textContent = `${userAreaRange[0]} - ${userAreaRange[1]}`
-  //   }
+    if (userAreaRange[0] > 0 && userAreaRange[1] > 0) {
+      priceElement.textContent = `${userAreaRange[0]} - ${userAreaRange[1]}`
+    }
 
-  //   if (userAreaRange[0] === userAreaRange[1]) {
-  //     priceElement.textContent = `от ${userAreaRange[0]}`
-  //   }
-  // }
+    if (userAreaRange[0] === userAreaRange[1]) {
+      priceElement.textContent = `от ${userAreaRange[0]}`
+    }
+  }
 
   // PRICE RANGE
   $('.priceMin').keyup(function () {
@@ -848,25 +848,25 @@
   })
 
   // AREA RANGE
-  // $('.inputAreaMin').keyup(function () {
-  //   userAreaRange[0] = this.value;
+  $('.inputAreaMin').keyup(function () {
+    userAreaRange[0] = this.value;
 
-  //   if (data.category === 'rent') {
-  //     howItAreaRange(showAreaRange);
-  //   } else {
-  //     howItAreaRange(showAreaRangeBuy);
-  //   }
-  // })
+    if (data.category === 'rent') {
+      howItAreaRange(showAreaRange);
+    } else {
+      howItAreaRange(showAreaRangeBuy);
+    }
+  })
 
-  // $('.inputAreaMax').keyup(function () {
-  //   userAreaRange[1] = this.value;
+  $('.inputAreaMax').keyup(function () {
+    userAreaRange[1] = this.value;
    
-  //   if (data.category === 'rent') {
-  //     howItAreaRange(showAreaRange);
-  //   } else {
-  //     howItAreaRange(showAreaRangeBuy);
-  //   }
-  // })
+    if (data.category === 'rent') {
+      howItAreaRange(showAreaRange);
+    } else {
+      howItAreaRange(showAreaRangeBuy);
+    }
+  })
 
 
 const categorySelector = ".category";
@@ -913,17 +913,17 @@ const renderTags = () => {
             if (Array.isArray(value)) {
               roomNumer.empty()
 
-              const valArea = value.reduce((acc, n, i, array) => {
-                if (i === 0 || i === array.length - 1) {
-                    acc.push(n + (i === 0 && array.length > 1 ? '-' : ''));
-                } else {
-                    let nextEl = array[i+1];
-            
-                    if (nextEl && nextEl - n > 0.5) {
-                        acc.push(n, ', ' , nextEl + (i + 1 === array.length - 1 ? '' : '-'));
-                    }
-                }
-                return acc;
+            const valArea = value.reduce((acc, n, i, array) => {
+              if (i === 0 || i === array.length - 1) {
+                  acc.push(n + (i === 0 && array.length > 1 ? '-' : ''));
+              } else {
+                  let nextEl = array[i+1];
+          
+                  if (nextEl && nextEl - n > 0.5) {
+                      acc.push(n, ', ' , nextEl + (i + 1 === array.length - 1 ? '' : '-'));
+                  }
+              }
+              return acc;
             }, []).join('');
 
             roomNumer.append(valArea);
@@ -1113,3 +1113,21 @@ $(document).on("click", "[data-clear-name]", function (e) {
     })
     .submit();
 });
+
+// handling to the top property page
+$(document).ready(function() {
+  const btnToTheTop = $('#btnToTheTop');
+
+  $(window).scroll(function() {
+    if ($(window).scrollTop() > 300) {
+      btnToTheTop.addClass('show');
+    } else {
+      btnToTheTop.removeClass('show');
+    }
+  });
+  
+  btnToTheTop.on('click', function(e) {
+    e.preventDefault();
+    $(document).scrollTop(0)
+  });
+})
