@@ -1,10 +1,36 @@
-<select class="dep-select col col-lg-4 mr-4" name="country" id="dependentListsCountry">
-  <option value="bra" selected>Бразилия</option>
-  <option value="rus">Россия</option>
-  <option value="ind">Индия</option>
-  <option value="chn">Китай</option>
-  <option value="zaf">ЮАР</option>
-</select>
+<div class="dependens-dropdon">
+  <div class="dependens-dropdon-block">
+    <button type="button" class="dep-select first-drop">Country</button>
 
-<select class="dep-select col col-lg-4" name="city" id="dependentListsCity">
-</select>
+    <ul class="show-country">
+      <li>
+        <label>
+          <input name="country" value="by" type="radio" />
+          Belarus
+        </label>
+      </li>
+
+      <li>
+        <label>
+          <input name="country" value="ru" type="radio" />
+          Russia
+        </label>
+      </li>
+
+      <li>
+        <label>
+          <input name="country" value="pl" type="radio" />
+          Poland
+        </label>
+      </li>
+    </ul>
+  </div>
+
+  <div class="dependens-dropdon-block">
+    <button type="button" class="dep-select second-drop">City</button>
+
+    <ul class="show-city">
+      <li><label for="city"><input name="city" value="" type="radio">Select country</label></li>
+    </ul>
+  </div>
+</div>

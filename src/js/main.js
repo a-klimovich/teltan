@@ -25,7 +25,10 @@
     prevScrollTop = scrollTop;
   });
 
-  mapboxgl.accessToken = 'pk.eyJ1IjoiYS1rbGltb2YiLCJhIjoiY2themVqYzI4MGlrZDJxbWlvaDBlMzF6MyJ9.QXFKypM1BnCkQaUZKTuP0g';
+  // Handler mobile manu user
+  $('.btnUserMenuProfile').on('click', (e) => {
+    $('.user-profile-menu__header').toggleClass('active')
+  })
 
   // MODALS start
   $('#registerModal').on('show.bs.modal', function () {
@@ -61,11 +64,19 @@
   // MOBILE MENU --END--
 
   // MAPS START
+  mapboxgl.accessToken = 'pk.eyJ1IjoiYS1rbGltb2YiLCJhIjoiY2themVqYzI4MGlrZDJxbWlvaDBlMzF6MyJ9.QXFKypM1BnCkQaUZKTuP0g';
+
   if($('#map').length > 0) {
     const map = new mapboxgl.Map({
       container: 'map',
       style: 'mapbox://styles/mapbox/streets-v11',
     });
+
+    map.on('load', function () {
+      map.addLayer({
+        
+      })
+    })
   }
 
   if($('#mapMini').length > 0) {
@@ -708,30 +719,71 @@
     $('.allert').removeClass('show')
   })
 
-  // Dependense list
-  if ($('#dependentListsCountry').length != 0) {
-    let cities = {
-      bra: ["Сан-Паулу", "Рио-де-Жанейро"],
-      rus: ["Москва", "Санкт-Петербург"],
-      ind: ["Мумбаи", "Дели"],
-      chn: ["Шанхай", "Пекин"],
-      zaf: ["Йоханнесбург", "Кейптаун"]
-    };
-  let country = document.getElementById("dependentListsCountry");
-  let city = document.querySelector("#dependentListsCity");
-  
-  window.onload = selectCountry;
-  country.onchange = selectCountry;
+  // Dependense lists START
+  const btnFirstDropD = $(".first-drop");
+  const btnSecondDropD = $(".second-drop");
+  const countryList = $(".show-country");
+  const cityList = $(".show-city");
 
-    function selectCountry(ev){
-      city.innerHTML = "";
-      var c = this.value || "bra", o;
-      for(let i = 0; i < cities[c].length; i++){
-        o = new Option(cities[c][i],i,false,false);
-        city.add(o);
-      };
+  const placesList = {
+    by: ["Minsk", "Grodno", "Gomel"],
+    ru: ["Moskow", "SPB", "Samara"],
+    pl: ["Warsawa", "Lublin", "Gdansk"]
+  };
+
+  countryList.on("click", function (e) {
+    let target = e.target.value;
+    let countryName = e.target.closest("label").textContent;
+    
+    showCityThisCountry(target);
+    checkedElement(countryName, btnFirstDropD);
+
+    countryList.removeClass("active");
+
+    if (cityList.hasClass('active') === true) {
+      cityList.toggleClass("active");
     }
-  }
+  });
+
+  cityList.on("click", function (e) {
+    let target = e.target.closest("label").textContent;
+
+    checkedElement(target, btnSecondDropD);
+    
+    cityList.toggleClass("active");
+
+    if (countryList.hasClass('active') === true) {
+      countryList.toggleClass("active");
+    }
+  });
+
+  const showCityThisCountry = (countryName) => {
+    if (placesList[countryName]) {
+      cityList.empty();
+      
+      placesList[countryName].forEach((element) => {
+        cityList.append(
+          `<li><label for="city"><input name="city" value='${element}' type="radio">${element}</label></li>`
+        );
+      });
+        
+      checkedElement(placesList[countryName][0], btnSecondDropD);
+    }
+  };
+
+  const checkedElement = (name, renderTo) => {
+    renderTo.empty();
+    renderTo.append(name);
+  };
+
+  btnFirstDropD.on("click", () => {
+    countryList.toggleClass("active");
+  });
+
+  btnSecondDropD.on("click", () => {
+    cityList.toggleClass("active");
+  });
+  // Dependense lists END
 
 // Header property filters / dropdown
   const dropdownElems = [$('.dropdown-prise'), $('.dropdown-room-number'), $('.dropdown-building-type'), $('.dropdown-area')]

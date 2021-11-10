@@ -1,7 +1,87 @@
-.dep-select {
-  height: 54px;
-  border: 1px solid #c2c2cc;
-  border-radius: 8px;
-  color: #495057;
-  -webkit-appearance: none;
+@import "variables";
+@import "node_modules/bootstrap-scss/mixins";
+
+.dependens-dropdon {
+  display: flex;
+  align-items: center;
+
+  ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 101%;
+    left: 0;
+    list-style: none;
+    padding-right: 0;
+    padding-left: 0;
+    background: $white;
+    z-index: 1;
+    width: 100%;
+    box-shadow: $box-shadow;
+    font-size: 16px;
+
+    li:last-child {
+      border-bottom: 1px solid transparent;
+    }
+
+    li {
+      border-bottom: 1px solid #e7e7e7;
+    }
+
+    &.active {
+      display: flex;
+    }
+  }
+
+  button {
+    width: 160px;
+    height: 54px;
+    font-size: 16px;
+    border-radius: 8px;
+    margin-bottom: 0;
+    color: #5a5a5a;
+    cursor: pointer;
+    padding: 6px 8px;
+    border: 1px solid #e7e7e7;
+    outline: none;
+    cursor: pointer;
+    margin-left: 7px;
+    background: transparent;
+    text-align: right;
+  }
+
+  label {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 8px 15px;
+    cursor: pointer;
+
+    &:hover {
+      color: $primary;
+    }
+
+    input {
+      display: none;
+    }
+  }
+}
+
+.dependens-dropdon-block {
+  position: relative;
+
+  &::after {
+    content: "\e904";
+    font-family: "icomoon";
+    position: absolute;
+    top: calc(50% - 4.5px);
+    left: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15px;
+    color: #7d7d7d;
+    height: 10px;
+    font-weight: 700;
+  }
 }

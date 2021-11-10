@@ -1,6 +1,28 @@
 <div class="header__user-menu-bar d-flex align-items-center h-100">
   <div class="mr-2 mb-1 d-flex">
-    <a class="d-flex align-items-center mr-3" href="#"><span class="d-none d-lg-block mr-2">My Profile</span> <i class="icon-user-1"></i></a>
+    <a type="button" class="d-flex align-items-center mr-3 btnUserMenuProfile"><span class="d-none d-lg-block mr-2">My Profile</span> <i class="icon-user-1"></i></a>
+
+    <ul class="mb-0 user-profile-menu user-profile-menu__header">
+      <li class="pt-0 user-profile-menu__list active"><a href="#">My announcements</a></li>
+  
+      <li class="user-profile-menu__list ">
+        <a class="d-flex justify-content-end align-items-center" href="#">
+          @@include('./user-account/counter-user-message.html')
+          <span class="ml-3">My Messages</span>
+        </a>
+      </li>
+  
+      <li class="user-profile-menu__list"><a href="#">Wallet history</a></li>
+  
+      <li class="user-profile-menu__list"><a href="#">History</a></li>
+  
+      <li class="user-profile-menu__list"><a href="#">Tracked</a></li>
+  
+      <li class="user-profile-menu__list"><a href="#">VIP</a></li>
+  
+      <li class="pb-0 border-bottom-0 user-profile-menu__list"><a href="#">Settings</a>
+      </li>
+    </ul>
   </div>
 
   <a href="#" class="mr-4 user-message">

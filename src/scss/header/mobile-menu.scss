@@ -88,6 +88,12 @@
         padding: 0 16px;
         box-shadow: inset 0 -1px 0 0 #e8e9ec;
 
+        &:hover, &:active {
+          .item-name {
+            color: $primary;
+          }
+        }
+
         &:active, &:focus, &:hover {
           outline: 0;
           outline-offset: 0;
@@ -121,6 +127,7 @@
           white-space: nowrap;
           overflow: hidden;
           text-overflow: ellipsis;
+          color: $black;
         }
 
         .arrow-list {
