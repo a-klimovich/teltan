@@ -51,8 +51,6 @@
   }
 
   @include media-breakpoint-up (md) {
-    width: fit-content;
-    
     &.active {
       left: 0;
     }

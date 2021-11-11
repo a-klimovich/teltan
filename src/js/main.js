@@ -1,4 +1,5 @@
 (function(){
+  const $body = $('body');
   const $filterModalContetn = $('#filterModalContent')
   const $itemSlider =  $('#itemSlider');
 
@@ -36,19 +37,19 @@
   });
   
   $("#registerModal").on('shown.bs.modal', function () {
-    $("body").addClass('modal-open');
+    $body.addClass('modal-open');
   });
   // MODALS end
 
   // MOBILE MENU --START--
   $('.hamburger').on('click', () => {
     $('.mobile-menu').addClass('active')
-     $('body').addClass('overflow-h')
+     $body.addClass('overflow-h')
   })
 
   $('.mobile-menu .closer').on('click', (e) => {
     $('.mobile-menu').removeClass('active')
-     $('body').removeClass('overflow-h')
+     $body.removeClass('overflow-h')
   })
 
   $('.menu__nav .nav-item').on('click', function (e) {
@@ -71,12 +72,6 @@
       container: 'map',
       style: 'mapbox://styles/mapbox/streets-v11',
     });
-
-    map.on('load', function () {
-      map.addLayer({
-        
-      })
-    })
   }
 
   if($('#mapMini').length > 0) {
@@ -97,7 +92,7 @@
     })
   }
   // MAPS END
-
+  
   $('#showListUserNumber').on('click', () => {
     $('.mobile-block-show-contacts').toggleClass('show')
   })
@@ -106,12 +101,41 @@
     $('.mobile-block-show-contacts').removeClass('show')
   })
 
+
+  Element.prototype.remove = function() {
+    this.parentElement.removeChild(this);
+  }
+  NodeList.prototype.remove = HTMLCollection.prototype.remove = function() {
+      for(var i = this.length - 1; i >= 0; i--) {
+          if(this[i] && this[i].parentElement) {
+              this[i].parentElement.removeChild(this[i]);
+          }
+      }
+  }
+
   $('.filterTogglerMobile').on('click', (e) => {
     e.preventDefault()
     $filterModalContetn.toggleClass('visible')
+
+    if ($('#isMobileMenuFiltersOpen').hasClass('modal-backdrop fade show')) {
+      $('#isMobileMenuFiltersOpen').remove();
+      $body.removeClass('modal-open');
+    } else {
+      $filterModalContetn.css("z-index", "1050")
+      $body.append(`<div id='isMobileMenuFiltersOpen' class="modal-backdrop fade show"></div>`)
+      $body.addClass('modal-open')
+
+      $('#isMobileMenuFiltersOpen').on('click', function(e) {
+        $(this).remove();
+        $filterModalContetn.toggleClass('visible')
+        $body.removeClass('modal-open');
+      })
+    }
     
     $('.cord-container').removeClass('overlay')
   })
+
+  
 
   $('.filterPropertyCloser').on('click', (e) => {
     e.preventDefault()
@@ -335,7 +359,7 @@
   })
 
   $('#modalSandMessage').on('shown.bs.modal', () => {
-    $('body').addClass('modal-open')
+    $body.addClass('modal-open')
 
     new FileUploader(
       // container where will images rendered (prepend method useing)
@@ -1177,7 +1201,7 @@ $(document).on("click", "[data-clear-name]", function (e) {
 // handling to the top property page
 $(document).ready(function() {
   const btnToTheTop = $('#btnToTheTop');
-
+  
   $(window).scroll(function() {
     if ($(window).scrollTop() > 300) {
       btnToTheTop.addClass('show');

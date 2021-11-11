@@ -20,6 +20,18 @@
     }
   }
 
+  .filter-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 55%;
+    padding: 15px;
+    min-width: 250px;
+    background-color: white;
+    z-index: 2;
+  }
+
   .menu-closer {
     display: flex;
     

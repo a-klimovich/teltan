@@ -28,9 +28,8 @@
   visibility: hidden;
   z-index: 99;
 
-  svg {
+  img, svg {
     max-width: 2rem;
-    fill: $black;
   }
 
   span {
@@ -41,17 +40,19 @@
     color: #222222;
   }
 
-  &:hover {
-    cursor: pointer;
-    background-color: $primary;
-    color: $white;
-
-    svg {
-      fill: $white;
-    }
-
-    span {
+  @include media-breakpoint-up (lg) {
+    &:hover {
+      cursor: pointer;
+      background-color: $primary;
       color: $white;
+  
+      img {
+        filter: brightness(3);
+      }
+  
+      span {
+        color: $white;
+      }
     }
   }
   
@@ -64,4 +65,3 @@
     visibility: visible;
   }
 }
-
